@@ -195,6 +195,7 @@
       submap=reset
 
       layerrule=blur,waybar
+      layerrule=blur,ewww-bar
     '';
   };
 }

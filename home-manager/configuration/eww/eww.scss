@@ -1,0 +1,63 @@
+@import "/home/ryan/.config/eww/style.scss"
+
+* {
+    all: unset;
+    border: none;
+    border-radius: 0px;
+    font-family: $font;
+    font-size: 12px;
+    min-height: 0;
+}
+
+.bar {
+    background-color: $base02-transparent;
+    color: $base04;
+    padding: 10px;
+}
+
+.pill {
+    background-color: $base00;
+    color: $base04;
+    margin: 4px 0px;
+    margin-left: 7px;
+    border-radius: 16px 16px 16px 16px;
+    padding: 0px 20px;
+    font-weight: bold;
+}
+
+.pill:hover {
+    background-color: $base01;
+}
+
+.workspaces {
+    background-color: $base00;
+    color: $base02;
+    margin: 4px 4px;
+    padding: 4px 2px;
+    border-radius: 16px;
+}
+
+.workspace-button {
+    background-color: $base01;
+    color: $base04;
+    padding: 0px 10px;
+    margin: 0px 4px;
+    border-radius: 16px;
+    min-width: 20px;
+    transition: all 200ms ease-in-out;
+}
+
+.workspace-button.workspace-active {
+    background-color: $base0D;
+    color: $base02;
+    min-width: 40px;
+    background-size: 400% 400%;
+}
+
+.workspace-button:hover {
+    background-color: $base04;
+    color: $base02;
+    border-radius: 16px;
+    min-width: 40px;
+    background-size: 400% 400%;
+}

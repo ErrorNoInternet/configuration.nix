@@ -29,6 +29,7 @@ in
     ../modules/cava.nix
     ../modules/desktop-entries.nix
     ../modules/dunst.nix
+    ../modules/eww.nix
     ../modules/fastfetch.nix
     ../modules/fcitx.nix
     ../modules/git.nix
@@ -79,6 +80,7 @@ in
     swayidle
     swww
     wl-clipboard
+    (import ../derivations/hyprland-workspaces.nix { inherit pkgs; })
     (import ../derivations/brightness.nix { inherit pkgs; })
     (import ../derivations/pavolume.nix { inherit pkgs; })
     (import ../derivations/swaylock.nix { inherit config custom pkgs; })
