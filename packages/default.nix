@@ -3,6 +3,7 @@
   perSystem = {pkgs, ...}: {
     packages = {
       brightness = pkgs.callPackage ./brightness.nix {};
+      hyprland-workspaces = pkgs.callPackage ./hyprland-workspaces.nix {};
       passgen = pkgs.callPackage ./passgen.nix {};
       pavolume = pkgs.callPackage ./pavolume.nix {};
       savehw = pkgs.callPackage ./savehw.nix {};

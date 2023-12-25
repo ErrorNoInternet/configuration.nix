@@ -1,8 +1,8 @@
-(defpoll volume :interval "1s"
-  "hmm volume")
+(deflisten volume
+  `pactl subscribe | grep --line-buffered "sink" | stdbuf -oL cut -d'#' -f2 | xargs -I {} bash -c "pactl get-sink-volume {} | sed -n 's|Volume:.*/\(.*%\) /.*|\1|p' | tr -d ' '"`)
 
 (defpoll time :interval "5s"
-  "date '+%H:%M %b %d, %Y'")
+  "date '+%a, %b %d, %H:%M'")
 
 (deflisten workspace0 "hyprland-workspaces `hyprctl monitors -j | jq -r \".[0].name\"`")
 
@@ -46,12 +46,12 @@
 (defwidget volume []
     (label
         :class "pill"
-        :text "󰕾  ???%"))
+        :text "󰕾  ${volume}"))
 
 (defwidget time []
     (label
         :class "pill"
-        :text "  ???"))
+        :text "  ${time}"))
 
 (defwidget workspaces []
     (eventbox :onscroll "hyprctl dispatch workspace `echo {} | sed 's/up/+/\' | sed 's/down/-/'`1"

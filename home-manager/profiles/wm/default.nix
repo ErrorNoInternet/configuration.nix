@@ -26,6 +26,7 @@
     pavucontrol
     ripdrag
     self.packages.${pkgs.system}.brightness
+    self.packages.${pkgs.system}.hyprland-workspaces
     self.packages.${pkgs.system}.pavolume
     slurp
     swayidle

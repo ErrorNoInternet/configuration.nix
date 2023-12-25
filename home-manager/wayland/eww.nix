@@ -1,6 +1,10 @@
-{ config, custom, inputs, lib, ... }:
-
 {
+  config,
+  custom,
+  inputs,
+  lib,
+  ...
+}: {
   home.file.".config/eww/style.scss".text = ''
     $base00: #${config.colorScheme.colors.base00};
     $base01: #${config.colorScheme.colors.base01};

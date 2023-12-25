@@ -57,6 +57,7 @@ in {
     ../terminal/irssi.nix
     ../wayland/hyprland-autoname-workspaces.nix
     ../wayland/hyprland.nix
+    ../wayland/eww.nix
     inputs.agenix.homeManagerModules.default
   ];
 
