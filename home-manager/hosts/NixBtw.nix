@@ -1,11 +1,19 @@
-{ config, inputs, lib, pkgs, ... }:
-
-let
+{
+  inputs,
+  lib,
+  pkgs,
+  self,
+  ...
+}: let
   custom = {
+    hostname = "NixBtw";
     font = "JetBrainsMono Nerd Font";
-    opacity = ".7";
-    subtleOpacity = ".9";
     predefinedColorScheme = "Nord";
+    opacity = ".8";
+    subtleOpacity = ".9";
+    barOpacity = ".7";
+    terminal = "foot";
+    browser = "firefox";
     pointerCursor = {
       name = "Bibata-Modern-Classic";
       package = pkgs.bibata-cursors;
@@ -13,135 +21,92 @@ let
     };
     gtkTheme = {
       name = "Colloid-Dark-${custom.predefinedColorScheme}";
-      package = pkgs.colloid-gtk-theme.override { tweaks = [ "${lib.strings.toLower custom.predefinedColorScheme}" ]; };
+      package = pkgs.colloid-gtk-theme.override {tweaks = ["${lib.strings.toLower custom.predefinedColorScheme}"];};
     };
     gtkIconTheme = {
       name = "Colloid-${lib.strings.toLower custom.predefinedColorScheme}-dark";
-      package = pkgs.colloid-icon-theme.override { schemeVariants = [ "nord" ]; };
+      package = pkgs.colloid-icon-theme.override {schemeVariants = ["nord"];};
     };
   };
-in
-{
-  _module.args = { inherit custom; };
+in {
+  _module.args = {inherit custom;};
   imports = [
-    ../modules/bat.nix
-    ../modules/btop.nix
-    ../modules/cava.nix
-    ../modules/desktop-entries.nix
-    ../modules/dunst.nix
-    ../modules/eww.nix
-    ../modules/fastfetch.nix
-    ../modules/fcitx.nix
-    ../modules/git.nix
+    ../../shared/caches/all.nix
+    ../common.nix
+    ../locations/china.nix
+    ../modules/cursor.nix
     ../modules/gtk.nix
-    ../modules/hyprland-autoname-workspaces.nix
-    ../modules/hyprland.nix
-    ../modules/imv.nix
-    ../modules/irssi.nix
-    ../modules/kdeconnect.nix
-    ../modules/kitty.nix
-    ../modules/libreoffice.nix
-    ../modules/mpv.nix
-    ../modules/neovim.nix
-    ../modules/nheko.nix
-    ../modules/obs-studio.nix
-    ../modules/rofi.nix
-    ../modules/thunderbird.nix
-    ../modules/tmux.nix
-    ../modules/virt-manager.nix
-    ../modules/waybar.nix
-    ../modules/yazi.nix
-    ../modules/zoxide.nix
-    ../modules/zsh.nix
-    inputs.nix-colors.homeManagerModules.default
+    ../modules/mimeapps.nix
+    ../modules/nvidia-desktop-entries.nix
+    ../profiles/development
+    ../profiles/wm
+    ../programs/fcitx.nix
+    ../programs/imv.nix
+    ../programs/kdeconnect.nix
+    ../programs/libreoffice.nix
+    ../programs/mpv.nix
+    ../programs/nheko.nix
+    ../programs/obs-studio.nix
+    ../programs/thunderbird.nix
+    ../programs/virt-manager.nix
+    ../terminal/btop.nix
+    ../terminal/cava.nix
+    ../terminal/foot.nix
+    ../terminal/git.nix
+    ../terminal/gnupg.nix
+    ../terminal/irssi.nix
+    ../wayland/hyprland-autoname-workspaces.nix
+    ../wayland/hyprland.nix
+    inputs.agenix.homeManagerModules.default
   ];
 
   colorScheme = inputs.nix-colors.colorSchemes.nord;
-  home.username = "ryan";
-  home.homeDirectory = "/home/ryan";
-  home.file = {
-    downloads.source = config.lib.file.mkOutOfStoreSymlink "/mnt/data/downloads";
-    data.source = config.lib.file.mkOutOfStoreSymlink "/mnt/data";
-    "pictures/wallpapers".source = ../../other/wallpapers;
-  };
+  home = {
+    username = "ryan";
+    homeDirectory = "/home/ryan";
+    file = {
+      "pictures/wallpapers".source = ../../other/wallpapers;
+    };
+    packages = with pkgs; [
+      # desktop
+      hyprpicker
+      inputs.hyprwm-contrib.packages.${pkgs.system}.scratchpad
 
-  home.packages = with pkgs; [
-    # rice
-    fastfetch
-    cmatrix
-    cava
+      # system utilities
+      self.packages.${pkgs.system}.tbw
+      _7zz
+      bandwhich
+      compsize
+      duf
+      ffmpeg_6-full
+      nmap
+      nvtop
+      procs
+      pv
+      timg
 
-    # desktop
-    cliphist
-    hyprland-autoname-workspaces
-    hyprpicker
-    inputs.hyprwm-contrib.packages.${pkgs.system}.grimblast
-    pavucontrol
-    swayidle
-    swww
-    wl-clipboard
-    (import ../derivations/hyprland-workspaces.nix { inherit pkgs; })
-    (import ../derivations/brightness.nix { inherit pkgs; })
-    (import ../derivations/pavolume.nix { inherit pkgs; })
-    (import ../derivations/swaylock.nix { inherit config custom pkgs; })
+      # graphical utilities
+      firefox
+      gimp
+      imhex
+      qbittorrent
+      (discord-canary.override {
+        withOpenASAR = true;
+        withVencord = true;
+      })
 
-    # system utilities
-    (import ../../workstation/derivations/tbw.nix { inherit pkgs; })
-    _7zz
-    bandwhich
-    compsize
-    croc
-    duf
-    eza
-    ffmpeg_6-full
-    inputs.hsize.packages.${pkgs.system}.hsize
-    jq
-    nmap
-    nvtop
-    pv
-    timg
+      # development utilities
+      jetbrains.idea-community
 
-    # graphical utilities
-    brave
-    firefox
-    gimp
-    qbittorrent
-    ripdrag
-    slurp
-    wf-recorder
-    (discord-canary.override {
-      withOpenASAR = true;
-      withVencord = true;
-    })
-
-    # development utilities
-    gcc
-    jetbrains.idea-community
-    python3
-    python310Packages.bpython
-    rustup
-    virt-manager
-
-    # games
-    prismlauncher
-    superTuxKart
-    inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
-    inputs.nix-gaming.packages.${pkgs.system}.wine-ge
-
-    # ABSOLUTELY PROPRIETARY
-    zoom-us
-  ];
-
-  home.sessionVariables = {
-    TERMINAL = "kitty";
-    BROWSER = "firefox";
-  };
-
-  home.pointerCursor = {
-    name = custom.pointerCursor.name;
-    package = custom.pointerCursor.package;
-    size = custom.pointerCursor.size;
-    x11.enable = true;
-    gtk.enable = true;
+      # games
+      inputs.nix-gaming.packages.${pkgs.system}.wine-ge
+      osu-lazer-bin
+      prismlauncher
+      superTuxKart
+    ];
+    sessionVariables = {
+      TERMINAL = "${custom.terminal}";
+      BROWSER = "${custom.browser}";
+    };
   };
 }

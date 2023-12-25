@@ -1,11 +1,19 @@
-{ config, inputs, lib, pkgs, ... }:
-
-let
+{
+  inputs,
+  lib,
+  pkgs,
+  self,
+  ...
+}: let
   custom = {
+    hostname = "Rescanix";
     font = "JetBrainsMono Nerd Font";
-    opacity = ".7";
-    subtleOpacity = ".9";
     predefinedColorScheme = "Nord";
+    opacity = ".8";
+    subtleOpacity = ".9";
+    barOpacity = ".7";
+    terminal = "foot";
+    browser = "firefox";
     pointerCursor = {
       name = "Bibata-Modern-Classic";
       package = pkgs.bibata-cursors;
@@ -13,122 +21,116 @@ let
     };
     gtkTheme = {
       name = "Colloid-Dark-${custom.predefinedColorScheme}";
-      package = pkgs.colloid-gtk-theme.override { tweaks = [ "${lib.strings.toLower custom.predefinedColorScheme}" ]; };
+      package = pkgs.colloid-gtk-theme.override {tweaks = ["${lib.strings.toLower custom.predefinedColorScheme}"];};
     };
     gtkIconTheme = {
       name = "Colloid-${lib.strings.toLower custom.predefinedColorScheme}-dark";
-      package = pkgs.colloid-icon-theme.override { schemeVariants = [ "nord" ]; };
+      package = pkgs.colloid-icon-theme.override {schemeVariants = ["nord"];};
     };
   };
-in
-{
-  _module.args = { inherit custom; };
+in {
+  _module.args = {inherit custom;};
   imports = [
-    ../modules/bat.nix
-    ../modules/btop.nix
-    ../modules/cava.nix
-    ../modules/desktop-entries.nix
-    ../modules/dunst.nix
-    ../modules/fastfetch.nix
-    ../modules/fcitx.nix
-    ../modules/git.nix
+    ../../shared/caches/all.nix
+    ../common.nix
+    ../locations/china.nix
+    ../modules/cursor.nix
     ../modules/gtk.nix
-    ../modules/hyprland-autoname-workspaces.nix
-    ../modules/hyprland.nix
-    ../modules/imv.nix
-    ../modules/kdeconnect.nix
-    ../modules/kitty.nix
-    ../modules/mpv.nix
-    ../modules/neovim.nix
-    ../modules/obs-studio.nix
-    ../modules/rofi.nix
-    ../modules/tmux.nix
-    ../modules/waybar.nix
-    ../modules/yazi.nix
-    ../modules/zoxide.nix
-    ../modules/zsh.nix
-    inputs.nix-colors.homeManagerModules.default
+    ../modules/mimeapps.nix
+    ../profiles/development
+    ../profiles/wm
+    ../programs/fcitx.nix
+    ../programs/imv.nix
+    ../programs/kdeconnect.nix
+    ../programs/mpv.nix
+    ../programs/obs-studio.nix
+    ../programs/spicetify.nix
+    ../programs/virt-manager.nix
+    ../terminal/btop.nix
+    ../terminal/cava.nix
+    ../terminal/foot.nix
+    ../terminal/git.nix
+    ../wayland/hyprland-autoname-workspaces.nix
+    ../wayland/hyprland.nix
+    inputs.agenix.homeManagerModules.default
   ];
 
   colorScheme = inputs.nix-colors.colorSchemes.nord;
-  home.username = "ryan";
-  home.homeDirectory = "/home/ryan";
-
-  home.packages = with pkgs; [
-    (hashcat.override { cudaSupport = true; })
-    (import ../../workstation/derivations/collect-hwinfo.nix { inherit pkgs; })
-    (import ../../workstation/derivations/passgen.nix { inherit pkgs; })
-    (import ../../workstation/derivations/tbw.nix { inherit pkgs; })
-    (import ../derivations/brightness.nix { inherit pkgs; })
-    (import ../derivations/pavolume.nix { inherit pkgs; })
-    (import ../derivations/swaylock.nix { inherit config custom pkgs; })
-    _7zz
-    bandwhich
-    blender
-    brave
-    cava
-    cliphist
-    cmatrix
-    compsize
-    cpu-x
-    croc
-    drm_info
-    duf
-    eza
-    fastfetch
-    ffmpeg_6-full
-    firefox
-    gcc
-    geekbench
-    gimp
-    gptfdisk
-    hyprland-autoname-workspaces
-    hyprpicker
-    inputs.hsize.packages.${pkgs.system}.hsize
-    inputs.hyprwm-contrib.packages.${pkgs.system}.grimblast
-    inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
-    inputs.nix-gaming.packages.${pkgs.system}.wine-ge
-    intel-gpu-tools
-    jq
-    kdiskmark
-    lm_sensors
-    lshw
-    mangohud
-    mesa-demos
-    nmap
-    nvtop
-    pavucontrol
-    powertop
-    prismlauncher
-    pv
-    python3
-    radeontop
-    ripdrag
-    rustup
-    slurp
-    smartmontools
-    sshfs
-    superTuxKart
-    swayidle
-    swaylock-effects
-    swww
-    timg
-    unigine-heaven
-    vulkan-tools
-    wf-recorder
-    wl-clipboard
-  ];
-
-  home.sessionVariables = {
-    TERMINAL = "kitty";
-    BROWSER = "firefox";
-  };
-
-  home.pointerCursor = {
-    name = custom.pointerCursor.name;
-    package = custom.pointerCursor.package;
-    size = custom.pointerCursor.size;
-    x11.enable = true;
-    gtk.enable = true;
+  home = {
+    username = "ryan";
+    homeDirectory = "/home/ryan";
+    file = {
+      "pictures/wallpapers".source = ../../other/wallpapers;
+    };
+    packages = with pkgs; [
+      (hashcat.override {cudaSupport = true;})
+      _7zz
+      bandwhich
+      blender
+      brave
+      compsize
+      cpu-x
+      ddrescue
+      dmidecode
+      drm_info
+      duf
+      duperemove
+      efibootmgr
+      efivar
+      ffmpeg_6-full
+      fio
+      firefox
+      geekbench
+      gimp
+      gparted
+      gptfdisk
+      hyperfine
+      hyprpicker
+      imagemagick
+      inputs.hyprwm-contrib.packages.${pkgs.system}.scratchpad
+      inputs.nix-gaming.packages.${pkgs.system}.wine-ge
+      intel-gpu-tools
+      kdiskmark
+      linuxPackages_latest.perf
+      lm_sensors
+      lshw
+      lsof
+      mangohud
+      mesa-demos
+      multipath-tools
+      nmap
+      nvtop
+      osu-lazer-bin
+      parted
+      patchelf
+      pavucontrol
+      pciutils
+      powertop
+      prismlauncher
+      procs
+      pv
+      python3Packages.bpython
+      radeontop
+      sdparm
+      self.packages.${pkgs.system}.passgen
+      self.packages.${pkgs.system}.savehw
+      self.packages.${pkgs.system}.tbw
+      smartmontools
+      sqlite
+      sshfs
+      steam-run
+      superTuxKart
+      sysstat
+      timg
+      unigine-heaven
+      usbutils
+      util-linux
+      virt-manager
+      vulkan-tools
+    ];
+    sessionVariables = {
+      TERMINAL = "${custom.terminal}";
+      BROWSER = "${custom.browser}";
+    };
   };
 }

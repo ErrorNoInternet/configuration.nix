@@ -1,15 +1,15 @@
-let
+{inputs, ...}: let
   custom = {
     predefinedColorScheme = "Nord";
+    terminal = "foot";
   };
-in
-{
-  _module.args = { inherit custom; };
+in {
+  _module.args = {inherit custom;};
   imports = [
-    ../modules/bat.nix
-    ../modules/nix-on-droid/zsh.nix
-    ../modules/neovim.nix
-    ../modules/tmux.nix
-    ../modules/zoxide.nix
+    ../common.nix
+    ../profiles/development
+    ../programs/git.nix
   ];
+
+  colorScheme = inputs.nix-colors.colorSchemes.nord;
 }
