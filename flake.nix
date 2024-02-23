@@ -17,7 +17,6 @@
     nix-index-database.url = "github:nix-community/nix-index-database";
     agenix.url = "github:ryantm/agenix";
     nix-colors.url = "github:misterio77/nix-colors";
-    nixvim.url = "github:nix-community/nixvim";
 
     attic.url = "github:zhaofengli/attic";
     hsize.url = "github:ErrorNoInternet/hsize";
@@ -27,8 +26,10 @@
     neovim-nightly.url = "github:nix-community/neovim-nightly-overlay";
     nix-gaming.url = "github:fufexan/nix-gaming";
     nix-super.url = "github:privatevoid-net/nix-super";
+    nixvim.url = "github:nix-community/nixvim";
     overmask.url = "github:ErrorNoInternet/overmask";
     paralload.url = "github:ErrorNoInternet/Paralload";
+    schizofox.url = "github:schizofox/schizofox";
     shadower.url = "github:n3oney/shadower";
     spicetify-nix.url = "github:the-argus/spicetify-nix";
     waybar.url = "github:Alexays/Waybar";

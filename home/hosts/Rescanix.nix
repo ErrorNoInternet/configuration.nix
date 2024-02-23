@@ -57,7 +57,6 @@
       ethtool
       ffmpeg_6-full
       fio
-      firefox
       geekbench
       gimp
       gparted
