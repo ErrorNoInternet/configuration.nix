@@ -4,12 +4,12 @@
   lib,
   ...
 }: let
-  cfg = config.programs.graphical.firefox;
+  cfg = config.customPrograms.graphical.firefox;
   inherit (lib) mkEnableOption mkIf;
 in {
   imports = [inputs.schizofox.homeManagerModule];
 
-  options.programs.graphical.firefox = {
+  options.customPrograms.graphical.firefox = {
     enable =
       mkEnableOption ""
       // {
