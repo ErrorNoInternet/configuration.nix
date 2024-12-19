@@ -1,4 +1,4 @@
-{ pkgs, self', ... }:
+{ self', ... }:
 {
   hardware.cpu.intel.updateMicrocode = true;
 
@@ -12,16 +12,6 @@
   services = {
     power-profiles-daemon.enable = true;
     upower.enable = true;
-  };
-
-  systemd.services.power-profile-performance = {
-    wantedBy = [ "multi-user.target" ];
-    after = [ "power-profiles-daemon.service" ];
-
-    serviceConfig = {
-      Type = "oneshot";
-      ExecStart = "${pkgs.power-profiles-daemon}/bin/powerprofilesctl set performance";
-    };
   };
 
   hjem.users.error.systemd.services.gamma-control = {
