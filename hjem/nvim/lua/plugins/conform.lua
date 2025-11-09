@@ -1,0 +1,45 @@
+return {
+	"stevearc/conform.nvim",
+
+	keys = {
+		{ mode = "n", "<F2>", "<cmd>lua require('conform').format()<cr>:w<cr>", silent = true },
+		{ mode = "i", "<F2>", "<esc><cmd>lua require('conform').format()<cr>:w<cr>", silent = true },
+		{ mode = "v", "<F2>", "<esc><cmd>lua require('conform').format()<cr>:w<cr>", silent = true },
+		{ mode = "n", "<F3>", "<cmd>lua require('conform').format()<cr>", silent = true },
+		{ mode = "i", "<F3>", "<esc><cmd>lua require('conform').format()<cr>", silent = true },
+		{ mode = "v", "<F3>", "<esc><cmd>lua require('conform').format()<cr>", silent = true },
+	},
+	opts = {
+		formatters = {
+			zig = {
+				command = "zig",
+				args = { "fmt", "--stdin" },
+				stdin = true,
+			},
+		},
+		formatters_by_ft = {
+			asm = { "asmfmt" },
+			c = { "clang_format" },
+			cpp = { "clang_format" },
+			css = { "prettier" },
+			cuda = { "clang_format" },
+			go = { "gofmt" },
+			html = { "prettier" },
+			javascript = { "prettier" },
+			json = { "prettier" },
+			jsonc = { "prettier" },
+			lua = { "stylua" },
+			markdown = { "prettier" },
+			nix = { "nixfmt" },
+			python = { "ruff_format", "ruff_organize_imports" },
+			rust = { "rustfmt" },
+			scss = { "prettier" },
+			sh = { "shfmt" },
+			toml = { "taplo" },
+			typescript = { "prettier" },
+			yaml = { "prettier" },
+			zig = { "zig" },
+		},
+		lsp_fallback = true,
+	},
+}

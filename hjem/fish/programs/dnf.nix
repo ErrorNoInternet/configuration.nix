@@ -1,0 +1,42 @@
+{
+  rum.programs.fish.abbrs = {
+    d = "dnf";
+    dnfa = "sudo dnf autoremove";
+    dnfb = "sudo dnf builddep";
+    dnfC = "sudo dnf -C";
+    dnfc = "sudo dnf check-update";
+    dnfcc = "sudo dnf check-update --changelogs";
+    dnfCI = "sudo dnf -C info";
+    dnfCi = "sudo dnf -C install";
+    dnfCl = "sudo dnf -C list";
+    dnfCp = "sudo dnf -C provides";
+    dnfCrq = "sudo dnf -C repoquery";
+    dnfCrql = "sudo dnf -C repoquery -l";
+    dnfCrqp = "sudo dnf -C repoquery --provides";
+    dnfCs = "sudo dnf -C search";
+    dnfcs = "sudo dnf check-update --security";
+    dnfcsc = "sudo dnf check-update --security --changelogs";
+    dnfh = "sudo dnf history list";
+    dnfhl = "dnf history list &| less";
+    dnfhR = "sudo dnf history redo";
+    dnfhr = "sudo dnf history rollback";
+    dnfhu = "sudo dnf history undo";
+    dnfhul = "sudo dnf history undo last";
+    dnfI = "sudo dnf info";
+    dnfi = "sudo dnf install";
+    dnfl = "sudo dnf list";
+    dnfp = "sudo dnf provides";
+    dnfR = "sudo dnf reinstall";
+    dnfr = "sudo dnf remove";
+    dnfrq = "sudo dnf repoquery";
+    dnfrql = "sudo dnf repoquery -l";
+    dnfrqp = "sudo dnf repoquery --provides";
+    dnfs = "sudo dnf search";
+    dnfS = "sudo dnf swap";
+    dnfu = "sudo dnf upgrade";
+    dnfur = "sudo dnf upgrade --refresh";
+    dnfurs = "sudo dnf upgrade --refresh --security";
+    dnfus = "sudo dnf upgrade --security";
+    "/r" = "--refresh";
+  };
+}

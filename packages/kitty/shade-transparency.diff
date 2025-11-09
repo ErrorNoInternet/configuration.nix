@@ -1,0 +1,38 @@
+diff --git a/kitty/decorations.c b/kitty/decorations.c
+index 27530d42e..d40cead24 100644
+--- a/kitty/decorations.c
++++ b/kitty/decorations.c
+@@ -927,6 +927,7 @@ typedef struct Shade {
+     bool light, invert, fill_blank;
+     Edge which_half;
+     uint xnum, ynum;
++    uint level;
+ } Shade;
+ 
+ #define is_odd(x) ((x) & 1u)
+@@ -960,6 +961,11 @@ shade(Canvas *self, Shade s) {
+         case RIGHT_EDGE: cols.start = number_of_cols / 2; square_width_extension *= 2; break;
+     }
+ 
++    if (s.level) {
++        for (uint r = rows.start; r < rows.end; r++) memset(self->mask + r * self->width + cols.start, s.level, cols.end - cols.start + 1);
++        return;
++    }
++
+     bool extra_row = false;
+     uint ey = 0, old_ey = 0, drawn_rows = 0;
+ 
+@@ -1566,9 +1572,9 @@ START_ALLOW_CASE_RANGE
+         EV(L'▐', 4, 5, 6, 7);
+ #undef EV
+ #define SH(ch, ...) C(ch, shade, (Shade){ __VA_ARGS__ });
+-        SH(L'░', .xnum=12, .light=true);
+-        SH(L'▒', .xnum=12);
+-        SH(L'▓', .xnum=12, .light=true, .invert=true);
++        SH(L'░', .xnum=12, .level=64);
++        SH(L'▒', .xnum=12, .level=128);
++        SH(L'▓', .xnum=12, .level=192);
+         SH(L'🮌', .xnum=12, .which_half=LEFT_EDGE);
+         SH(L'🮍', .xnum=12, .which_half=RIGHT_EDGE);
+         SH(L'🮎', .xnum=12, .which_half=TOP_EDGE);
+

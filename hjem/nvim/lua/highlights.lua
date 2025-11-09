@@ -1,0 +1,37 @@
+local highlights = {
+	["@comment"] = { fg = "#5E81AC" },
+	["@property"] = { fg = "#81A1C1" },
+	["@variable"] = { bold = false },
+	BufferCurrentSign = { bg = "#3B4252", fg = "#81A1C1" },
+	BufferDefaultTabpages = { bg = "#3B4252", fg = "#ECEFF4" },
+	BufferInactiveSign = { bg = "#2E3440", fg = "#4C566A" },
+	BufferTabPages = { fg = "#81a1c1" },
+	CmpItemKindConstant = { link = "@constant" },
+	CmpItemKindEnum = { link = "@lsp.type.enum" },
+	CmpItemKindEnumMember = { link = "@lsp.type.enumMember" },
+	CmpItemKindFunction = { link = "@function" },
+	CmpItemKindMethod = { link = "@method" },
+	CmpItemKindSnippet = { fg = "#5E81AC" },
+	CmpItemKindStruct = { link = "@lsp.type.struct" },
+	Comment = { link = "@comment" },
+	CursorLine = { bg = "none" },
+	FloatBorder = { fg = "#4C566A", bg = "#2E3440" },
+	FoldColumn = { fg = "#4C566A" },
+	Function = { bold = true },
+	LspInlayHint = { fg = "#4C566A" },
+	Macro = { bold = true, fg = "#81A1C1" },
+	MatchParen = { bg = "#4C566A", fg = "#81A1C1" },
+	OutlineNormal = { bg = "#3B4252" },
+	Quote = { fg = "#D8DEE9" },
+	RustEnumVariant = { fg = "#88C0D0" },
+	Title = { bg = "#2E3440", bold = true },
+	TreesitterContextLineNumber = { bg = "#2E3440", fg = "#4C566A" },
+	TroubleNormal = { bg = "#2E3440" },
+	WinBar = { bg = "#2E3440" },
+	WinBarNC = { bg = "#2E3440" },
+	WinSeparator = { link = "VertSplit" },
+}
+
+for k, v in pairs(highlights) do
+	vim.api.nvim_set_hl(0, k, v)
+end

@@ -1,0 +1,34 @@
+load perl
+
+script load adv_windowlist.pl
+format -delete awl_display_header
+format awl_display_key \$N%n \$H\$C\$S
+format awl_display_key_active \$N%n \$H%9%U\$C%n\$S
+set awl_viewer off
+
+script load nm2.pl
+format neat_pad_char  
+set neat_dynamic 100
+set neat_maxlength 18
+set neat_melength 1
+
+script load nickcolor_expando.pl
+set neat_color_reassign_time 7d
+set neat_global_colors on
+
+script load colour_popup.pl
+statusbar additem -after input -alignment right colours prompt
+statusbar modify -position 100 prompt
+
+script load conceal.pl
+script load disable_znc_beep.pl
+script load extrabuster.pl
+
+bind ^E command scrollback goto +1
+bind ^Y command scrollback goto -1
+bind meta-tab command window last 
+set beep_when_window_active off
+set show_server_time on
+statusbar window add otr
+
+clear

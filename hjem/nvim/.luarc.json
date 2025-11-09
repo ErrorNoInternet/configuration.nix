@@ -1,0 +1,8 @@
+{
+    "diagnostics.globals": [
+        "vim",
+        "capabilities",
+        "file_exists",
+        "TODO"
+    ]
+}

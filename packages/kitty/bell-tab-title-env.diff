@@ -1,0 +1,14 @@
+diff --git a/kitty/window.py b/kitty/window.py
+index 18140e1e3..5ba692877 100644
+--- a/kitty/window.py
++++ b/kitty/window.py
+@@ -1256,6 +1256,8 @@ def on_bell(self) -> None:
+             import subprocess
+             env = self.child.foreground_environ
+             env['KITTY_CHILD_CMDLINE'] = ' '.join(map(shlex.quote, self.child.cmdline))
++            if tab := self.tabref():
++                env['KITTY_TAB_TITLE'] = tab.title
+             subprocess.Popen(cb, env=env, cwd=self.child.foreground_cwd, preexec_fn=clear_handled_signals)
+         if not self.is_active:
+             changed = not self.needs_attention
+

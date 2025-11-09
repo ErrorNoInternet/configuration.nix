@@ -1,0 +1,20 @@
+vim.opt.cursorline = true
+vim.opt.encoding = "utf8"
+vim.opt.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
+vim.opt.foldcolumn = "1"
+vim.opt.foldlevelstart = 99
+vim.opt.number = true
+vim.opt.scrollback = 100000
+vim.opt.scrolloff = 5
+vim.opt.shortmess = "ltToOCFcI"
+vim.opt.showmode = false
+vim.opt.signcolumn = "no"
+vim.opt.smartindent = true
+vim.opt.smoothscroll = true
+vim.opt.swapfile = false
+vim.opt.undofile = true
+
+vim.opt.expandtab = true
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
+vim.opt.tabstop = 4

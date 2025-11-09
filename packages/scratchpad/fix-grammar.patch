@@ -1,0 +1,22 @@
+diff --git a/scratchpad b/scratchpad
+index 4cf92b5..6192ba5 100755
+--- a/scratchpad
++++ b/scratchpad
+@@ -103,7 +103,7 @@ getBack() {
+   _current_workspace="$(hyprctl monitors -j | jq '.[] | select(.focused==true)' | jq -j '.activeWorkspace.name')"
+ 
+   [ -z "$_current_workspace" ] && {
+-    notify "Scratchpad" "Some Error Occured while getting current workspace."
++    notify "Scratchpad" "An error occurred while getting current workspace"
+     exit 1
+   }
+ 
+@@ -117,7 +117,7 @@ getBack() {
+       -e 's/]//g')
+ 
+   [ "${#_clients_on_spad[@]}" -eq 0 ] && {
+-    notify "No Clients" "There was no client on $default_scratchpad_name"
++    notify "No Clients" "There are no clients on <b>\`$default_scratchpad_name\`</b>"
+     exit 0
+   }
+   [ "${#_clients_on_spad[@]}" -eq 1 ] && {
