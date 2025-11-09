@@ -1,0 +1,96 @@
+{
+  "pins": {
+    "Ori-fcitx5": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "ErrorNoInternet",
+        "repo": "Ori-fcitx5"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "e14d815ada5b79a460ddefad04a31530df92f83e",
+      "url": "https://github.com/ErrorNoInternet/Ori-fcitx5/archive/e14d815ada5b79a460ddefad04a31530df92f83e.tar.gz",
+      "hash": "07w9nbl7qc8wxxnc885c9h7954yzv7nxzif4i0lbqmrhpzqvs3n5"
+    },
+    "bookmarks.yazi": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "dedukun",
+        "repo": "bookmarks.yazi"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "9ef1254d8afe88aba21cd56a186f4485dd532ab8",
+      "url": "https://github.com/dedukun/bookmarks.yazi/archive/9ef1254d8afe88aba21cd56a186f4485dd532ab8.tar.gz",
+      "hash": "01lp2bghnm6qch6q1a2aj782nbh00abhcx56p2kajhls3m24208r"
+    },
+    "fish_logo": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "laughedelic",
+        "repo": "fish_logo"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "dc6a40836de8c24c62ad7c4365aa9f21292c3e6e",
+      "url": "https://github.com/laughedelic/fish_logo/archive/dc6a40836de8c24c62ad7c4365aa9f21292c3e6e.tar.gz",
+      "hash": "09lvjjwajiysd5y4wvl3iq3md4bzi5f69kwb4xdvgr6s8yvx158d"
+    },
+    "kanagawa.yazi": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "dangooddd",
+        "repo": "kanagawa.yazi"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "a0b1d9dec31387b5f8a82c96044e6419b6c46534",
+      "url": "https://github.com/dangooddd/kanagawa.yazi/archive/a0b1d9dec31387b5f8a82c96044e6419b6c46534.tar.gz",
+      "hash": "0jbmvwrs4zbx8z487266jknz6vff7gfhm1p1jb8swzjn0l164qcw"
+    },
+    "scripts.irssi.org": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "irssi",
+        "repo": "scripts.irssi.org"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "f587a925ec8bb75545dae07ef57a208a12b65b06",
+      "url": "https://github.com/irssi/scripts.irssi.org/archive/f587a925ec8bb75545dae07ef57a208a12b65b06.tar.gz",
+      "hash": "0xvg94qi4n209lmliljrv102ia8gimvad4aqplpjf7nn2hpa32vd"
+    },
+    "shadower": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "n3oney",
+        "repo": "shadower"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "48f8f6bc227fc287b6669fb3ecaf4411d27a3b7a",
+      "url": "https://github.com/n3oney/shadower/archive/48f8f6bc227fc287b6669fb3ecaf4411d27a3b7a.tar.gz",
+      "hash": "1vbq0g069lf0fi1sprf59kpqr5ciaxb1zk92dcih4kwpf240mrxy"
+    },
+    "wlr-clients": {
+      "type": "Git",
+      "repository": {
+        "type": "GitLab",
+        "repo_path": "wlroots/wlr-clients",
+        "server": "https://gitlab.freedesktop.org/"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "65f108236fa5e1a1bc054d86982228dbeeab9c78",
+      "url": "https://gitlab.freedesktop.org/api/v4/projects/wlroots%2Fwlr-clients/repository/archive.tar.gz?sha=65f108236fa5e1a1bc054d86982228dbeeab9c78",
+      "hash": "1ms5ga1772i1jk9dvqc1vzqjd6z5n6yy1zqc7iq7xggaf7sflddq"
+    }
+  },
+  "version": 5
+}

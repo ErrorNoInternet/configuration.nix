@@ -1,0 +1,137 @@
+settings = {
+  core = {
+    settings_autosave = "no";
+    real_name = "Ryan";
+
+    timestamp_format = "%H:%M:%S";
+    timestamp_format_alt = "%a %b %e %H:%M:%S";
+  };
+};
+
+aliases = {
+  ab           = "allbuster";
+  allbuster    = "scrollback levelclear -level CLIENTCRAP,CLIENTERRORS,CLIENTNOTICE,CRAP,JOINS,MODES,PARTS,QUITS,NICKS";
+  cb           = "crapbuster";
+  crapbuster   = "scrollback levelclear -level CLIENTCRAP,CRAP";
+  eb           = "extrabuster";
+  statusbuster = "scrollback levelclear -level JOINS,QUITS,PARTS,NICKS";
+  stb          = "statusbuster";
+
+  addallchans  = "SCRIPT EXEC foreach my \\$channel (Irssi::channels()) { Irssi::command(\"CHANNEL ADD -auto \\$channel->{visible_name} \\$channel->{server}->{tag} \\$channel->{key}\")\\;}";
+  atag         = "WINDOW SERVER";
+  b            = "BAN";
+  back         = "AWAY";
+  bans         = "BAN";
+  bye          = "QUIT";
+  c            = "CLEAR";
+  calc         = "EXEC - if command -v qalc >/dev/null 2>&1\\; then printf '%s=' '$*'\\; echo '$*' | qalc \\; else echo qalc was not found\\; fi";
+  chat         = "DCC CHAT";
+  date         = "TIME";
+  dehighlight  = "DEHILIGHT";
+  describe     = "ACTION";
+  dhl          = "DEHILIGHT";
+  exemptlist   = "MODE $C +e";
+  exit         = "QUIT";
+  goto         = "SCROLLBACK GOTO";
+  highlight    = "HILIGHT";
+  hl           = "HILIGHT";
+  host         = "USERHOST";
+  invitelist   = "MODE $C +I";
+  j            = "JOIN";
+  k            = "KICK";
+  kb           = "KICKBAN";
+  kn           = "KNOCKOUT";
+  last         = "LASTLOG";
+  leave        = "PART";
+  m            = "MSG";
+  mub          = "UNBAN *";
+  n            = "NAMES";
+  nmsg         = "^MSG";
+  p            = "PART";
+  pass         = "QUOTE PASS";
+  q            = "QUERY";
+  read         = "script exec \$_->activity(0) for Irssi::windows";
+  reset        = "SET -default";
+  run          = "SCRIPT LOAD";
+  say          = "MSG *";
+  sb           = "SCROLLBACK";
+  sbar         = "STATUSBAR";
+  shelp        = "QUOTE HELP";
+  signoff      = "QUIT";
+  t            = "TOPIC";
+  ub           = "UNBAN";
+  umode        = "MODE $N";
+  unset        = "SET -clear";
+  w            = "WHO";
+  wc           = "WINDOW CLOSE";
+  wg           = "WINDOW GOTO";
+  wi           = "WHOIS";
+  wjoin        = "JOIN -window";
+  wl           = "WINDOW LIST";
+  wn           = "WINDOW NEW HIDDEN";
+  wquery       = "QUERY -window";
+  ww           = "WHOWAS";
+};
+
+ignores = (
+  { level = "JOINS PARTS QUITS NICKS";  channels = ("#btrfs", "#bcache", "#selinux", "#jujutsu"); },
+  { level = "NO_ACT ALL";               channels = ("#btrfs", "#bcache", "#selinux", "#jujutsu"); },
+);
+
+channels = (
+  { name = "#chatbot";      chatnet = "tuxcord";      autojoin = "no"; },
+  { name = "#general";      chatnet = "tuxcord";      autojoin = "no"; },
+  { name = "#linux";        chatnet = "tuxcord";      autojoin = "no"; },
+  { name = "#memes";        chatnet = "tuxcord";      autojoin = "no"; },
+  { name = "#rust";         chatnet = "tuxcord";      autojoin = "no"; },
+  { name = "#testing";      chatnet = "tuxcord";      autojoin = "no"; },
+);
+
+servers = (
+  {
+    chatnet = "libera";
+    address = "irc.libera.chat";
+    port = "6697";
+    use_ssl = "yes";
+    ssl_verify = "yes";
+    autoconnect = "no";
+  },
+
+  {
+    chatnet = "oftc";
+    address = "irc.oftc.net";
+    port = "6697";
+    use_ssl = "yes";
+    ssl_verify = "yes";
+    autoconnect = "no";
+  },
+
+  {
+    chatnet = "tuxcord";
+    address = "irc.tuxcord.net";
+    port = "6697";
+    use_ssl = "yes";
+    ssl_verify = "yes";
+    autoconnect = "no";
+  }
+);
+
+chatnets = {
+  libera = {
+    type = "IRC";
+    nick = "ErrorNoInternet";
+    alternate_nick = "ErrorNoInternet_";
+  };
+
+  oftc = {
+    type = "IRC";
+    nick = "ErrorNoInternet";
+    alternate_nick = "ErrorNoInternet_";
+  };
+
+  tuxcord = {
+    type = "IRC";
+    nick = "error";
+    alternate_nick = "error_";
+  };
+};

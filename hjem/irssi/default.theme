@@ -1,0 +1,7 @@
+abstracts = {
+  menick = "%U%Y$*%n";
+  ownctcp = "[%r$0%K(%R$1-%K)%n] ";
+  ownnotice = "[%r$0%K(%R$1-%K)%n] ";
+  sb_background = "%0%w";
+  sb_foreground = "%*";
+};
