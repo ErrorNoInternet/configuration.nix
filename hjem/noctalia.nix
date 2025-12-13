@@ -5,10 +5,11 @@
       appLauncher = {
         customLaunchPrefix = "";
         customLaunchPrefixEnabled = false;
-        enableClipPreview = true;
         enableClipboardHistory = true;
+        enableClipPreview = true;
         pinnedExecs = [ ];
         position = "top_center";
+        showCategories = true;
         sortByMostUsed = true;
         terminalCommand = "kitty -e";
         useApp2Unit = false;
@@ -40,10 +41,13 @@
           center = [
             {
               characterCount = 2;
+              colorizeIcons = true;
               followFocusedScreen = false;
               hideUnoccupied = false;
               id = "Workspace";
               labelMode = "index";
+              showApplications = false;
+              showLabelsOnlyWhenOccupied = true;
             }
           ];
           left = [
@@ -62,6 +66,7 @@
               showCpuTemp = false;
               showCpuUsage = true;
               showDiskUsage = true;
+              showGpuTemp = false;
               showMemoryAsPercent = true;
               showMemoryUsage = true;
               showNetworkStats = true;
@@ -86,6 +91,7 @@
               blacklist = [ ];
               colorizeIcons = true;
               drawerEnabled = false;
+              hidePassive = false;
               id = "Tray";
               pinned = [
                 "Fcitx"
@@ -107,6 +113,8 @@
               deviceNativePath = "";
               displayMode = "alwaysShow";
               id = "Battery";
+              showNoctaliaPerformance = true;
+              showPowerProfiles = true;
               warningThreshold = 25;
             }
             {
@@ -152,9 +160,6 @@
             id = "weather-card";
           }
         ];
-      };
-      changelog = {
-        lastSeenVersion = "";
       };
       colorSchemes = {
         darkMode = true;
@@ -206,18 +211,21 @@
       dock = {
         backgroundOpacity = 1;
         colorizeIcons = false;
+        deadOpacity = 0.6;
         displayMode = "always_visible";
         enabled = false;
         floatingRatio = 1;
+        inactiveIndicators = false;
         monitors = [ ];
         onlySameOutput = true;
         pinnedApps = [ ];
+        pinnedStatic = false;
         size = 1;
       };
       general = {
         allowPanelsOnScreenWithoutBar = true;
         animationDisabled = false;
-        animationSpeed = 1;
+        animationSpeed = 2;
         avatarImage = "~/.face";
         boxRadiusRatio = 1;
         compactLockScreen = true;
@@ -235,6 +243,7 @@
         shadowOffsetY = 3;
         showHibernateOnLockScreen = false;
         showScreenCorners = false;
+        showSessionButtonsOnLockScreen = true;
       };
       hooks = {
         darkModeChange = "";
@@ -276,6 +285,15 @@
         normalUrgencyDuration = 8;
         overlayLayer = true;
         respectExpireTimeout = false;
+        sounds = {
+          criticalSoundFile = "";
+          enabled = false;
+          excludedApps = "discord,firefox,chrome,chromium,edge";
+          lowSoundFile = "";
+          normalSoundFile = "";
+          separateSounds = false;
+          volume = 0.5;
+        };
       };
       osd = {
         autoHideMs = 1000;
@@ -340,7 +358,7 @@
         ];
         showHeader = true;
       };
-      settingsVersion = 26;
+      settingsVersion = 28;
       systemMonitor = {
         cpuCriticalThreshold = 90;
         cpuPollingInterval = 3000;
@@ -349,6 +367,9 @@
         diskCriticalThreshold = 95;
         diskPollingInterval = 10000;
         diskWarningThreshold = 85;
+        gpuCriticalThreshold = 90;
+        gpuPollingInterval = 3000;
+        gpuWarningThreshold = 80;
         memCriticalThreshold = 90;
         memPollingInterval = 3000;
         memWarningThreshold = 80;
@@ -380,6 +401,7 @@
         vicinae = false;
         walker = false;
         wezterm = false;
+        yazi = false;
       };
       ui = {
         fontDefault = osConfig.fonts.preferred;
@@ -388,7 +410,7 @@
         fontFixedScale = 1.25;
         panelBackgroundOpacity = 1;
         panelsAttachedToBar = true;
-        settingsPanelAttachToBar = true;
+        settingsPanelMode = "attached";
         tooltipsEnabled = true;
       };
       wallpaper = {
