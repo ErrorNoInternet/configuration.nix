@@ -8,16 +8,25 @@ let
   cfg = config.snapper;
   inherit (lib)
     mkEnableOption
+    mkOption
     mkIf
+    types
     ;
 in
 {
   options.snapper = {
     enable = mkEnableOption "";
+
+    interval = mkOption {
+      default = "hourly";
+      type = types.str;
+    };
   };
 
   config = mkIf cfg.enable {
     services.snapper = {
+      snapshotInterval = cfg.interval;
+
       configs = {
         home = {
           SUBVOLUME = "/home";

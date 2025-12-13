@@ -6,6 +6,9 @@
   pkgs,
   ...
 }:
+let
+  inherit (lib) mkDefault mkIf;
+in
 {
   imports = with inputs; [
     agenix.nixosModules.default
@@ -73,7 +76,7 @@
   boot = {
     loader = {
       grub = {
-        enable = true;
+        enable = mkDefault true;
         efiSupport = true;
         efiInstallAsRemovable = true;
         device = "nodev";
@@ -85,6 +88,8 @@
 
     kernelParams = [ "boot.shell_on_fail" ];
     kernelPackages = pkgs.linuxPackages_latest;
+
+    binfmt.emulatedSystems = mkIf pkgs.stdenv.hostPlatform.isx86 [ "aarch64-linux" ];
   };
 
   networking = {

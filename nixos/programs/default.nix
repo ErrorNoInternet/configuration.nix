@@ -81,7 +81,6 @@
     nix-output-monitor
     npins
     nvme-cli
-    nvtopPackages.full
     openssl
     pinentry-curses
     python3

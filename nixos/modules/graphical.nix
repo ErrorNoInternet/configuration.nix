@@ -66,6 +66,7 @@ in
       gimp3-with-plugins
       grim
       nheko
+      nvtopPackages.full
       pavucontrol
       playerctl
       qalculate-gtk
