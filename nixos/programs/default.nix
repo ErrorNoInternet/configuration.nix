@@ -65,6 +65,7 @@
     gcc
     gnupg
     hdparm
+    hyperfine
     inputs'.agenix.packages.default
     inputs'.nix-super.packages.default
     jq
@@ -83,6 +84,7 @@
     nvme-cli
     openssl
     pinentry-curses
+    poop
     python3
     python3Packages.bpython
     ripgrep
