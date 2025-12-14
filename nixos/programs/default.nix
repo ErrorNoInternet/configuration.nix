@@ -47,6 +47,7 @@
     bat
     binsort
     btdu
+    cachix
     cmatrix
     compsize
     croc

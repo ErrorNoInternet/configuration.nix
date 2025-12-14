@@ -9,6 +9,7 @@
     ./rpi.nix
     ./snapper.nix
     ./spicetify.nix
+    ./substituters.nix
     ./wifi.nix
   ];
 }

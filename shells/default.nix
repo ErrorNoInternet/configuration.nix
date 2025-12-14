@@ -7,6 +7,7 @@
         name = "configuration.nix";
         packages = with pkgs; [
           bat
+          cachix
           deadnix
           delta
           git
