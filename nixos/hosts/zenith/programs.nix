@@ -12,6 +12,8 @@
   };
 
   environment.systemPackages = with pkgs; [
+    android-tools
     newsboat
+    scrcpy
   ];
 }
