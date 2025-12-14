@@ -30,8 +30,8 @@ let
 in
 {
   flake.nixosConfigurations = {
+    moss = mkSystem "moss" "x86_64-linux";
     scout = mkSystem "scout" "aarch64-linux";
-
     zenith = mkSystem "zenith" "x86_64-linux";
   };
 }
