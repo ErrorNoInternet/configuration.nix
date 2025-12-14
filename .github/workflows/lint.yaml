@@ -1,0 +1,34 @@
+name: Lint
+on:
+  push:
+    paths:
+      - '**.nix'
+      - flake.lock
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  nix-expressions:
+    name: Nix expressions
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@v21
+        with:
+          extra-conf: |
+            log-lines = 500
+
+      - name: Clone repository
+        uses: actions/checkout@v5
+
+      - name: Check if properly formatted
+        run: nix fmt -- -c .
+
+      - name: Static code analysis
+        if: always()
+        run: nix run nixpkgs#statix -- check -i npins
+
+      - name: Scan for dead code
+        if: always()
+        run: nix run nixpkgs#deadnix -- -f --exclude npins
