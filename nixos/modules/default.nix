@@ -6,6 +6,7 @@
     ./graphical.nix
     ./host.nix
     ./hyprland.nix
+    ./kernel.nix
     ./rpi.nix
     ./snapper.nix
     ./spicetify.nix
