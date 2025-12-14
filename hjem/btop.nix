@@ -77,7 +77,7 @@
           log_level = "WARNING";
           mem_below_net = false;
           mem_graphs = true;
-          net_auto = false;
+          net_auto = true;
           net_download = 100;
           net_sync = true;
           net_upload = 100;
