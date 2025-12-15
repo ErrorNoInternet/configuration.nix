@@ -1,7 +1,5 @@
 { config, ... }:
 {
-  snapper.enable = true;
-
   fileSystems."/persist".neededForBoot = true;
 
   disko.devices.disk.main = {

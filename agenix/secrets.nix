@@ -1,6 +1,10 @@
 let
+  moss = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA4uIe2N455VCDagDux58713OyhpCzpDMRJZb0ebxs4g";
   zenith = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHwJ6RJApteQw7nKq/dAyUC5gMf+q34bFivpBoE5eOeF";
-  systems = [ zenith ];
+  systems = [
+    moss
+    zenith
+  ];
 in
 {
   "aerc.age".publicKeys = [ zenith ];

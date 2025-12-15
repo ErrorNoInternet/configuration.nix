@@ -15,7 +15,9 @@ let
 in
 {
   options.snapper = {
-    enable = mkEnableOption "";
+    enable = mkEnableOption "" // {
+      default = true;
+    };
 
     interval = mkOption {
       default = "hourly";
