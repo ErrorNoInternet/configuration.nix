@@ -1,3 +1,4 @@
+{ config, ... }:
 {
   xdg.config.files."nbrc".text = ''
     #!/usr/bin/env bash
@@ -9,6 +10,6 @@
   '';
 
   environment.sessionVariables = {
-    NBRC_PATH = "$XDG_CONFIG_HOME/nbrc";
+    NBRC_PATH = "${config.xdg.config.directory}/nbrc";
   };
 }
