@@ -22,6 +22,12 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
+      - name: Remove unused files
+        uses: mathio/gha-cleanup@v1
+        with:
+          remove-browsers: true
+          verbose: true
+
       - name: Install Nix
         uses: DeterminateSystems/nix-installer-action@v21
         with:
