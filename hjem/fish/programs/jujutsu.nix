@@ -11,11 +11,11 @@
       jC = "jj commit";
       jci = "jj commit -i";
       jD = "jj diff";
-      jde = "jj desc --edit";
-      jde- = "jj desc --edit @-";
-      jde-- = "jj desc --edit @--";
-      jde--I = "jj desc --edit @-- --ignore-immutable";
-      jde-I = "jj desc --edit @- --ignore-immutable";
+      jde = "jj desc --editor";
+      jde- = "jj desc --editor @-";
+      jde-- = "jj desc --editor @--";
+      jde--I = "jj desc --editor @-- --ignore-immutable";
+      jde-I = "jj desc --editor @- --ignore-immutable";
       je = "jj edit";
       jE = "jj evolog";
       je- = "jj edit @-";
