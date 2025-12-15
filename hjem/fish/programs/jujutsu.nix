@@ -2,6 +2,7 @@
   rum.programs.fish = {
     abbrs = {
       "je+" = "jj edit @+";
+      "jR." = "jj restore .";
       "js+" = "jj show @+";
       j = "jj";
       ja = "jj abandon";
