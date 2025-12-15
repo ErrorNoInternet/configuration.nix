@@ -13,10 +13,16 @@ jobs:
       matrix:
         include:
           - host: moss
+            attribute: toplevel
             os: ubuntu-24.04
 
           - host: scout
+            attribute: toplevel
             os: ubuntu-24.04-arm
+
+          - host: zenith
+            attribute: kernel
+            os: ubuntu-24.04
 
     name: NixOS (${{ matrix.host }})
     runs-on: ${{ matrix.os }}
@@ -43,8 +49,8 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@v5
 
-      - name: Build ${{ matrix.host }}
+      - name: Build ${{ matrix.host }} (${{ matrix.attribute }})
         run: nix run github:Mic92/nix-fast-build --
                --no-nom --skip-cached
-               --eval-workers 2 -j 1
-               --flake .#nixosConfigurations.${{ matrix.host }}.config.system.build.toplevel
+               --eval-workers 1 -j 4
+               --flake .#nixosConfigurations.${{ matrix.host }}.config.system.build.${{ matrix.attribute }}
