@@ -44,6 +44,7 @@
 
   environment.systemPackages = with pkgs; [
     _7zz
+    atop
     bat
     binsort
     btdu
@@ -57,6 +58,7 @@
     doggo
     duf
     dust
+    dwarfs
     evcxr
     eza
     fastfetch
@@ -66,6 +68,7 @@
     gcc
     gnupg
     hdparm
+    htop
     hyperfine
     inputs'.agenix.packages.default
     inputs'.disko.packages.default
@@ -78,19 +81,24 @@
     lowfi
     lsof
     microfetch
+    multipath-tools
     nb
     neovim
     nh
     nix-output-monitor
+    nmap
     npins
     nvme-cli
     openssl
     pinentry-curses
     poop
+    progress
     python3
     python3Packages.bpython
     ripgrep
+    screen
     smartmontools
+    squashfsTools
     statix
     tmux
     translate-shell

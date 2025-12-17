@@ -64,6 +64,7 @@ in
       ffmpeg-full
       galaxy-buds-client
       gimp3-with-plugins
+      gparted
       grim
       nheko
       nvtopPackages.full
