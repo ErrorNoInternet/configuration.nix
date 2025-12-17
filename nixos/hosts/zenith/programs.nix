@@ -13,6 +13,7 @@
 
   environment.systemPackages = with pkgs; [
     android-tools
+    discord
     newsboat
     scrcpy
   ];
