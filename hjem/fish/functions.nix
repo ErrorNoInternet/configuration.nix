@@ -58,7 +58,7 @@ in
     '';
 
     mb = ''
-      read_silent -P "[luks] password for btank: " LUKS_PASSWORD
+      read -sP "[luks] password for btank: " LUKS_PASSWORD
       echo
       echo "$LUKS_PASSWORD" | sudo cryptsetup luksOpen /dev/disk/by-uuid/63d74946-b1e7-4c3b-87a6-67bca2f6a096 luks_btank
       if [ "$status" != 0 ]
