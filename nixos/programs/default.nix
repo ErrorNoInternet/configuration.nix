@@ -51,6 +51,7 @@
     cachix
     cmatrix
     compsize
+    copyparty
     croc
     deadnix
     delta
