@@ -20,7 +20,10 @@ in
     programs = {
       gamemode.enable = true;
       gamescope.enable = true;
-      steam.enable = true;
+      steam = {
+        enable = true;
+        extraCompatPackages = [ pkgs.proton-ge-bin ];
+      };
     };
 
     environment.systemPackages = with pkgs; [
