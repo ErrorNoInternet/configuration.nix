@@ -74,6 +74,7 @@
     inputs'.agenix.packages.default
     inputs'.disko.packages.default
     inputs'.nix-super.packages.default
+    inxi
     jq
     jujutsu
     killall
