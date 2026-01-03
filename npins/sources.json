@@ -48,9 +48,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "a0b1d9dec31387b5f8a82c96044e6419b6c46534",
-      "url": "https://github.com/dangooddd/kanagawa.yazi/archive/a0b1d9dec31387b5f8a82c96044e6419b6c46534.tar.gz",
-      "hash": "0jbmvwrs4zbx8z487266jknz6vff7gfhm1p1jb8swzjn0l164qcw"
+      "revision": "04985d12842b06bdb3ad5f1b3d7abc631059b7f5",
+      "url": "https://github.com/dangooddd/kanagawa.yazi/archive/04985d12842b06bdb3ad5f1b3d7abc631059b7f5.tar.gz",
+      "hash": "1g1nw861cmnssgnyzk8gd78rdbi0f65r1kkfsbjbm0g6bi2k6gb3"
     },
     "kernel-patches": {
       "type": "Git",
@@ -61,9 +61,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "8a5e89d346af4221d7426b45da65a677a1ff5582",
-      "url": "https://github.com/CachyOS/kernel-patches/archive/8a5e89d346af4221d7426b45da65a677a1ff5582.tar.gz",
-      "hash": "0zyb4lh20zx9780dc0qxhdwgbyxfl4vyn6mma53l9saqyl0sip3v"
+      "revision": "6184689fad8d8933f646025245295d4d50e20eb9",
+      "url": "https://github.com/CachyOS/kernel-patches/archive/6184689fad8d8933f646025245295d4d50e20eb9.tar.gz",
+      "hash": "17j890ka9hcz6rgfhrqadxzn57j78rixxxis53zf4lraga24h524"
     },
     "scripts.irssi.org": {
       "type": "Git",
@@ -74,9 +74,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "f587a925ec8bb75545dae07ef57a208a12b65b06",
-      "url": "https://github.com/irssi/scripts.irssi.org/archive/f587a925ec8bb75545dae07ef57a208a12b65b06.tar.gz",
-      "hash": "0xvg94qi4n209lmliljrv102ia8gimvad4aqplpjf7nn2hpa32vd"
+      "revision": "2954a5af174d0170d0d23b0c99dffc82d1975731",
+      "url": "https://github.com/irssi/scripts.irssi.org/archive/2954a5af174d0170d0d23b0c99dffc82d1975731.tar.gz",
+      "hash": "0krnj0zmpvdj66kd58h4db7ifzahjdmv5f29sg51nnvi4ja5xh66"
     },
     "shadower": {
       "type": "Git",
