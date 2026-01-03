@@ -37,7 +37,7 @@
       bind    = $mod           , A, exec                   , scratchpad
       bind    = $mod           , S, togglespecialworkspace , scratchpad
       bind    = $mod           , W, togglespecialworkspace , communication
-      bind    = $mod SHIFT     , A                         , exec, scratchpad -g
+      bind    = $mod SHIFT     , A                         , exec, scratchpad -g -m "fuzzel -d"
       bind    = $mod SHIFT     , W, movetoworkspace        , special:communication
 
       bind    = $mod           , RETURN    , exec, kitty

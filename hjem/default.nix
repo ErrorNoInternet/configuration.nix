@@ -33,6 +33,7 @@
       ./fastfetch.nix
       ./fcitx5.nix
       ./fish
+      ./fuzzel.nix
       ./fzf.nix
       ./gdb.nix
       ./git.nix
