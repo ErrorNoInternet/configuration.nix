@@ -42,6 +42,7 @@
       ./hyprland
       ./irssi
       ./jujutsu.nix
+      ./kdeconnect.nix
       ./kitty.nix
       ./mangohud.nix
       ./mpv.nix

@@ -56,6 +56,8 @@ in
       firefox.enable = true;
 
       gdk-pixbuf.modulePackages = [ pkgs.librsvg ];
+
+      kdeconnect.enable = true;
     };
 
     environment.systemPackages = with pkgs; [
