@@ -17,7 +17,6 @@
   systemd.services.power-profile-performance = {
     wantedBy = [ "multi-user.target" ];
     after = [ "power-profiles-daemon.service" ];
-    requires = [ "power-profiles-daemon.service" ];
 
     serviceConfig = {
       Type = "oneshot";
