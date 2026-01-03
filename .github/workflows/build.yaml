@@ -4,6 +4,7 @@ on:
     paths:
       - '**.nix'
       - flake.lock
+      - npins/sources.json
   workflow_dispatch:
 
 jobs:
