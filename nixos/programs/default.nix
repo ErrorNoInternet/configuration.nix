@@ -83,6 +83,7 @@
     lowfi
     lsof
     microfetch
+    miniupnpc
     multipath-tools
     nb
     neovim
