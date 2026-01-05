@@ -82,6 +82,7 @@
     lm_sensors
     lowfi
     lsof
+    manix
     microfetch
     miniupnpc
     multipath-tools
