@@ -25,6 +25,7 @@ in
       pandoc
       rustup
       tokei
+      toolbox
     ];
   };
 }
