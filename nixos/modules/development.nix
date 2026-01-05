@@ -21,6 +21,7 @@ in
       clang
       git-graph
       nixfmt-rfc-style
+      onefetch
       pandoc
       rustup
       tokei
