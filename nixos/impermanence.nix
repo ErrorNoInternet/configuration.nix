@@ -2,7 +2,7 @@
 {
   boot.initrd.postResumeCommands = lib.mkAfter ''
     mkdir /impermanence_tmp
-    mount /dev/disk/by-label/${config.host.name} /impermanence_tmp
+    mount /dev/disk/by-label/${config.host.name} /impermanence_tmp || mount /dev/disk/by-label/NIXOS_SD /impermanence_tmp
 
     timestamp=$(date --date="@$(stat -c %Y /impermanence_tmp/@)" "+%Y-%m-%d_%H:%M:%S")
     if [[ -e /impermanence_tmp/@ ]]; then
