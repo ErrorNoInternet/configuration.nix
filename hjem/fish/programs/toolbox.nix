@@ -1,13 +1,17 @@
 {
-  rum.programs.fish.abbrs = {
-    tb = "toolbox";
-    tbc = "toolbox create";
-    tbe = "toolbox enter";
-    tbl = "toolbox list";
-    tbR = "toolbox rm";
-    tbr = "toolbox run -c";
+  rum.programs.fish = {
+    aliases.toolbox = "SHELL=fish toolbox";
 
-    stbe = "sudo toolbox enter";
-    stbl = "sudo toolbox list";
+    abbrs = {
+      tb = "toolbox";
+      tbc = "toolbox create";
+      tbe = "toolbox enter";
+      tbl = "toolbox list";
+      tbR = "toolbox rm";
+      tbr = "toolbox run -c";
+
+      stbe = "sudo toolbox enter";
+      stbl = "sudo toolbox list";
+    };
   };
 }
