@@ -12,7 +12,7 @@
         {
           selector = "class:lowfi";
           rules = [
-            "size 306 80"
+            "size 306 82"
             "center"
             "float"
           ];
