@@ -572,7 +572,7 @@
           enabled = false;
         };
         petpet = {
-          enabled = false;
+          enabled = true;
         };
         PictureInPicture = {
           enabled = false;
