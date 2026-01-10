@@ -1,5 +1,13 @@
 { pkgs, ... }:
 {
+  services.printing = {
+    enable = true;
+    drivers = with pkgs; [
+      brlaser
+      hplip
+    ];
+  };
+
   development.enable = true;
   gaming.enable = true;
   graphical.enable = true;
@@ -14,6 +22,7 @@
   environment.systemPackages = with pkgs; [
     android-tools
     discord
+    libreoffice-fresh
     newsboat
     scrcpy
   ];
