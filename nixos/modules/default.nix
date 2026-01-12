@@ -11,6 +11,7 @@
     ./snapper.nix
     ./spicetify.nix
     ./substituters.nix
+    ./sysctl.nix
     ./wifi.nix
   ];
 }
