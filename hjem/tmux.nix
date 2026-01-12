@@ -30,7 +30,8 @@
       #[fg=brightwhite,bg=brightblack,nobold,noitalics,nounderscore]#[fg=black,bg=brightwhite,bold] #H#{prefix_highlight}#[fg=brightwhite,bg=default,nobold]"
       set -g @prefix_highlight_fg 'black'
       set -g @prefix_highlight_bg 'brightwhite'
-      set -g @prefix_highlight_empty_prompt '#[fg=black,bg=brightwhite,bold] '
+      set -g @prefix_highlight_empty_attr 'bg=brightwhite'
+      set -g @prefix_highlight_empty_prompt ' '
       set -g window-status-bell-style bg=default
       set -g window-status-format "#[fg=brightblack,bg=default,nobold,noitalics,nounderscore]#[fg=brightwhite,bg=brightblack] #I \
       #[fg=brightwhite,bg=brightblack,nobold,noitalics,nounderscore]| #[fg=brightwhite,bg=brightblack]#W #F #[fg=brightblack,bg=default,nobold,noitalics,nounderscore]"
