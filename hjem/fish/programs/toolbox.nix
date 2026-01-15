@@ -1,6 +1,6 @@
 {
   rum.programs.fish = {
-    aliases.toolbox = "SHELL=fish toolbox";
+    aliases.toolbox = "SHELL=fish command toolbox";
 
     abbrs = {
       tb = "toolbox";
