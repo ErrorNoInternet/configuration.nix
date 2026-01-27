@@ -26,11 +26,11 @@
         }
         {
           selector = "class:kitty";
-          rules = [ "size 960 594" ];
+          rules = [ "size 980 630" ];
         }
         {
           selector = "class:org.mozilla.firefox";
-          rules = [ "size 960 594" ];
+          rules = [ "size 980 630" ];
         }
 
         {
