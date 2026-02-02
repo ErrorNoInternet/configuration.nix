@@ -99,6 +99,7 @@
     progress
     python3
     python3Packages.bpython
+    python3Packages.btrfs
     ripgrep
     screen
     smartmontools
