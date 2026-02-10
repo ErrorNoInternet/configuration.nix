@@ -42,6 +42,7 @@
     ];
     files = [
       "/etc/machine-id"
+      "/var/lib/cups/printers.conf"
     ];
   };
 
