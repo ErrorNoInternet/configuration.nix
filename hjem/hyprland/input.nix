@@ -21,7 +21,6 @@
       accel_profile = "flat";
       repeat_delay = 150;
       repeat_rate = 50;
-      sensitivity = 0.75;
     };
 
     misc = {
