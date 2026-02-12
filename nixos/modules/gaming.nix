@@ -30,6 +30,7 @@ in
       mangohud
       osu-lazer-bin
       prismlauncher
+      r2modman
       superTuxKart
       xonotic
     ];
