@@ -87,7 +87,7 @@
               ;
           };
 
-          formatter = pkgs.nixfmt-rfc-style;
+          formatter = pkgs.nixfmt;
         };
 
       flake.pins = import ./npins;

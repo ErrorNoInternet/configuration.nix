@@ -27,7 +27,7 @@ in
       mangohud
       osu-lazer-bin
       prismlauncher
-      superTuxKart
+      supertuxkart
       xonotic
     ];
   };

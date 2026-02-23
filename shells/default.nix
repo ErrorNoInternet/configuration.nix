@@ -15,7 +15,7 @@
           inputs.disko.packages.${stdenv.hostPlatform.system}.default
           neovim
           nix-output-monitor
-          nixfmt-rfc-style
+          nixfmt
           npins
           parted
           smartmontools
