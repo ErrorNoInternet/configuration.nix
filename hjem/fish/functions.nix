@@ -225,8 +225,8 @@ in
       set jj_status (jj log -r@ -n1 --no-graph --color always -T '
       separate(" ",
         surround(
-          raw_escape_sequence(if(diff.files(), "'$(set_color yellow)'", "'$(set_color green)'")) ++ "(",
-          raw_escape_sequence(if(diff.files(), "'$(set_color yellow)'", "'$(set_color green)'")) ++ ")",
+          raw_escape_sequence(if(diff.files(), "'$(set_color bryellow)'", "'$(set_color green)'")) ++ "(",
+          raw_escape_sequence(if(diff.files(), "'$(set_color bryellow)'", "'$(set_color green)'")) ++ ")",
           separate(" ",
             bookmarks.map(|x| if(
               x.name().substr(0, 10).starts_with(x.name()),
@@ -254,7 +254,7 @@ in
         ),
         if(
           diff.files(),
-          raw_escape_sequence("'$(set_color yellow)'") ++ "!" ++ diff.files().len()
+          raw_escape_sequence("'$(set_color bryellow)'") ++ "!" ++ diff.files().len()
         ),
       )' | string trim)
       _tide_print_item jj $tide_jj_icon' ' "$jj_status"
