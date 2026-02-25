@@ -67,7 +67,9 @@
     fastfetch
     fd
     file
-    gcal
+    (gcal.overrideAttrs (_old: {
+      env.NIX_CFLAGS_COMPILE = "-std=gnu17";
+    }))
     gcc
     gnupg
     hdparm
