@@ -1,4 +1,5 @@
 [
+  ./dwarfs
   ./gamma-control
   ./hyprtoggle
   ./kitty
