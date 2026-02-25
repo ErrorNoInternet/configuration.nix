@@ -26,6 +26,11 @@
       "url": "https://github.com/dedukun/bookmarks.yazi/archive/9ef1254d8afe88aba21cd56a186f4485dd532ab8.tar.gz",
       "hash": "01lp2bghnm6qch6q1a2aj782nbh00abhcx56p2kajhls3m24208r"
     },
+    "dwarfs": {
+      "type": "Tarball",
+      "url": "https://github.com/mhx/dwarfs/releases/download/v0.14.1/dwarfs-0.14.1.tar.xz",
+      "hash": "17jvyrdzqrwmzlh1r240sfvr3zqcfqibpn7yp8bd9bgmx3fwp1cw"
+    },
     "fish_logo": {
       "type": "Git",
       "repository": {

@@ -2,6 +2,7 @@
   inputs',
   lib,
   pkgs,
+  self',
   ...
 }:
 {
@@ -49,6 +50,10 @@
     }))
     python3Packages.btrfs
 
+    (gcal.overrideAttrs (_old: {
+      env.NIX_CFLAGS_COMPILE = "-std=gnu17";
+    }))
+
     _7zz
     atop
     bat
@@ -65,15 +70,11 @@
     doggo
     duf
     dust
-    dwarfs
     evcxr
     eza
     fastfetch
     fd
     file
-    (gcal.overrideAttrs (_old: {
-      env.NIX_CFLAGS_COMPILE = "-std=gnu17";
-    }))
     gcc
     gnupg
     hdparm
@@ -107,6 +108,7 @@
     progress
     ripgrep
     screen
+    self'.packages.dwarfs
     smartmontools
     squashfsTools
     statix
