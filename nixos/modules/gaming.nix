@@ -31,7 +31,7 @@ in
       osu-lazer-bin
       prismlauncher
       r2modman
-      superTuxKart
+      supertuxkart
       xonotic
     ];
   };

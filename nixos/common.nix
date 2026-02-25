@@ -37,7 +37,10 @@ in
 
   documentation = {
     doc.enable = false;
-    man.generateCaches = false;
+    man.cache = {
+      enable = true;
+      generateAtRuntime = true;
+    };
   };
 
   nix = {
