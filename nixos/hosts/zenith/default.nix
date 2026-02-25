@@ -8,6 +8,9 @@
     ./usbguard.nix
   ];
 
-  kernel.bore = true;
+  kernel = {
+    bore = true;
+    qol = true;
+  };
   time.timeZone = "America/New_York";
 }

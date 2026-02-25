@@ -43,6 +43,12 @@
   };
 
   environment.systemPackages = with pkgs; [
+    python3
+    (python3Packages.bpython.overrideAttrs (_old: {
+      dontUsePytestCheck = true;
+    }))
+    python3Packages.btrfs
+
     _7zz
     atop
     bat
@@ -65,7 +71,9 @@
     fastfetch
     fd
     file
-    gcal
+    (gcal.overrideAttrs (_old: {
+      env.NIX_CFLAGS_COMPILE = "-std=gnu17";
+    }))
     gcc
     gnupg
     hdparm
@@ -97,9 +105,6 @@
     pinentry-curses
     poop
     progress
-    python3
-    python3Packages.bpython
-    python3Packages.btrfs
     ripgrep
     screen
     smartmontools

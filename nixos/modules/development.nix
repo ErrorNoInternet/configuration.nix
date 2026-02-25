@@ -20,7 +20,7 @@ in
     environment.systemPackages = with pkgs; [
       clang
       git-graph
-      nixfmt-rfc-style
+      nixfmt
       onefetch
       pandoc
       rustup
