@@ -43,12 +43,7 @@
 
     nix-super = {
       url = "github:privatevoid-net/nix-super";
-      inputs = {
-        flake-parts.follows = "flake-parts";
-        nixpkgs-23-11.follows = "nixpkgs";
-        nixpkgs-regression.follows = "nixpkgs";
-        nixpkgs.follows = "nixpkgs";
-      };
+      inputs.flake-parts.follows = "flake-parts";
     };
 
     noctalia = {
