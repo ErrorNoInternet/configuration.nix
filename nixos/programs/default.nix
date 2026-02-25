@@ -43,6 +43,11 @@
   };
 
   environment.systemPackages = with pkgs; [
+    python3
+    (python3Packages.bpython.overrideAttrs (_old: {
+      dontUsePytestCheck = true;
+    }))
+
     _7zz
     bat
     binsort
@@ -87,8 +92,6 @@
     openssl
     pinentry-curses
     poop
-    python3
-    python3Packages.bpython
     ripgrep
     smartmontools
     statix
