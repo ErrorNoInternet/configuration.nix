@@ -22,6 +22,7 @@
   environment.systemPackages = with pkgs; [
     android-tools
     discord
+    imhex
     libreoffice-fresh
     newsboat
     scrcpy
