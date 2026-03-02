@@ -59,6 +59,7 @@
     bat
     binsort
     btdu
+    bubblewrap
     cachix
     cmatrix
     compsize
