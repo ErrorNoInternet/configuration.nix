@@ -26,6 +26,7 @@ in
       rustup
       tokei
       toolbox
+      zig
     ];
   };
 }
