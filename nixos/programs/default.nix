@@ -68,6 +68,7 @@
     deadnix
     delta
     difftastic
+    dnsutils
     doggo
     duf
     dust
