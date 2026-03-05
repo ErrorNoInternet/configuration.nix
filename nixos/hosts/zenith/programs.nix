@@ -25,6 +25,7 @@
     imhex
     libreoffice-fresh
     newsboat
+    obsidian
     scrcpy
   ];
 }
