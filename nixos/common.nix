@@ -92,7 +92,10 @@ in
     kernelParams = [ "boot.shell_on_fail" ];
     kernelPackages = pkgs.linuxPackages_latest;
 
-    binfmt.emulatedSystems = mkIf pkgs.stdenv.hostPlatform.isx86 [ "aarch64-linux" ];
+    binfmt = {
+      emulatedSystems = mkIf pkgs.stdenv.hostPlatform.isx86 [ "aarch64-linux" ];
+      preferStaticEmulators = true;
+    };
   };
 
   networking = {
