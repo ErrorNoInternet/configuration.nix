@@ -96,6 +96,22 @@
       "url": "https://github.com/n3oney/shadower/archive/48f8f6bc227fc287b6669fb3ecaf4411d27a3b7a.tar.gz",
       "hash": "sha256-vucKiHCXTwIjayLNH1ZXkZWM70zF5atDdMDRZMADeO0="
     },
+    "spicy-lyrics": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "Spikerko",
+        "repo": "spicy-lyrics"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "5.19.12",
+      "revision": "d221033de0cdc73b6d19a1d42c08a4c1e7859ad6",
+      "url": "https://api.github.com/repos/Spikerko/spicy-lyrics/tarball/refs/tags/5.19.12",
+      "hash": "sha256-htGtfA6PwAyrHS7WMska7UINVerVBukXQ+tLQxxfnlo="
+    },
     "wlr-clients": {
       "type": "Git",
       "repository": {

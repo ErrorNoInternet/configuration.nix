@@ -2,6 +2,7 @@
   config,
   inputs',
   lib,
+  self,
   ...
 }:
 let
@@ -32,6 +33,11 @@ in
           keyboardShortcut
           songStats
           volumePercentage
+
+          {
+            name = "spicy-lyrics.mjs";
+            src = "${self.pins.spicy-lyrics}/builds";
+          }
         ];
         enabledCustomApps = with spicePkgs.apps; [
           lyricsPlus
