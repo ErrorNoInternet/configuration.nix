@@ -20,6 +20,7 @@
       bind    = $mod           , G      , exec, noctalia-shell ipc call launcher clipboard
       bind    = $mod           , O      , exec, noctalia-shell ipc call controlCenter toggle
       bind    = $mod           , P      , exec, noctalia-shell ipc call notifications toggleHistory
+      bind    = $mod SHIFT     , code:60, exec, noctalia-shell ipc call plugin:unicode toggle
       bind    = $mod SHIFT     , O      , exec, noctalia-shell ipc call calendar toggle
       bind    = $mod SHIFT     , P      , exec, noctalia-shell ipc call notifications dismissAll
 
