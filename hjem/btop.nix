@@ -64,6 +64,7 @@
           custom_gpu_name5 = "";
           disk_free_priv = false;
           force_tty = false;
+          freq_mode = "range";
           gpu_mirror_graph = true;
           graph_symbol = "braille";
           graph_symbol_cpu = "default";
@@ -112,6 +113,7 @@
           shown_boxes = "cpu mem net proc gpu0";
           swap_disk = false;
           temp_scale = "celsius";
+          terminal_sync = false;
           theme_background = false;
           truecolor = true;
           update_ms = 1000;
