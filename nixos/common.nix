@@ -145,25 +145,33 @@ in
     memoryPercent = 200;
   };
 
-  users.users = {
-    root.hashedPasswordFile = config.age.secrets.rootPassword.path;
-
-    error = {
-      hashedPasswordFile = config.age.secrets.errorPassword.path;
-      isNormalUser = true;
-      shell = pkgs.fish;
-
-      extraGroups = [
-        "wheel"
-        "networkmanager"
-      ];
-
-      openssh.authorizedKeys.keys = [
+  users.users =
+    let
+      authorizedKeys = [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDzdpxex2GlFVf5G2qsh3Ixa/XCMjnbq4JSTmAev7WYJ error.nointernet@gmail.com"
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIExq/sL8TLmD7AERh7X9afXlqeuf4g5EeIaoemRf+C7l ErrorNoPhone"
       ];
+    in
+    {
+      root = {
+        hashedPasswordFile = config.age.secrets.rootPassword.path;
+
+        openssh.authorizedKeys.keys = authorizedKeys;
+      };
+
+      error = {
+        hashedPasswordFile = config.age.secrets.errorPassword.path;
+        isNormalUser = true;
+        shell = pkgs.fish;
+
+        extraGroups = [
+          "wheel"
+          "networkmanager"
+        ];
+
+        openssh.authorizedKeys.keys = authorizedKeys;
+      };
     };
-  };
 
   nixpkgs.config.allowUnfree = true;
 
