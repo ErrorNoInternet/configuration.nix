@@ -5,6 +5,9 @@
   self',
   ...
 }:
+let
+  inherit (lib) mkDefault mkForce;
+in
 {
   imports = [
     ./aerc.nix
@@ -14,13 +17,13 @@
   ];
 
   services = {
-    mullvad-vpn.enable = true;
+    mullvad-vpn.enable = mkDefault true;
   };
 
   programs = {
     fish = {
       enable = true;
-      shellAliases = lib.mkForce { };
+      shellAliases = mkForce { };
     };
 
     fuse.userAllowOther = true;
