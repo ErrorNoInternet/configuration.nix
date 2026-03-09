@@ -1,6 +1,31 @@
 { lib, osConfig, ... }:
 {
   xdg.config.files = lib.mkIf osConfig.graphical.enable {
+    "noctalia/plugins.json".text = builtins.toJSON {
+      sources = [
+        {
+          enabled = true;
+          name = "Noctalia Plugins";
+          url = "https://github.com/noctalia-dev/noctalia-plugins";
+        }
+      ];
+      states = {
+        screen-recorder = {
+          enabled = true;
+          sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
+        };
+        timer = {
+          enabled = true;
+          sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
+        };
+        unicode-picker = {
+          enabled = true;
+          sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
+        };
+      };
+      version = 2;
+    };
+
     "noctalia/settings.json".text = builtins.toJSON {
       appLauncher = {
         autoPasteClipboard = false;
@@ -29,21 +54,23 @@
         viewMode = "list";
       };
       audio = {
-        cavaFrameRate = 30;
         mprisBlacklist = [ ];
         preferredPlayer = "";
+        spectrumFrameRate = 30;
         visualizerType = "linear";
         volumeFeedback = true;
+        volumeFeedbackSoundFile = "";
         volumeOverdrive = false;
         volumeStep = 5;
       };
       bar = {
         autoHideDelay = 500;
         autoShowDelay = 150;
-        backgroundOpacity = 1;
+        backgroundOpacity = 0.8;
         barType = "simple";
         capsuleColorKey = "none";
         capsuleOpacity = 1;
+        contentPadding = 2;
         density = "default";
         displayMode = "always_visible";
         floating = false;
@@ -53,15 +80,24 @@
         hideOnOverview = false;
         marginHorizontal = 5;
         marginVertical = 5;
+        middleClickAction = "settings";
+        middleClickCommand = "";
+        middleClickFollowMouse = false;
         monitors = [ ];
+        mouseWheelAction = "none";
+        mouseWheelWrap = true;
         outerCorners = true;
         position = "top";
+        reverseScroll = false;
+        rightClickAction = "launcherPanel";
+        rightClickCommand = "";
+        rightClickFollowMouse = false;
         screenOverrides = [ ];
         showCapsule = true;
         showOnWorkspaceSwitch = true;
         showOutline = false;
-        useSeparateOpacity = false;
-        widgetSpacing = 6;
+        useSeparateOpacity = true;
+        widgetSpacing = 10;
         widgets = {
           center = [
             {
@@ -71,6 +107,7 @@
               enableScrollWheel = true;
               focusedColor = "primary";
               followFocusedScreen = false;
+              fontWeight = "bold";
               groupedBorderOpacity = 0.5;
               hideUnoccupied = false;
               iconScale = 0.75;
@@ -99,6 +136,7 @@
               diskPath = "/";
               iconColor = "primary";
               id = "SystemMonitor";
+              showCpuCores = false;
               showCpuFreq = false;
               showCpuTemp = false;
               showCpuUsage = true;
@@ -117,14 +155,11 @@
             }
             {
               compactMode = false;
-              compactShowAlbumArt = true;
-              compactShowVisualizer = false;
               hideMode = "hidden";
               hideWhenIdle = false;
               id = "MediaMini";
               maxWidth = 150;
               panelShowAlbumArt = true;
-              panelShowVisualizer = true;
               scrollingMode = "hover";
               showAlbumArt = false;
               showArtistFirst = true;
@@ -136,6 +171,25 @@
             }
           ];
           right = [
+            {
+              defaultSettings = {
+                audioCodec = "opus";
+                audioSource = "default_output";
+                colorRange = "limited";
+                copyToClipboard = false;
+                directory = "";
+                filenamePattern = "recording_yyyyMMdd_HHmmss";
+                frameRate = "60";
+                hideInactive = false;
+                iconColor = "none";
+                quality = "very_high";
+                resolution = "original";
+                showCursor = true;
+                videoCodec = "h264";
+                videoSource = "portal";
+              };
+              id = "plugin:screen-recorder";
+            }
             {
               blacklist = [ ];
               chevronColor = "none";
@@ -322,6 +376,9 @@
         groupContextMenuMode = "extended";
         groupIndicatorStyle = "dots";
         inactiveIndicators = false;
+        indicatorColor = "primary";
+        indicatorOpacity = 0.6;
+        indicatorThickness = 3;
         launcherIconColor = "none";
         launcherPosition = "end";
         monitors = [ ];
@@ -329,7 +386,7 @@
         pinnedApps = [ ];
         pinnedStatic = false;
         position = "bottom";
-        showFrameIndicator = true;
+        showDockIndicator = false;
         showLauncherIcon = false;
         sitOnFrame = false;
         size = 1;
@@ -344,9 +401,11 @@
         boxRadiusRatio = 1;
         clockFormat = "hh\\nmm";
         clockStyle = "digital";
-        compactLockScreen = true;
-        dimmerOpacity = 0.6;
+        compactLockScreen = false;
+        dimmerOpacity = 0.4;
+        enableBlurBehind = true;
         enableLockScreenCountdown = true;
+        enableLockScreenMediaControls = true;
         enableShadows = true;
         forceBlackScreenCorners = false;
         iRadiusRatio = 1;
@@ -356,6 +415,7 @@
           ];
           keyEnter = [
             "Return"
+            "Enter"
           ];
           keyEscape = [
             "Esc"
@@ -376,10 +436,10 @@
         language = "";
         lockOnSuspend = true;
         lockScreenAnimations = true;
-        lockScreenBlur = 0;
+        lockScreenBlur = 0.4;
         lockScreenCountdownDuration = 10000;
         lockScreenMonitors = [ ];
-        lockScreenTint = 0;
+        lockScreenTint = 0.4;
         passwordChars = false;
         radiusRatio = 1;
         reverseScroll = false;
@@ -405,6 +465,20 @@
         startup = "";
         wallpaperChange = "";
       };
+      idle = {
+        customCommands = "[]";
+        enabled = false;
+        fadeDuration = 5;
+        lockCommand = "";
+        lockTimeout = 660;
+        resumeLockCommand = "";
+        resumeScreenOffCommand = "";
+        resumeSuspendCommand = "";
+        screenOffCommand = "";
+        screenOffTimeout = 600;
+        suspendCommand = "";
+        suspendTimeout = 1800;
+      };
       location = {
         analogClockInCalendar = false;
         firstDayOfWeek = -1;
@@ -421,11 +495,13 @@
       };
       network = {
         airplaneModeEnabled = false;
+        bluetoothAutoConnect = true;
         bluetoothDetailsViewMode = "grid";
         bluetoothHideUnnamedDevices = false;
         bluetoothRssiPollIntervalMs = 60000;
         bluetoothRssiPollingEnabled = false;
         disableDiscoverability = false;
+        networkPanelView = "wifi";
         wifiDetailsViewMode = "grid";
         wifiEnabled = true;
       };
@@ -437,6 +513,10 @@
         manualSunrise = "06:30";
         manualSunset = "18:30";
         nightTemp = "4000";
+      };
+      noctaliaPerformance = {
+        disableDesktopWidgets = true;
+        disableWallpaper = true;
       };
       notifications = {
         backgroundOpacity = 1;
@@ -485,6 +565,17 @@
       };
       plugins = {
         autoUpdate = true;
+      };
+      screenRecorder = {
+        audioCodec = "opus";
+        audioSource = "default_output";
+        colorRange = "limited";
+        directory = "~/";
+        frameRate = 60;
+        quality = "high";
+        showCursor = true;
+        videoCodec = "h264";
+        videoSource = "portal";
       };
       sessionMenu = {
         countdownDuration = 10000;
@@ -546,7 +637,7 @@
         showHeader = true;
         showKeybinds = true;
       };
-      settingsVersion = 53;
+      settingsVersion = 57;
       systemMonitor = {
         batteryCriticalThreshold = 5;
         batteryWarningThreshold = 20;
@@ -575,19 +666,17 @@
         enableUserTheming = false;
       };
       ui = {
-        bluetoothDetailsViewMode = "grid";
-        bluetoothHideUnnamedDevices = false;
         boxBorderEnabled = false;
         fontDefault = "${osConfig.fonts.preferred}";
         fontDefaultScale = 1.05;
         fontFixed = "${osConfig.fonts.preferred} Mono";
         fontFixedScale = 1.1;
-        networkPanelView = "wifi";
-        panelBackgroundOpacity = 1;
+        panelBackgroundOpacity = 0.75;
         panelsAttachedToBar = true;
+        scrollbarAlwaysVisible = true;
         settingsPanelMode = "attached";
+        settingsPanelSideBarCardStyle = false;
         tooltipsEnabled = true;
-        wifiDetailsViewMode = "grid";
       };
       wallpaper = {
         automationEnabled = false;
