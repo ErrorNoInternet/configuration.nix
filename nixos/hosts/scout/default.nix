@@ -7,6 +7,7 @@
     ./nginx.nix
     ./programs.nix
     ./storage.nix
+    ./upnp.nix
   ];
 
   time.timeZone = "America/New_York";
