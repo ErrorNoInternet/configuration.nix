@@ -19,7 +19,10 @@
         no_donation_nag = true;
       };
 
-      misc.enable_anr_dialog = false;
+      misc = {
+        disable_xdg_env_checks = true;
+        enable_anr_dialog = false;
+      };
     };
   };
 }
