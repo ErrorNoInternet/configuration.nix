@@ -19,7 +19,7 @@
           let
             rulePart = lib.concatStringsSep ", " a.rules;
           in
-          "layerrule = ${rulePart}, match:class ${a.class}"
+          "layerrule = ${rulePart}, match:namespace ${a.namespace}"
         ) attrs;
 
       windowRuleSets = [
@@ -188,8 +188,20 @@
 
       layerRuleSets = [
         {
-          class = "hyprpicker";
-          rules = [ "animation fade" ];
+          namespace = "hyprpicker";
+          rules = [ "no_anim on" ];
+        }
+        {
+          namespace = "selection";
+          rules = [ "no_anim on" ];
+        }
+        {
+          namespace = "noctalia-background-.*";
+          rules = [ "blur on" ];
+        }
+        {
+          namespace = "noctalia-background-.*";
+          rules = [ "ignore_alpha 0.7" ];
         }
       ];
     in
