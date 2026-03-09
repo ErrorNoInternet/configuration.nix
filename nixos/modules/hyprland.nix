@@ -24,6 +24,8 @@ in
         enable = true;
         withUWSM = true;
       };
+
+      gpu-screen-recorder.enable = true;
     };
 
     services.noctalia-shell.enable = true;
