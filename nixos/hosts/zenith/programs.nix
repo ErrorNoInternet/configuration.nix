@@ -27,5 +27,6 @@
     newsboat
     obsidian
     scrcpy
+    songrec
   ];
 }
