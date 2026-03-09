@@ -11,7 +11,7 @@
       "submodules": false,
       "revision": "e14d815ada5b79a460ddefad04a31530df92f83e",
       "url": "https://github.com/ErrorNoInternet/Ori-fcitx5/archive/e14d815ada5b79a460ddefad04a31530df92f83e.tar.gz",
-      "hash": "07w9nbl7qc8wxxnc885c9h7954yzv7nxzif4i0lbqmrhpzqvs3n5"
+      "hash": "sha256-xQ698b8wV7woiMTF3+3Z35OSDkysIMRs7xwxfOiyiR8="
     },
     "bookmarks.yazi": {
       "type": "Git",
@@ -24,12 +24,12 @@
       "submodules": false,
       "revision": "9ef1254d8afe88aba21cd56a186f4485dd532ab8",
       "url": "https://github.com/dedukun/bookmarks.yazi/archive/9ef1254d8afe88aba21cd56a186f4485dd532ab8.tar.gz",
-      "hash": "01lp2bghnm6qch6q1a2aj782nbh00abhcx56p2kajhls3m24208r"
+      "hash": "sha256-GQFBRB2aQqmmuKZ0BpcCAC4r0JFKqIANZNhUC98SlwY="
     },
     "dwarfs": {
       "type": "Tarball",
       "url": "https://github.com/mhx/dwarfs/releases/download/v0.14.1/dwarfs-0.14.1.tar.xz",
-      "hash": "17jvyrdzqrwmzlh1r240sfvr3zqcfqibpn7yp8bd9bgmx3fwp1cw"
+      "hash": "sha256-nIXL3ej1rdQWuv7YuyJ2DP+Rt9OAiBwg/ZVn/Fv2W54="
     },
     "fish_logo": {
       "type": "Git",
@@ -42,7 +42,7 @@
       "submodules": false,
       "revision": "dc6a40836de8c24c62ad7c4365aa9f21292c3e6e",
       "url": "https://github.com/laughedelic/fish_logo/archive/dc6a40836de8c24c62ad7c4365aa9f21292c3e6e.tar.gz",
-      "hash": "09lvjjwajiysd5y4wvl3iq3md4bzi5f69kwb4xdvgr6s8yvx158d"
+      "hash": "sha256-DZXQt0fa5LdbJ4vPZFyJf5FWB46Dbk58adpHqbiUmyY="
     },
     "kanagawa.yazi": {
       "type": "Git",
@@ -55,7 +55,7 @@
       "submodules": false,
       "revision": "04985d12842b06bdb3ad5f1b3d7abc631059b7f5",
       "url": "https://github.com/dangooddd/kanagawa.yazi/archive/04985d12842b06bdb3ad5f1b3d7abc631059b7f5.tar.gz",
-      "hash": "1g1nw861cmnssgnyzk8gd78rdbi0f65r1kkfsbjbm0g6bi2k6gb3"
+      "hash": "sha256-Yz0zRVzmgbrk0m7OkItxIK6W0WkPze/t09pWFgziNrw="
     },
     "kernel-patches": {
       "type": "Git",
@@ -68,7 +68,7 @@
       "submodules": false,
       "revision": "6184689fad8d8933f646025245295d4d50e20eb9",
       "url": "https://github.com/CachyOS/kernel-patches/archive/6184689fad8d8933f646025245295d4d50e20eb9.tar.gz",
-      "hash": "17j890ka9hcz6rgfhrqadxzn57j78rixxxis53zf4lraga24h524"
+      "hash": "sha256-RBRIhHoqU+L+KDr23mNGR55if28KZ+heNp/BpCZISJ4="
     },
     "scripts.irssi.org": {
       "type": "Git",
@@ -81,7 +81,7 @@
       "submodules": false,
       "revision": "2954a5af174d0170d0d23b0c99dffc82d1975731",
       "url": "https://github.com/irssi/scripts.irssi.org/archive/2954a5af174d0170d0d23b0c99dffc82d1975731.tar.gz",
-      "hash": "0krnj0zmpvdj66kd58h4db7ifzahjdmv5f29sg51nnvi4ja5xh66"
+      "hash": "sha256-xsBelCRxWxvK00m4smuTUH0Xz2oEotKmMbLtWz+QNk8="
     },
     "shadower": {
       "type": "Git",
@@ -94,7 +94,7 @@
       "submodules": false,
       "revision": "48f8f6bc227fc287b6669fb3ecaf4411d27a3b7a",
       "url": "https://github.com/n3oney/shadower/archive/48f8f6bc227fc287b6669fb3ecaf4411d27a3b7a.tar.gz",
-      "hash": "1vbq0g069lf0fi1sprf59kpqr5ciaxb1zk92dcih4kwpf240mrxy"
+      "hash": "sha256-vucKiHCXTwIjayLNH1ZXkZWM70zF5atDdMDRZMADeO0="
     },
     "wlr-clients": {
       "type": "Git",
@@ -107,8 +107,8 @@
       "submodules": false,
       "revision": "65f108236fa5e1a1bc054d86982228dbeeab9c78",
       "url": "https://gitlab.freedesktop.org/api/v4/projects/wlroots%2Fwlr-clients/repository/archive.tar.gz?sha=65f108236fa5e1a1bc054d86982228dbeeab9c78",
-      "hash": "1ms5ga1772i1jk9dvqc1vzqjd6z5n6yy1zqc7iq7xggaf7sflddq"
+      "hash": "sha256-uDXq9HHqvX5wPAz/4L2x5Zsm8d+B4d3SlCGKc4J6Rdc="
     }
   },
-  "version": 5
+  "version": 7
 }
