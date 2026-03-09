@@ -3,123 +3,192 @@
   rum.desktops.hyprland.extraConfig =
     let
       mkWindowRules =
-        attrs: lib.concatMap (a: map (rule: "windowrule = ${rule}, ${a.selector}") a.rules) attrs;
+        attrs:
+        map (
+          a:
+          let
+            rulePart = lib.concatStringsSep ", " a.rules;
+          in
+          "windowrule = ${rulePart}, match:${a.match.type} ${a.match.value}"
+        ) attrs;
 
       mkLayerRules =
-        attrs: lib.concatMap (a: map (rule: "layerrule = ${rule}, ${a.target}") a.rules) attrs;
+        attrs:
+        map (
+          a:
+          let
+            rulePart = lib.concatStringsSep ", " a.rules;
+          in
+          "layerrule = ${rulePart}, match:namespace ${a.namespace}"
+        ) attrs;
 
       windowRuleSets = [
         {
-          selector = "class:lowfi";
+          match = {
+            type = "class";
+            value = "lowfi";
+          };
           rules = [
             "size 306 82"
-            "center"
-            "float"
+            "center on"
+            "float on"
           ];
         }
         {
-          selector = "class:qalculate-gtk";
+          match = {
+            type = "class";
+            value = "qalculate-gtk";
+          };
           rules = [
             "size 720 540"
-            "float"
+            "float on"
           ];
         }
         {
-          selector = "class:kitty";
+          match = {
+            type = "class";
+            value = "kitty";
+          };
           rules = [ "size 980 630" ];
         }
         {
-          selector = "class:org.mozilla.firefox";
+          match = {
+            type = "class";
+            value = "org.mozilla.firefox";
+          };
           rules = [ "size 980 630" ];
         }
 
         {
-          selector = "class:blueman-manager";
+          match = {
+            type = "class";
+            value = "blueman-manager";
+          };
           rules = [
             "animation slide"
-            "center"
-            "float"
-            "size 60% 65%"
+            "center on"
+            "float on"
+            "size (monitor_w*0.6) (monitor_h*0.65)"
           ];
         }
         {
-          selector = "class:xdg-desktop-portal";
+          match = {
+            type = "class";
+            value = "xdg-desktop-portal";
+          };
           rules = [
             "animation slide"
-            "center"
-            "float"
-            "size 60% 65%"
-          ];
-        }
-        {
-          selector = "title:File Upload";
-          rules = [
-            "animation slide"
-            "center"
-            "float"
-            "size 60% 65%"
-          ];
-        }
-        {
-          selector = "title:Open";
-          rules = [
-            "animation slide"
-            "center"
-            "float"
-            "size 60% 65%"
-          ];
-        }
-        {
-          selector = "title:Save As";
-          rules = [
-            "animation slide"
-            "center"
-            "float"
-            "size 60% 65%"
+            "center on"
+            "float on"
+            "size (monitor_w*0.6) (monitor_h*0.65)"
           ];
         }
 
         {
-          selector = "class:branchdialog";
-          rules = [ "float" ];
+          match = {
+            type = "title";
+            value = "File Upload";
+          };
+          rules = [
+            "animation slide"
+            "center on"
+            "float on"
+            "size (monitor_w*0.6) (monitor_h*0.65)"
+          ];
         }
         {
-          selector = "class:confirm";
-          rules = [ "float" ];
+          match = {
+            type = "title";
+            value = "Open";
+          };
+          rules = [
+            "animation slide"
+            "center on"
+            "float on"
+            "size (monitor_w*0.6) (monitor_h*0.65)"
+          ];
         }
         {
-          selector = "class:dialog";
-          rules = [ "float" ];
+          match = {
+            type = "title";
+            value = "Save As";
+          };
+          rules = [
+            "animation slide"
+            "center on"
+            "float on"
+            "size (monitor_w*0.6) (monitor_h*0.65)"
+          ];
+        }
+
+        {
+          match = {
+            type = "class";
+            value = "branchdialog";
+          };
+          rules = [ "float on" ];
         }
         {
-          selector = "class:error";
-          rules = [ "float" ];
+          match = {
+            type = "class";
+            value = "confirm";
+          };
+          rules = [ "float on" ];
         }
         {
-          selector = "class:mpv";
-          rules = [ "float" ];
+          match = {
+            type = "class";
+            value = "dialog";
+          };
+          rules = [ "float on" ];
         }
         {
-          selector = "class:notification";
-          rules = [ "float" ];
+          match = {
+            type = "class";
+            value = "error";
+          };
+          rules = [ "float on" ];
         }
         {
-          selector = "class:org.kde.kdeconnect.daemon";
-          rules = [ "float" ];
+          match = {
+            type = "class";
+            value = "mpv";
+          };
+          rules = [ "float on" ];
         }
         {
-          selector = "class:pavucontrol";
-          rules = [ "float" ];
+          match = {
+            type = "class";
+            value = "notification";
+          };
+          rules = [ "float on" ];
         }
         {
-          selector = "class:vimiv";
-          rules = [ "float" ];
+          match = {
+            type = "class";
+            value = "org.kde.kdeconnect.daemon";
+          };
+          rules = [ "float on" ];
+        }
+        {
+          match = {
+            type = "class";
+            value = "pavucontrol";
+          };
+          rules = [ "float on" ];
+        }
+        {
+          match = {
+            type = "class";
+            value = "vimiv";
+          };
+          rules = [ "float on" ];
         }
       ];
 
       layerRuleSets = [
         {
-          target = "hyprpicker";
+          namespace = "hyprpicker";
           rules = [ "animation fade" ];
         }
       ];
