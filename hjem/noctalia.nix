@@ -462,7 +462,7 @@
         sounds = {
           criticalSoundFile = "";
           enabled = true;
-          excludedApps = "discord,firefox,chrome,chromium,edge";
+          excludedApps = "chrome,chromium,discord,edge,firefox,vesktop";
           lowSoundFile = "";
           normalSoundFile = "";
           separateSounds = false;
