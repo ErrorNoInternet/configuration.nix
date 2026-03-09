@@ -10,6 +10,7 @@ let
 in
 {
   "aerc.age".publicKeys = [ zenith ];
+  "ddns.age".publicKeys = [ scout ];
   "usbguard.age".publicKeys = [ zenith ];
   "users/error.age".publicKeys = systems;
   "users/root.age".publicKeys = systems;
