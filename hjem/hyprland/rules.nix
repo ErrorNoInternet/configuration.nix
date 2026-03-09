@@ -19,7 +19,7 @@
           let
             rulePart = lib.concatStringsSep ", " a.rules;
           in
-          "layerrule = ${rulePart}, match:namespace ${a.namespace}"
+          "layerrule = ${rulePart}, match:class ${a.class}"
         ) attrs;
 
       windowRuleSets = [
@@ -188,7 +188,7 @@
 
       layerRuleSets = [
         {
-          namespace = "hyprpicker";
+          class = "hyprpicker";
           rules = [ "animation fade" ];
         }
       ];
