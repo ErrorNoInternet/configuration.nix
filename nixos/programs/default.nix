@@ -122,6 +122,7 @@ in
     tmux
     translate-shell
     try
+    tz
     vgrep
     vim
   ];
