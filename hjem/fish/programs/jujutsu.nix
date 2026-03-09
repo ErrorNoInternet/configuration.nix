@@ -6,6 +6,7 @@
       "js+" = "jj show @+";
       j = "jj";
       ja = "jj abandon";
+      jA = "jj arrange";
       jb = "jj bookmark";
       jbm = "jj bookmark move";
       jC = "jj commit";
