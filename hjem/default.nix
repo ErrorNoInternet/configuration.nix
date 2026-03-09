@@ -51,7 +51,6 @@
       ./newsboat.nix
       ./noctalia.nix
       ./nvtop.nix
-      ./prismlauncher.nix
       ./qalculate.nix
       ./qt.nix
       ./satty.nix
