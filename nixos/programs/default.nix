@@ -119,6 +119,7 @@ in
     smartmontools
     squashfsTools
     statix
+    sysstat
     tmux
     translate-shell
     try
