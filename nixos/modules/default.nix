@@ -1,6 +1,7 @@
 {
   imports = [
     ./development.nix
+    ./fail2ban.nix
     ./fonts.nix
     ./gaming.nix
     ./graphical.nix
