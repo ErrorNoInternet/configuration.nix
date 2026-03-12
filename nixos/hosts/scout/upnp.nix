@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 {
   systemd = {
     timers.upnp = {
@@ -24,9 +24,15 @@
 
       script = ''
         IP=$(hostname -I | awk '{print $1}')
-        upnpc -a "$IP" 22 10101 tcp 0 || true
-        upnpc -a "$IP" 6984 6984 tcp 0 || true
-      '';
+      ''
+      + lib.concatStringsSep "\n" (
+        map (port: "upnpc -a \"$IP\" ${port} ${port} tcp 0 || true") (
+          map (port: builtins.toString port) [
+            22
+            6984
+          ]
+        )
+      );
     };
   };
 }
