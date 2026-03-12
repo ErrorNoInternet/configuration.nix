@@ -100,7 +100,10 @@ in
 
   networking = {
     networkmanager.enable = true;
-    firewall.enable = false;
+    firewall = {
+      enable = mkDefault false;
+      allowedTCPPorts = [ 22 ];
+    };
   };
 
   services = {

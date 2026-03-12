@@ -10,5 +10,6 @@
     ./upnp.nix
   ];
 
+  networking.firewall.enable = true;
   time.timeZone = "America/New_York";
 }
