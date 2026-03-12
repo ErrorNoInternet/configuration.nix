@@ -10,6 +10,8 @@
     ./upnp.nix
   ];
 
+  fail2ban.enable = true;
   networking.firewall.enable = true;
+
   time.timeZone = "America/New_York";
 }
