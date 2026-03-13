@@ -127,5 +127,6 @@ in
     tz
     vgrep
     vim
+    whois
   ];
 }
