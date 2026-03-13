@@ -20,6 +20,7 @@ in
     environment.systemPackages = with pkgs; [
       clang
       git-graph
+      go
       mold
       nixfmt
       onefetch
