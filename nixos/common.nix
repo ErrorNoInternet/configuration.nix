@@ -102,7 +102,9 @@ in
     networkmanager.enable = true;
     firewall = {
       enable = mkDefault false;
+
       allowedTCPPorts = [ 22 ];
+      allowedUDPPorts = [ 5353 ];
     };
   };
 
