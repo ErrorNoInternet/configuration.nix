@@ -73,6 +73,7 @@
         contentPadding = 2;
         density = "default";
         displayMode = "always_visible";
+        enableExclusionZoneInset = true;
         floating = false;
         fontScale = 1;
         frameRadius = 12;
@@ -115,7 +116,8 @@
               labelMode = "index";
               occupiedColor = "secondary";
               pillSize = 0.65;
-              showApplications = false;
+              showApplications = true;
+              showApplicationsHover = true;
               showBadge = true;
               showLabelsOnlyWhenOccupied = true;
               unfocusedIconsOpacity = 1;
@@ -359,6 +361,7 @@
       desktopWidgets = {
         enabled = false;
         gridSnap = false;
+        gridSnapScale = false;
         monitorWidgets = [ ];
         overviewEnabled = true;
       };
@@ -677,6 +680,7 @@
         settingsPanelMode = "attached";
         settingsPanelSideBarCardStyle = false;
         tooltipsEnabled = true;
+        translucentWidgets = false;
       };
       wallpaper = {
         automationEnabled = false;
