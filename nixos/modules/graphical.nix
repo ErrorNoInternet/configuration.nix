@@ -32,6 +32,8 @@ in
         gnome-keyring.enable = true;
         gcr-ssh-agent.enable = false;
       };
+
+      playerctld.enable = true;
     };
 
     i18n.inputMethod = {
