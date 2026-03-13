@@ -120,6 +120,7 @@ in
     squashfsTools
     statix
     sysstat
+    tcpdump
     tmux
     translate-shell
     try
