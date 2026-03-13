@@ -25,6 +25,7 @@ in
       nixfmt
       onefetch
       pandoc
+      pkg-config
       rustup
       tokei
       toolbox
