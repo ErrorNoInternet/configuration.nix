@@ -47,7 +47,6 @@
       ./kitty.nix
       ./mangohud.nix
       ./mpv.nix
-      ./nb.nix
       ./newsboat.nix
       ./noctalia.nix
       ./nvtop.nix

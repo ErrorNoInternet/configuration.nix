@@ -3,8 +3,8 @@
     abbrs = {
       "nre." = "nix repl .";
       n = "nix";
-      nB = "nix build";
-      nBl = "nix build -L";
+      nb = "nix build";
+      nbl = "nix build -L";
       nd = "nix develop -c fish";
       nD = "nix develop";
       nDl = "nix develop -L -c fish";

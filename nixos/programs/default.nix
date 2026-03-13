@@ -103,7 +103,6 @@ in
     microfetch
     miniupnpc
     multipath-tools
-    nb
     neovim
     nh
     nix-output-monitor
