@@ -19,6 +19,7 @@ in
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
       clang
+      gh
       git-graph
       go
       graphviz
