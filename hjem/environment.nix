@@ -1,15 +1,12 @@
 { lib, osConfig, ... }:
 {
   environment.sessionVariables = {
-    BROWSER = "firefox";
     TERMINAL = "kitty";
 
-    GLFW_IM_MODULE = "ibus";
-    QT_IM_MODULE = "fcitx";
-    XMODIFIERS = "@im=fcitx";
-
     BAT_THEME = "ansi";
+    GOPATH = "$HOME/.go";
     HWATCH = "--no-help-banner";
+
     NIXOS_OZONE_WL = 1;
   }
   // lib.optionalAttrs osConfig.hardware.nvidia.enabled {

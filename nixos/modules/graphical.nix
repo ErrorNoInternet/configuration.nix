@@ -62,31 +62,41 @@ in
       kdeconnect.enable = true;
     };
 
-    environment.systemPackages = with pkgs; [
-      bibata-cursors
-      cava
-      ffmpeg-full
-      galaxy-buds-client
-      gimp3-with-plugins
-      gparted
-      grim
-      nheko
-      nvtopPackages.full
-      pavucontrol
-      playerctl
-      qalculate-gtk
-      qbittorrent
-      ripdrag
-      satty
-      slurp
-      timg
-      vesktop
-      wechat
-      wev
+    environment = {
+      sessionVariables = {
+        BROWSER = "firefox";
 
-      kdePackages.breeze
-      kdePackages.breeze.qt5
-    ];
+        GLFW_IM_MODULE = "ibus";
+        QT_IM_MODULE = "fcitx";
+        XMODIFIERS = "@im=fcitx";
+      };
+
+      systemPackages = with pkgs; [
+        bibata-cursors
+        cava
+        ffmpeg-full
+        galaxy-buds-client
+        gimp3-with-plugins
+        gparted
+        grim
+        nheko
+        nvtopPackages.full
+        pavucontrol
+        playerctl
+        qalculate-gtk
+        qbittorrent
+        ripdrag
+        satty
+        slurp
+        timg
+        vesktop
+        wechat
+        wev
+
+        kdePackages.breeze
+        kdePackages.breeze.qt5
+      ];
+    };
 
     nixpkgs.config.permittedInsecurePackages = [
       "olm-3.2.16"
