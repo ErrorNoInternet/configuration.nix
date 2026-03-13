@@ -1,4 +1,5 @@
 {
+  inputs,
   inputs',
   pkgs,
   self,
@@ -9,7 +10,7 @@ builtins.listToAttrs (
     src:
     let
       pkg = pkgs.callPackage src {
-        inherit inputs' self;
+        inherit inputs inputs' self;
       };
     in
     {

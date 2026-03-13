@@ -103,7 +103,6 @@ in
     microfetch
     miniupnpc
     multipath-tools
-    neovim
     nh
     nix-output-monitor
     nmap
@@ -116,6 +115,7 @@ in
     ripgrep
     screen
     self'.packages.dwarfs
+    self'.packages.neovim
     smartmontools
     squashfsTools
     statix

@@ -51,6 +51,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nvf = {
+      url = "github:NotAShelf/nvf";
+      inputs = {
+        flake-parts.follows = "flake-parts";
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
+
     shadower.url = "github:n3oney/shadower";
 
     spicetify-nix = {
@@ -76,6 +84,7 @@
         {
           packages = import ./packages {
             inherit
+              inputs
               inputs'
               pkgs
               self

@@ -69,10 +69,6 @@
         url = "https://avatars.githubusercontent.com/u/61157623";
         sha256 = "0k90jpmp82f237b8cwpjdlybfc0gqm3f4l491zxii29ncln2dcb3";
       };
-
-      xdg.config.files = {
-        "nvim".source = ./nvim;
-      };
     };
   };
 }

@@ -1,0 +1,39 @@
+{
+  imports = [
+    ./autopairs.nix
+    ./barbar.nix
+    ./cmp.nix
+    ./colorizer.nix
+    ./comment.nix
+    ./comment.nix
+    ./conform.nix
+    ./fidget.nix
+    ./garbage-day.nix
+    ./git.nix
+    ./guess-indent.nix
+    ./highlight-undo.nix
+    ./ibl.nix
+    ./leap.nix
+    ./lint.nix
+    ./lualine.nix
+    ./mark-radar.nix
+    ./navic.nix
+    ./notify.nix
+    ./numb.nix
+    ./nvim-tree.nix
+    ./obsidian.nix
+    ./rustaceanvim.nix
+    ./smart-splits.nix
+    ./snacks.nix
+    ./sort.nix
+    ./spider.nix
+    ./statuscol.nix
+    ./suda.nix
+    ./telescope.nix
+    ./todo-comments.nix
+    ./treesitter.nix
+    ./ufo.nix
+    ./undotree.nix
+    ./yanky.nix
+  ];
+}

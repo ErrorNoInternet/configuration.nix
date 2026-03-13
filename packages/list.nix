@@ -3,6 +3,7 @@
   ./gamma-control
   ./hyprtoggle
   ./kitty
+  ./neovim
   ./savehw
   ./scratchpad
   ./tbw
