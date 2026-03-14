@@ -21,12 +21,13 @@
         --transient=No
 
       set -U tide_character_color yellow
+      set -U tide_character_vi_icon_default "❯"
       set -U tide_color_truncated_dirs white
       set -U tide_pwd_color_anchors white
       set -U tide_pwd_color_dirs white
       set -U tide_pwd_color_truncated_dirs white
       set -U tide_left_prompt_items pwd git jj character
-      set -U tide_right_prompt_items  status cmd_duration context jobs direnv \
+      set -U tide_right_prompt_items status cmd_duration context jobs direnv \
                       node python rustc java php ruby go zig \
                       distrobox toolbox
 
