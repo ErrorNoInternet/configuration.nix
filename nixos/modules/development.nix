@@ -20,6 +20,7 @@ in
     environment.systemPackages = with pkgs; [
       clang
       git-graph
+      mold
       nixfmt
       onefetch
       pandoc
