@@ -21,6 +21,7 @@ in
       clang
       git-graph
       go
+      graphviz
       mold
       nixfmt
       onefetch
