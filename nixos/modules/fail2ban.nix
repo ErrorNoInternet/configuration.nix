@@ -19,7 +19,7 @@ in
       bantime = "5m";
       bantime-increment = {
         enable = true;
-        multipliers = "1 2 6 12 24 72 144 288 864 2016";
+        multipliers = "1 2 6 24 288 864 2016 8640";
         rndtime = "5m";
       };
 
