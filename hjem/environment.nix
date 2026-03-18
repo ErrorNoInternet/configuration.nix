@@ -4,7 +4,7 @@
     TERMINAL = "kitty";
 
     BAT_THEME = "ansi";
-    GOPATH = "$HOME/.go";
+    GOPATH = "${osConfig.hjem.users.error.directory}/.go";
     HWATCH = "--no-help-banner";
 
     NIXOS_OZONE_WL = 1;
