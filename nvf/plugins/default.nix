@@ -1,5 +1,6 @@
 {
   imports = [
+    ./auto-hlsearch.nix
     ./autopairs.nix
     ./barbar.nix
     ./cmp.nix
