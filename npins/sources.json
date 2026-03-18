@@ -82,9 +82,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "d60f37176775b87d3300b333b39ae974adbda381",
-      "url": "https://github.com/CachyOS/kernel-patches/archive/d60f37176775b87d3300b333b39ae974adbda381.tar.gz",
-      "hash": "sha256-qsniqHnVIZdhGO6tYyugtWpOtdYofnUcpJAj6YAAvM4="
+      "revision": "5544a0679fd6f6fb714e275514449c4ab9db2a53",
+      "url": "https://github.com/CachyOS/kernel-patches/archive/5544a0679fd6f6fb714e275514449c4ab9db2a53.tar.gz",
+      "hash": "sha256-JErpxWTdoHq4JuDerfsbPA60FmWOxK4oX9UL9CcsP/Q="
     },
     "scripts.irssi.org": {
       "type": "Git",
