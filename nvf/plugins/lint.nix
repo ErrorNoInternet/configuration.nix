@@ -2,7 +2,6 @@
 {
   config.vim = {
     extraPackages = with pkgs; [
-      cspell
       markdownlint-cli2
       ruff
       yamllint
@@ -13,12 +12,8 @@
 
       linters_by_ft = {
         fish = [ "fish" ];
-        markdown = [
-          "cspell"
-          "markdownlint-cli2"
-        ];
+        markdown = [ "markdownlint-cli2" ];
         python = [ "ruff" ];
-        text = [ "cspell" ];
         yaml = [ "yamllint" ];
       };
 
