@@ -8,7 +8,14 @@
     ./usbguard.nix
   ];
 
-  kernel.qol = true;
+  kernel = {
+    cachyos = {
+      enable = true;
+      suffix = "lto-x86_64-v3";
+    };
+
+    qol = true;
+  };
 
   time.timeZone = "America/New_York";
 }
