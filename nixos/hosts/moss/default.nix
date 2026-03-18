@@ -5,6 +5,5 @@
     ./storage.nix
   ];
 
-  kernel.bore = true;
   time.timeZone = "America/New_York";
 }

@@ -73,19 +73,6 @@
       "url": "https://github.com/dangooddd/kanagawa.yazi/archive/04985d12842b06bdb3ad5f1b3d7abc631059b7f5.tar.gz",
       "hash": "sha256-Yz0zRVzmgbrk0m7OkItxIK6W0WkPze/t09pWFgziNrw="
     },
-    "kernel-patches": {
-      "type": "Git",
-      "repository": {
-        "type": "GitHub",
-        "owner": "CachyOS",
-        "repo": "kernel-patches"
-      },
-      "branch": "master",
-      "submodules": false,
-      "revision": "5544a0679fd6f6fb714e275514449c4ab9db2a53",
-      "url": "https://github.com/CachyOS/kernel-patches/archive/5544a0679fd6f6fb714e275514449c4ab9db2a53.tar.gz",
-      "hash": "sha256-JErpxWTdoHq4JuDerfsbPA60FmWOxK4oX9UL9CcsP/Q="
-    },
     "scripts.irssi.org": {
       "type": "Git",
       "repository": {
