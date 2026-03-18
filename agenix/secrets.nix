@@ -18,6 +18,10 @@ in
     zenith
     scout
   ];
+  "freshrss.age".publicKeys = [
+    zenith
+    scout
+  ];
   "usbguard.age".publicKeys = [ zenith ];
   "users/error.age".publicKeys = systems;
   "users/root.age".publicKeys = systems;

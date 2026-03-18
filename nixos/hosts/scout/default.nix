@@ -3,6 +3,7 @@
     ./acme.nix
     ./couchdb.nix
     ./ddns.nix
+    ./freshrss.nix
     ./hardware.nix
     ./nginx.nix
     ./programs.nix

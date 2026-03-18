@@ -30,6 +30,7 @@
           map (port: builtins.toString port) [
             22
             6984
+            18080
           ]
         )
       );
