@@ -17,7 +17,14 @@
     };
     markdown = {
       enable = true;
-      extensions.render-markdown-nvim.enable = true;
+      extensions.render-markdown-nvim = {
+        enable = true;
+        setupOpts.code = {
+          border = "thin";
+          conceal_delimiters = false;
+          sign = false;
+        };
+      };
     };
     nix.enable = true;
     python.enable = true;
