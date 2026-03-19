@@ -11,6 +11,10 @@
             name = "devnull";
             path = "~/devnull";
           }
+          {
+            name = "liminal";
+            path = "~/liminal";
+          }
         ];
 
         frontmatter.enabled = false;
