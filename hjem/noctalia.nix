@@ -704,7 +704,7 @@
         sortOrder = "name";
         transitionDuration = 1500;
         transitionEdgeSmoothness = 0.05;
-        transitionType = "random";
+        transitionType = [ "honeycomb" ];
         useSolidColor = false;
         useWallhaven = false;
         viewMode = "single";
