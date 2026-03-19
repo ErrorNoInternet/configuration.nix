@@ -28,6 +28,7 @@
       ./cava.nix
       ./clang-format.nix
       ./cursor.nix
+      ./eilmeldung.nix
       ./electron.nix
       ./environment.nix
       ./fastfetch.nix

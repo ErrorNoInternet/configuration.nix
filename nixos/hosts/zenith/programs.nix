@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs', pkgs, ... }:
 {
   services.printing = {
     enable = true;
@@ -23,6 +23,7 @@
     android-tools
     discord
     imhex
+    inputs'.eilmeldung.packages.default
     libreoffice-fresh
     newsboat
     obsidian

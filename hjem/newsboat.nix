@@ -24,10 +24,10 @@
       include                                     colors
       include                                     binds
 
-      auto-reload                                 true
+      auto-reload                                 false
       keep-articles-days                          365
       openbrowser-and-mark-jumps-to-next-unread   true
-      refresh-on-startup                          true
+      refresh-on-startup                          false
       reload-time                                 30
       scrolloff                                   5
       show-keymap-hint                            false
