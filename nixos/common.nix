@@ -103,8 +103,13 @@ in
     firewall = {
       enable = mkDefault false;
 
-      allowedTCPPorts = [ 22 ];
-      allowedUDPPorts = [ 5353 ];
+      allowedTCPPorts = [
+        22
+      ];
+      allowedUDPPorts = [
+        1900
+        5353
+      ];
     };
   };
 

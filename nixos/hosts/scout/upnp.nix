@@ -26,7 +26,7 @@
         IP=$(hostname -I | awk '{print $1}')
       ''
       + lib.concatStringsSep "\n" (
-        map (port: "upnpc -a \"$IP\" ${port} ${port} tcp 0 || true") (
+        map (port: "upnpc -z 1900 -a \"$IP\" ${port} ${port} tcp 0 || true") (
           map (port: builtins.toString port) [
             22
             6984
