@@ -45,16 +45,14 @@ in
           (mkLuaInline /* lua */ ''
             function(a, b)
               local source_priority = {
-                nerdfont = 6,
                 path = 5,
                 lsp = 4,
                 snippets = 3,
                 buffer = 2,
                 yank = 1,
               }
-
-              local a_priority = source_priority[a.source_id]
-              local b_priority = source_priority[b.source_id]
+              local a_priority = source_priority[a.source_id] or 100
+              local b_priority = source_priority[b.source_id] or 100
               if a_priority ~= b_priority then return a_priority > b_priority end
             end
           '')
