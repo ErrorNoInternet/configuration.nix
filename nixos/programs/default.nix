@@ -118,6 +118,7 @@ in
     self'.packages.neovim
     smartmontools
     squashfsTools
+    sshfs
     statix
     sysstat
     tcpdump
