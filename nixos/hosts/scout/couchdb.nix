@@ -1,6 +1,12 @@
 { config, self, ... }:
 {
-  environment.persistence."/persist".directories = [ "/var/lib/couchdb" ];
+  environment.persistence."/persist".directories = [
+    {
+      directory = "/var/lib/couchdb";
+      group = "couchdb";
+      user = "couchdb";
+    }
+  ];
 
   age.secrets.couchdb = {
     file = "${self}/agenix/couchdb.age";
