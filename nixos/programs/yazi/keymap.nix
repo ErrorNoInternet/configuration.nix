@@ -692,7 +692,7 @@
         }
         {
           on = "E";
-          run = "shell --block 'kdeconnect-cli -d 6ded058eb2e79440 --share \"$@\"; read'";
+          run = "shell --block 'kdeconnect-cli -n Paradigm --share \"$@\"; read'";
           desc = "send to KDE Connect device";
         }
 
