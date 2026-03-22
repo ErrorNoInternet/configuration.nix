@@ -126,6 +126,7 @@ in
     translate-shell
     try
     tz
+    unzip
     vgrep
     vim
     whois
