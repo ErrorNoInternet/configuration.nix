@@ -29,5 +29,6 @@
     obsidian
     scrcpy
     songrec
+    yt-dlp
   ];
 }
