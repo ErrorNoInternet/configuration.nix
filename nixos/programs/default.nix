@@ -83,6 +83,7 @@ in
     fd
     file
     gcc
+    gnumake
     gnupg
     hdparm
     htop
