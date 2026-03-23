@@ -1,9 +1,15 @@
+{ pkgs, ... }:
 {
   config.vim = {
+    extraPackages = with pkgs; [
+      asmfmt
+    ];
+
     formatter.conform-nvim = {
       enable = true;
 
       setupOpts.formatters_by_ft = {
+        asm = [ "asmfmt" ];
         markdown = [ ];
         nix = [ "nixfmt" ];
         python = [
