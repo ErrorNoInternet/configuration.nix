@@ -45,9 +45,10 @@
     after = [ "graphical-session.target" ];
     partOf = [ "graphical-session.target" ];
     wantedBy = [ "graphical-session.target" ];
-    path = [
+    path = with pkgs; [
+      brightnessctl
+      hypridle
       inputs'.noctalia.packages.default
-      pkgs.hypridle
     ];
     script = "hypridle";
   };
