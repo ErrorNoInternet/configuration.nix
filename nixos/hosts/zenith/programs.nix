@@ -25,6 +25,8 @@
     imhex
     inputs'.eilmeldung.packages.default
     libreoffice-fresh
+    lsfg-vk
+    lsfg-vk-ui
     newsboat
     obsidian
     scrcpy
