@@ -4,25 +4,25 @@ let
 in
 {
   rum.programs.fish.functions = {
-    bak = ''
+    bak = /* fish */ ''
       for argi in (seq 1 $(count $argv))
         cp -aiv $argv[$argi]{,.bak}
       end
     '';
 
-    btrfs-map-physical = ''
+    btrfs-map-physical = /* fish */ ''
       sudo command btrfs-map-physical $argv | column -ts\t
     '';
 
-    cdd = ''
+    cdd = /* fish */ ''
       cd (dirname $argv[1])
     '';
 
-    g = ''
+    g = /* fish */ ''
       vgrep --no-header $argv[1..] | fzf --ansi --bind "Ctrl-d:half-page-down,Ctrl-u:half-page-up" | awk '{print $1}' | xargs -I{} -o vgrep --show {}
     '';
 
-    gitc = ''
+    gitc = /* fish */ ''
       if test (count $argv) -lt 1
         echo "not enough arguments!"
         return
@@ -57,7 +57,7 @@ in
       end
     '';
 
-    mb = ''
+    mb = /* fish */ ''
       read -sP "[luks] password for btank: " LUKS_PASSWORD
       echo
       echo "$LUKS_PASSWORD" | sudo cryptsetup luksOpen /dev/disk/by-uuid/63d74946-b1e7-4c3b-87a6-67bca2f6a096 luks_btank
@@ -70,7 +70,7 @@ in
       sudo mount -o compress=zstd:9 /dev/mapper/luks_btank /mnt/btank
     '';
 
-    mkcd = ''
+    mkcd = /* fish */ ''
       command mkdir $argv
       if test $status = 0
         switch $argv[(count $argv)]
@@ -83,16 +83,16 @@ in
       end
     '';
 
-    multicd = ''
+    multicd = /* fish */ ''
       echo cd (string repeat -n (math (string length -- $argv) - 1) ../)
     '';
 
-    notify-done = ''
+    notify-done = /* fish */ ''
       $argv
       notify-send "Command finished" "<b>`$argv`</b> has exited with code $status."
     '';
 
-    pmem = ''
+    pmem = /* fish */ ''
       for pid in (string replace -a " " \n $argv)
         echo $pid
         string match -re "VmRSS|VmSwap" < /proc/$pid/status |
@@ -102,7 +102,7 @@ in
       end
     '';
 
-    remove_path = ''
+    remove_path = /* fish */ ''
       set code 1
       if set -l index (contains -i "$argv" $fish_user_paths)
         set -e fish_user_paths[$index]
@@ -111,7 +111,7 @@ in
       return $code
     '';
 
-    res = ''
+    res = /* fish */ ''
       for argi in (seq 1 $(count $argv))
         set name $argv[$argi]
         switch $name
@@ -123,7 +123,7 @@ in
       end
     '';
 
-    storesolve = ''
+    storesolve = /* fish */ ''
       argparse "d/directory" -- $argv
 
       for argi in (seq 1 (count $argv))
@@ -165,7 +165,7 @@ in
       end
     '';
 
-    toggle-comment = ''
+    toggle-comment = /* fish */ ''
       set cursor (commandline --cursor)
       set cmd (commandline -b)
       if string match -qr '^#' $cmd
@@ -182,12 +182,12 @@ in
       commandline --cursor $cursor
     '';
 
-    umb = ''
+    umb = /* fish */ ''
       sudo umount /mnt/btank
       sudo cryptsetup luksClose luks_btank
     '';
 
-    uns = ''
+    uns = /* fish */ ''
       for argi in (seq 1 $(count $argv))
         set name $argv[$argi]
         mv $name $name.store
@@ -197,7 +197,7 @@ in
       end
     '';
 
-    unS = ''
+    unS = /* fish */ ''
       for argi in (seq 1 $(count $argv))
         set name $argv[$argi]
         mv $name $name.store
@@ -217,7 +217,7 @@ in
       end
     '';
 
-    _tide_item_jj = ''
+    _tide_item_jj = /* fish */ ''
       if not command -sq jj; or not jj root --quiet &>/dev/null
         return 1
       end

@@ -13,7 +13,7 @@
   rum.programs.fish = {
     inherit (osConfig.programs.fish) enable;
 
-    config = ''
+    config = /* fish */ ''
       status is-interactive; and begin
         if not set -q SETTINGS_CONFIGURED
           set -U SETTINGS_CONFIGURED 1

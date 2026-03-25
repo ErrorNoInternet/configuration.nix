@@ -1,5 +1,5 @@
 {
-  rum.programs.fish.config = ''
+  rum.programs.fish.config = /* fish */ ''
     function _custom_fish_key_bindings --on-variable fish_key_bindings
       bind --user ctrl-\\ toggle-comment
       bind --user ctrl-\] "echo; cdh; commandline -f repaint"

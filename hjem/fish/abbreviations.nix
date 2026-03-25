@@ -69,7 +69,7 @@
       wlpga = "wl-paste | git apply";
     };
 
-    config = ''
+    config = /* fish */ ''
       abbr -a dotdot -r '^\.\.+$' -f multicd
     '';
   };

@@ -1,6 +1,6 @@
 { osConfig, ... }:
 {
-  rum.programs.fish.config = with osConfig.scheme; ''
+  rum.programs.fish.config = with osConfig.scheme; /* fish */ ''
     if not set -q FISH_THEME_CONFIGURED
       set -U FISH_THEME_CONFIGURED 1
 
