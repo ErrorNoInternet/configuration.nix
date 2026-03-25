@@ -13,7 +13,6 @@ in
   files.".ssh/config".text = ''
     AddKeysToAgent 1d
     Compression yes
-    VisualHostKey yes
   ''
   + (lib.concatStringsSep "\n" (
     map (host: ''
