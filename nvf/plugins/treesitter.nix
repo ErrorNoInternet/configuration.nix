@@ -14,6 +14,7 @@
 
     grammars = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
       cuda
+      fish
       hyprlang
       regex
       toml
