@@ -43,10 +43,7 @@
 
             content = {
               type = "btrfs";
-              extraArgs = [
-                "-L ${config.host.name}"
-                "-O bgt"
-              ];
+              extraArgs = [ "-L ${config.host.name}" ];
 
               subvolumes = {
                 "@" = {
