@@ -110,6 +110,7 @@ in
     npins
     nvme-cli
     openssl
+    perf
     pinentry-curses
     poop
     progress
