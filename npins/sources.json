@@ -82,38 +82,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "2954a5af174d0170d0d23b0c99dffc82d1975731",
-      "url": "https://github.com/irssi/scripts.irssi.org/archive/2954a5af174d0170d0d23b0c99dffc82d1975731.tar.gz",
-      "hash": "sha256-xsBelCRxWxvK00m4smuTUH0Xz2oEotKmMbLtWz+QNk8="
-    },
-    "shadower": {
-      "type": "Git",
-      "repository": {
-        "type": "GitHub",
-        "owner": "n3oney",
-        "repo": "shadower"
-      },
-      "branch": "main",
-      "submodules": false,
-      "revision": "48f8f6bc227fc287b6669fb3ecaf4411d27a3b7a",
-      "url": "https://github.com/n3oney/shadower/archive/48f8f6bc227fc287b6669fb3ecaf4411d27a3b7a.tar.gz",
-      "hash": "sha256-vucKiHCXTwIjayLNH1ZXkZWM70zF5atDdMDRZMADeO0="
-    },
-    "spicy-lyrics": {
-      "type": "GitRelease",
-      "repository": {
-        "type": "GitHub",
-        "owner": "Spikerko",
-        "repo": "spicy-lyrics"
-      },
-      "pre_releases": false,
-      "version_upper_bound": null,
-      "release_prefix": null,
-      "submodules": false,
-      "version": "5.19.12",
-      "revision": "d221033de0cdc73b6d19a1d42c08a4c1e7859ad6",
-      "url": "https://api.github.com/repos/Spikerko/spicy-lyrics/tarball/refs/tags/5.19.12",
-      "hash": "sha256-htGtfA6PwAyrHS7WMska7UINVerVBukXQ+tLQxxfnlo="
+      "revision": "99827bd1fb009a053ff8ffe17e9843b98eaae0bb",
+      "url": "https://github.com/irssi/scripts.irssi.org/archive/99827bd1fb009a053ff8ffe17e9843b98eaae0bb.tar.gz",
+      "hash": "sha256-K5PbE1LVqC/1HssvHeZZ4+Jri9QSbHYARuY7QTJaq64="
     },
     "wlr-clients": {
       "type": "Git",
