@@ -113,6 +113,7 @@ in
     pinentry-curses
     poop
     progress
+    pv
     ripgrep
     screen
     self'.packages.dwarfs
