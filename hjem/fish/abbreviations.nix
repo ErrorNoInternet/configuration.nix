@@ -16,6 +16,7 @@
       dmtw = "sudo dmesg -Tw";
       dmw = "sudo dmesg -w";
       e = "echo";
+      emd = "eilmeldung";
       ex = "exec";
       F = "fastfetch";
       f = "fg";
