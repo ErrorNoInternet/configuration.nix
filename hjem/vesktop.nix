@@ -408,7 +408,7 @@
           enabled = false;
         };
         ClearURLs = {
-          enabled = false;
+          enabled = true;
         };
         ClientTheme = {
           enabled = false;
