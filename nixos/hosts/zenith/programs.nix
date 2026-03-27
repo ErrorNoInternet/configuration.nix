@@ -29,6 +29,7 @@
     lsfg-vk-ui
     newsboat
     obsidian
+    qpwgraph
     scrcpy
     songrec
     yt-dlp
