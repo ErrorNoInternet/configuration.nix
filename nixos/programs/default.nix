@@ -104,6 +104,7 @@ in
     microfetch
     miniupnpc
     multipath-tools
+    ncdu
     nh
     nix-output-monitor
     nmap
