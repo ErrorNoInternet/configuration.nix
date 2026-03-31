@@ -15,6 +15,8 @@
   };
 
   hjem.users.error.systemd.services.gamma-control = {
+    enable = false;
+
     after = [ "graphical-session.target" ];
     partOf = [ "graphical-session.target" ];
     wantedBy = [ "graphical-session.target" ];
