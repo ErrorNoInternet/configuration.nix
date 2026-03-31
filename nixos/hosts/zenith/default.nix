@@ -17,5 +17,10 @@
     qol = true;
   };
 
+  nix = {
+    daemonCPUSchedPolicy = "idle";
+    daemonIOSchedClass = "idle";
+  };
+
   time.timeZone = "America/New_York";
 }
