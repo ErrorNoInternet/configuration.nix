@@ -17,6 +17,7 @@
     aerc.enable = true;
     btop.variant = "cuda";
     irssi.enable = true;
+    wireshark.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
