@@ -15,8 +15,13 @@
       "xhci_pci"
       "hid_asus"
     ];
+
     kernelModules = [ "kvm-intel" ];
   };
 
-  hardware.enableRedistributableFirmware = true;
+  hardware = {
+    i2c.enable = true;
+
+    enableRedistributableFirmware = true;
+  };
 }

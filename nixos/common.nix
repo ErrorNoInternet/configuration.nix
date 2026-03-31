@@ -89,8 +89,8 @@ in
       timeout = 1;
     };
 
-    kernelParams = [ "boot.shell_on_fail" ];
     kernelPackages = mkDefault pkgs.linuxPackages_latest;
+    kernelParams = [ "boot.shell_on_fail" ];
 
     binfmt = {
       emulatedSystems = mkIf pkgs.stdenv.hostPlatform.isx86 [ "aarch64-linux" ];
@@ -175,8 +175,9 @@ in
         shell = pkgs.fish;
 
         extraGroups = [
-          "wheel"
+          "i2c"
           "networkmanager"
+          "wheel"
         ];
 
         openssh.authorizedKeys.keys = authorizedKeys;
