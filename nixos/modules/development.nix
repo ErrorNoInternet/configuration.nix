@@ -24,6 +24,7 @@ in
       git-graph
       go
       graphviz
+      lua
       mold
       nixfmt
       onefetch
