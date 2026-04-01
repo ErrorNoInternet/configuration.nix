@@ -112,6 +112,7 @@ in
     npins
     nvme-cli
     openssl
+    parted
     perf
     pinentry-curses
     poop
