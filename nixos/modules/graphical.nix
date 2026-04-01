@@ -79,21 +79,16 @@ in
         cava
         ffmpeg-full
         galaxy-buds-client
-        gimp3-with-plugins
         gparted
         grim
-        nheko
         nvtopPackages.full
         pavucontrol
         playerctl
         qalculate-gtk
-        qbittorrent
         ripdrag
         satty
         slurp
         timg
-        vesktop
-        wechat
         wev
 
         kdePackages.breeze

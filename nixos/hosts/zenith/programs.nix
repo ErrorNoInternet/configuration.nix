@@ -25,16 +25,21 @@
     android-studio
     android-tools
     discord
+    gimp3-with-plugins
     imhex
     inputs'.eilmeldung.packages.default
     libreoffice-fresh
     lsfg-vk
     lsfg-vk-ui
     newsboat
+    nheko
     obsidian
+    qbittorrent
     qpwgraph
     scrcpy
     songrec
+    vesktop
+    wechat
     yt-dlp
   ];
 }
