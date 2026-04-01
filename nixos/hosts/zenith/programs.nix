@@ -12,6 +12,7 @@
   gaming.enable = true;
   graphical.enable = true;
   hyprland.enable = true;
+  spicetify.enable = true;
 
   programs = {
     aerc.enable = true;

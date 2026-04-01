@@ -17,6 +17,11 @@ in
   };
 
   config = mkIf cfg.enable {
+    nix = {
+      daemonCPUSchedPolicy = "idle";
+      daemonIOSchedClass = "idle";
+    };
+
     fonts.enable = true;
 
     xdg.mime.defaultApplications = {
@@ -49,8 +54,6 @@ in
         ];
       };
     };
-
-    spicetify.enable = true;
 
     programs = {
       dconf.enable = true;

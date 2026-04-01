@@ -9,10 +9,7 @@
 
   wifi.enable = true;
 
-  services = {
-    power-profiles-daemon.enable = true;
-    upower.enable = true;
-  };
+  services.upower.enable = true;
 
   hjem.users.error.systemd.services.gamma-control = {
     enable = false;

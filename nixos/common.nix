@@ -137,6 +137,8 @@ in
     };
 
     openssh.enable = lib.mkDefault true;
+
+    power-profiles-daemon.enable = true;
   };
 
   virtualisation.podman.enable = true;
