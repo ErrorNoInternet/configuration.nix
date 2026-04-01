@@ -61,6 +61,7 @@ in
 
     _7zz
     atop
+    atuin
     bat
     binsort
     btdu
