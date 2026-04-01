@@ -1,15 +1,14 @@
 {
-  boot = {
-    initrd.availableKernelModules = [
-      "applesmc"
-      "applespi"
-      "firewire_ohci"
-      "intel_lpss_pci"
-      "spi_pxa2xx_platform"
-    ];
-
-    plymouth.enable = true;
-  };
+  boot.initrd.availableKernelModules = [
+    "amdgpu"
+    "applesmc"
+    "applespi"
+    "firewire_ohci"
+    "intel_lpss_pci"
+    "radeon"
+    "simpledrm"
+    "spi_pxa2xx_platform"
+  ];
 
   networking.enableB43Firmware = true;
 
