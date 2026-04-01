@@ -12,6 +12,8 @@ in
   };
 
   config = mkIf cfg.enable {
+    networking.firewall.logRefusedConnections = false;
+
     services.fail2ban = {
       enable = true;
 
