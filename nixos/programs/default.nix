@@ -114,6 +114,7 @@ in
     nvme-cli
     openssl
     parted
+    pciutils
     perf
     pinentry-curses
     poop
