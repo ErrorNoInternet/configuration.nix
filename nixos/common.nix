@@ -179,6 +179,7 @@ in
         extraGroups = [
           "i2c"
           "networkmanager"
+          "video"
           "wheel"
         ];
 

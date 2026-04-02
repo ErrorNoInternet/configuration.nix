@@ -31,7 +31,6 @@ in
     services.noctalia-shell.enable = true;
 
     environment.systemPackages = with pkgs; [
-      brightnessctl
       hyprpicker
       inputs'.hyprwm-contrib.packages.grimblast
       inputs'.shadower.packages.shadower

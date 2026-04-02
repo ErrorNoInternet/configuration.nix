@@ -76,6 +76,7 @@ in
 
       systemPackages = with pkgs; [
         bibata-cursors
+        brightnessctl
         cava
         ffmpeg-full
         galaxy-buds-client
