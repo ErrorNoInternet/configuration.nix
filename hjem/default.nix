@@ -24,6 +24,7 @@
 
       ./aerc.nix
       ./applications.nix
+      ./atuin.nix
       ./btop.nix
       ./cava.nix
       ./clang-format.nix
