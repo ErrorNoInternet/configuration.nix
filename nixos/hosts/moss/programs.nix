@@ -5,5 +5,6 @@
   environment.systemPackages = with pkgs; [
     inputs'.eilmeldung.packages.default
     radeontop
+    yt-dlp
   ];
 }
