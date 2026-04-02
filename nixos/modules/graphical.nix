@@ -90,6 +90,7 @@ in
         slurp
         timg
         wev
+        ydotool
 
         kdePackages.breeze
         kdePackages.breeze.qt5
