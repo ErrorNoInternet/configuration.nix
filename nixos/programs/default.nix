@@ -118,6 +118,7 @@ in
     perf
     pinentry-curses
     poop
+    procs
     progress
     pv
     ripgrep
