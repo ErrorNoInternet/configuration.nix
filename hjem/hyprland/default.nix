@@ -6,7 +6,6 @@
     ./colors.nix
     ./graphics.nix
     ./input.nix
-    ./monitors.nix
     ./rules.nix
   ];
 

@@ -13,4 +13,8 @@
   networking.enableB43Firmware = true;
 
   wifi.enable = true;
+
+  hjem.users.error.rum.desktops.hyprland.settings.monitor = [
+    "         , preferred     , auto    , 1"
+  ];
 }
