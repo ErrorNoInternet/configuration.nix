@@ -1,31 +1,10 @@
 { lib, osConfig, ... }:
 {
-  xdg.config.files = lib.mkIf osConfig.graphical.enable {
-    "noctalia/plugins.json".text = builtins.toJSON {
-      sources = [
-        {
-          enabled = true;
-          name = "Noctalia Plugins";
-          url = "https://github.com/noctalia-dev/noctalia-plugins";
-        }
-      ];
-      states = {
-        screen-recorder = {
-          enabled = true;
-          sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
-        };
-        timer = {
-          enabled = true;
-          sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
-        };
-        unicode-picker = {
-          enabled = true;
-          sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
-        };
-      };
-      version = 2;
-    };
+  imports = [
+    ./plugins.nix
+  ];
 
+  xdg.config.files = lib.mkIf osConfig.graphical.enable {
     "noctalia/settings.json".text = builtins.toJSON {
       appLauncher = {
         autoPasteClipboard = false;

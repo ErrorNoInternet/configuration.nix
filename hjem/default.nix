@@ -1,7 +1,6 @@
 {
   inputs',
   inputs,
-  pkgs,
   self',
   self,
   ...
@@ -9,7 +8,7 @@
 {
   hjem = {
     clobberByDefault = true;
-    linker = inputs.hjem.packages.${pkgs.stdenv.hostPlatform.system}.smfh;
+    linker = inputs'.hjem.packages.smfh;
     specialArgs = {
       inherit
         inputs'
@@ -50,7 +49,7 @@
       ./mangohud.nix
       ./mpv.nix
       ./newsboat.nix
-      ./noctalia.nix
+      ./noctalia
       ./nvtop.nix
       ./qalculate.nix
       ./qt.nix
