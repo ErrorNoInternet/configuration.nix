@@ -190,8 +190,10 @@ in
 
   nixpkgs.config.allowUnfree = true;
 
+  environment.etc."nixos/current".source = lib.cleanSource ./..;
+
   system = {
-    stateVersion = "25.05";
     configurationRevision = self.rev or self.dirtyRev;
+    stateVersion = "25.05";
   };
 }
