@@ -1,7 +1,7 @@
 { osConfig, ... }:
 {
   rum.programs.mpv = {
-    inherit (osConfig.graphical) enable;
+    inherit (osConfig.display) enable;
 
     config = {
       no-keepaspect-window = "";

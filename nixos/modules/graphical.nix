@@ -101,7 +101,6 @@ in
         ripdrag
         satty
         slurp
-        timg
         wev
         ydotool
 
