@@ -29,6 +29,10 @@ in
           name = "JetBrainsMonoNL Nerd Font";
           package = pkgs.nerd-fonts.jetbrains-mono;
         }
+        {
+          name = "Twitter Color Emoji";
+          package = pkgs.twitter-color-emoji;
+        }
       ];
 
       hwRender = true;
