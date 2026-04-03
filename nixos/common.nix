@@ -154,7 +154,7 @@ in
 
   zramSwap = {
     enable = true;
-    memoryPercent = 200;
+    memoryPercent = 100;
   };
 
   users.users =
