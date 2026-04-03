@@ -4,6 +4,7 @@
   inputs,
   lib,
   pkgs,
+  self,
   ...
 }:
 let
@@ -189,5 +190,8 @@ in
 
   nixpkgs.config.allowUnfree = true;
 
-  system.stateVersion = "25.05";
+  system = {
+    stateVersion = "25.05";
+    configurationRevision = self.rev or self.dirtyRev;
+  };
 }
