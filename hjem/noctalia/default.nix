@@ -341,9 +341,6 @@
               };
               id = "plugin:screen-recorder";
             }
-            {
-              id = "PowerProfile";
-            }
           ];
         };
       };
