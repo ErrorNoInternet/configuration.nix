@@ -143,22 +143,6 @@
 
       bind    = $mod, R,      submap,       resize
       submap  = resize
-      binde   = CTRL      , left,   resizeactive, -40 0
-      binde   = CTRL      , right,  resizeactive, 40 0
-      binde   = CTRL      , up,     resizeactive, 0 -40
-      binde   = CTRL      , down,   resizeactive, 0 40
-      binde   = CTRL      , h,      resizeactive, -40 0
-      binde   = CTRL      , l,      resizeactive, 40 0
-      binde   = CTRL      , k,      resizeactive, 0 -40
-      binde   = CTRL      , j,      resizeactive, 0 40
-      binde   = SHIFT     , left,   resizeactive, 40 0
-      binde   = SHIFT     , right,  resizeactive, -40 0
-      binde   = SHIFT     , up,     resizeactive, 0 40
-      binde   = SHIFT     , down,   resizeactive, 0 -40
-      binde   = SHIFT     , h,      resizeactive, 40 0
-      binde   = SHIFT     , l,      resizeactive, -40 0
-      binde   = SHIFT     , k,      resizeactive, 0 40
-      binde   = SHIFT     , j,      resizeactive, 0 -40
       binde   =           , left,   resizeactive, -40 0
       binde   =           , right,  resizeactive, 40 0
       binde   =           , up,     resizeactive, 0 -40
