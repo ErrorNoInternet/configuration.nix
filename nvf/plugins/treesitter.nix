@@ -16,6 +16,7 @@
       cuda
       fish
       hyprlang
+      kotlin
       regex
       toml
     ];
