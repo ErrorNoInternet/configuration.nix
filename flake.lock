@@ -898,15 +898,15 @@
         "systems": "systems_6"
       },
       "locked": {
-        "lastModified": 1774157037,
-        "narHash": "sha256-kJpgEIF0sxMW0vx543m3AwyqptJOxPoOJY1DfJ4jQas=",
-        "owner": "Gerg-L",
+        "lastModified": 1775168081,
+        "narHash": "sha256-uZsnb4sABsK59ftEQgIeLjxnhWzH+x6zkFQtsxkfJ8k=",
+        "owner": "tdortman",
         "repo": "spicetify-nix",
-        "rev": "2e2234c2932a3aff5f845cda33cb1972a9e889aa",
+        "rev": "d4d9005dd3cabab4db806ea9e2cb5606db43d16a",
         "type": "github"
       },
       "original": {
-        "owner": "Gerg-L",
+        "owner": "tdortman",
         "repo": "spicetify-nix",
         "type": "github"
       }
