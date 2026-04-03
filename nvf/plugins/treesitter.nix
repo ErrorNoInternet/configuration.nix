@@ -17,6 +17,7 @@
       fish
       hyprlang
       kotlin
+      perl
       regex
       toml
     ];
