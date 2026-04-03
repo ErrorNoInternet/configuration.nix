@@ -67,7 +67,6 @@ in
         };
         "/persist" = {
           inherit device fsType;
-          neededForBoot = true;
           options = [ "subvol=@persist" ] ++ defaultOptions;
         };
         "/boot" = {

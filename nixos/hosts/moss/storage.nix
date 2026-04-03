@@ -2,8 +2,6 @@
 {
   snapper.interval = "0/4:0";
 
-  fileSystems."/persist".neededForBoot = true;
-
   disko.devices.disk.main = {
     type = "disk";
     device = "/dev/disk/by-id/ata-WDC_WD3200AAJS-40RYA0_WD-WCAPZ3290203";
