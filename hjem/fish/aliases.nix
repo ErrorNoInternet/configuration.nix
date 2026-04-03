@@ -3,7 +3,6 @@
   rum.programs.fish = {
     aliases = {
       batp = "bat -pp";
-      bpy = "bpython";
       fd = "LS_COLORS=1 command fd";
       gcal = "gcal -H '\e[34m:\e[0m:\e[32m:\e[0m'";
       grep = "grep --color";
@@ -12,7 +11,6 @@
       lsimg = "timg --grid=6 --upscale --title --center --frames=1";
       objdump = "objdump -Mintel --disassembler-color=on";
       peaclock = "peaclock --config-dir ~/.config/peaclock";
-      py = "python3";
       q = "exit";
       rdg = "ripdrag -xa";
       rgi = "rg -i";

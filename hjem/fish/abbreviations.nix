@@ -47,6 +47,7 @@
       pds3 = "pidstat --human -d 3";
       pf = "printf";
       pk = "pkill";
+      py = "python3";
       qc = "qalc";
       rd = "rmdir";
       rdp = "rmdir -p";
