@@ -28,13 +28,13 @@ in
             };
           };
         in
-        ''
+        /* lua */ ''
           require("lz.n").trigger_load("nvim-web-devicons")
           require('barbar').setup(${toLuaObject opts})
         '';
     };
 
-    luaConfigRC.barbar = entryAfter [ "pluginConfigs" ] ''
+    luaConfigRC.barbar = entryAfter [ "pluginConfigs" ] /* lua */ ''
       local lualine_a_normal = vim.api.nvim_get_hl(0, { name = "lualine_a_normal" })
       local lualine_c_normal = vim.api.nvim_get_hl(0, { name = "lualine_c_normal" })
 

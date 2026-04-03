@@ -6,14 +6,14 @@ in
   config.vim = {
     startPlugins = [ pkgs.vimPlugins.kanagawa-nvim ];
 
-    luaConfigRC.theme = entryBefore [ "pluginConfigs" "lazyConfigs" ] ''
+    luaConfigRC.theme = entryBefore [ "pluginConfigs" "lazyConfigs" ] /* lua */ ''
       vim.cmd.colorscheme("kanagawa")
     '';
 
-    luaConfigRC.fix-highlights = ''
-      vim.api.nvim_set_hl(0, 'GitSignsAdd', vim.tbl_extend('force', vim.api.nvim_get_hl(0, { name = 'GitSignsAdd' }), { bg = 'NONE' }))
-      vim.api.nvim_set_hl(0, 'GitSignsChange', vim.tbl_extend('force', vim.api.nvim_get_hl(0, { name = 'GitSignsChange' }), { bg = 'NONE' }))
-      vim.api.nvim_set_hl(0, 'GitSignsDelete', vim.tbl_extend('force', vim.api.nvim_get_hl(0, { name = 'GitSignsDelete' }), { bg = 'NONE' }))
+    luaConfigRC.fix-highlights = /* lua */ ''
+      vim.api.nvim_set_hl(0, 'GitSignsAdd', { bg = 'NONE', update = true })
+      vim.api.nvim_set_hl(0, 'GitSignsChange', { bg = 'NONE', update = true })
+      vim.api.nvim_set_hl(0, 'GitSignsDelete', { bg = 'NONE', update = true })
     '';
   };
 }
