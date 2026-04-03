@@ -36,7 +36,9 @@
         customLaunchPrefixEnabled = false;
         density = "default";
         enableClipPreview = true;
+        enableClipboardChips = true;
         enableClipboardHistory = true;
+        enableClipboardSmartIcons = true;
         enableSessionSearch = true;
         enableSettingsSearch = true;
         enableWindowsSearch = true;
@@ -50,13 +52,13 @@
         showIconBackground = false;
         sortByMostUsed = true;
         terminalCommand = "kitty -e";
-        useApp2Unit = false;
         viewMode = "list";
       };
       audio = {
         mprisBlacklist = [ ];
         preferredPlayer = "";
         spectrumFrameRate = 30;
+        spectrumMirrored = true;
         visualizerType = "linear";
         volumeFeedback = true;
         volumeFeedbackSoundFile = "";
@@ -74,7 +76,6 @@
         density = "default";
         displayMode = "always_visible";
         enableExclusionZoneInset = true;
-        floating = false;
         fontScale = 1;
         frameRadius = 12;
         frameThickness = 8;
@@ -156,6 +157,9 @@
               usePadding = true;
             }
             {
+              id = "plugin:privacy-indicator";
+            }
+            {
               compactMode = false;
               hideMode = "hidden";
               hideWhenIdle = false;
@@ -174,6 +178,9 @@
           ];
           right = [
             {
+              blacklist = [ ];
+              chevronColor = "none";
+              colorizeIcons = false;
               defaultSettings = {
                 audioCodec = "opus";
                 audioSource = "default_output";
@@ -190,6 +197,8 @@
                 videoCodec = "h264";
                 videoSource = "portal";
               };
+              drawerEnabled = false;
+              hidePassive = false;
               id = "plugin:screen-recorder";
             }
             {
@@ -277,6 +286,7 @@
         monitorForColors = "";
         predefinedScheme = "Kanagawa";
         schedulingMode = "off";
+        syncGsettings = true;
         useWallpaperColors = false;
       };
       controlCenter = {
@@ -382,8 +392,10 @@
         indicatorColor = "primary";
         indicatorOpacity = 0.6;
         indicatorThickness = 3;
+        launcherIcon = "";
         launcherIconColor = "none";
         launcherPosition = "end";
+        launcherUseDistroLogo = false;
         monitors = [ ];
         onlySameOutput = true;
         pinnedApps = [ ];
@@ -455,9 +467,11 @@
         showHibernateOnLockScreen = false;
         showScreenCorners = false;
         showSessionButtonsOnLockScreen = true;
+        smoothScrollEnabled = true;
         telemetryEnabled = false;
       };
       hooks = {
+        colorGeneration = "";
         darkModeChange = "";
         enabled = false;
         performanceModeDisabled = "";
@@ -484,10 +498,11 @@
       };
       location = {
         analogClockInCalendar = false;
+        autoLocate = true;
         firstDayOfWeek = -1;
         hideWeatherCityName = false;
         hideWeatherTimezone = false;
-        name = "Maryland";
+        name = "";
         showCalendarEvents = false;
         showCalendarWeather = true;
         showWeekNumberInCalendar = true;
@@ -495,9 +510,9 @@
         useFahrenheit = false;
         weatherEnabled = true;
         weatherShowEffects = true;
+        weatherTaliaMascotAlways = false;
       };
       network = {
-        airplaneModeEnabled = false;
         bluetoothAutoConnect = true;
         bluetoothDetailsViewMode = "grid";
         bluetoothHideUnnamedDevices = false;
@@ -506,7 +521,6 @@
         disableDiscoverability = false;
         networkPanelView = "wifi";
         wifiDetailsViewMode = "grid";
-        wifiEnabled = true;
       };
       nightLight = {
         autoSchedule = true;
@@ -568,17 +582,7 @@
       };
       plugins = {
         autoUpdate = true;
-      };
-      screenRecorder = {
-        audioCodec = "opus";
-        audioSource = "default_output";
-        colorRange = "limited";
-        directory = "~/";
-        frameRate = 60;
-        quality = "high";
-        showCursor = true;
-        videoCodec = "h264";
-        videoSource = "portal";
+        notifyUpdates = true;
       };
       sessionMenu = {
         countdownDuration = 10000;
@@ -640,7 +644,7 @@
         showHeader = true;
         showKeybinds = true;
       };
-      settingsVersion = 57;
+      settingsVersion = 59;
       systemMonitor = {
         batteryCriticalThreshold = 5;
         batteryWarningThreshold = 20;
@@ -691,6 +695,7 @@
         fillColor = "#000000";
         fillMode = "crop";
         hideWallpaperFilenames = false;
+        linkLightAndDarkWallpapers = true;
         monitorDirectories = [ ];
         overviewBlur = 0.4;
         overviewEnabled = false;
@@ -704,7 +709,10 @@
         sortOrder = "name";
         transitionDuration = 1500;
         transitionEdgeSmoothness = 0.05;
-        transitionType = [ "honeycomb" ];
+        transitionType = [
+          "honeycomb"
+        ];
+        useOriginalImages = false;
         useSolidColor = false;
         useWallhaven = false;
         viewMode = "single";
