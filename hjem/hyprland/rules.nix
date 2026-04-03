@@ -7,9 +7,10 @@
         map (
           a:
           let
-            rulePart = lib.concatStringsSep ", " a.rules;
+            matchParts = map (m: "match:${m.type} ${m.value}") a.matches;
+            allParts = a.rules ++ matchParts;
           in
-          "windowrule = ${rulePart}, match:${a.match.type} ${a.match.value}"
+          "windowrule = ${lib.concatStringsSep ", " allParts}"
         ) attrs;
 
       mkLayerRules =
@@ -17,17 +18,20 @@
         map (
           a:
           let
-            rulePart = lib.concatStringsSep ", " a.rules;
+            matchParts = map (m: "match:${m.type} ${m.value}") a.matches;
+            allParts = a.rules ++ matchParts;
           in
-          "layerrule = ${rulePart}, match:namespace ${a.namespace}"
+          "layerrule = ${lib.concatStringsSep ", " allParts}"
         ) attrs;
 
       windowRuleSets = [
         {
-          match = {
-            type = "class";
-            value = "lowfi";
-          };
+          matches = [
+            {
+              type = "class";
+              value = "lowfi";
+            }
+          ];
           rules = [
             "size 306 82"
             "center on"
@@ -35,35 +39,43 @@
           ];
         }
         {
-          match = {
-            type = "class";
-            value = "qalculate-gtk";
-          };
+          matches = [
+            {
+              type = "class";
+              value = "qalculate-gtk";
+            }
+          ];
           rules = [
             "size 720 540"
             "float on"
           ];
         }
         {
-          match = {
-            type = "class";
-            value = "kitty";
-          };
+          matches = [
+            {
+              type = "class";
+              value = "kitty";
+            }
+          ];
           rules = [ "size 980 630" ];
         }
         {
-          match = {
-            type = "class";
-            value = "org.mozilla.firefox";
-          };
+          matches = [
+            {
+              type = "class";
+              value = "org.mozilla.firefox";
+            }
+          ];
           rules = [ "size 980 630" ];
         }
 
         {
-          match = {
-            type = "class";
-            value = "blueman-manager";
-          };
+          matches = [
+            {
+              type = "class";
+              value = "blueman-manager";
+            }
+          ];
           rules = [
             "animation slide"
             "center on"
@@ -72,47 +84,12 @@
           ];
         }
         {
-          match = {
-            type = "class";
-            value = "xdg-desktop-portal";
-          };
-          rules = [
-            "animation slide"
-            "center on"
-            "float on"
-            "size (monitor_w*0.6) (monitor_h*0.65)"
+          matches = [
+            {
+              type = "class";
+              value = "xdg-desktop-portal";
+            }
           ];
-        }
-
-        {
-          match = {
-            type = "title";
-            value = "File Upload";
-          };
-          rules = [
-            "animation slide"
-            "center on"
-            "float on"
-            "size (monitor_w*0.6) (monitor_h*0.65)"
-          ];
-        }
-        {
-          match = {
-            type = "title";
-            value = "Open";
-          };
-          rules = [
-            "animation slide"
-            "center on"
-            "float on"
-            "size (monitor_w*0.6) (monitor_h*0.65)"
-          ];
-        }
-        {
-          match = {
-            type = "title";
-            value = "Save As";
-          };
           rules = [
             "animation slide"
             "center on"
@@ -122,86 +99,174 @@
         }
 
         {
-          match = {
-            type = "class";
-            value = "branchdialog";
-          };
+          matches = [
+            {
+              type = "title";
+              value = "File Upload";
+            }
+          ];
+          rules = [
+            "animation slide"
+            "center on"
+            "float on"
+            "size (monitor_w*0.6) (monitor_h*0.65)"
+          ];
+        }
+        {
+          matches = [
+            {
+              type = "title";
+              value = "Open";
+            }
+          ];
+          rules = [
+            "animation slide"
+            "center on"
+            "float on"
+            "size (monitor_w*0.6) (monitor_h*0.65)"
+          ];
+        }
+        {
+          matches = [
+            {
+              type = "title";
+              value = "Save As";
+            }
+          ];
+          rules = [
+            "animation slide"
+            "center on"
+            "float on"
+            "size (monitor_w*0.6) (monitor_h*0.65)"
+          ];
+        }
+
+        {
+          matches = [
+            {
+              type = "class";
+              value = "jetbrains-studio";
+            }
+            {
+              type = "title";
+              value = "^win(.*)";
+            }
+          ];
+          rules = [ "no_initial_focus on" ];
+        }
+        {
+          matches = [
+            {
+              type = "class";
+              value = "branchdialog";
+            }
+          ];
           rules = [ "float on" ];
         }
         {
-          match = {
-            type = "class";
-            value = "confirm";
-          };
+          matches = [
+            {
+              type = "class";
+              value = "confirm";
+            }
+          ];
           rules = [ "float on" ];
         }
         {
-          match = {
-            type = "class";
-            value = "dialog";
-          };
+          matches = [
+            {
+              type = "class";
+              value = "dialog";
+            }
+          ];
           rules = [ "float on" ];
         }
         {
-          match = {
-            type = "class";
-            value = "error";
-          };
+          matches = [
+            {
+              type = "class";
+              value = "error";
+            }
+          ];
           rules = [ "float on" ];
         }
         {
-          match = {
-            type = "class";
-            value = "mpv";
-          };
+          matches = [
+            {
+              type = "class";
+              value = "mpv";
+            }
+          ];
           rules = [ "float on" ];
         }
         {
-          match = {
-            type = "class";
-            value = "notification";
-          };
+          matches = [
+            {
+              type = "class";
+              value = "notification";
+            }
+          ];
           rules = [ "float on" ];
         }
         {
-          match = {
-            type = "class";
-            value = "org.kde.kdeconnect.daemon";
-          };
+          matches = [
+            {
+              type = "class";
+              value = "org.kde.kdeconnect.daemon";
+            }
+          ];
           rules = [ "float on" ];
         }
         {
-          match = {
-            type = "class";
-            value = "pavucontrol";
-          };
+          matches = [
+            {
+              type = "class";
+              value = "pavucontrol";
+            }
+          ];
           rules = [ "float on" ];
         }
         {
-          match = {
-            type = "class";
-            value = "vimiv";
-          };
+          matches = [
+            {
+              type = "class";
+              value = "vimiv";
+            }
+          ];
           rules = [ "float on" ];
         }
       ];
 
       layerRuleSets = [
         {
-          namespace = "hyprpicker";
+          matches = [
+            {
+              type = "namespace";
+              value = "hyprpicker";
+            }
+          ];
           rules = [ "no_anim on" ];
         }
         {
-          namespace = "selection";
+          matches = [
+            {
+              type = "namespace";
+              value = "selection";
+            }
+          ];
           rules = [ "no_anim on" ];
         }
         {
-          namespace = "noctalia-background-.*";
-          rules = [ "blur on" ];
-        }
-        {
-          namespace = "noctalia-background-.*";
-          rules = [ "ignore_alpha 0.7" ];
+          matches = [
+            {
+              type = "namespace";
+              value = "noctalia-background-.*";
+            }
+          ];
+          rules = [
+            "blur on"
+            "ignore_alpha 0.7"
+          ];
         }
       ];
     in
