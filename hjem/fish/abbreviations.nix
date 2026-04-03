@@ -37,6 +37,7 @@
       mk = "make";
       mkc = "make clean";
       mt = "neomutt";
+      nlc = "nix-locate";
       nw = "newsboat";
       objd = "objdump -d";
       p = "ping";
