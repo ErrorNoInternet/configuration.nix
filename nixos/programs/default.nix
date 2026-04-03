@@ -62,6 +62,7 @@ in
     _7zz
     atop
     atuin
+    bandwhich
     bat
     binsort
     btdu
