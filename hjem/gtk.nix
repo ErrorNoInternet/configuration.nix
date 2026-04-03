@@ -45,7 +45,7 @@ in
     settings = {
       application-prefer-dark-theme = true;
       button-images = true;
-      font-name = "${osConfig.fonts.preferred} ${builtins.toString osConfig.fonts.preferredSize}";
+      font-name = "${osConfig.fonts.preferredName} ${builtins.toString osConfig.fonts.preferredSize}";
       icon-theme-name = theme.iconName;
       menu-images = true;
       theme-name = theme.name;

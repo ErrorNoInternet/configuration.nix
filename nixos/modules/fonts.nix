@@ -17,7 +17,12 @@ in
   options.fonts = {
     enable = mkEnableOption "";
 
-    preferred = mkOption {
+    preferredPackage = mkOption {
+      default = pkgs.nerd-fonts.iosevka;
+      type = types.package;
+    };
+
+    preferredName = mkOption {
       default = "Iosevka Nerd Font";
       type = types.str;
     };
@@ -31,9 +36,9 @@ in
   config = mkIf cfg.enable {
     fonts = {
       packages = with pkgs; [
-        nerd-fonts.iosevka
-        nerd-fonts.jetbrains-mono
+        cfg.preferredPackage
 
+        nerd-fonts.jetbrains-mono
         noto-fonts
         noto-fonts-cjk-sans
         noto-fonts-cjk-serif
@@ -46,15 +51,15 @@ in
 
       fontconfig.defaultFonts = {
         serif = [
-          cfg.preferred
+          cfg.preferredName
           "Noto Serif CJK SC"
         ];
         sansSerif = [
-          cfg.preferred
+          cfg.preferredName
           "Noto Sans CJK SC"
         ];
         monospace = [
-          cfg.preferred
+          cfg.preferredName
         ];
         emoji = [
           "Twitter Color Emoji"

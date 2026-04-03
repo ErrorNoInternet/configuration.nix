@@ -9,20 +9,33 @@ let
   inherit (lib)
     mkEnableOption
     mkIf
+    mkOption
+    types
     ;
 in
 {
   options.graphical = {
     enable = mkEnableOption "";
+
+    repeatDelay = mkOption {
+      default = 150;
+      type = types.int;
+    };
+
+    repeatRate = mkOption {
+      default = 50;
+      type = types.int;
+    };
   };
 
   config = mkIf cfg.enable {
+    fonts.enable = true;
+    display.enable = true;
+
     nix = {
       daemonCPUSchedPolicy = "idle";
       daemonIOSchedClass = "idle";
     };
-
-    fonts.enable = true;
 
     xdg.mime.defaultApplications = {
       "application/pdf" = "org.mozilla.firefox.desktop";
@@ -76,7 +89,6 @@ in
 
       systemPackages = with pkgs; [
         bibata-cursors
-        brightnessctl
         cava
         ffmpeg-full
         galaxy-buds-client

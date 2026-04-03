@@ -1,3 +1,4 @@
+{ osConfig, ... }:
 {
   rum.desktops.hyprland.settings = {
     gestures = {
@@ -19,8 +20,8 @@
         natural_scroll = true;
       };
       accel_profile = "flat";
-      repeat_delay = 150;
-      repeat_rate = 50;
+      repeat_delay = osConfig.graphical.repeatDelay;
+      repeat_rate = osConfig.graphical.repeatRate;
     };
 
     misc = {

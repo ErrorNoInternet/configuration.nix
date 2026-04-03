@@ -24,7 +24,7 @@
       in
       {
         box_drawing_scale = "0.001, 0.75, 1, 1.5";
-        font_family = osConfig.fonts.preferred;
+        font_family = osConfig.fonts.preferredName;
         font_size = osConfig.fonts.preferredSize;
         symbol_map = "${lib.concatStringsSep "," (map (char: "U+${char}") symbolMap)} Unifont";
 
@@ -82,7 +82,7 @@
         color16 = base09;
         color17 = base0F;
       }
-      // lib.optionalAttrs (osConfig.fonts.preferred == "JetBrainsMonoNL Nerd Font") {
+      // lib.optionalAttrs (osConfig.fonts.preferredName == "JetBrainsMonoNL Nerd Font") {
         modify_font = "baseline 1";
       };
   };

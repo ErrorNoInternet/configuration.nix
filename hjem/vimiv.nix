@@ -9,7 +9,7 @@
       STYLE =
         with osConfig.scheme;
         let
-          font = "${builtins.toString osConfig.fonts.preferredSize}pt ${osConfig.fonts.preferred}";
+          font = "${builtins.toString osConfig.fonts.preferredSize}pt ${osConfig.fonts.preferredName}";
         in
         {
           inherit font;

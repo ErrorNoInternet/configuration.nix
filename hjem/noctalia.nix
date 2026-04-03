@@ -670,9 +670,9 @@
       };
       ui = {
         boxBorderEnabled = false;
-        fontDefault = "${osConfig.fonts.preferred}";
+        fontDefault = "${osConfig.fonts.preferredName}";
         fontDefaultScale = 1.05;
-        fontFixed = "${osConfig.fonts.preferred} Mono";
+        fontFixed = "${osConfig.fonts.preferredName} Mono";
         fontFixedScale = 1.1;
         panelBackgroundOpacity = 0.75;
         panelsAttachedToBar = true;

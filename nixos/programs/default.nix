@@ -72,7 +72,6 @@ in
     compsize
     copyparty
     croc
-    ddcutil
     deadnix
     delta
     difftastic
