@@ -44,7 +44,6 @@
       set -g status-left-length 20
 
       set -g allow-passthrough on
-      set -g focus-events off
       set -g repeat-time 0
       set -g set-clipboard on
       set -g set-titles on
