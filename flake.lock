@@ -898,15 +898,16 @@
         "systems": "systems_6"
       },
       "locked": {
-        "lastModified": 1775168081,
+        "lastModified": 1775312577,
         "narHash": "sha256-uZsnb4sABsK59ftEQgIeLjxnhWzH+x6zkFQtsxkfJ8k=",
         "owner": "tdortman",
         "repo": "spicetify-nix",
-        "rev": "d4d9005dd3cabab4db806ea9e2cb5606db43d16a",
+        "rev": "d12cc0eb51aba8e13b6d480e59f87345c06a7789",
         "type": "github"
       },
       "original": {
         "owner": "tdortman",
+        "ref": "lucid-gitlab",
         "repo": "spicetify-nix",
         "type": "github"
       }

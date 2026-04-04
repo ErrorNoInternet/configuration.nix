@@ -69,7 +69,7 @@
     shadower.url = "github:n3oney/shadower";
 
     spicetify-nix = {
-      url = "github:tdortman/spicetify-nix";
+      url = "github:tdortman/spicetify-nix/lucid-gitlab";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
