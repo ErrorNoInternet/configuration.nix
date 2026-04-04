@@ -1,5 +1,14 @@
 { config, ... }:
 {
+  fileSystems."/mnt/moss" = {
+    device = "moss.local:/export/error";
+    fsType = "nfs";
+    options = [
+      "x-systemd.automount"
+      "noauto"
+    ];
+  };
+
   disko.devices.disk.main = {
     type = "disk";
     device = "/dev/disk/by-id/nvme-KINGSTON_SNV2S1000G_50026B7382E7E711";
