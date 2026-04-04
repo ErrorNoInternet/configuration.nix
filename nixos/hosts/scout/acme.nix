@@ -25,6 +25,7 @@ in
 
     certs.${domainName} = {
       dnsProvider = "rfc2136";
+      dnsResolver = "tuxcord.net:53";
       environmentFile = config.age.secrets.ddns.path;
       extraDomainNames = [
         "*.${domainName}"
