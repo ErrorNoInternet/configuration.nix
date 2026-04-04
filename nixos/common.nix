@@ -97,6 +97,8 @@ in
       emulatedSystems = mkIf pkgs.stdenv.hostPlatform.isx86 [ "aarch64-linux" ];
       preferStaticEmulators = true;
     };
+
+    supportedFilesystems = [ "nfs" ];
   };
 
   networking = {
