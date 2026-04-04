@@ -19,6 +19,7 @@ in
     zenith
     scout
   ];
+  "ntfy.age".publicKeys = systems;
   "usbguard.age".publicKeys = [ zenith ];
   "users/error.age".publicKeys = systems;
   "users/root.age".publicKeys = systems;
