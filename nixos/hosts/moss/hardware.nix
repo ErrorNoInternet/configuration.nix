@@ -14,6 +14,8 @@
 
   wifi.enable = true;
 
+  services.kmscon.hwRender = false;
+
   hjem.users.error.rum.desktops.hyprland.settings.monitor = [
     "         , preferred     , auto    , 1"
   ];

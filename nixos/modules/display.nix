@@ -7,6 +7,7 @@
 let
   cfg = config.display;
   inherit (lib)
+    mkDefault
     mkEnableOption
     mkIf
     ;
@@ -18,7 +19,7 @@ in
 
   config = mkIf cfg.enable {
     services.kmscon = {
-      enable = true;
+      enable = mkDefault true;
 
       fonts = [
         {
@@ -35,7 +36,7 @@ in
         }
       ];
 
-      hwRender = true;
+      hwRender = mkDefault true;
       term = "xterm-256color";
 
       extraConfig = ''
