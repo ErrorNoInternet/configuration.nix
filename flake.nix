@@ -78,29 +78,17 @@
   };
 
   outputs =
-    inputs@{ flake-parts, self, ... }:
+    inputs@{ flake-parts, ... }:
     flake-parts.lib.mkFlake { inherit inputs; } {
       imports = [
         ./nixos
+        ./packages
         ./shells
       ];
 
       perSystem =
+        { pkgs, ... }:
         {
-          inputs',
-          pkgs,
-          ...
-        }:
-        {
-          packages = import ./packages {
-            inherit
-              inputs
-              inputs'
-              pkgs
-              self
-              ;
-          };
-
           formatter = pkgs.nixfmt;
         };
 
