@@ -14,10 +14,7 @@ in
     zenith
     scout
   ];
-  "ddns.age".publicKeys = [
-    zenith
-    scout
-  ];
+  "ddns.age".publicKeys = systems;
   "freshrss.age".publicKeys = [
     zenith
     scout

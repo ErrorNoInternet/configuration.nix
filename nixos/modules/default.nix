@@ -1,5 +1,6 @@
 {
   imports = [
+    ./ddns.nix
     ./development.nix
     ./display.nix
     ./fail2ban.nix

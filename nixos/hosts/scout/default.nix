@@ -2,7 +2,6 @@
   imports = [
     ./acme.nix
     ./couchdb.nix
-    ./ddns.nix
     ./freshrss.nix
     ./hardware.nix
     ./nginx.nix
@@ -11,6 +10,7 @@
     ./upnp.nix
   ];
 
+  ddns.enable = true;
   fail2ban.enable = true;
   networking.firewall.enable = true;
 
