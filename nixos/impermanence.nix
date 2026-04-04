@@ -34,9 +34,11 @@
     directories = [
       "/etc/mullvad-vpn"
       "/etc/ssh"
+      "/export"
       "/mnt"
       "/var/db/sudo/lectured"
       "/var/lib/bluetooth"
+      "/var/lib/nfs"
       "/var/lib/nixos"
       "/var/lib/systemd/backlight"
       "/var/lib/systemd/coredump"
