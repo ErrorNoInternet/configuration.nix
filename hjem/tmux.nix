@@ -1,7 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, self, ... }:
 {
   xdg.config.files = with pkgs; {
-    "tmux/tmux.conf".text = ''
+    "tmux/tmux.conf".text = /* tmux */ ''
       set  -g default-terminal "tmux-256color"
       set  -g base-index      1
       setw -g pane-base-index 1
@@ -25,13 +25,10 @@
       set -ug status-bg
       set -g status-style bg=default
       set -g status-left "#[fg=brightwhite,bg=default]#[fg=black,bg=brightwhite,bold] #S #[fg=brightwhite,bg=default,nobold,noitalics,nounderscore] "
+      set -g status-left-length 20
       set -g status-right " #[fg=brightblack,bg=default,nobold,noitalics,nounderscore]#[fg=brightwhite,bg=brightblack] %Y-%m-%d \
       #[fg=brightwhite,bg=brightblack,nobold,noitalics,nounderscore]|#[fg=brightwhite,bg=brightblack] %H:%M \
       #[fg=brightwhite,bg=brightblack,nobold,noitalics,nounderscore]#[fg=black,bg=brightwhite,bold] #H#{prefix_highlight}#[fg=brightwhite,bg=default,nobold]"
-      set -g @prefix_highlight_fg 'black'
-      set -g @prefix_highlight_bg 'brightwhite'
-      set -g @prefix_highlight_empty_attr 'bg=brightwhite'
-      set -g @prefix_highlight_empty_prompt ' '
       set -g window-status-bell-style bg=default
       set -g window-status-format "#[fg=brightblack,bg=default,nobold,noitalics,nounderscore]#[fg=brightwhite,bg=brightblack] #I \
       #[fg=brightwhite,bg=brightblack,nobold,noitalics,nounderscore]| #[fg=brightwhite,bg=brightblack]#W #F #[fg=brightblack,bg=default,nobold,noitalics,nounderscore]"
@@ -39,9 +36,14 @@
       #[fg=black,bg=brightwhite,nobold,noitalics,nounderscore]| #[fg=black,bg=brightwhite]#W #F #[fg=brightwhite,bg=default,nobold,noitalics,nounderscore]"
       set -g pane-border-style 'fg=brightblack'
       set -g pane-active-border-style 'fg=brightwhite'
+
       set -g @jump-bg-color '\e[0m\e[90m'
       set -g @jump-fg-color '\e[1m\e[33m'
-      set -g status-left-length 20
+      set -g @pane-focus-size '75'
+      set -g @prefix_highlight_bg 'brightwhite'
+      set -g @prefix_highlight_empty_attr 'bg=brightwhite'
+      set -g @prefix_highlight_empty_prompt ' '
+      set -g @prefix_highlight_fg 'black'
 
       set -g allow-passthrough on
       set -g repeat-time 0
@@ -76,6 +78,7 @@
       bind -T copy-mode-vi v send -X begin-selection
       bind -T copy-mode-vi y send -X copy-pipe-and-cancel 'wl-copy'
 
+      run-shell ${self.pins.tmux-pane-focus}/focus.tmux
       run-shell ${tmuxPlugins.jump}/share/tmux-plugins/jump/tmux-jump.tmux
       run-shell ${tmuxPlugins.prefix-highlight}/share/tmux-plugins/prefix-highlight/prefix_highlight.tmux
       run-shell ${tmuxPlugins.yank}/share/tmux-plugins/yank/yank.tmux
