@@ -5,6 +5,7 @@
       markdownlint-cli2
       ruff
       yamllint
+      zig-zlint
     ];
 
     diagnostics.nvim-lint = {
@@ -15,6 +16,7 @@
         markdown = [ "markdownlint-cli2" ];
         python = [ "ruff" ];
         yaml = [ "yamllint" ];
+        zig = [ "zlint" ];
       };
 
       linters = {
