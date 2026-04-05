@@ -80,6 +80,7 @@ in
     doggo
     duf
     dust
+    efibootmgr
     evcxr
     eza
     fastfetch
