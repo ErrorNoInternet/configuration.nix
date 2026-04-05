@@ -18,6 +18,8 @@
       hyprlang
       kotlin
       perl
+      qmljs
+      qmldir
       regex
       toml
     ];
