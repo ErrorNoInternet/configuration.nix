@@ -36,12 +36,9 @@ in
     rootPassword.file = ../agenix/users/root.age;
   };
 
-  documentation = {
-    doc.enable = false;
-    man.cache = {
-      enable = true;
-      generateAtRuntime = true;
-    };
+  documentation.man.cache = {
+    enable = true;
+    generateAtRuntime = true;
   };
 
   nix = {

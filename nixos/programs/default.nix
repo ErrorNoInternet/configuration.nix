@@ -104,6 +104,7 @@ in
     lm_sensors
     lowfi
     lsof
+    man-pages
     manix
     microfetch
     miniupnpc

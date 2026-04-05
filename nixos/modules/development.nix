@@ -17,6 +17,8 @@ in
   };
 
   config = mkIf cfg.enable {
+    documentation.dev.enable = true;
+
     environment.systemPackages = with pkgs; [
       bear
       clang
