@@ -18,9 +18,10 @@
       hyprlang
       kotlin
       perl
-      qmljs
       qmldir
+      qmljs
       regex
+      tmux
       toml
     ];
   };
