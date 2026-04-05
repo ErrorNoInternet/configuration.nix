@@ -34,6 +34,7 @@ in
       rustup
       tokei
       toolbox
+      valgrind
       zig
     ];
   };
