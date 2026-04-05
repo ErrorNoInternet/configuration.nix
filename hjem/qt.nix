@@ -13,21 +13,21 @@ let
     if slug == "kanagawa" then
       writeText "kanagawa.conf" ''
         [ColorScheme]
-        active_colors=#ffffff, #1f1f28, #ffffff, #cacaca, #9f9f9f, #b8b8b8, #ffffff, #ffffff, #ffffff, #1f1f28, #1f1f28, #000000, #436038, #ffffff, #c0a36e, #76946a, #1f1f28, {{colors.scrim.default.hex}}, #1f1f28, #ffffff, #c0a36e
-        disabled_colors=#ffffff, #1f1f28, #ffffff, #cacaca, #9f9f9f, #b8b8b8, #ffffff, #ffffff, #ffffff, #1f1f28, #1f1f28, #000000, #436038, #ffffff, #c0a36e, #76946a, #1f1f28, {{colors.scrim.default.hex}}, #1f1f28, #ffffff, #c0a36e
-        inactive_colors=#ffffff, #1f1f28, #ffffff, #cacaca, #9f9f9f, #b8b8b8, #ffffff, #ffffff, #ffffff, #1f1f28, #1f1f28, #000000, #436038, #ffffff, #c0a36e, #76946a, #1f1f28, {{colors.scrim.default.hex}}, #1f1f28, #ffffff, #c0a36e
+        active_colors=#c8c093, #1f1f28, #ffffff, #cacaca, #9f9f9f, #b8b8b8, #c8c093, #ffffff, #c8c093, #1f1f28, #1f1f28, #1f1f28, #21321a, #e4eae1, #c0a36e, #76946a, #2a2a37, #1f1f28, #2a2a37, #c8c093, #c8c093, #76946a
+        disabled_colors=#c8c093, #1f1f28, #ffffff, #cacaca, #9f9f9f, #b8b8b8, #c8c093, #ffffff, #c8c093, #1f1f28, #1f1f28, #1f1f28, #21321a, #e4eae1, #c0a36e, #76946a, #2a2a37, #1f1f28, #2a2a37, #c8c093, #c8c093, #76946a
+        inactive_colors=#c8c093, #1f1f28, #ffffff, #cacaca, #9f9f9f, #b8b8b8, #c8c093, #ffffff, #c8c093, #1f1f28, #1f1f28, #1f1f28, #21321a, #e4eae1, #c0a36e, #76946a, #2a2a37, #1f1f28, #2a2a37, #c8c093, #c8c093, #76946a
       ''
     else if slug == "nord" then
       writeText "nord.conf" ''
         [ColorScheme]
-        active_colors=#ffffff, #2e3440, #ffffff, #cacaca, #9f9f9f, #b8b8b8, #ffffff, #ffffff, #ffffff, #2e3440, #2e3440, #000000, #326766, #ffffff, #88c0d0, #8fbcbb, #2e3440, {{colors.scrim.default.hex}}, #2e3440, #ffffff, #88c0d0
-        disabled_colors=#ffffff, #2e3440, #ffffff, #cacaca, #9f9f9f, #b8b8b8, #ffffff, #ffffff, #ffffff, #2e3440, #2e3440, #000000, #326766, #ffffff, #88c0d0, #8fbcbb, #2e3440, {{colors.scrim.default.hex}}, #2e3440, #ffffff, #88c0d0
-        inactive_colors=#ffffff, #2e3440, #ffffff, #cacaca, #9f9f9f, #b8b8b8, #ffffff, #ffffff, #ffffff, #2e3440, #2e3440, #000000, #326766, #ffffff, #88c0d0, #8fbcbb, #2e3440, {{colors.scrim.default.hex}}, #2e3440, #ffffff, #88c0d0
+        active_colors=#eceff4, #2e3440, #ffffff, #cacaca, #9f9f9f, #b8b8b8, #eceff4, #ffffff, #eceff4, #2e3440, #2e3440, #2e3440, #2e6b69, #dfecec, #88c0d0, #8fbcbb, #3b4252, #2e3440, #3b4252, #eceff4, #eceff4, #8fbcbb
+        disabled_colors=#eceff4, #2e3440, #ffffff, #cacaca, #9f9f9f, #b8b8b8, #eceff4, #ffffff, #eceff4, #2e3440, #2e3440, #2e3440, #2e6b69, #dfecec, #88c0d0, #8fbcbb, #3b4252, #2e3440, #3b4252, #eceff4, #eceff4, #8fbcbb
+        inactive_colors=#eceff4, #2e3440, #ffffff, #cacaca, #9f9f9f, #b8b8b8, #eceff4, #ffffff, #eceff4, #2e3440, #2e3440, #2e3440, #2e6b69, #dfecec, #88c0d0, #8fbcbb, #3b4252, #2e3440, #3b4252, #eceff4, #eceff4, #8fbcbb
       ''
     else
       "${pkgs.qt6Packages.qt6ct}/share/qt6ct/colors/darker.conf";
 
-  stylesheets = writeText "custom-fixes.qss" ''
+  stylesheets = writeText "custom-fixes.qss" /* css */ ''
     QMenuBar, QMenu, QToolBar, QStatusBar, QFrame, QScrollBar {
         border: none;
         color: palette(bright-text);
