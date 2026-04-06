@@ -92,6 +92,7 @@ in
         cava
         ffmpeg-full
         galaxy-buds-client
+        glib
         gparted
         grim
         nvtopPackages.full
