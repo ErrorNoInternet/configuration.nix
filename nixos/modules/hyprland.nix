@@ -19,6 +19,13 @@ in
   };
 
   config = mkIf cfg.enable {
+    security.wrappers.Hyprland = {
+      owner = "root";
+      group = "root";
+      capabilities = "cap_sys_nice+ep";
+      source = "${config.programs.hyprland.package}/bin/Hyprland";
+    };
+
     programs = {
       hyprland = {
         enable = true;
