@@ -60,7 +60,7 @@
         pattern = ft,
         callback = function()
           for key, cmd in pairs(filetype_cmd) do
-            local vim_cmd = ":wa<CR>:term " .. cmd .. "<CR>"
+            local vim_cmd = ":wa<CR>:tab term " .. cmd .. "<CR>"
             vim.keymap.set("n", "<" .. key .. ">", vim_cmd, opts)
             vim.keymap.set({ "i", "v" }, "<" .. key .. ">", "<Esc>" .. vim_cmd, opts)
           end
