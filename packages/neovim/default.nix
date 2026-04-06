@@ -10,5 +10,5 @@
   modules = [ "${self}/nvf" ];
 }).neovim.overrideAttrs
   (_old: {
-    name = "neovim";
+    pname = "neovim";
   })
