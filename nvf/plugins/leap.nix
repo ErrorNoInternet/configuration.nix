@@ -1,6 +1,6 @@
 {
   config.vim = {
-    extraPlugins.leap-nvim.package = "leap-nvim";
+    extraPlugins.leap.package = "leap-nvim";
 
     keymaps = [
       {
