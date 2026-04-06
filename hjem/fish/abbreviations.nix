@@ -5,6 +5,7 @@
       ae = "aerc";
       b = "bat";
       bp = "batp";
+      bpy = "bpython";
       bt = "btop";
       c = "cat";
       cl = "curl -L";
