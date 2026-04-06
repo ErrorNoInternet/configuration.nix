@@ -25,6 +25,7 @@
     android-studio
     android-tools
     discord
+    duperemove
     gimp3-with-plugins
     imhex
     inputs'.eilmeldung.packages.default
