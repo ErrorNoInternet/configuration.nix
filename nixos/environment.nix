@@ -2,7 +2,7 @@
   environment.variables = {
     EDITOR = "nvim";
     LESS = "-QR";
-    MANPAGER = "less -R --use-color -Dd+c -Du+b";
+    MANPAGER = "less -R --use-color -Dd+r -Du+b";
     MANROFFOPT = "-c";
     PAGER = "less";
     VISUAL = "nvim";
