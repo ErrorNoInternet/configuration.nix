@@ -23,7 +23,7 @@ in
       owner = "root";
       group = "root";
       capabilities = "cap_sys_nice+ep";
-      source = "${config.programs.hyprland.package}/bin/Hyprland";
+      source = lib.getExe config.programs.hyprland.package;
     };
 
     programs = {

@@ -1,8 +1,7 @@
-{ pkgs, ... }:
 {
   rum.programs.fish = {
     aliases = {
-      H = "ulimit -c (math 1024 x 1024 x 1024) && exec uwsm start ${pkgs.hyprland}/bin/start-hyprland";
+      H = "ulimit -c (math 1024 x 1024 x 1024) && exec uwsm start start-hyprland";
 
       cava = "TERM=kitty command cava";
       pwdc = "pwd | tr -d '\n' | wl-copy";
