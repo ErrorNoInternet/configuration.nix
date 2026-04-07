@@ -81,7 +81,6 @@ in
     duf
     dust
     efibootmgr
-    evcxr
     eza
     fastfetch
     fd
@@ -92,7 +91,6 @@ in
     hdparm
     htop
     hwatch
-    hyperfine
     inputs'.agenix.packages.default
     inputs'.disko.packages.default
     inputs'.nix-super.packages.default
@@ -123,12 +121,14 @@ in
     poop
     procs
     progress
+    pstree
     pv
     ripgrep
     screen
     self'.packages.dwarfs
     self'.packages.neovim
     smartmontools
+    smem
     squashfsTools
     sshfs
     statix

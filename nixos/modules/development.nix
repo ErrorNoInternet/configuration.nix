@@ -23,10 +23,12 @@ in
       bear
       clang
       cspell
+      evcxr
       gh
       git-graph
       go
       graphviz
+      hyperfine
       lua
       mold
       nixfmt
