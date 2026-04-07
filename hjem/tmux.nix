@@ -39,6 +39,7 @@
 
       set -g @jump-bg-color '\e[0m\e[90m'
       set -g @jump-fg-color '\e[1m\e[33m'
+      set -g @pane-focus-enabled off
       set -g @pane-focus-size '75'
       set -g @prefix_highlight_bg 'brightwhite'
       set -g @prefix_highlight_empty_attr 'bg=brightwhite'
