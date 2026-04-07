@@ -148,9 +148,13 @@ in
     ExternalSizeMax=512M
   '';
 
-  security.sudo.extraConfig = ''
-    Defaults:root,%wheel timestamp_timeout=15
-  '';
+  security = {
+    rtkit.enable = true;
+
+    sudo.extraConfig = ''
+      Defaults:root,%wheel timestamp_timeout=15
+    '';
+  };
 
   zramSwap = {
     enable = true;
