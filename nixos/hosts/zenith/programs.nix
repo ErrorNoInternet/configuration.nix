@@ -12,6 +12,7 @@
   gaming.enable = true;
   graphical.enable = true;
   hyprland.enable = true;
+  kmscon.enable = true;
   spicetify.enable = true;
 
   programs = {

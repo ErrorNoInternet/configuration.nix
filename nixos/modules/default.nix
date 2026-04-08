@@ -10,6 +10,7 @@
     ./host.nix
     ./hyprland.nix
     ./kernel.nix
+    ./kmscon.nix
     ./rpi.nix
     ./snapper.nix
     ./spicetify.nix

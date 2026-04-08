@@ -1,7 +1,8 @@
 { inputs', pkgs, ... }:
 {
-  display.enable = true;
   development.enable = true;
+  display.enable = true;
+  kmscon.enable = true;
 
   environment.systemPackages = with pkgs; [
     ffmpeg-full
