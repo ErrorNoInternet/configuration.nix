@@ -25,7 +25,7 @@
       include                                     binds
 
       auto-reload                                 false
-      keep-articles-days                          365
+      keep-articles-days                          3650
       openbrowser-and-mark-jumps-to-next-unread   true
       refresh-on-startup                          false
       reload-time                                 30
