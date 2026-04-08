@@ -8,7 +8,10 @@
       ja = "jj abandon";
       jA = "jj arrange";
       jb = "jj bookmark";
+      jbd = "jj bookmark delete";
       jbm = "jj bookmark move";
+      jbt = "jj bookmark track";
+      jbu = "jj bookmark untrack";
       jC = "jj commit";
       jci = "jj commit -i";
       jD = "jj diff";
@@ -46,6 +49,7 @@
       jRbd = "jj rebase -d";
       jRi = "jj restore -i";
       jRr = "jj restore -f@ -t@-";
+      jrv = "jj revert -r";
       js = "jj show";
       jS = "jj split";
       js- = "jj show @-";
