@@ -100,6 +100,7 @@ in
 
   networking = {
     networkmanager.enable = true;
+
     firewall = {
       enable = mkDefault false;
 
@@ -114,23 +115,6 @@ in
   };
 
   services = {
-    pipewire = {
-      enable = true;
-      pulse.enable = true;
-      alsa = {
-        enable = true;
-        support32Bit = true;
-      };
-    };
-
-    xserver = {
-      enable = true;
-      excludePackages = [ pkgs.xterm ];
-      displayManager.lightdm.enable = false;
-    };
-
-    logind.settings.Login.HandleLidSwitch = "ignore";
-
     getty = {
       greetingLine = ">>> NixOS ${config.system.nixos.label} (\\m) - \\l";
       helpLine = lib.mkForce "";
@@ -148,13 +132,9 @@ in
     ExternalSizeMax=512M
   '';
 
-  security = {
-    rtkit.enable = true;
-
-    sudo.extraConfig = ''
-      Defaults:root,%wheel timestamp_timeout=15
-    '';
-  };
+  security.sudo.extraConfig = ''
+    Defaults:root,%wheel timestamp_timeout=15
+  '';
 
   zramSwap = {
     enable = true;

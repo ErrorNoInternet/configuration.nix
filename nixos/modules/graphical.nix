@@ -45,7 +45,24 @@ in
       "x-scheme-handler/mailto" = "aerc.desktop";
     };
 
+    security.rtkit.enable = true;
+
     services = {
+      pipewire = {
+        enable = true;
+        pulse.enable = true;
+        alsa = {
+          enable = true;
+          support32Bit = true;
+        };
+      };
+
+      xserver = {
+        enable = true;
+        excludePackages = [ pkgs.xterm ];
+        displayManager.lightdm.enable = false;
+      };
+
       gnome = {
         gnome-keyring.enable = true;
         gcr-ssh-agent.enable = false;

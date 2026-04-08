@@ -9,7 +9,11 @@
 
   wifi.enable = true;
 
-  services.upower.enable = true;
+  services = {
+    logind.settings.Login.HandleLidSwitch = "ignore";
+
+    upower.enable = true;
+  };
 
   hjem.users.error = {
     rum.desktops.hyprland.settings.monitor = [
