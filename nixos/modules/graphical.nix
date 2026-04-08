@@ -45,7 +45,7 @@ in
       "x-scheme-handler/mailto" = "aerc.desktop";
     };
 
-    security.rtkit.enable = true;
+    users.users.error.extraGroups = [ "pipewire" ];
 
     services = {
       pipewire = {

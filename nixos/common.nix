@@ -161,9 +161,7 @@ in
         shell = pkgs.fish;
 
         extraGroups = [
-          "i2c"
           "networkmanager"
-          "video"
           "wheel"
         ];
 

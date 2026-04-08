@@ -18,6 +18,11 @@ in
   };
 
   config = mkIf cfg.enable {
+    users.users.error.extraGroups = [
+      "i2c"
+      "video"
+    ];
+
     services.kmscon = {
       enable = mkDefault true;
 
