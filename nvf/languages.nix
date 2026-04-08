@@ -1,52 +1,63 @@
+{ pkgs, ... }:
 {
-  config.vim.languages = {
-    enableFormat = true;
-    enableTreesitter = true;
-    enableExtraDiagnostics = true;
+  config.vim = {
+    extraPackages = with pkgs; [
+      python3Packages.pylatexenc
+    ];
 
-    assembly.enable = true;
+    languages = {
+      enableFormat = true;
+      enableTreesitter = true;
+      enableExtraDiagnostics = true;
 
-    bash.enable = true;
+      assembly.enable = true;
 
-    clang.enable = true;
+      bash.enable = true;
 
-    css.enable = true;
+      clang.enable = true;
 
-    go.enable = true;
+      css.enable = true;
 
-    html.enable = true;
+      go.enable = true;
 
-    json.enable = true;
+      html.enable = true;
 
-    lua = {
-      enable = true;
-      lsp.lazydev.enable = true;
-    };
+      json.enable = true;
 
-    markdown = {
-      enable = true;
-      extensions.render-markdown-nvim = {
+      lua = {
         enable = true;
+        lsp.lazydev.enable = true;
+      };
 
-        setupOpts.code = {
-          border = "thin";
-          conceal_delimiters = false;
-          sign = false;
+      markdown = {
+        enable = true;
+        extensions.render-markdown-nvim = {
+          enable = true;
+
+          setupOpts = {
+            code = {
+              border = "thin";
+              conceal_delimiters = false;
+              sign = false;
+            };
+
+            latex.enabled = true;
+          };
         };
       };
+
+      nix.enable = true;
+
+      python.enable = true;
+
+      rust = {
+        enable = true;
+        extensions.crates-nvim.enable = true;
+      };
+
+      yaml.enable = true;
+
+      zig.enable = true;
     };
-
-    nix.enable = true;
-
-    python.enable = true;
-
-    rust = {
-      enable = true;
-      extensions.crates-nvim.enable = true;
-    };
-
-    yaml.enable = true;
-
-    zig.enable = true;
   };
 }
