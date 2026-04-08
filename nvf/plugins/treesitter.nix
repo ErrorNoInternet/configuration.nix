@@ -17,6 +17,7 @@
       fish
       hyprlang
       kotlin
+      latex
       perl
       qmldir
       qmljs
