@@ -19,6 +19,10 @@ in
   config = mkIf cfg.enable {
     boot.kernelModules = [ "ntsync" ];
 
+    users.users.error.extraGroups = [
+      "gamemode"
+    ];
+
     programs = {
       gamemode.enable = true;
 
