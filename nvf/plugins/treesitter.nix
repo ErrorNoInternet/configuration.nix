@@ -17,13 +17,9 @@
       fish
       hyprlang
       kotlin
-      latex
       perl
-      qmldir
-      qmljs
       regex
       tmux
-      toml
     ];
   };
 }

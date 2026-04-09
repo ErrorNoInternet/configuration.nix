@@ -50,10 +50,16 @@
 
       python.enable = true;
 
+      qml.enable = true;
+
       rust = {
         enable = true;
         extensions.crates-nvim.enable = true;
       };
+
+      tex.enable = true;
+
+      toml.enable = true;
 
       yaml.enable = true;
 
