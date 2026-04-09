@@ -124,6 +124,7 @@ in
     pstree
     pv
     ripgrep
+    s-tui
     screen
     self'.packages.dwarfs
     self'.packages.neovim
