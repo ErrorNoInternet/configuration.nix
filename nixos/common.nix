@@ -138,6 +138,8 @@ in
 
   zramSwap = {
     enable = true;
+
+    algorithm = mkDefault "lzo-rle";
     memoryPercent = 100;
   };
 

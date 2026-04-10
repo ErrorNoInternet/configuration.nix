@@ -17,5 +17,7 @@
     qol = true;
   };
 
+  zramSwap.algorithm = "zstd";
+
   time.timeZone = "America/New_York";
 }
