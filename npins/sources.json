@@ -82,9 +82,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "99827bd1fb009a053ff8ffe17e9843b98eaae0bb",
-      "url": "https://github.com/irssi/scripts.irssi.org/archive/99827bd1fb009a053ff8ffe17e9843b98eaae0bb.tar.gz",
-      "hash": "sha256-K5PbE1LVqC/1HssvHeZZ4+Jri9QSbHYARuY7QTJaq64="
+      "revision": "4e2cac5124064a374e5a09edd287f05570e53d01",
+      "url": "https://github.com/irssi/scripts.irssi.org/archive/4e2cac5124064a374e5a09edd287f05570e53d01.tar.gz",
+      "hash": "sha256-bWCMMZRF+IcrCNnP5GdbTToYI2EpVqBkc/cY1rM4BbY="
     },
     "tmux-pane-focus": {
       "type": "Git",
