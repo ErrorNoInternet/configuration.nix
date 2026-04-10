@@ -557,8 +557,8 @@
         overlayLayer = true;
       };
       plugins = {
-        autoUpdate = true;
-        notifyUpdates = true;
+        autoUpdate = false;
+        notifyUpdates = false;
       };
       sessionMenu = {
         countdownDuration = 10000;
