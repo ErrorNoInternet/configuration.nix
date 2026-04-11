@@ -4,6 +4,7 @@
   lib,
   pkgs,
   self',
+  self,
   ...
 }:
 let
@@ -31,6 +32,10 @@ in
     services.noctalia-shell.enable = true;
 
     environment.systemPackages = with pkgs; [
+      (vimiv-qt.overrideAttrs (_: {
+        src = self.pins.vimiv-qt;
+      }))
+
       hyprpicker
       inputs'.hyprwm-contrib.packages.grimblast
       inputs'.shadower.packages.shadower
@@ -38,7 +43,6 @@ in
       self'.packages.gamma-control
       self'.packages.hyprtoggle
       self'.packages.scratchpad
-      vimiv-qt
       wf-recorder
       wl-clipboard
 

@@ -99,6 +99,19 @@
       "url": "https://github.com/graemedavidson/tmux-pane-focus/archive/525ce8117220de82331a97fec87fa6b54bad81df.tar.gz",
       "hash": "sha256-dkXTWZcNfs1+BelKuRzN268jF1CwIIObz9VJDLwMHvE="
     },
+    "vimiv-qt": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "ErrorNoInternet",
+        "repo": "vimiv-qt"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "ad731c9344dab46015296300ca6558316982166c",
+      "url": "https://github.com/ErrorNoInternet/vimiv-qt/archive/ad731c9344dab46015296300ca6558316982166c.tar.gz",
+      "hash": "sha256-r8mfWX8/oy6I9liEZ4ppVVnsfjAh4tFafo5+15eE3SQ="
+    },
     "wlr-clients": {
       "type": "Git",
       "repository": {
