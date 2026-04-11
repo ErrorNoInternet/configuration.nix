@@ -5,63 +5,47 @@
   ...
 }:
 let
-  networkCount = 9;
+  networkCount = 8;
 
   cfg = config.wifi;
   inherit (lib)
     mkEnableOption
     mkIf
     ;
+  inherit (lib.attrsets) recursiveUpdate;
 
-  mkNetwork = id: {
-    connection = {
-      id = "$SSID_${id}";
-      type = "wifi";
-    };
-    ipv4 = {
-      method = "auto";
-    };
+  defaultOptions = {
+    connection.type = "wifi";
+    ipv4.method = "auto";
     ipv6 = {
       addr-gen-mode = "default";
       method = "auto";
     };
-    wifi = {
-      mode = "infrastructure";
-      ssid = "$SSID_${id}";
-    };
+    wifi.mode = "infrastructure";
     wifi-security = {
       auth-alg = "open";
       key-mgmt = "wpa-psk";
-      psk = "$PSK_${id}";
     };
   };
 
+  mkNetwork =
+    id:
+    (recursiveUpdate {
+      connection.id = "$SSID_${id}";
+      wifi.ssid = "$SSID_${id}";
+      wifi-security.psk = "$PSK_${id}";
+    } defaultOptions);
+
   mkCustomNetwork =
     id: options:
-    {
-      connection = {
-        id = "$SSID_c${id}";
-        type = "wifi";
-      };
-      ipv4 = {
-        method = "auto";
-      };
-      ipv6 = {
-        addr-gen-mode = "default";
-        method = "auto";
-      };
+    (recursiveUpdate (recursiveUpdate {
+      connection.id = "$SSID_c${id}";
       wifi = {
         bssid = "$BSSID_c${id}";
-        mode = "infrastructure";
         ssid = "$SSID_c${id}";
       };
-      wifi-security = {
-        auth-alg = "open";
-        key-mgmt = "wpa-psk";
-        psk = "$PSK_c${id}";
-      };
-    }
-    // options;
+      wifi-security.psk = "$PSK_c${id}";
+    } defaultOptions) options);
 
 in
 {
@@ -84,6 +68,7 @@ in
         )
         // {
           custom-network_0 = mkCustomNetwork "0" { wifi.cloned-mac-address = "permanent"; };
+          custom-network_1 = mkCustomNetwork "1" { connection.autoconnect-priority = 1; };
         };
     };
   };
