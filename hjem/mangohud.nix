@@ -4,6 +4,9 @@
     "MangoHud/MangoHud.conf".text = ''
       full
       media_player=off
+      no_display
+      time_no_label
+      version=off
     '';
   };
 }
