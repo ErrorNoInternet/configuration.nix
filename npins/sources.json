@@ -108,9 +108,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "ad731c9344dab46015296300ca6558316982166c",
-      "url": "https://github.com/ErrorNoInternet/vimiv-qt/archive/ad731c9344dab46015296300ca6558316982166c.tar.gz",
-      "hash": "sha256-r8mfWX8/oy6I9liEZ4ppVVnsfjAh4tFafo5+15eE3SQ="
+      "revision": "df86b111812b851b7748e8e21344fff2f122dd84",
+      "url": "https://github.com/ErrorNoInternet/vimiv-qt/archive/df86b111812b851b7748e8e21344fff2f122dd84.tar.gz",
+      "hash": "sha256-XRY/Er9nzWW6KVCIdEwtCl6C1is8RIy239qOMBEPLgc="
     },
     "wlr-clients": {
       "type": "Git",
