@@ -88,7 +88,10 @@ in
     };
 
     kernelPackages = mkDefault pkgs.linuxPackages_latest;
-    kernelParams = [ "boot.shell_on_fail" ];
+    kernelParams = [
+      "boot.shell_on_fail"
+      "zswap.enabled=0"
+    ];
 
     binfmt = {
       emulatedSystems = mkIf pkgs.stdenv.hostPlatform.isx86 [ "aarch64-linux" ];
