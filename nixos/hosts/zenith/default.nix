@@ -14,7 +14,7 @@
       suffix = "lto-x86_64-v3";
     };
 
-    qol = true;
+    qol.enable = true;
   };
 
   zramSwap.algorithm = "zstd";

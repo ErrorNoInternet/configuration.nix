@@ -26,7 +26,7 @@ in
       };
     };
 
-    qol = mkEnableOption "";
+    qol.enable = mkEnableOption "";
   };
 
   config = {
@@ -39,7 +39,7 @@ in
         mkIf cfg.cachyos.enable
           pkgs.cachyosKernels."linuxPackages-cachyos-latest-${cfg.cachyos.suffix}";
 
-      kernelPatches = optionals cfg.qol [
+      kernelPatches = optionals cfg.qol.enable [
         {
           name = "drm_panic";
           patch = null;
