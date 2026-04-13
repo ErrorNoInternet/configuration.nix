@@ -93,6 +93,8 @@ in
       gdk-pixbuf.modulePackages = [ pkgs.librsvg ];
 
       kdeconnect.enable = true;
+
+      nix-ld.libraries = [ pkgs.libglvnd ];
     };
 
     environment = {
