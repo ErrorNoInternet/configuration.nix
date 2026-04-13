@@ -45,9 +45,10 @@ in
           (mkLuaInline /* lua */ ''
             function(a, b)
               local source_priority = {
-                path = 5,
-                lsp = 4,
-                snippets = 3,
+                path = 6,
+                lsp = 5,
+                snippets = 4,
+                nerdfont = 3,
                 buffer = 2,
                 yank = 1,
               }
