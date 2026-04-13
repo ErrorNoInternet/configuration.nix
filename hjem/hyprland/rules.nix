@@ -145,7 +145,7 @@
           matches = [
             {
               type = "class";
-              value = "jetbrains-studio";
+              value = "jetbrains-(.*)";
             }
             {
               type = "title";
