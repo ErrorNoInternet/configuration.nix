@@ -33,6 +33,7 @@
     gimp3-with-plugins
     imhex
     inputs'.eilmeldung.packages.default
+    jetbrains.idea-oss
     libreoffice-fresh
     lsfg-vk
     lsfg-vk-ui
