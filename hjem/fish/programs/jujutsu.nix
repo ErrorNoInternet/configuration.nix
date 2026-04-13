@@ -57,6 +57,7 @@
       jsq = "jj squash";
       jsqI = "jj squash --ignore-immutable";
       jsqi = "jj squash -i";
+      jsqii = "jj squash -i --into";
       jss = "jj show --stat";
       jsS = "jj show -s";
       jss- = "jj show --stat @-";
