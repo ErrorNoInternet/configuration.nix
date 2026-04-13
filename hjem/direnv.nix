@@ -1,7 +1,7 @@
-{ config, ... }:
+{ config, osConfig, ... }:
 {
   rum.programs.direnv = {
-    enable = true;
-    integrations.fish.enable = config.rum.programs.fish.enable;
+    inherit (osConfig.development) enable;
+    integrations.fish = { inherit (config.rum.programs.fish) enable; };
   };
 }
