@@ -30,7 +30,6 @@ in
       bear
       clang
       cspell
-      devenv
       evcxr
       gh
       git-graph
