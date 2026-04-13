@@ -81,6 +81,7 @@
       gpo = "git push origin";
       gpod = "git push origin --delete";
       gps = "git push -u origin";
+      gpt = "git push --tags";
       gr = "git restore";
       grb = "git rebase -i";
       grba = "git rebase --abort";
