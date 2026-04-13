@@ -1,11 +1,11 @@
-{ osConfig, pkgs, ... }:
+{ pkgs, ... }:
 {
   xdg.config.files = {
     "eilmeldung/config.toml".source = (pkgs.formats.toml { }).generate "config.toml" {
       article_scope = "all";
       keep_articles_days = 365;
       mouse_support = true;
-      notify_after_sync = osConfig.graphical.enable;
+      notify_after_sync = false;
       show_top_bar = false;
       sync_every_minutes = 60;
 
