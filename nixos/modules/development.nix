@@ -14,10 +14,14 @@ in
 {
   options.development = {
     enable = mkEnableOption "";
+
+    java.enable = mkEnableOption "";
   };
 
   config = mkIf cfg.enable {
     documentation.dev.enable = true;
+
+    programs.java = { inherit (cfg.java) enable; };
 
     environment.systemPackages = with pkgs; [
       bear

@@ -8,7 +8,10 @@
     ];
   };
 
-  development.enable = true;
+  development = {
+    enable = true;
+    java.enable = true;
+  };
   gaming.enable = true;
   graphical.enable = true;
   hyprland.enable = true;
