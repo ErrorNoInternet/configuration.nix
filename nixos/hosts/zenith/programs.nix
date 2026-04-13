@@ -40,6 +40,7 @@
     newsboat
     nheko
     obsidian
+    oxipng
     qbittorrent
     qpwgraph
     scrcpy
