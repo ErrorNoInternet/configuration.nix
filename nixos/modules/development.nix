@@ -21,7 +21,10 @@ in
   config = mkIf cfg.enable {
     documentation.dev.enable = true;
 
-    programs.java = { inherit (cfg.java) enable; };
+    programs.java = {
+      inherit (cfg.java) enable;
+      binfmt = true;
+    };
 
     environment.systemPackages = with pkgs; [
       bear
