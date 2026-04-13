@@ -16,6 +16,7 @@
       cuda
       fish
       hyprlang
+      java
       kotlin
       perl
       regex
