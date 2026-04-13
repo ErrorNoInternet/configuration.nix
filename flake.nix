@@ -42,6 +42,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nix-alien = {
+      url = "github:thiagokokada/nix-alien";
+      inputs = {
+        nix-index-database.follows = "nix-index-database";
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
 
     nix-cachyos-kernel = {
       url = "github:xddxdd/nix-cachyos-kernel/release";
