@@ -54,6 +54,7 @@
 
       set -ga update-environment DISPLAY
       set -ga update-environment HYPRLAND_INSTANCE_SIGNATURE
+      set -ga update-environment KITTY_PID
       set -ga update-environment SSH_AUTH_SOCK
       set -ga update-environment SSH_TTY
       set -ga update-environment TERM
