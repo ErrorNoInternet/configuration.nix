@@ -42,7 +42,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     nix-cachyos-kernel = {
       url = "github:xddxdd/nix-cachyos-kernel/release";
@@ -53,6 +52,8 @@
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     nix-super = {
       url = "github:privatevoid-net/nix-super";
