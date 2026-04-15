@@ -22,12 +22,6 @@
         }
 
         {
-          timeout = 10 * 60;
-          on-timeout = "brightnessctl -s s 1%";
-          on-resume = "brightnessctl -r";
-        }
-
-        {
           timeout = 15 * 60;
           on-timeout = "hyprctl dispatch dpms off";
         }
@@ -48,6 +42,7 @@
     path = with pkgs; [
       brightnessctl
       hypridle
+      hyprland
       inputs'.noctalia.packages.default
     ];
     script = "hypridle";
