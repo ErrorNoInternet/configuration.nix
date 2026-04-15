@@ -122,6 +122,7 @@ in
         satty
         slurp
         wev
+        wlr-randr
         ydotool
 
         kdePackages.breeze
