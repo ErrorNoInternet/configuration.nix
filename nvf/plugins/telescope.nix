@@ -8,7 +8,10 @@
         { name = "yank_history"; }
       ];
 
-      setupOpts.defaults.file_ignore_patterns = [ ];
+      setupOpts.defaults.file_ignore_patterns = [
+        "%.git/"
+        "%.venv/"
+      ];
     };
 
     extraPlugins.telescope-ui-select = {
