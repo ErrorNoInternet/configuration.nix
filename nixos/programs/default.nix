@@ -131,6 +131,7 @@ in
     self'.packages.neovim
     smartmontools
     smem
+    socat
     squashfsTools
     sshfs
     statix
