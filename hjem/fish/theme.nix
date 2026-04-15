@@ -29,7 +29,7 @@
       set -U tide_left_prompt_items pwd git jj character
       set -U tide_right_prompt_items status cmd_duration context jobs direnv \
                       node python rustc java php ruby go zig \
-                      distrobox toolbox nix_shell
+                      distrobox nix_shell
 
       tide reload
     end
