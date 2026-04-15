@@ -7,6 +7,8 @@
       extensions = [
         { name = "yank_history"; }
       ];
+
+      setupOpts.defaults.file_ignore_patterns = [ ];
     };
 
     extraPlugins.telescope-ui-select = {
