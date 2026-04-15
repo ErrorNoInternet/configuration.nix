@@ -127,6 +127,7 @@
       gsw- = "git switch";
       gswC = "git switch -C";
       gswc = "git switch -c";
+      gswd = "git switch -d";
       gt = "git tag";
       gtd = "git tag -d";
     };
