@@ -46,7 +46,6 @@
       gcl = "git clone";
       gcld = "git clone --depth 1";
       gco = "git checkout";
-      gcob = "git checkout -b";
       gcoh = "git checkout HEAD^";
       gcp = "git cherry-pick";
       gcpa = "git cherry-pick --abort";
@@ -124,7 +123,10 @@
       gsmu = "git submodule update";
       gss = "git show -m --stat";
       gst = "git status";
-      gsw = "git switch -";
+      gsw = "git switch";
+      gsw- = "git switch";
+      gswC = "git switch -C";
+      gswc = "git switch -c";
       gt = "git tag";
       gtd = "git tag -d";
     };
