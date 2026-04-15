@@ -3,6 +3,7 @@
     ./cargo.nix
     ./chezmoi.nix
     ./desktop.nix
+    ./distrobox.nix
     ./dnf.nix
     ./git.nix
     ./jujutsu.nix
