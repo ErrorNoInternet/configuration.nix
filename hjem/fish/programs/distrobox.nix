@@ -2,12 +2,12 @@
   rum.programs.fish.abbrs = {
     db = "distrobox";
     dbc = "distrobox create";
-    dbcr = "distrobox create --root";
+    dbcr = "distrobox create -r";
     dbe = "distrobox enter";
-    dber = "distrobox enter --root";
+    dber = "distrobox enter -r";
     dbl = "distrobox ls";
-    dblr = "distrobox ls --root";
+    dblr = "distrobox ls -r";
     dbr = "distrobox rm";
-    dbrr = "distrobox rm --root";
+    dbrr = "distrobox rm -r";
   };
 }
