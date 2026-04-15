@@ -19,7 +19,9 @@
           set -U SETTINGS_CONFIGURED 1
         end
 
-        atuin init fish --disable-up-arrow --disable-ai | source
+        if not set -q FISH_DISABLE_ATUIN
+          atuin init fish --disable-up-arrow --disable-ai | source
+        end
       end
     '';
   };
