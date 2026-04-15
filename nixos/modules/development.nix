@@ -31,6 +31,7 @@ in
       clang
       cspell
       evcxr
+      gdb
       gh
       git-graph
       go
