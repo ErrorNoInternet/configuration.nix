@@ -29,6 +29,7 @@
     android-studio
     android-tools
     discord
+    distrobox
     duperemove
     gimp3-with-plugins
     imhex
