@@ -50,10 +50,11 @@ in
 
     glfzf = writeFish "glfzf.fish" ''
       function glfzf -d "use fzf to preview git commits" --wraps "git log"
-        git log --graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" --abbrev=12 $argv | fzf --ansi --no-sort --reverse --tiebreak=index --scroll-off=5 --preview-window=right:60% \
-          --preview 'function preview; git show -m --color=always (echo $argv | grep -o "[a-f0-9]\{12\}" | head -c12) | delta --width=(tput cols); end; preview {}' \
-          --bind 'alt-j:preview-down,alt-k:preview-up,shift-down:preview-page-down,shift-up:preview-page-up,ctrl-m:execute:
-                  function show; git show -m --color=always (echo $argv | grep -o "[a-f0-9]\{12\}" | head -c12) | delta --width=(tput cols) | less -R; end; show {}'
+        git log --graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" --abbrev=12 $argv |
+          SHELL=fish fzf --ansi --no-sort --reverse --tiebreak=index --scroll-off=5 --preview-window=right:60% \
+                         --preview 'function preview; git show -m --color=always (echo $argv | grep -o "[a-f0-9]\{12\}" | head -c12) | delta --width=(tput cols); end; preview {}' \
+                         --bind 'alt-j:preview-down,alt-k:preview-up,shift-down:preview-page-down,shift-up:preview-page-up,ctrl-m:execute:
+                                 function show; git show -m --color=always (echo $argv | grep -o "[a-f0-9]\{12\}" | head -c12) | delta --width=(tput cols) | less -R; end; show {}'
       end
     '';
 
