@@ -9,6 +9,7 @@
       ];
 
       setupOpts.defaults.file_ignore_patterns = [
+        "%.direnv/"
         "%.git/"
         "%.venv/"
       ];
