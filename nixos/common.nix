@@ -24,6 +24,7 @@ in
 
     ../hjem
     ./bluetooth.nix
+    ./builds.nix
     ./dns.nix
     ./environment.nix
     ./hardware.nix
