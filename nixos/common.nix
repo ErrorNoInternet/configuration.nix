@@ -8,7 +8,11 @@
   ...
 }:
 let
-  inherit (lib) mkDefault mkIf;
+  inherit (lib)
+    mkDefault
+    mkForce
+    mkIf
+    ;
 in
 {
   imports = with inputs; [
@@ -122,11 +126,11 @@ in
   services = {
     getty = {
       greetingLine = ">>> NixOS ${config.system.nixos.label} (\\m) - \\l";
-      helpLine = lib.mkForce "";
+      helpLine = mkForce "";
     };
 
+    nscd.enable = false;
     openssh.enable = lib.mkDefault true;
-
     power-profiles-daemon.enable = true;
   };
 
@@ -182,6 +186,7 @@ in
 
   system = {
     configurationRevision = self.rev or self.dirtyRev;
+    nssModules = mkForce [ ];
     stateVersion = "25.05";
   };
 }
