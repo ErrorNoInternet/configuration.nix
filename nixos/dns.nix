@@ -18,7 +18,6 @@
       ];
       DNSOverTLS = true;
       DNSSEC = "allow-downgrade";
-      LLMNR = false;
     };
   };
 }
