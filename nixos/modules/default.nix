@@ -17,5 +17,6 @@
     ./substituters.nix
     ./sysctl.nix
     ./wifi.nix
+    ./wireguard.nix
   ];
 }

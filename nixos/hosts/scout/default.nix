@@ -13,6 +13,7 @@
   ddns.enable = true;
   fail2ban.enable = true;
   networking.firewall.enable = true;
+  wireguard.server.enable = true;
 
   time.timeZone = "America/New_York";
 }
