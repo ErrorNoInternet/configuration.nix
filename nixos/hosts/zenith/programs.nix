@@ -23,6 +23,15 @@
     btop.variant = "cuda";
     irssi.enable = true;
     wireshark.enable = true;
+
+    sbox = {
+      enable = true;
+      shellHook = ''
+        export fish_greeting=
+        export FISH_THEME_CONFIGURED=1
+        export SHELL=bash
+      '';
+    };
   };
 
   environment.systemPackages = with pkgs; [

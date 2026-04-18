@@ -816,8 +816,24 @@
         "nixpkgs": "nixpkgs_4",
         "noctalia": "noctalia",
         "nvf": "nvf",
+        "sbox": "sbox",
         "shadower": "shadower",
         "spicetify-nix": "spicetify-nix"
+      }
+    },
+    "sbox": {
+      "locked": {
+        "lastModified": 1776432259,
+        "narHash": "sha256-kYB1QBneY6tdqs6gpxuCHAHIEVFSfr0n9ORQikBcSnE=",
+        "owner": "DavHau",
+        "repo": "sbox",
+        "rev": "1ae298f3a13bca27c2edce8ac41797f403e979da",
+        "type": "github"
+      },
+      "original": {
+        "owner": "DavHau",
+        "repo": "sbox",
+        "type": "github"
       }
     },
     "shadower": {

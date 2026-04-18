@@ -19,6 +19,7 @@ in
     impermanence.nixosModules.default
     nix-index-database.nixosModules.nix-index
     noctalia.nixosModules.default
+    sbox.nixosModules.default
     spicetify-nix.nixosModules.default
 
     ../hjem

@@ -80,6 +80,8 @@
       };
     };
 
+    sbox.url = "github:DavHau/sbox";
+
     shadower.url = "github:n3oney/shadower";
 
     spicetify-nix = {
