@@ -72,6 +72,7 @@
       "/var/lib/nixos"
       "/var/lib/systemd/backlight"
       "/var/lib/systemd/coredump"
+      "/var/lib/systemd/timesync"
       "/var/log"
     ];
     files = [
