@@ -73,6 +73,19 @@
       "url": "https://github.com/dangooddd/kanagawa.yazi/archive/04985d12842b06bdb3ad5f1b3d7abc631059b7f5.tar.gz",
       "hash": "sha256-Yz0zRVzmgbrk0m7OkItxIK6W0WkPze/t09pWFgziNrw="
     },
+    "nvidia-vaapi-driver": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "alper-han",
+        "repo": "nvidia-vaapi-driver"
+      },
+      "branch": "nvenc-h264-encode",
+      "submodules": false,
+      "revision": "a40916e477a0510f5673536b5a87981df631a3f0",
+      "url": "https://github.com/alper-han/nvidia-vaapi-driver/archive/a40916e477a0510f5673536b5a87981df631a3f0.tar.gz",
+      "hash": "sha256-aHE9LKWsEgEBHXPxkLWgQh3egL3TxNlsx8++XPDwiXQ="
+    },
     "scripts.irssi.org": {
       "type": "Git",
       "repository": {
