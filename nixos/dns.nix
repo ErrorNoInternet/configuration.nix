@@ -17,7 +17,6 @@
         "2606:4700:4700::1001#cloudflare-dns.com"
       ];
       DNSOverTLS = true;
-      DNSSEC = "allow-downgrade";
     };
   };
 }
