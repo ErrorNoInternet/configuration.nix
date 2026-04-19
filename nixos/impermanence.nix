@@ -16,6 +16,7 @@
     };
 
     services.impermanence-btrfs-rolling-root = {
+      description = "Move Root for Impermanence";
       unitConfig.DefaultDependencies = false;
       serviceConfig.Type = "oneshot";
 
