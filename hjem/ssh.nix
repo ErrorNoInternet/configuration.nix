@@ -1,22 +1,49 @@
 { lib, ... }:
 let
-  hosts = [
-    "100.96.0.1"
-    "error.tuxcord.net"
-    "scout.error.tuxcord.net"
-    "scout.local"
-    "tuxcord.net"
-    "zenith.local"
-  ];
+  hosts = {
+    "100.96.0.1" = {
+      ForwardAgent = "yes";
+    };
+    "error.tuxcord.net" = {
+      ForwardAgent = "yes";
+    };
+    "scout.error.tuxcord.net" = {
+      ForwardAgent = "yes";
+    };
+    "scout.local" = {
+      ForwardAgent = "yes";
+    };
+    "tuxcord.net" = {
+      ForwardAgent = "yes";
+    };
+    "zenith.local" = {
+      ForwardAgent = "yes";
+    };
+    "git.javalsai.tuxcord.net" = {
+      Port = "1022";
+      User = "gitea";
+    };
+  };
 in
 {
   files.".ssh/config".text = ''
     AddKeysToAgent 1d
     Compression yes
   ''
-  + (lib.concatStringsSep "\n" (
-    map (host: ''
-      Host ${host}
-        ForwardAgent yes'') hosts
-  ));
+  +
+    lib.attrsets.foldlAttrs
+      (
+        acc: host: options:
+        acc + "Host ${host}\n${options}\n"
+      )
+      ""
+      (
+        builtins.mapAttrs (
+          _host: options:
+          lib.attrsets.foldlAttrs (
+            acc: key: value:
+            acc + "  ${key} ${value}\n"
+          ) "" options
+        ) hosts
+      );
 }
