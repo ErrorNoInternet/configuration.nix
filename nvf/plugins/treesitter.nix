@@ -21,6 +21,7 @@
       perl
       regex
       tmux
+      typescript
     ];
   };
 }
