@@ -16,6 +16,7 @@
     ./spicetify.nix
     ./substituters.nix
     ./sysctl.nix
+    ./upnp.nix
     ./wifi.nix
     ./wireguard.nix
   ];

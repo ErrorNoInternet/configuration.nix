@@ -1,3 +1,9 @@
+let
+  usedTCPPorts = [
+    6984
+    18080
+  ];
+in
 {
   users.users.nginx.extraGroups = [ "acme" ];
 
@@ -46,8 +52,6 @@
     };
   };
 
-  networking.firewall.allowedTCPPorts = [
-    6984
-    18080
-  ];
+  networking.firewall.allowedTCPPorts = usedTCPPorts;
+  upnp.tcpPorts = usedTCPPorts;
 }

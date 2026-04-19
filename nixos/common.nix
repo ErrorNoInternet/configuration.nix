@@ -122,6 +122,7 @@ in
       ];
     };
   };
+  upnp.tcpPorts = [ 22 ];
 
   services = {
     getty = {

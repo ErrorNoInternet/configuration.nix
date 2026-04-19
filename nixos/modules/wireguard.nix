@@ -40,6 +40,7 @@ in
       internalInterfaces = [ "wg0" ];
     };
 
+    upnp.udpPorts = [ cfg.server.listenPort ];
     networking = {
       firewall.allowedUDPPorts = [ cfg.server.listenPort ];
 
