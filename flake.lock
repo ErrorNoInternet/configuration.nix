@@ -123,11 +123,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1775811760,
-        "narHash": "sha256-levgCMP/JYUxRTfrAMTCD3lWCsmUOgVVW8EGmAcE4ds=",
+        "lastModified": 1776758047,
+        "narHash": "sha256-rCv9uFVNvLCe5Cx4/IuNc2IEw8KiP3ykf3hDFoYTpZg=",
         "owner": "christo-auer",
         "repo": "eilmeldung",
-        "rev": "e900007a97ec9fe54746533ce14b1782001e2933",
+        "rev": "ff5eb4ce26cc95ca0f43c10e44a2d737ac62ea91",
         "type": "github"
       },
       "original": {
