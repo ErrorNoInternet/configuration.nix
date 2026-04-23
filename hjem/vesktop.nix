@@ -48,6 +48,9 @@
           enabled = true;
           format = "human";
         };
+        CharacterCounter = {
+          enabled = true;
+        };
         ChatInputButtonAPI = {
           enabled = true;
         };
