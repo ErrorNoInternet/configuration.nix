@@ -38,6 +38,7 @@
     android-studio
     android-tools
     discord
+    appimage-run
     distrobox
     duperemove
     gimp3-with-plugins
