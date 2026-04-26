@@ -21,6 +21,7 @@ in
     disko.nixosModules.default
     hjem.nixosModules.default
     impermanence.nixosModules.default
+    inputs.nixcord.nixosModules.nixcord
     nix-index-database.nixosModules.nix-index
     noctalia.nixosModules.default
     sbox.nixosModules.default

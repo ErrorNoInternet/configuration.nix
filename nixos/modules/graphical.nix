@@ -41,7 +41,6 @@ in
       "application/pdf" = "org.mozilla.firefox.desktop";
       "image/jpeg" = "vimiv.desktop";
       "image/png" = "vimiv.desktop";
-      "x-scheme-handler/discord" = "vesktop.desktop";
       "x-scheme-handler/mailto" = "aerc.desktop";
     };
 
@@ -87,13 +86,10 @@ in
 
     programs = {
       dconf.enable = true;
-
+      discord.enable = true;
       firefox.enable = true;
-
       gdk-pixbuf.modulePackages = [ pkgs.librsvg ];
-
       kdeconnect.enable = true;
-
       nix-ld.libraries = [ pkgs.libglvnd ];
     };
 

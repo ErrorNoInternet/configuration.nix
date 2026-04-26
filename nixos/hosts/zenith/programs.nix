@@ -37,7 +37,6 @@
   environment.systemPackages = with pkgs; [
     android-studio
     android-tools
-    discord
     appimage-run
     distrobox
     duperemove
@@ -56,7 +55,6 @@
     qpwgraph
     scrcpy
     songrec
-    vesktop
     wechat
     yt-dlp
   ];

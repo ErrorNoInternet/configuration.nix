@@ -57,7 +57,6 @@
       ./ssh.nix
       ./tmux.nix
       ./tz.nix
-      ./vesktop.nix
       ./vimiv.nix
       ./xdg.nix
       ./zoxide.nix

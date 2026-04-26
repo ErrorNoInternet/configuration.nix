@@ -12,6 +12,7 @@ in
   imports = [
     ./aerc.nix
     ./btop.nix
+    ./discord.nix
     ./irssi.nix
     ./yazi
   ];
