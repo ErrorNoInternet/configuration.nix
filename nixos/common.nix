@@ -181,13 +181,23 @@ in
       };
     };
 
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs = {
+    config.allowUnfree = true;
 
-  environment.etc."nixos/current".source = lib.cleanSource ./..;
+    overlays = [
+      (_: super: {
+        mimalloc = super.mimalloc.overrideAttrs (old: {
+          cmakeFlags = old.cmakeFlags ++ [ "-DMI_NO_OPT_ARCH=ON" ];
+        });
+      })
+    ];
+  };
 
   system = {
     configurationRevision = self.rev or self.dirtyRev;
     nssModules = mkForce [ ];
     stateVersion = "25.05";
   };
+
+  environment.etc."nixos/current".source = lib.cleanSource ./..;
 }
