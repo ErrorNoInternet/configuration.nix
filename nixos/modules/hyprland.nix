@@ -29,8 +29,6 @@ in
       gpu-screen-recorder.enable = true;
     };
 
-    services.noctalia-shell.enable = true;
-
     environment.systemPackages = with pkgs; [
       (vimiv-qt.overrideAttrs (_: {
         src = self.pins.vimiv-qt;
@@ -46,6 +44,7 @@ in
       wf-recorder
       wl-clipboard
 
+      inputs'.noctalia.packages.default
       libsForQt5.qt5.qtgraphicaleffects
       qt6Packages.qt5compat
       quickshell
