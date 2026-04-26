@@ -8,6 +8,14 @@ let
   domainName = "errornointernet.tuxcord.net";
 in
 {
+  environment.persistence."/persist".directories = [
+    {
+      directory = "/var/lib/acme";
+      group = "acme";
+      user = "acme";
+    }
+  ];
+
   age.secrets.ntfy.file = "${self}/agenix/ntfy.age";
 
   security.acme = {
