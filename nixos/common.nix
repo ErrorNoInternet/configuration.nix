@@ -183,11 +183,11 @@ in
 
   nixpkgs.config.allowUnfree = true;
 
-  environment.etc."nixos/current".source = lib.cleanSource ./..;
-
   system = {
     configurationRevision = self.rev or self.dirtyRev;
     nssModules = mkForce [ ];
     stateVersion = "25.05";
   };
+
+  environment.etc."nixos/current".source = lib.cleanSource ./..;
 }
