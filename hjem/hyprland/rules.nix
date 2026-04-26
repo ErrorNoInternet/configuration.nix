@@ -87,22 +87,7 @@
           matches = [
             {
               type = "class";
-              value = "xdg-desktop-portal";
-            }
-          ];
-          rules = [
-            "animation slide"
-            "center on"
-            "float on"
-            "size (monitor_w*0.6) (monitor_h*0.65)"
-          ];
-        }
-
-        {
-          matches = [
-            {
-              type = "title";
-              value = "File Upload";
+              value = "xdg-desktop-portal-gtk";
             }
           ];
           rules = [
@@ -116,28 +101,14 @@
           matches = [
             {
               type = "title";
-              value = "Open";
+              value = "Select what to share";
             }
           ];
           rules = [
             "animation slide"
             "center on"
             "float on"
-            "size (monitor_w*0.6) (monitor_h*0.65)"
-          ];
-        }
-        {
-          matches = [
-            {
-              type = "title";
-              value = "Save As";
-            }
-          ];
-          rules = [
-            "animation slide"
-            "center on"
-            "float on"
-            "size (monitor_w*0.6) (monitor_h*0.65)"
+            "size (monitor_w*0.3) (monitor_h*0.3)"
           ];
         }
 
