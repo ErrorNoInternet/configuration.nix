@@ -1,5 +1,6 @@
 {
   environment.variables = {
+    DO_NOT_TRACK = 1;
     EDITOR = "nvim";
     LESS = "-QR";
     MANPAGER = "less -R --use-color -Dd+r -Du+b";
