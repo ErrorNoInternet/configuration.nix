@@ -58,7 +58,7 @@ in
               );
           in
           ''
-            IP=$(hostname -I | awk '{print $1}')
+            IP=$(hostname -I | awk '{print $NF}')
           ''
           + lib.concatStringsSep "\n" (mkPorts "tcp" ++ mkPorts "udp");
       };
