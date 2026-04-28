@@ -56,10 +56,6 @@ in
     }))
     python3Packages.btrfs
 
-    (gcal.overrideAttrs (_old: {
-      env.NIX_CFLAGS_COMPILE = "-std=gnu17";
-    }))
-
     _7zz
     atop
     atuin
@@ -86,6 +82,7 @@ in
     fastfetch
     fd
     file
+    gcal
     gcc
     gnumake
     gnupg
