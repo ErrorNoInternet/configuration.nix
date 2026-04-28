@@ -18,6 +18,7 @@
           nix-output-monitor
           nixfmt
           npins
+          nurl
           parted
           smartmontools
           statix

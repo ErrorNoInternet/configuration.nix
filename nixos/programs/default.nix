@@ -110,6 +110,7 @@ in
     nix-output-monitor
     nmap
     npins
+    nurl
     nvme-cli
     openssl
     parted
