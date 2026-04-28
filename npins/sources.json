@@ -31,6 +31,22 @@
       "url": "https://github.com/mhx/dwarfs/releases/download/v0.14.1/dwarfs-0.14.1.tar.xz",
       "hash": "sha256-nIXL3ej1rdQWuv7YuyJ2DP+Rt9OAiBwg/ZVn/Fv2W54="
     },
+    "endcord": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "sparklost",
+        "repo": "endcord"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "1.4.2",
+      "revision": "07fbed536aec04b6358ad9cfe822eaa92f1781fb",
+      "url": "https://api.github.com/repos/sparklost/endcord/tarball/refs/tags/1.4.2",
+      "hash": "sha256-YY9NRK5ZXH5Ry7FCGQ158AySRcPwr+jNh2QrcP1YlV4="
+    },
     "fish_logo": {
       "type": "Git",
       "repository": {

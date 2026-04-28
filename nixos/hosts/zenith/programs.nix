@@ -1,4 +1,9 @@
-{ inputs', pkgs, ... }:
+{
+  inputs',
+  pkgs,
+  self',
+  ...
+}:
 {
   services.printing = {
     enable = true;
@@ -53,6 +58,7 @@
     qbittorrent
     qpwgraph
     scrcpy
+    self'.packages.endcord
     songrec
     wechat
     yt-dlp

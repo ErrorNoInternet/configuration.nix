@@ -1,5 +1,6 @@
 [
   ./dwarfs
+  ./endcord
   ./gamma-control
   ./hyprtoggle
   ./kitty
