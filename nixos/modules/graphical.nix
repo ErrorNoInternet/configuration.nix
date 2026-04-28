@@ -85,6 +85,10 @@ in
     };
 
     programs = {
+      appimage = {
+        enable = true;
+        binfmt = true;
+      };
       dconf.enable = true;
       discord.enable = true;
       firefox.enable = true;

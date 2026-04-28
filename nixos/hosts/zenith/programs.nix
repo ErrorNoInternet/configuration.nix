@@ -37,7 +37,6 @@
   environment.systemPackages = with pkgs; [
     android-studio
     android-tools
-    appimage-run
     distrobox
     duperemove
     gimp3-with-plugins
