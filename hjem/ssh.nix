@@ -23,6 +23,15 @@ let
       Port = "1022";
       User = "gitea";
     };
+    "javalsai.tuxcord.net" = {
+      Port = "1022";
+    };
+    "envs.net" = {
+      User = "errornointernet";
+    };
+    "fedorapeople.org" = {
+      User = "errornointernet";
+    };
   };
 in
 {
