@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  self',
   ...
 }:
 let
@@ -44,6 +45,7 @@ in
       pandoc
       pkg-config
       rustup
+      self'.packages.ferritin
       tokei
       toolbox
       valgrind

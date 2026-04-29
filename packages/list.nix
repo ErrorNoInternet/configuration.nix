@@ -1,6 +1,7 @@
 [
   ./dwarfs
   ./endcord
+  ./ferritin
   ./gamma-control
   ./hyprtoggle
   ./kitty
