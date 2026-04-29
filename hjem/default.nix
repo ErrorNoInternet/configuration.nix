@@ -43,6 +43,7 @@
       ./gtk.nix
       ./hypridle.nix
       ./hyprland
+      ./iamb.nix
       ./irssi
       ./jujutsu.nix
       ./kdeconnect.nix

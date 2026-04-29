@@ -45,6 +45,7 @@
     distrobox
     duperemove
     gimp3-with-plugins
+    iamb
     imhex
     inputs'.eilmeldung.packages.default
     jetbrains.idea-oss
