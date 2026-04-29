@@ -53,6 +53,7 @@
     lsfg-vk-ui
     newsboat
     nheko
+    nix-init
     obsidian
     oxipng
     qbittorrent
