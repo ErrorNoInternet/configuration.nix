@@ -30,6 +30,7 @@
       ./cursor.nix
       ./direnv.nix
       ./eilmeldung.nix
+      ./endcord.nix
       ./environment.nix
       ./fastfetch.nix
       ./fcitx5.nix
