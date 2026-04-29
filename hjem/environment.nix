@@ -4,6 +4,7 @@
     TERMINAL = "kitty";
 
     BAT_THEME = "ansi";
+    FERRITIN_THEME = "zenburn";
     GOPATH = "${osConfig.hjem.users.error.directory}/.go";
     HWATCH = "--no-help-banner";
 
