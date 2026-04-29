@@ -4,16 +4,16 @@
     "tz/conf.toml".source = (pkgs.formats.toml { }).generate "conf.toml" {
       zones = [
         {
-          id = "Europe/Stockholm";
-          name = "Stockholm";
-        }
-        {
-          id = "America/New_York";
-          name = "New York";
+          id = "Asia/Shanghai";
+          name = "Shanghai";
         }
         {
           id = "America/Los_Angeles";
           name = "Los Angeles";
+        }
+        {
+          id = "Europe/Stockholm";
+          name = "Stockholm";
         }
         {
           id = "Asia/Yekaterinburg";
