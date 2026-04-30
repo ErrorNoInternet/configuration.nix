@@ -21,7 +21,6 @@
         {
           main = {
             downloads_path = "~/downloads";
-            limit_username = 15;
             send_typing = false;
             vim_mode = true;
           };
