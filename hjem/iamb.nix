@@ -29,7 +29,7 @@
         read_receipt_send = true;
         request_timeout = 10000;
         typing_notice_display = true;
-        typing_notice_send = true;
+        typing_notice_send = false;
         user_gutter_width = 30;
         username_display = "username";
 
