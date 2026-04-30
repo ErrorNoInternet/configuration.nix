@@ -63,6 +63,7 @@
     self'.packages.endcord
     songrec
     wechat
+    wireguard-tools
     yt-dlp
   ];
 }

@@ -64,6 +64,11 @@ in
                 allowedIPs = [ "10.0.0.2/32" ];
                 publicKey = "AZqrfJ+LiQGsdOWm2+EMa5xSwdHYdgA7sgyuUtNNtE4=";
               }
+              {
+                name = "zenith";
+                allowedIPs = [ "10.0.0.3/32" ];
+                publicKey = "Gccrx0HcLw6SBwclEeTrU6scANLx7UGZ89FjGukFeBM=";
+              }
             ];
           };
       };
