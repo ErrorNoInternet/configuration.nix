@@ -261,6 +261,14 @@ in
       _tide_print_item jj $tide_jj_icon' ' "$jj_status"
     '';
 
+    _tide_item_nix_shell = /* fish */ ''
+      if set -q IN_NIX_SHELL
+        _tide_print_item nix_shell $tide_nix_shell_icon' ' $IN_NIX_SHELL
+      else if set -q IN_NIX3_SHELL
+        _tide_print_item nix_shell $tide_nix_shell_icon' '
+      end
+    '';
+
     __fish_list_current_token = writeFish "__fish_list_current_token.fish" ''
       function __fish_list_current_token --description 'List contents of token under the cursor if it is a directory, otherwise list the contents of the current directory'
         set -l val "$(commandline -t | string replace -r '^~' "$HOME")"
