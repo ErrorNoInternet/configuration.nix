@@ -45,7 +45,9 @@ in
       wl-clipboard
 
       inputs'.noctalia.packages.default
-      libsForQt5.qt5.qtgraphicaleffects
+      kdePackages.kimageformats
+      qt5.qtgraphicaleffects
+      qt5.qtimageformats
       qt6.qt5compat
       qt6.qtimageformats
       quickshell
