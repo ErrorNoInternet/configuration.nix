@@ -46,7 +46,8 @@ in
 
       inputs'.noctalia.packages.default
       libsForQt5.qt5.qtgraphicaleffects
-      qt6Packages.qt5compat
+      qt6.qt5compat
+      qt6.qtimageformats
       quickshell
     ];
   };
