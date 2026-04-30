@@ -1,4 +1,9 @@
-{ lib, osConfig, ... }:
+{
+  config,
+  lib,
+  osConfig,
+  ...
+}:
 {
   xdg.data.files = lib.mkIf osConfig.graphical.enable {
     "endcord/config.ini".text =
@@ -20,7 +25,7 @@
         }
         {
           main = {
-            downloads_path = "~/downloads";
+            downloads_path = "${config.directory}/downloads";
             send_typing = false;
             vim_mode = true;
           };
