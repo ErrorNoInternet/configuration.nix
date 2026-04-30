@@ -39,8 +39,7 @@ in
 
     xdg.mime.defaultApplications = {
       "application/pdf" = "org.mozilla.firefox.desktop";
-      "image/jpeg" = "vimiv.desktop";
-      "image/png" = "vimiv.desktop";
+      "image/*" = "vimiv.desktop";
       "x-scheme-handler/mailto" = "aerc.desktop";
     };
 
