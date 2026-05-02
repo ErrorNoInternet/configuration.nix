@@ -45,6 +45,7 @@
       set -g @prefix_highlight_empty_attr 'bg=brightwhite'
       set -g @prefix_highlight_empty_prompt ' '
       set -g @prefix_highlight_fg 'black'
+      set -g @resurrect-processes 'aerc btop eilmeldung endcord iamb newsboat nvim'
 
       set -g allow-passthrough on
       set -g repeat-time 0
