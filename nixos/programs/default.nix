@@ -89,6 +89,7 @@ in
     hdparm
     htop
     hwatch
+    hydra-check
     inputs'.agenix.packages.default
     inputs'.disko.packages.default
     inputs'.nix-alien.packages.default

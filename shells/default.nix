@@ -11,6 +11,7 @@
           deadnix
           delta
           git
+          hydra-check
           inputs.agenix.packages.${stdenv.hostPlatform.system}.default
           inputs.disko.packages.${stdenv.hostPlatform.system}.default
           jujutsu
