@@ -65,6 +65,7 @@
       "/etc/mullvad-vpn"
       "/export"
       "/mnt"
+      "/root/.ssh"
       "/var/db/sudo/lectured"
       "/var/lib/bluetooth"
       "/var/lib/nfs"
