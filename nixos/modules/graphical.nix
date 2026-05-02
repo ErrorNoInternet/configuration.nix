@@ -113,6 +113,7 @@ in
         glib
         gparted
         grim
+        libva-utils
         nvtopPackages.full
         pavucontrol
         playerctl
