@@ -36,7 +36,7 @@ in
       term = "xterm-256color";
 
       extraConfig = ''
-        font-size = ${builtins.toString (config.fonts.preferredSize + 2)}
+        font-size = ${builtins.toString (config.fonts.preferredSize + 1)}
 
         xkb-repeat-delay = ${builtins.toString config.graphical.repeatDelay}
         xkb-repeat-rate = ${builtins.toString config.graphical.repeatRate}
