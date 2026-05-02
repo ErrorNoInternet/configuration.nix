@@ -83,6 +83,7 @@
       run-shell ${self.pins.tmux-pane-focus}/focus.tmux
       run-shell ${tmuxPlugins.jump}/share/tmux-plugins/jump/tmux-jump.tmux
       run-shell ${tmuxPlugins.prefix-highlight}/share/tmux-plugins/prefix-highlight/prefix_highlight.tmux
+      run-shell ${tmuxPlugins.resurrect}/share/tmux-plugins/resurrect/resurrect.tmux
       run-shell ${tmuxPlugins.yank}/share/tmux-plugins/yank/yank.tmux
     '';
   };
