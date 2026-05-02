@@ -1,13 +1,5 @@
-{ config, self, ... }:
+{ config, ... }:
 {
-  nixpkgs.overlays = [
-    (_: super: {
-      nvidia-vaapi-driver = super.nvidia-vaapi-driver.overrideAttrs (_old: {
-        src = self.pins.nvidia-vaapi-driver;
-      });
-    })
-  ];
-
   hardware = {
     graphics.enable = true;
 
