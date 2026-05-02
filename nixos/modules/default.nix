@@ -11,6 +11,7 @@
     ./hyprland.nix
     ./kernel.nix
     ./kmscon.nix
+    ./libvirt.nix
     ./rpi.nix
     ./snapper.nix
     ./spicetify.nix
