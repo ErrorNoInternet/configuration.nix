@@ -17,5 +17,7 @@
     qol.enable = true;
   };
 
+  libvirt.enable = true;
+
   time.timeZone = "America/New_York";
 }
