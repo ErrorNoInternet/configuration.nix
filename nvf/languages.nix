@@ -65,5 +65,9 @@
 
       zig.enable = true;
     };
+
+    lsp.servers = {
+      basedpyright.settings.basedpyright.analysis.typeCheckingMode = "standard";
+    };
   };
 }
