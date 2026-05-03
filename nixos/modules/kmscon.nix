@@ -44,7 +44,7 @@ in
 
       extraConfig = ''
         dpms-timeout = ${builtins.toString cfg.dpmsTimeout}
-        font-size = ${builtins.toString (config.fonts.preferredSize + 3)}
+        font-size = ${builtins.toString (config.fonts.preferredSize + 2)}
 
         xkb-repeat-delay = ${builtins.toString config.graphical.repeatDelay}
         xkb-repeat-rate = ${builtins.toString config.graphical.repeatRate}

@@ -7,7 +7,7 @@
       main = {
         width = 64;
         font = "${osConfig.fonts.preferredName}:size=${
-          builtins.toString (osConfig.fonts.preferredSize + 3)
+          builtins.toString (osConfig.fonts.preferredSize + 4)
         }";
       };
 
