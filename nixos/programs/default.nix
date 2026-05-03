@@ -70,7 +70,6 @@ in
     compsize
     copyparty
     croc
-    deadnix
     delta
     difftastic
     dnsutils
@@ -133,7 +132,6 @@ in
     socat
     squashfsTools
     sshfs
-    statix
     sysstat
     tcpdump
     tmux

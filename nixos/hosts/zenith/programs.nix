@@ -62,6 +62,7 @@
     scrcpy
     self'.packages.endcord
     songrec
+    sqlit-tui
     wechat
     wireguard-tools
     yt-dlp

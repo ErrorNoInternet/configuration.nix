@@ -31,6 +31,7 @@ in
       bear
       clang
       cspell
+      deadnix
       evcxr
       gdb
       gh
@@ -46,7 +47,7 @@ in
       pkg-config
       rustup
       self'.packages.ferritin
-      sqlit-tui
+      statix
       tokei
       toolbox
       valgrind
