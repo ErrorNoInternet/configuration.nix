@@ -48,6 +48,8 @@ in
           callTimer.enable = true;
           ClearURLs.enable = true;
           copyFileContents.enable = true;
+          copyProfileColors.enable = true;
+          copyStickerLinks.enable = true;
           CopyUserURLs.enable = true;
           crashHandler.enable = true;
           equibopStreamFixes.enable = true;
@@ -59,7 +61,9 @@ in
           friendsSince.enable = true;
           imageZoom.enable = true;
           implicitRelationships.enable = true;
+          jumpTo.enable = true;
           keepCurrentChannel.enable = true;
+          lastActive.enable = true;
           memberCount.enable = true;
           mentionAvatars.enable = true;
           messageLatency = {
@@ -118,6 +122,7 @@ in
           userVoiceShow.enable = true;
           viewIcons.enable = true;
           viewRaw.enable = true;
+          voiceDownload.enable = true;
           voiceMessages.enable = true;
           volumeBooster.enable = true;
           webKeybinds.enable = true;
