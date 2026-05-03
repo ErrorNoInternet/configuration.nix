@@ -14,6 +14,7 @@
     ./guess-indent.nix
     ./highlight-undo.nix
     ./ibl.nix
+    ./indent-object.nix
     ./jj.nix
     ./leap.nix
     ./lint.nix
