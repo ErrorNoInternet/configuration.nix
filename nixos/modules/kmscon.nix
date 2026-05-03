@@ -10,11 +10,18 @@ let
     mkDefault
     mkEnableOption
     mkIf
+    mkOption
+    types
     ;
 in
 {
   options.kmscon = {
     enable = mkEnableOption "";
+
+    dpmsTimeout = mkOption {
+      type = types.int;
+      default = 900;
+    };
   };
 
   config = mkIf cfg.enable {
@@ -36,6 +43,7 @@ in
       term = "xterm-256color";
 
       extraConfig = ''
+        dpms-timeout = ${builtins.toString cfg.dpmsTimeout}
         font-size = ${builtins.toString (config.fonts.preferredSize + 3)}
 
         xkb-repeat-delay = ${builtins.toString config.graphical.repeatDelay}
