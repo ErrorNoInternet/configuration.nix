@@ -46,6 +46,7 @@ in
       pkg-config
       rustup
       self'.packages.ferritin
+      sqlit-tui
       tokei
       toolbox
       valgrind
