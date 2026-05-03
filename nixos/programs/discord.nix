@@ -25,18 +25,16 @@ in
         vencord.enable = false;
       };
 
-      legcord = {
+      equibop = {
         enable = true;
-        equicord.enable = true;
 
         settings = {
-          channel = "stable";
-          doneSetup = true;
+          arRPC = true;
+          discordBranch = "stable";
+          enableSplashScreen = false;
+          hardwareVideoAcceleration = true;
           minimizeToTray = true;
-          mods = [ "equicord" ];
-          scanInterval = 10000;
-          skipSplash = true;
-          tray = "dsc-tray";
+          splashTheming = false;
         };
       };
 
@@ -52,6 +50,7 @@ in
           copyFileContents.enable = true;
           CopyUserURLs.enable = true;
           crashHandler.enable = true;
+          equibopStreamFixes.enable = true;
           experiments.enable = true;
           fakeNitro.enable = true;
           favoriteGifSearch.enable = true;
