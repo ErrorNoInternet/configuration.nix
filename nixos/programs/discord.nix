@@ -51,15 +51,23 @@ in
           copyProfileColors.enable = true;
           copyStickerLinks.enable = true;
           CopyUserURLs.enable = true;
-          crashHandler.enable = true;
+          crashHandler = {
+            enable = true;
+            attemptToNavigateToHome = true;
+          };
           equibopStreamFixes.enable = true;
           experiments.enable = true;
           fakeNitro.enable = true;
           favoriteGifSearch.enable = true;
           fixCodeblockGap.enable = true;
+          fixSpotifyEmbeds.enable = true;
+          fixYoutubeEmbeds.enable = true;
           forceOwnerCrown.enable = true;
           friendsSince.enable = true;
-          imageZoom.enable = true;
+          imageZoom = {
+            enable = true;
+            size = 250.0;
+          };
           implicitRelationships.enable = true;
           jumpTo.enable = true;
           keepCurrentChannel.enable = true;
@@ -115,6 +123,7 @@ in
             hideChatBoxTypingIndicators = false;
             hideMembersListTypingIndicators = false;
           };
+          spotifyCrack.enable = true;
           translate.enable = true;
           typingIndicator.enable = true;
           typingTweaks.enable = true;
@@ -128,6 +137,7 @@ in
           webKeybinds.enable = true;
           webScreenShareFixes.enable = true;
           whoReacted.enable = true;
+          youtubeAdblock.enable = true;
           altKrispSwitch.enable = true;
           betterAudioPlayer.enable = true;
           betterInvites.enable = true;
