@@ -15,6 +15,7 @@
           inputs.agenix.packages.${stdenv.hostPlatform.system}.default
           inputs.disko.packages.${stdenv.hostPlatform.system}.default
           jujutsu
+          lazyjj
           neovim
           nix-output-monitor
           nixfmt

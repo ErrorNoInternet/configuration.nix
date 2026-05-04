@@ -96,6 +96,7 @@ in
     jq
     jujutsu
     killall
+    lazyjj
     libqalculate
     lm_sensors
     lowfi

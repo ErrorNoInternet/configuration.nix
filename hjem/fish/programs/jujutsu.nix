@@ -68,6 +68,7 @@
       jt = "jj tug";
       jtp = "jj tug && jj git push";
       ju = "jj undo";
+      lj = "lazyjj";
     };
 
     config = ''
