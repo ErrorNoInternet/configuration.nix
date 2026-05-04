@@ -25,6 +25,8 @@
         ];
       };
 
+      remotes.origin.auto-track-bookmarks = "*";
+
       git = {
         sign-on-push = true;
       };
