@@ -80,6 +80,7 @@
       bind -T copy-mode-vi C-v send -X rectangle-toggle
       bind -T copy-mode-vi v send -X begin-selection
       bind -T copy-mode-vi y send -X copy-pipe-and-cancel 'wl-copy'
+      bind -T prefix r source-file ~/.config/tmux/tmux.conf
 
       run-shell ${self.pins.tmux-pane-focus}/focus.tmux
       run-shell ${tmuxPlugins.jump}/share/tmux-plugins/jump/tmux-jump.tmux
