@@ -1,14 +1,14 @@
 {
   rum.programs.fish.abbrs = {
-    jr = "journalctl";
-    jrb = "journalctl -b";
-    jrbe = "journalctl -eb";
-    jre = "journalctl -e";
-    jreu = "journalctl -eu";
-    jrf = "journalctl -f";
-    jrke = "journalctl -ke";
-    jru = "journalctl -u";
-    jrxeu = "journalctl -xeu";
+    jctl = "journalctl";
+    jctlb = "journalctl -b";
+    jctlbe = "journalctl -eb";
+    jctle = "journalctl -e";
+    jctleu = "journalctl -eu";
+    jctlf = "journalctl -f";
+    jctlke = "journalctl -ke";
+    jctlu = "journalctl -u";
+    jctlxeu = "journalctl -xeu";
 
     sc = "systemctl";
     scd = "systemctl disable";
