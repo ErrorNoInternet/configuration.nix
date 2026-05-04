@@ -13,6 +13,8 @@ let
     mkForce
     mkIf
     ;
+
+  sshPorts = config.services.openssh.ports;
 in
 {
   imports = with inputs; [
@@ -121,16 +123,14 @@ in
     firewall = {
       enable = mkDefault false;
 
-      allowedTCPPorts = [
-        22
-      ];
       allowedUDPPorts = [
         1900
         5353
       ];
+      allowedTCPPorts = sshPorts;
     };
   };
-  upnp.tcpPorts = [ 22 ];
+  upnp.tcpPorts = sshPorts;
 
   services = {
     getty = {
