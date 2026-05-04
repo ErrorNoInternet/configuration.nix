@@ -39,6 +39,7 @@ in
       go
       graphviz
       hyperfine
+      just
       lua
       mold
       nixfmt
