@@ -27,6 +27,7 @@
     ./nvim-tree.nix
     ./obsidian.nix
     ./rustaceanvim.nix
+    ./session-manager.nix
     ./smart-splits.nix
     ./snacks.nix
     ./sort.nix
