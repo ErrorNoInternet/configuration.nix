@@ -14,10 +14,6 @@
         pager = "delta";
       };
 
-      diff = {
-        tool = "delta";
-      };
-
       aliases = {
         tug = [
           "bookmark"
@@ -38,6 +34,8 @@
         behavior = "drop";
         key = "2486BFB7B1E6A4A3";
       };
+
+      lazyjj.diff-tool = "delta";
     };
   };
 }
