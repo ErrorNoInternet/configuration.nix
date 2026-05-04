@@ -15,6 +15,7 @@
     ./highlight-undo.nix
     ./ibl.nix
     ./indent-object.nix
+    ./jj-conflict-highlight.nix
     ./jj.nix
     ./leap.nix
     ./lint.nix

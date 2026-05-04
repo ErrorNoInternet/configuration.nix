@@ -92,6 +92,19 @@
       "url": "https://api.github.com/repos/Zeioth/garbage-day.nvim/tarball/refs/tags/v1.4.0",
       "hash": "sha256-T4zxIGuUzLcMeZvjBOFGh+Ms6fusQWlhlfuXcOA92xA="
     },
+    "jj-conflict-highlight.nvim": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "Spiegie",
+        "repo": "jj-conflict-highlight.nvim"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "b351cb58ee1254fff5b344e740bdee1adae358c7",
+      "url": "https://github.com/Spiegie/jj-conflict-highlight.nvim/archive/b351cb58ee1254fff5b344e740bdee1adae358c7.tar.gz",
+      "hash": "sha256-2fr6AFNILf84nhitk+05CiSDVTuwrp7j5GOKS4f08yk="
+    },
     "kanagawa.yazi": {
       "type": "Git",
       "repository": {
