@@ -115,6 +115,7 @@ in
         grim
         libva-utils
         nvtopPackages.full
+        osc
         pavucontrol
         playerctl
         qalculate-gtk

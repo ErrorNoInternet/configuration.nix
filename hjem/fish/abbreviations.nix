@@ -41,6 +41,8 @@
       nlc = "nix-locate";
       nw = "newsboat";
       objd = "objdump -d";
+      oscc = "osc copy";
+      oscp = "osc paste";
       p = "ping";
       pa = "patch -p1";
       pc = "peaclock";
