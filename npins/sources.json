@@ -58,10 +58,10 @@
       "version_upper_bound": null,
       "release_prefix": "ferritin-",
       "submodules": true,
-      "version": "ferritin-v0.8.1",
-      "revision": "456b7f134edf4ac44b08c8bb52a19ebe902971f2",
+      "version": "ferritin-v0.9.0",
+      "revision": "53fb765f4d772e2c2ff5f277186b4bdfebc9bd66",
       "url": null,
-      "hash": "sha256-hrALIUm1cpJ9MD91kOq/J+RwTkszuGX5kn/WzSQ2Bao="
+      "hash": "sha256-gpipdvN0FVryxoh21ZWWEfds3qPM9rxTEUZ+AfC9HLU="
     },
     "fish_logo": {
       "type": "Git",

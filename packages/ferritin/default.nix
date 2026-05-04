@@ -9,7 +9,7 @@ pkgs.rustPlatform.buildRustPackage (finalAttrs: {
   version = lib.strings.removePrefix "ferritin-v" self.pins.ferritin.version;
 
   src = self.pins.ferritin;
-  cargoHash = "sha256-8OfDi4MkE5uJ7wtVhnin4sv6w+02nTcADg+KzrE5nwg=";
+  cargoHash = "sha256-JnD+vxRrBp2I7evISDuuwxJtAGAbnfREAv/00NDZ2ns=";
 
   nativeBuildInputs = [ pkgs.pkg-config ];
 
