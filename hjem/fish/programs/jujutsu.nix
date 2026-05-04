@@ -7,6 +7,7 @@
       j = "jj";
       ja = "jj abandon";
       jA = "jj arrange";
+      jab = "jj absorb";
       jb = "jj bookmark";
       jbd = "jj bookmark delete";
       jbm = "jj bookmark move";
