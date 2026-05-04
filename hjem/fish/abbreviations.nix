@@ -39,6 +39,7 @@
       mkc = "make clean";
       mt = "neomutt";
       nlc = "nix-locate";
+      ntfd = "notify-done";
       nw = "newsboat";
       objd = "objdump -d";
       oscc = "osc copy";
