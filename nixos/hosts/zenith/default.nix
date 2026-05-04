@@ -8,6 +8,8 @@
     ./usbguard.nix
   ];
 
+  substituters.caches.fenix.enable = true;
+
   kernel = {
     cachyos = {
       enable = true;

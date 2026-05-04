@@ -1,5 +1,9 @@
 { inputs, ... }:
 {
+  imports = [
+    ./rust.nix
+  ];
+
   perSystem =
     { pkgs, ... }:
     {
