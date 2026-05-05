@@ -7,6 +7,7 @@
       nbl = "nix build -L";
       nd = "nix develop -c fish";
       nD = "nix develop";
+      ndc = "nix develop -c";
       nDl = "nix develop -L -c fish";
       ndl = "nix develop -L";
       nf = "nix flake";
