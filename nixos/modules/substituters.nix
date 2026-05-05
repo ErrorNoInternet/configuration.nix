@@ -40,7 +40,7 @@ in
 
     caches = builtins.mapAttrs (_: values: {
       enable = mkEnableOption "" // {
-        inherit (values) default;
+        default = values.default or false;
       };
     }) caches;
   };
