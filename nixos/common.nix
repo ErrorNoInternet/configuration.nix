@@ -161,6 +161,7 @@ in
       authorizedKeys = [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDzdpxex2GlFVf5G2qsh3Ixa/XCMjnbq4JSTmAev7WYJ error.nointernet@gmail.com"
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIExq/sL8TLmD7AERh7X9afXlqeuf4g5EeIaoemRf+C7l ErrorNoPhone"
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIZ/2CGqYAIrVV5LWNFbKMopeGAFr1wFlP6nwu+HEgdI moss"
       ];
     in
     {
