@@ -16,6 +16,10 @@ in
   };
 
   config = mkIf cfg.enable {
+    environment.persistence."/persist".directories = [
+      "/var/lib/libvirt"
+    ];
+
     users.users.error.extraGroups = [ "libvirtd" ];
 
     virtualisation = {

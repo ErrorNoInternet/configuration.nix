@@ -5,6 +5,10 @@
   ...
 }:
 {
+  environment.persistence."/persist".files = [
+    "/var/lib/cups/printers.conf"
+  ];
+
   services.printing = {
     enable = true;
     drivers = with pkgs; [
