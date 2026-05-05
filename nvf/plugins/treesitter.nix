@@ -16,6 +16,7 @@
       cuda
       fish
       hyprlang
+      ini
       java
       kotlin
       perl
