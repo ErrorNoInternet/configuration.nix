@@ -67,6 +67,7 @@
     self'.packages.endcord
     songrec
     sqlit-tui
+    stress-ng
     wechat
     wireguard-tools
     yt-dlp
