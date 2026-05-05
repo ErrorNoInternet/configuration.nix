@@ -535,7 +535,7 @@
         sounds = {
           criticalSoundFile = "";
           enabled = true;
-          excludedApps = "chrome,chromium,discord,edge,firefox";
+          excludedApps = "chrome,chromium,discord,edge,equibop,firefox";
           lowSoundFile = "";
           normalSoundFile = "";
           separateSounds = false;
