@@ -114,6 +114,7 @@ in
         gparted
         grim
         libva-utils
+        mesa-demos
         nvtopPackages.full
         osc
         pavucontrol
@@ -122,6 +123,7 @@ in
         ripdrag
         satty
         slurp
+        vulkan-tools
         wev
         wlr-randr
         ydotool
