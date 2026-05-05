@@ -86,7 +86,7 @@ in
     gnumake
     gnupg
     hdparm
-    htop
+    htop-vim
     hwatch
     hydra-check
     inputs'.agenix.packages.default
