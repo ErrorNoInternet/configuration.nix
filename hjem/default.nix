@@ -7,17 +7,6 @@
 }:
 {
   hjem = {
-    clobberByDefault = true;
-    linker = inputs'.hjem.packages.smfh;
-    specialArgs = {
-      inherit
-        inputs'
-        inputs
-        self'
-        self
-        ;
-    };
-
     extraModules = [
       inputs.hjem-rum.hjemModules.default
 
@@ -71,6 +60,17 @@
         url = "https://avatars.githubusercontent.com/u/61157623";
         sha256 = "0k90jpmp82f237b8cwpjdlybfc0gqm3f4l491zxii29ncln2dcb3";
       };
+    };
+
+    linker = inputs'.hjem.packages.smfh;
+    clobberByDefault = true;
+    specialArgs = {
+      inherit
+        inputs'
+        inputs
+        self'
+        self
+        ;
     };
   };
 }
