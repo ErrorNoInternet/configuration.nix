@@ -13,6 +13,7 @@ in
     ./aerc.nix
     ./btop.nix
     ./discord.nix
+    ./htop.nix
     ./irssi.nix
     ./yazi
   ];
@@ -86,7 +87,6 @@ in
     gnumake
     gnupg
     hdparm
-    htop-vim
     hwatch
     hydra-check
     inputs'.agenix.packages.default
