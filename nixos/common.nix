@@ -145,11 +145,6 @@ in
 
   virtualisation.podman.enable = true;
 
-  systemd.coredump.extraConfig = ''
-    ProcessSizeMax=2G
-    ExternalSizeMax=512M
-  '';
-
   security.sudo.extraConfig = ''
     Defaults:root,%wheel timestamp_timeout=15
   '';
