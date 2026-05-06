@@ -126,6 +126,7 @@ in
         vulkan-tools
         wev
         wlr-randr
+        xdg-user-dirs
         ydotool
 
         kdePackages.breeze
