@@ -23,6 +23,7 @@
       f = "fg";
       gz = "gzip";
       gzd = "gzip -d";
+      h = "head";
       ht = "htop";
       hy = "hyprctl";
       ios = "iostat --human 1";
@@ -65,6 +66,9 @@
       srl = "songrec l -d \"Monitor of HUAWEI USB-C HEADSET Pro\"";
       st = "strace";
       t = "tmux";
+      ta = "tmux a";
+      tl = "tail";
+      tlf = "tail -f";
       una = "uname -a";
       up = "uptime";
       upp = "uptime -p";
