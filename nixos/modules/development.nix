@@ -51,6 +51,7 @@ in
       statix
       tokei
       toolbox
+      upx
       valgrind
       zig
     ];
