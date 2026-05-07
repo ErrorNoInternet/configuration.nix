@@ -29,6 +29,8 @@ in
 
     environment.systemPackages = with pkgs; [
       bear
+      cargo-xwin
+      cargo-zigbuild
       clang
       cspell
       deadnix
