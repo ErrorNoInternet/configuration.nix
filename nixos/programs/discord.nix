@@ -43,6 +43,7 @@ in
 
         plugins = {
           accountPanelServerProfile.enable = true;
+          alwaysTrust.enable = true;
           betterRoleContext.enable = true;
           betterSessions.enable = true;
           callTimer.enable = true;
