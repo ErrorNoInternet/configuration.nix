@@ -40,14 +40,15 @@ in
           pkgs.cachyosKernels."linuxPackages-cachyos-latest-${cfg.cachyos.suffix}";
 
       kernelPatches = optionals cfg.qol.enable [
-        {
-          name = "drm_panic";
-          patch = null;
-          structuredExtraConfig = with lib.kernel; {
-            DRM_PANIC_SCREEN = lib.mkForce (freeform "qr_code");
-            DRM_PANIC_SCREEN_QR_CODE_URL = freeform "https://kdj0c.github.io/panic_report/";
-          };
-        }
+        # TODO: add back when Rust works with LTO
+        # {
+        #   name = "drm_panic";
+        #   patch = null;
+        #   structuredExtraConfig = with lib.kernel; {
+        #     DRM_PANIC_SCREEN = lib.mkForce (freeform "qr_code");
+        #     DRM_PANIC_SCREEN_QR_CODE_URL = freeform "https://kdj0c.github.io/panic_report/";
+        #   };
+        # }
       ];
     };
   };
