@@ -68,6 +68,7 @@
       "/root/.ssh"
       "/var/db/sudo/lectured"
       "/var/lib/bluetooth"
+      "/var/lib/containers"
       "/var/lib/nfs"
       "/var/lib/nixos"
       "/var/lib/systemd/backlight"
