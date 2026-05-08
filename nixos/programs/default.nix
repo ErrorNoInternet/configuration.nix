@@ -109,6 +109,7 @@ in
     ncdu
     nh
     nix-output-monitor
+    nix-tree
     nmap
     npins
     nurl
