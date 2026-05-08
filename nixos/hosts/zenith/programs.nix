@@ -46,6 +46,7 @@
   environment.systemPackages = with pkgs; [
     android-studio
     android-tools
+    codex
     distrobox
     duperemove
     gimp3-with-plugins
