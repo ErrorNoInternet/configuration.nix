@@ -5,7 +5,7 @@
       H = "ulimit -c (math 1024 x 1024 x 1024) && exec uwsm start ${osConfig.programs.hyprland.package}/bin/start-hyprland";
 
       cava = "TERM=kitty command cava";
-      pwdc = "pwd | tr -d '\n' | wl-copy";
+      pwdc = "pwd | tr -d '\n' | begin; wl-copy || osc copy; end";
 
       pp = "playerctl play-pause";
       ppc = "playerctl play";
