@@ -38,10 +38,10 @@
       bind    = $mod           , A, exec                   , scratchpad
       bind    = $mod           , S, togglespecialworkspace , scratchpad
       bind    = $mod           , W, togglespecialworkspace , communication
-      bind    = $mod           , E, togglespecialworkspace , feed
+      bind    = $mod           , E, togglespecialworkspace , inbox
       bind    = $mod SHIFT     , A                         , exec, scratchpad -g -m "fuzzel -d"
       bind    = $mod SHIFT     , W, movetoworkspace        , special:communication
-      bind    = $mod SHIFT     , E, movetoworkspace        , special:feed
+      bind    = $mod SHIFT     , E, movetoworkspace        , special:inbox
 
       bind    = $mod           , RETURN    , exec, kitty
       bind    = $mod SHIFT     , RETURN    , exec, [float; center] kitty

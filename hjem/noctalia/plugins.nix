@@ -67,7 +67,7 @@ let
           focusColor = "primary";
         }
         {
-          name = "feed";
+          name = "inbox";
           icon = "inbox";
           symbolColor = "none";
           showPill = false;
