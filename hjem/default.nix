@@ -15,6 +15,7 @@
       ./atuin.nix
       ./btop.nix
       ./cava.nix
+      ./chawan.nix
       ./clang-format.nix
       ./cursor.nix
       ./direnv.nix

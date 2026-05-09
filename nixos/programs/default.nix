@@ -66,7 +66,6 @@ in
     btdu
     bubblewrap
     cachix
-    chawan
     cmatrix
     compsize
     copyparty
