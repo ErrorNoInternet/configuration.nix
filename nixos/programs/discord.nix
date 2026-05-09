@@ -147,8 +147,8 @@ in
           messageLoggerEnhanced = {
             enable = true;
             messageLimit = 100;
-            attachmentSizeLimitInMegabytes = 10;
             cacheLimit = 250;
+            saveImages = true;
           };
           moyai = {
             enable = true;
