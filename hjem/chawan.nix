@@ -3,8 +3,8 @@
     enable = true;
 
     settings.buffer = {
-      images = true;
       autofocus = true;
+      scripting = true;
     };
   };
 }
