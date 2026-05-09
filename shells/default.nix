@@ -1,14 +1,14 @@
-{ inputs, ... }:
 {
   imports = [
     ./rust.nix
   ];
 
   perSystem =
-    { pkgs, ... }:
+    { inputs', pkgs, ... }:
     {
       devShells.default = pkgs.mkShell {
         name = "configuration.nix";
+
         packages = with pkgs; [
           bat
           cachix
@@ -16,8 +16,8 @@
           delta
           git
           hydra-check
-          inputs.agenix.packages.${stdenv.hostPlatform.system}.default
-          inputs.disko.packages.${stdenv.hostPlatform.system}.default
+          inputs'.agenix.packages.default
+          inputs'.disko.packages.default
           jujutsu
           lazyjj
           neovim
