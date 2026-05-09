@@ -23,6 +23,7 @@
           neovim
           nix-output-monitor
           nixfmt
+          nixfmt-tree
           npins
           nurl
           parted

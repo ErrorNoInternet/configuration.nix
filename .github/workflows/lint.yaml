@@ -24,9 +24,9 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Check if properly formatted
-        run: nix fmt -- -c .
+        run: nix fmt -- --fail-on-change
 
-      - name: Static code analysis
+      - name: Run static code analysis
         if: always()
         run: nix run nixpkgs#statix -- check -i npins
 

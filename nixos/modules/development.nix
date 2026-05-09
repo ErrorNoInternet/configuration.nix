@@ -45,6 +45,7 @@ in
       lua
       mold
       nixfmt
+      nixfmt-tree
       onefetch
       pandoc
       pkg-config

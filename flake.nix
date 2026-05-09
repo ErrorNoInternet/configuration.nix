@@ -120,7 +120,7 @@
             config.allowUnfree = true;
           };
 
-          formatter = pkgs.nixfmt;
+          formatter = pkgs.nixfmt-tree;
         };
 
       flake.pins = import ./npins;
