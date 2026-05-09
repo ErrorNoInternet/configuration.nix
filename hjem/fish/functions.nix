@@ -103,6 +103,12 @@ in
       end
     '';
 
+    pwdc = /* fish */ ''
+      set -l dir (pwd | tr -d '\n')
+      echo -n $dir | wl-copy >/dev/null 2>&1
+      or echo -n $dir | osc copy
+    '';
+
     remove_path = /* fish */ ''
       set code 1
       if set -l index (contains -i "$argv" $fish_user_paths)
