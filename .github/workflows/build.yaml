@@ -40,6 +40,8 @@ jobs:
         with:
           extra-conf: |
             log-lines = 500
+            extra-substituters = https://cache.garnix.io
+            extra-trusted-public-keys = cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g=
 
       - name: Set up Cachix
         uses: cachix/cachix-action@v17
