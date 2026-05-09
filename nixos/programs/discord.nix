@@ -134,11 +134,13 @@ in
           viewRaw.enable = true;
           voiceDownload.enable = true;
           voiceMessages.enable = true;
+          voiceStats.enable = true;
           volumeBooster.enable = true;
           webKeybinds.enable = true;
           webScreenShareFixes.enable = true;
           whoReacted.enable = true;
           youtubeAdblock.enable = true;
+          zipPreview.enable = true;
           altKrispSwitch.enable = true;
           betterAudioPlayer.enable = true;
           betterInvites.enable = true;
@@ -154,26 +156,7 @@ in
           };
           newPluginsManager.enable = true;
           cancelFriendRequest.enable = true;
-          questify = {
-            enable = true;
-            disableQuestsDiscoveryTab = false;
-            disableQuestsFetchingQuests = false;
-            disableQuestsDirectMessagesTab = false;
-            disableQuestsPageSponsoredBanner = false;
-            disableQuestsPopupAboveAccountPanel = true;
-            disableQuestsBadgeOnUserProfiles = false;
-            disableQuestsGiftInventoryRelocationNotice = true;
-            disableFriendsListActiveNowPromotion = true;
-            disableMembersListActivelyPlayingIcon = true;
-            disableQuestsEverything = false;
-            makeMobileQuestsDesktopCompatible = true;
-            completeVideoQuestsQuicker = false;
-            completeVideoQuestsInBackground = true;
-            completeGameQuestsInBackground = true;
-            completeAchievementQuestsInBackground = true;
-            notifyOnQuestComplete = true;
-            questButtonDisplay = "never";
-          };
+          questify.enable = true;
           showSongName.enable = true;
           timezones = {
             enable = true;
