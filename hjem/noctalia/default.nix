@@ -82,6 +82,10 @@
         widgets = {
           center = [
             {
+              id = "Spacer";
+              width = 20;
+            }
+            {
               characterCount = 2;
               colorizeIcons = true;
               emptyColor = "secondary";
@@ -101,6 +105,9 @@
               showBadge = true;
               showLabelsOnlyWhenOccupied = true;
               unfocusedIconsOpacity = 1;
+            }
+            {
+              id = "plugin:special-workspaces";
             }
           ];
           left = [

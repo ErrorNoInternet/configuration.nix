@@ -34,6 +34,53 @@ let
       customFrameRate = "60";
     };
 
+    special-workspaces = {
+      mainIcon = "layout-grid";
+      expandDirection = "right";
+      primarySymbolColor = "none";
+      primaryShowPill = false;
+      primaryPillColor = "secondary";
+      primarySize = 0.9;
+      primaryBorderRadius = 1;
+      primaryFocusColor = "primary";
+      panelBackgroundColor = "none";
+      panelBackgroundEnabled = false;
+      workspaces = [
+        {
+          name = "scratchpad";
+          icon = "box-multiple";
+          symbolColor = "none";
+          showPill = false;
+          pillColor = "primary";
+          size = 0.9;
+          borderRadius = 1;
+          focusColor = "primary";
+        }
+        {
+          name = "communication";
+          icon = "message";
+          symbolColor = "none";
+          showPill = false;
+          pillColor = "primary";
+          size = 0.9;
+          borderRadius = 1;
+          focusColor = "primary";
+        }
+        {
+          name = "feed";
+          icon = "inbox";
+          symbolColor = "none";
+          showPill = false;
+          pillColor = "primary";
+          size = 0.9;
+          borderRadius = 1;
+          focusColor = "primary";
+        }
+      ];
+      drawer = true;
+      hideEmptyWorkspaces = true;
+    };
+
     timer = {
       compactMode = false;
       iconColor = "none";
