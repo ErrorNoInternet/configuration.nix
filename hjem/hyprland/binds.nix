@@ -38,8 +38,10 @@
       bind    = $mod           , A, exec                   , scratchpad
       bind    = $mod           , S, togglespecialworkspace , scratchpad
       bind    = $mod           , W, togglespecialworkspace , communication
+      bind    = $mod           , E, togglespecialworkspace , feed
       bind    = $mod SHIFT     , A                         , exec, scratchpad -g -m "fuzzel -d"
       bind    = $mod SHIFT     , W, movetoworkspace        , special:communication
+      bind    = $mod SHIFT     , E, movetoworkspace        , special:feed
 
       bind    = $mod           , RETURN    , exec, kitty
       bind    = $mod SHIFT     , RETURN    , exec, [float; center] kitty
@@ -86,7 +88,6 @@
       bindm   = $mod           , mouse:272                 , movewindow
       bindm   = $mod           , mouse:273                 , resizewindow
 
-      bind    = $mod           , 0                         , workspace         , 10
       bind    = $mod           , 1                         , workspace         , 1
       bind    = $mod           , 2                         , workspace         , 2
       bind    = $mod           , 3                         , workspace         , 3
@@ -96,9 +97,11 @@
       bind    = $mod           , 7                         , workspace         , 7
       bind    = $mod           , 8                         , workspace         , 8
       bind    = $mod           , 9                         , workspace         , 9
+      bind    = $mod           , 0                         , workspace         , 10
+      bind    = $mod           , mouse:276                 , workspace         , 9
+      bind    = $mod           , mouse:275                 , workspace         , 10
       bind    = $mod           , mouse:274                 , workspace         , previous
       bind    = $mod           , TAB                       , workspace         , previous
-      bind    = $mod SHIFT     , 0                         , movetoworkspace   , 10
       bind    = $mod SHIFT     , 1                         , movetoworkspace   , 1
       bind    = $mod SHIFT     , 2                         , movetoworkspace   , 2
       bind    = $mod SHIFT     , 3                         , movetoworkspace   , 3
@@ -108,6 +111,9 @@
       bind    = $mod SHIFT     , 7                         , movetoworkspace   , 7
       bind    = $mod SHIFT     , 8                         , movetoworkspace   , 8
       bind    = $mod SHIFT     , 9                         , movetoworkspace   , 9
+      bind    = $mod SHIFT     , 0                         , movetoworkspace   , 10
+      bind    = $mod           , mouse:276                 , movetoworkspace   , 9
+      bind    = $mod           , mouse:275                 , movetoworkspace   , 10
       bind    = $mod SHIFT     , mouse:274                 , movetoworkspace   , previous
       bind    = $mod SHIFT     , TAB                       , movetoworkspace   , previous
 
