@@ -37,6 +37,7 @@
       abbr -a --position anywhere -- /unsupported "NIXPKGS_ALLOW_UNSUPPORTED_SYSTEM=1"
 
       abbr -a --position anywhere -- /afc "--accept-flake-config"
+      abbr -a --position anywhere -- /b "--builders @/etc/nix/machines"
       abbr -a --position anywhere -- /c "-c fish"
       abbr -a --position anywhere -- /es "--extra-substituters"
       abbr -a --position anywhere -- /etpk "--extra-trusted-public-keys"
