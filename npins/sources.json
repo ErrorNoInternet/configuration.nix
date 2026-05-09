@@ -47,22 +47,6 @@
       "url": "https://api.github.com/repos/sparklost/endcord/tarball/refs/tags/1.4.2",
       "hash": "sha256-YY9NRK5ZXH5Ry7FCGQ158AySRcPwr+jNh2QrcP1YlV4="
     },
-    "ferritin": {
-      "type": "GitRelease",
-      "repository": {
-        "type": "GitHub",
-        "owner": "jbr",
-        "repo": "ferritin"
-      },
-      "pre_releases": false,
-      "version_upper_bound": null,
-      "release_prefix": "ferritin-",
-      "submodules": true,
-      "version": "ferritin-v0.9.0",
-      "revision": "53fb765f4d772e2c2ff5f277186b4bdfebc9bd66",
-      "url": null,
-      "hash": "sha256-gpipdvN0FVryxoh21ZWWEfds3qPM9rxTEUZ+AfC9HLU="
-    },
     "fish_logo": {
       "type": "Git",
       "repository": {

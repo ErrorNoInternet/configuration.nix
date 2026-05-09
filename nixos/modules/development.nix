@@ -2,7 +2,6 @@
   config,
   lib,
   pkgs,
-  self',
   ...
 }:
 let
@@ -50,7 +49,6 @@ in
       pandoc
       pkg-config
       rustup
-      self'.packages.ferritin
       statix
       tokei
       toolbox
