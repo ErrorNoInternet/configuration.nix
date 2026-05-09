@@ -12,7 +12,7 @@
       };
     };
 
-    extraConfig = ''
+    extraConfig = /* hyprlang */ ''
       bind    = $mod           , code:60, exec, noctalia-shell ipc call launcher emoji
       bind    = $mod           , comma  , exec, noctalia-shell ipc call settings toggle
       bind    = $mod           , D      , exec, noctalia-shell ipc call launcher toggle
