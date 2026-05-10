@@ -25,7 +25,11 @@ in
   programs = {
     fish = {
       enable = true;
+
       shellAliases = mkForce { };
+      shellInit = /* fish */ ''
+        set -U fish_greeting
+      '';
     };
 
     fuse.userAllowOther = true;
