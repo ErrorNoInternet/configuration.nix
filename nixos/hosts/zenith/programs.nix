@@ -35,7 +35,11 @@
     aerc.enable = true;
     btop.variant = "cuda";
     irssi.enable = true;
-    wireshark.enable = true;
+
+    wireshark = {
+      enable = true;
+      package = pkgs.wireshark;
+    };
 
     sbox = {
       enable = true;
