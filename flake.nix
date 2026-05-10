@@ -120,6 +120,10 @@
             config.allowUnfree = true;
           };
 
+          checks.sorted-inputs = pkgs.runCommand "sorted-inputs" { } ''
+            echo ${builtins.toString (import ./lib/sorted-inputs.nix { inherit (pkgs) lib; })} > $out
+          '';
+
           formatter = pkgs.nixfmt-tree;
         };
 

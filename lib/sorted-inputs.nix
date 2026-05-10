@@ -1,5 +1,8 @@
+{
+  lib ? (import <nixpkgs> { }).lib,
+}:
 let
-  inherit ((import <nixpkgs> { }).lib)
+  inherit (lib)
     add
     attrNames
     elemAt
@@ -64,4 +67,4 @@ let
   );
 in
 assert errors == 0;
-"all good!"
+"ok"
