@@ -147,7 +147,7 @@
               hideMode = "hidden";
               hideWhenIdle = false;
               id = "MediaMini";
-              maxWidth = 150;
+              maxWidth = 200;
               panelShowAlbumArt = true;
               scrollingMode = "hover";
               showAlbumArt = false;
