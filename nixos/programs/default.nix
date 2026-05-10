@@ -76,6 +76,7 @@ in
     dust
     dwarfs
     efibootmgr
+    ethtool
     eza
     fastfetch
     fd
