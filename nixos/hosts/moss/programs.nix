@@ -4,7 +4,7 @@
   display.enable = true;
   kmscon = {
     enable = true;
-    dpmsTimeout = 6 * 60 * 60;
+    dpmsTimeout = 0;
   };
 
   environment.systemPackages = with pkgs; [
