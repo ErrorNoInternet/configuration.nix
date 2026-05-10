@@ -228,7 +228,7 @@
               formatHorizontal = "ddd, MMM dd, HH:mm";
               formatVertical = "HH mm - dd MM";
               id = "Clock";
-              tooltipFormat = "HH:mm ddd, MMM dd";
+              tooltipFormat = "HH:mm:ss t";
               useCustomFont = false;
             }
           ];
