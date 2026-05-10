@@ -1,12 +1,12 @@
 {
-  pkgs,
+  hyprland,
   writeShellApplication,
   ...
 }:
 writeShellApplication {
   name = "hyprtoggle";
 
-  runtimeInputs = [ pkgs.hyprland ];
+  runtimeInputs = [ hyprland ];
 
   text = ''
     #!/usr/bin/env sh
@@ -17,7 +17,7 @@ writeShellApplication {
     fi
 
     VARIABLE="$1"
-    export STATUS_FILE="$XDG_RUNTIME_DIR/hyprland_$VARIABLE"
+    export STATUS_FILE="$XDG_RUNTIME_DIR/hypr/toggle_$VARIABLE"
 
     set_true() {
     	printf "true" >"$STATUS_FILE"
