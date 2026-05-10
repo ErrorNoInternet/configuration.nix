@@ -49,6 +49,7 @@ in
       pandoc
       pkg-config
       rustup
+      sqlite
       statix
       tokei
       toolbox
