@@ -8,8 +8,6 @@
 {
   hjem = {
     extraModules = [
-      inputs.hjem-rum.hjemModules.default
-
       ./aerc.nix
       ./applications.nix
       ./atuin.nix
@@ -52,6 +50,7 @@
       ./vimiv.nix
       ./xdg.nix
       ./zoxide.nix
+      inputs.hjem-rum.hjemModules.default
     ];
 
     users.error = {

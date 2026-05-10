@@ -11,8 +11,8 @@ let
   inherit (lib)
     mkEnableOption
     mkIf
+    recursiveUpdate
     ;
-  inherit (lib.attrsets) recursiveUpdate;
 
   defaultOptions = {
     connection.type = "wifi";
@@ -46,7 +46,6 @@ let
       };
       wifi-security.psk = "$PSK_c${id}";
     } defaultOptions) options);
-
 in
 {
   options.wifi = {

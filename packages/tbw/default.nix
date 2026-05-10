@@ -1,12 +1,13 @@
 {
-  pkgs,
+  bc,
+  smartmontools,
   writeShellApplication,
   ...
 }:
-writeShellApplication rec {
+writeShellApplication {
   name = "tbw";
 
-  runtimeInputs = with pkgs; [
+  runtimeInputs = [
     bc
     smartmontools
   ];

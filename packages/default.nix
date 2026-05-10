@@ -4,6 +4,7 @@
     {
       inputs',
       pkgs,
+      self',
       ...
     }:
     {
@@ -12,7 +13,12 @@
           src:
           let
             pkg = pkgs.callPackage src {
-              inherit inputs inputs' self;
+              inherit
+                inputs
+                inputs'
+                self
+                self'
+                ;
             };
           in
           {

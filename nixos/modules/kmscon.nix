@@ -20,7 +20,7 @@ in
 
     dpmsTimeout = mkOption {
       type = types.int;
-      default = 900;
+      default = 15 * 60;
     };
   };
 

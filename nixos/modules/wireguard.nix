@@ -37,6 +37,7 @@ in
     boot.kernel.sysctl."net.ipv4.ip_forward" = 1;
 
     upnp.udpPorts = [ cfg.server.listenPort ];
+
     networking = {
       firewall.allowedUDPPorts = [ cfg.server.listenPort ];
 

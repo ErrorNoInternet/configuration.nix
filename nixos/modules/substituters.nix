@@ -5,7 +5,7 @@
 }:
 let
   caches = {
-    cachix = {
+    errornobinaries = {
       url = "https://errornobinaries.cachix.org";
       key = "errornobinaries.cachix.org-1:84oagGNCIsXxBTYmfTiP+lvWje7lIS294iqAtCpFsbU=";
       default = true;

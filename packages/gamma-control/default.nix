@@ -2,9 +2,10 @@
   lib,
   pkgs,
   self,
+  stdenv,
   ...
 }:
-pkgs.stdenv.mkDerivation rec {
+stdenv.mkDerivation {
   pname = "gamma-control";
   version = "0.1.0";
 
@@ -39,5 +40,6 @@ pkgs.stdenv.mkDerivation rec {
     homepage = "https://gitlab.freedesktop.org/wlroots/wlr-clients";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
+    mainProgram = "gamma-control";
   };
 }
