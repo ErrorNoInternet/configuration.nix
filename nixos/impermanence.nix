@@ -17,6 +17,7 @@
 
     services.impermanence-btrfs-rolling-root = {
       description = "Move Root for Impermanence";
+
       unitConfig.DefaultDependencies = false;
       serviceConfig.Type = "oneshot";
 
@@ -58,33 +59,6 @@
 
   fileSystems."/persist".neededForBoot = true;
 
-  environment.persistence."/persist" = {
-    enable = true;
-    hideMounts = true;
-    directories = [
-      "/etc/mullvad-vpn"
-      "/export"
-      "/mnt"
-      "/root/.ssh"
-      "/var/db/sudo/lectured"
-      "/var/lib/bluetooth"
-      "/var/lib/containers"
-      "/var/lib/nfs"
-      "/var/lib/nixos"
-      "/var/lib/systemd/backlight"
-      "/var/lib/systemd/coredump"
-      "/var/lib/systemd/timesync"
-      "/var/log"
-    ];
-    files = [
-      "/etc/machine-id"
-      "/etc/ssh/ssh_host_ed25519_key"
-      "/etc/ssh/ssh_host_ed25519_key.pub"
-      "/etc/ssh/ssh_host_rsa_key"
-      "/etc/ssh/ssh_host_rsa_key.pub"
-    ];
-  };
-
   services.openssh.hostKeys =
     let
       statePath = config.environment.persistence."/persist".persistentStoragePath + "/etc/ssh";
@@ -100,4 +74,33 @@
         type = "ed25519";
       }
     ];
+
+  environment.persistence."/persist" = {
+    enable = true;
+    hideMounts = true;
+
+    directories = [
+      "/etc/mullvad-vpn"
+      "/export"
+      "/mnt"
+      "/root/.ssh"
+      "/var/db/sudo/lectured"
+      "/var/lib/bluetooth"
+      "/var/lib/containers"
+      "/var/lib/nfs"
+      "/var/lib/nixos"
+      "/var/lib/systemd/backlight"
+      "/var/lib/systemd/coredump"
+      "/var/lib/systemd/timesync"
+      "/var/log"
+    ];
+
+    files = [
+      "/etc/machine-id"
+      "/etc/ssh/ssh_host_ed25519_key"
+      "/etc/ssh/ssh_host_ed25519_key.pub"
+      "/etc/ssh/ssh_host_rsa_key"
+      "/etc/ssh/ssh_host_rsa_key.pub"
+    ];
+  };
 }

@@ -18,7 +18,7 @@
   services.kmscon.hwRender = false;
 
   systemd.services.load-backlight = {
-    description = "Load Backlight (radeon_bl0)";
+    description = "Load Backlight for radeon_bl0";
 
     after = [ "systemd-user-sessions.service" ];
     wantedBy = [ "multi-user.target" ];

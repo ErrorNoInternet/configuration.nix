@@ -55,12 +55,6 @@ in
   };
 
   environment.systemPackages = with pkgs; [
-    python3
-    (python3Packages.bpython.overrideAttrs (_old: {
-      dontUsePytestCheck = true;
-    }))
-    python3Packages.btrfs
-
     _7zz
     atop
     atuin
@@ -127,6 +121,9 @@ in
     progress
     pstree
     pv
+    python3
+    python3.pkgs.bpython
+    python3.pkgs.btrfs
     ripgrep
     s-tui
     screen

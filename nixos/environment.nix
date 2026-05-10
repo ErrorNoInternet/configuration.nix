@@ -24,9 +24,9 @@
   ];
 
   scheme = {
-    slug = "kanagawa";
-    scheme = "Kanagawa";
     author = "ErrorNoInternet (https://github.com/ErrorNoInternet)";
+    scheme = "Kanagawa";
+    slug = "kanagawa";
 
     base00 = "#1F1F28";
     base01 = "#16161D";
