@@ -127,6 +127,7 @@ in
     ripgrep
     s-tui
     screen
+    self'.packages.btrfs-map-physical
     self'.packages.dwarfs
     self'.packages.neovim
     smartmontools

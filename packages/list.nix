@@ -1,4 +1,5 @@
 [
+  ./btrfs-map-physical
   ./dwarfs
   ./endcord
   ./gamma-control

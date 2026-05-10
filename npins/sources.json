@@ -102,6 +102,19 @@
       "url": "https://github.com/dangooddd/kanagawa.yazi/archive/04985d12842b06bdb3ad5f1b3d7abc631059b7f5.tar.gz",
       "hash": "sha256-Yz0zRVzmgbrk0m7OkItxIK6W0WkPze/t09pWFgziNrw="
     },
+    "osandov-linux": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "osandov",
+        "repo": "osandov-linux"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "1fb959a45b8c15cfdb4af5f4330a6d936dbc9c2f",
+      "url": "https://github.com/osandov/osandov-linux/archive/1fb959a45b8c15cfdb4af5f4330a6d936dbc9c2f.tar.gz",
+      "hash": "sha256-IZGMc9nOhoHfsHmVKfUQy3Kat4BZK4HV7G+gbG5UOmQ="
+    },
     "scripts.irssi.org": {
       "type": "Git",
       "repository": {

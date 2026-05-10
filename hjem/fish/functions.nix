@@ -11,7 +11,8 @@ in
     '';
 
     btrfs-map-physical = /* fish */ ''
-      sudo command btrfs-map-physical $argv | column -ts\t
+      set command_path (which btrfs-map-physical)
+      sudo $command_path $argv | column -ts\t
     '';
 
     cdd = /* fish */ ''
