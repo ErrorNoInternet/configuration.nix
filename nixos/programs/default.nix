@@ -75,6 +75,7 @@ in
     duf
     dust
     dwarfs
+    e2fsprogs
     efibootmgr
     ethtool
     eza
