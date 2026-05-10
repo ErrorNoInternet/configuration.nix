@@ -148,5 +148,6 @@ in
     vgrep
     vim
     whois
+    xfsprogs
   ];
 }
