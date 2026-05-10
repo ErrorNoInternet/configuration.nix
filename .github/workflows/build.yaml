@@ -54,5 +54,5 @@ jobs:
             --no-nom \
             --skip-cached \
             --eval-workers 1 \
-            -j 4 \
+            --max-jobs 4 \
             --flake .#nixosConfigurations.${{ matrix.host }}.config.system.build.${{ matrix.attribute }}
