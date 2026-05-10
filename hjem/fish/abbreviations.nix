@@ -65,6 +65,7 @@
       sr = "songrec r -d \"Monitor of HUAWEI USB-C HEADSET Pro\"";
       srl = "songrec l -d \"Monitor of HUAWEI USB-C HEADSET Pro\"";
       st = "strace";
+      sv = "sudo -v";
       t = "tmux";
       ta = "tmux a";
       tl = "tail";
