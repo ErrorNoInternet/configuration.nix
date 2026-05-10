@@ -143,9 +143,6 @@
               usePadding = true;
             }
             {
-              id = "plugin:privacy-indicator";
-            }
-            {
               compactMode = false;
               hideMode = "hidden";
               hideWhenIdle = false;
@@ -163,6 +160,9 @@
             }
           ];
           right = [
+            {
+              id = "plugin:privacy-indicator";
+            }
             {
               blacklist = [ ];
               chevronColor = "none";
