@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   boot.initrd.availableKernelModules = [
     "amdgpu"
@@ -16,7 +17,19 @@
 
   services.kmscon.hwRender = false;
 
-  hjem.users.error.rum.desktops.hyprland.settings.monitor = [
-    "         , preferred     , auto    , 1"
-  ];
+  systemd.services.load-backlight = {
+    description = "Load Backlight (radeon_bl0)";
+
+    after = [ "systemd-user-sessions.service" ];
+    wantedBy = [ "multi-user.target" ];
+
+    serviceConfig = {
+      Type = "oneshot";
+      User = "root";
+    };
+
+    script = ''
+      ${pkgs.systemd}/lib/systemd/systemd-backlight load backlight:radeon_bl0
+    '';
+  };
 }
