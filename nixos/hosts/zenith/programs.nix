@@ -17,6 +17,10 @@
     ];
   };
 
+  users.users.error.extraGroups = [
+    "wireshark"
+  ];
+
   development = {
     enable = true;
     java.enable = true;
