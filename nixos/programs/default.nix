@@ -74,6 +74,7 @@ in
     doggo
     duf
     dust
+    dwarfs
     efibootmgr
     eza
     fastfetch
@@ -128,7 +129,6 @@ in
     s-tui
     screen
     self'.packages.btrfs-map-physical
-    self'.packages.dwarfs
     self'.packages.neovim
     smartmontools
     smem

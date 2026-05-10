@@ -9,7 +9,7 @@ let
 in
 python.pkgs.buildPythonApplication rec {
   pname = "endcord";
-  inherit (self.pins.endcord) version;
+  inherit (src) version;
 
   src = self.pins.endcord;
   pyproject = false;
