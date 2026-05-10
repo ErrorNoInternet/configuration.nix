@@ -31,10 +31,7 @@
             type = "luks";
 
             name = "luks_${config.host.name}";
-            settings = {
-              allowDiscards = true;
-              keyFile = "/boot/luks";
-            };
+            settings.allowDiscards = true;
             extraFormatArgs = [
               "--pbkdf argon2id"
               "--pbkdf-force-iterations 8"
