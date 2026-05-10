@@ -137,6 +137,7 @@ in
     tcpdump
     tmux
     translate-shell
+    trickle
     try
     tz
     unzip
