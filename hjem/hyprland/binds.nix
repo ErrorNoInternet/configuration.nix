@@ -85,6 +85,12 @@
 
       bind    = $mod           , mouse_down                , workspace, e-1
       bind    = $mod           , mouse_up                  , workspace, e+1
+      bind    = $mod CTRL      , mouse_down                , workspace, r-1
+      bind    = $mod CTRL      , mouse_up                  , workspace, r+1
+      bind    = $mod CTRL SHIFT, mouse_down                , movetoworkspace, r-1
+      bind    = $mod CTRL SHIFT, mouse_up                  , movetoworkspace, r+1
+      bind    = $mod SHIFT     , mouse_down                , movetoworkspace, e-1
+      bind    = $mod SHIFT     , mouse_up                  , movetoworkspace, e+1
       bindm   = $mod           , mouse:272                 , movewindow
       bindm   = $mod           , mouse:273                 , resizewindow
 
