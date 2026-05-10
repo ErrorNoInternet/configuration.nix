@@ -21,6 +21,7 @@
       ex = "exec";
       F = "fastfetch";
       f = "fg";
+      ff = "ffmpeg";
       gz = "gzip";
       gzd = "gzip -d";
       h = "head";
