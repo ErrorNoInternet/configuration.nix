@@ -40,20 +40,26 @@ jobs:
         with:
           extra-conf: |
             log-lines = 500
-            extra-substituters = https://cache.garnix.io https://nix-community.cachix.org
-            extra-trusted-public-keys = cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g= nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs=
+            extra-substituters = https://cache.garnix.io
+            extra-trusted-public-keys = cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g=
 
       - name: Set up Cachix
         uses: cachix/cachix-action@v17
         with:
           name: errornobinaries
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
+          extraPullNames: nix-community
 
       - name: Clone repository
         uses: actions/checkout@v6
 
       - name: Build ${{ matrix.host }} (${{ matrix.attribute }})
-        run: nix run github:Mic92/nix-fast-build --
-               --no-nom --skip-cached
-               --eval-workers 1 -j 4
-               --flake .#nixosConfigurations.${{ matrix.host }}.config.system.build.${{ matrix.attribute }}
+        env:
+          NIX_USER_CONF_FILES: "${{ env.NIX_USER_CONF_FILES }}:/etc/nix/nix.conf"
+        run: |
+          nix run github:Mic92/nix-fast-build -- \
+            --no-nom \
+            --skip-cached \
+            --eval-workers 1 \
+            -j 4 \
+            --flake .#nixosConfigurations.${{ matrix.host }}.config.system.build.${{ matrix.attribute }}
