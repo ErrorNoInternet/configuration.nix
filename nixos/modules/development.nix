@@ -34,6 +34,7 @@ in
       cspell
       deadnix
       evcxr
+      flamegraph
       gdb
       gh
       git-graph
