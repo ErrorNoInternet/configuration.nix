@@ -7,6 +7,11 @@
 
     base16.url = "github:SenchoPens/base16.nix";
 
+    concord = {
+      url = "github:chojs23/concord";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     disko = {
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
