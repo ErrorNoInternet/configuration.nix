@@ -26,7 +26,7 @@
       set  -g  @prefix_highlight_empty_attr 'bg=brightwhite'
       set  -g  @prefix_highlight_empty_prompt ' '
       set  -g  @prefix_highlight_fg 'black'
-      set  -g  @resurrect-processes 'aerc btop cha eilmeldung endcord iamb newsboat nvim "gh news"'
+      set  -g  @resurrect-processes '"~aerc" btop cha eilmeldung endcord iamb newsboat nvim "~gh news"'
 
       bind '"' split-window -v -c "#{pane_current_path}"
       bind '%' split-window -h -c "#{pane_current_path}"
