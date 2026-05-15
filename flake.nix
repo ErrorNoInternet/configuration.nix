@@ -85,7 +85,7 @@
       inputs.flake-parts.follows = "flake-parts";
     };
 
-    noctalia = {
+    noctalia-shell = {
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };

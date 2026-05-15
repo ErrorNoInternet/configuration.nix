@@ -43,7 +43,7 @@
       brightnessctl
       hypridle
       hyprland
-      inputs'.noctalia.packages.default
+      inputs'.noctalia-shell.packages.default
     ];
     script = "hypridle";
   };

@@ -44,7 +44,7 @@ in
       wf-recorder
       wl-clipboard
 
-      inputs'.noctalia.packages.default
+      inputs'.noctalia-shell.packages.default
       kdePackages.kimageformats
       qt5.qtgraphicaleffects
       qt5.qtimageformats
