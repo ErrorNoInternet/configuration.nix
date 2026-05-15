@@ -54,14 +54,7 @@ in
   };
 
   nix = {
-    # TODO: remove when nix-super updates nixpkgs
-    package =
-      with inputs'.nix-super.packages;
-      default.override {
-        nix-cli = nix-cli.override {
-          inherit (pkgs) mimalloc;
-        };
-      };
+    package = inputs'.nix-super.packages.default;
 
     settings = {
       auto-optimise-store = true;
