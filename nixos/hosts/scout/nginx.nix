@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 let
   usedTCPPorts = [
     6984
@@ -5,6 +6,9 @@ let
   ];
 in
 {
+  networking.firewall.allowedTCPPorts = usedTCPPorts;
+  upnp.tcpPorts = usedTCPPorts;
+
   users.users.nginx.extraGroups = [ "acme" ];
 
   services.nginx = {
@@ -52,6 +56,5 @@ in
     };
   };
 
-  networking.firewall.allowedTCPPorts = usedTCPPorts;
-  upnp.tcpPorts = usedTCPPorts;
+  environment.systemPackages = [ pkgs.nginx ];
 }
