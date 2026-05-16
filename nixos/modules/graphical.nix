@@ -113,6 +113,8 @@ in
         glib
         gparted
         grim
+        kdePackages.breeze
+        kdePackages.breeze.qt5
         libva-utils
         mesa-demos
         nvtopPackages.full
@@ -123,14 +125,12 @@ in
         ripdrag
         satty
         slurp
+        trash-cli
         vulkan-tools
         wev
         wlr-randr
         xdg-user-dirs
         ydotool
-
-        kdePackages.breeze
-        kdePackages.breeze.qt5
       ];
     };
 
