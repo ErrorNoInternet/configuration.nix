@@ -1,18 +1,28 @@
 {
   perSystem =
-    { inputs', pkgs, ... }:
+    {
+      inputs',
+      lib,
+      pkgs,
+      ...
+    }:
     let
       mkShell =
         toolchain:
         let
-          rust = inputs'.fenix.packages.${toolchain}.withComponents [
-            "cargo"
-            "clippy"
-            "rust-analyzer"
-            "rust-src"
-            "rustc"
-            "rustfmt"
-          ];
+          rust = inputs'.fenix.packages.${toolchain}.withComponents (
+            [
+              "cargo"
+              "clippy"
+              "rust-analyzer"
+              "rust-src"
+              "rustc"
+              "rustfmt"
+            ]
+            ++ lib.optionals (toolchain == "complete") [
+              "miri-preview"
+            ]
+          );
         in
         pkgs.mkShell {
           name = "rust";
