@@ -39,7 +39,7 @@
       bind    = $mod           , S, togglespecialworkspace , scratchpad
       bind    = $mod           , W, togglespecialworkspace , communication
       bind    = $mod           , E, togglespecialworkspace , inbox
-      bind    = $mod SHIFT     , A                         , exec, scratchpad -g -m "fuzzel -d"
+      bind    = $mod SHIFT     , A                         , exec, scratchpad -g -l -m "fuzzel -d"
       bind    = $mod SHIFT     , W, movetoworkspace        , special:communication
       bind    = $mod SHIFT     , E, movetoworkspace        , special:inbox
 
