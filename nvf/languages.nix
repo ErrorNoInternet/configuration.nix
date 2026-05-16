@@ -68,6 +68,7 @@
 
     lsp.servers = {
       basedpyright.settings.basedpyright.analysis.typeCheckingMode = "standard";
+      nil.settings.nil.nix.flake.autoArchive = true;
     };
   };
 }
