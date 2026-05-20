@@ -10,12 +10,6 @@ in
       friendly-snippets.enable = true;
 
       sourcePlugins = {
-        nerdfont = {
-          enable = true;
-          package = pkgs.vimPlugins.blink-nerdfont-nvim;
-          module = "blink-nerdfont";
-        };
-
         yank = {
           enable = true;
           package = pkgs.vimPlugins.blink-cmp-yanky;
@@ -25,7 +19,6 @@ in
 
       setupOpts = {
         sources.default = [
-          "nerdfont"
           "yank"
         ];
 
@@ -45,10 +38,9 @@ in
           (mkLuaInline /* lua */ ''
             function(a, b)
               local source_priority = {
-                path = 6,
-                lsp = 5,
-                snippets = 4,
-                nerdfont = 3,
+                path = 5,
+                lsp = 4,
+                snippets = 3,
                 buffer = 2,
                 yank = 1,
               }
