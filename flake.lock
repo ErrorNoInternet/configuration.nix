@@ -1054,11 +1054,11 @@
         "systems": "systems_6"
       },
       "locked": {
-        "lastModified": 1778421486,
-        "narHash": "sha256-N4aD7VzJ5R4XQsiUD5JfbikQto7anQx84J5Za27S6DQ=",
+        "lastModified": 1779234348,
+        "narHash": "sha256-inZs8gWvfjBfzzM1OwvnNTZ3CqC1GWx82zn1IXhp6XE=",
         "owner": "tdortman",
         "repo": "spicetify-nix",
-        "rev": "9d4ae83ad690258e63b6eab4caa26f5b66d1dad2",
+        "rev": "a470be9a1671a7a90bbd4eb8ad7d6f9de3272b6a",
         "type": "github"
       },
       "original": {
