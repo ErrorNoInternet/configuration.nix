@@ -136,6 +136,11 @@ in
   upnp.tcpPorts = sshPorts;
 
   services = {
+    getty = {
+      greetingLine = "<<< ${config.system.nixos.distroName} ${config.system.nixos.label} (\\m) - \\l >>>";
+      helpLine = mkForce "";
+    };
+
     nscd.enable = false;
     openssh.enable = lib.mkDefault true;
     power-profiles-daemon.enable = true;
