@@ -1,9 +1,8 @@
-{ osConfig, ... }:
 {
   rum.programs.fish = {
     aliases = {
       cava = "TERM=kitty command cava";
-      H = "ulimit -c (math 1024 x 1024 x 1024) && exec uwsm start ${osConfig.programs.hyprland.package}/bin/start-hyprland";
+      H = "ulimit -c (math 1024 x 1024 x 1024) && exec uwsm start -e -D Hyprland start-hyprland";
       pp = "playerctl play-pause";
       ppc = "playerctl play";
       ppl = "playerctl -l";
