@@ -36,7 +36,7 @@ jobs:
           verbose: true
 
       - name: Install Nix
-        uses: DeterminateSystems/nix-installer-action@v22
+        uses: cachix/install-nix-action@v31
 
       - name: Set up Cachix
         uses: cachix/cachix-action@v17

@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Install Nix
-        uses: DeterminateSystems/nix-installer-action@v22
+        uses: cachix/install-nix-action@v31
         with:
           extra-conf: |
             log-lines = 500
