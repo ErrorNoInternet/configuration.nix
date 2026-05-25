@@ -3,6 +3,7 @@
     abbrs = {
       "-" = "cd -";
       ae = "aerc";
+      at = "atuin";
       b = "bat";
       bp = "batp";
       bpy = "bpython";
