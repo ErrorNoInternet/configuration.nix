@@ -1,6 +1,5 @@
 [
   ./btrfs-map-physical
-  ./endcord
   ./gamma-control
   ./hyprtoggle
   ./kitty

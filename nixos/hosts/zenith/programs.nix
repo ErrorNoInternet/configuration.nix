@@ -1,7 +1,6 @@
 {
   inputs',
   pkgs,
-  self',
   ...
 }:
 {
@@ -74,7 +73,6 @@
     qbittorrent
     qpwgraph
     scrcpy
-    self'.packages.endcord
     songrec
     sqlit-tui
     stress-ng
