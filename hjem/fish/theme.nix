@@ -26,7 +26,7 @@
       set -U tide_pwd_color_anchors white
       set -U tide_pwd_color_dirs white
       set -U tide_pwd_color_truncated_dirs white
-      set -U tide_left_prompt_items pwd git jj character
+      set -U tide_left_prompt_items pwd vcs character
       set -U tide_right_prompt_items status cmd_duration jobs \
                       node python rustc java php ruby go zig \
                       nix_shell direnv distrobox context

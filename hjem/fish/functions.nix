@@ -225,49 +225,6 @@ in
       end
     '';
 
-    _tide_item_jj = /* fish */ ''
-      if not command -sq jj; or not jj root --quiet &>/dev/null
-        return 1
-      end
-
-      set jj_status (jj log -r@ -n1 --no-graph --color always -T '
-      separate(" ",
-        surround(
-          raw_escape_sequence(if(diff.files(), "'$(set_color bryellow)'", "'$(set_color green)'")) ++ "(",
-          raw_escape_sequence(if(diff.files(), "'$(set_color bryellow)'", "'$(set_color green)'")) ++ ")",
-          separate(" ",
-            bookmarks.map(|x| if(
-              x.name().substr(0, 10).starts_with(x.name()),
-              x.name().substr(0, 10),
-              x.name().substr(0, 9) ++ "…")
-            ).join(" "),
-            tags.map(|x| if(
-              x.name().substr(0, 10).starts_with(x.name()),
-              x.name().substr(0, 10),
-              x.name().substr(0, 9) ++ "…")
-            ).join(" "),
-            raw_escape_sequence("'$(set_color green)'") ++ surround("\"", "\"",
-              if(
-                description.first_line().substr(0, 16).starts_with(description.first_line()),
-                description.first_line().substr(0, 16),
-                description.first_line().substr(0, 15) ++ "…"
-              )
-            ),
-            change_id.shortest(),
-            commit_id.shortest(),
-            if(conflict, raw_escape_sequence("'$(set_color red)'") ++ "conflict"),
-            if(divergent, raw_escape_sequence("'$(set_color red)'") ++ "divergent"),
-            if(hidden, "hidden"),
-          )
-        ),
-        if(
-          diff.files(),
-          raw_escape_sequence("'$(set_color bryellow)'") ++ "!" ++ diff.files().len()
-        ),
-      )' | string trim)
-      _tide_print_item jj $tide_jj_icon' ' "$jj_status"
-    '';
-
     _tide_item_nix_shell = /* fish */ ''
       if set -q IN_NIX_SHELL
         _tide_print_item nix_shell $tide_nix_shell_icon' ' $IN_NIX_SHELL

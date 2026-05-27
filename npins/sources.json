@@ -107,6 +107,19 @@
       "url": "https://github.com/irssi/scripts.irssi.org/archive/4e2cac5124064a374e5a09edd287f05570e53d01.tar.gz",
       "hash": "sha256-bWCMMZRF+IcrCNnP5GdbTToYI2EpVqBkc/cY1rM4BbY="
     },
+    "tide-item-jj": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "lucasadelino",
+        "repo": "tide-item-jj"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "e1150b7332b85149b468cb10c2844f082f33975b",
+      "url": "https://github.com/lucasadelino/tide-item-jj/archive/e1150b7332b85149b468cb10c2844f082f33975b.tar.gz",
+      "hash": "sha256-vLSrHPoytZ/kXQh0Bp/4AWe8YLlyufRjepfXUAuWCB8="
+    },
     "tmux-pane-focus": {
       "type": "Git",
       "repository": {
