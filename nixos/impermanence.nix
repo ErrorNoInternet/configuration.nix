@@ -84,6 +84,7 @@
       "/export"
       "/mnt"
       "/root/.ssh"
+      "/srv"
       "/var/db/sudo/lectured"
       "/var/lib/bluetooth"
       "/var/lib/containers"
