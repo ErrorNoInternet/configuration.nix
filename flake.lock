@@ -1017,11 +1017,11 @@
         "systems": "systems_6"
       },
       "locked": {
-        "lastModified": 1779234348,
-        "narHash": "sha256-inZs8gWvfjBfzzM1OwvnNTZ3CqC1GWx82zn1IXhp6XE=",
+        "lastModified": 1779829400,
+        "narHash": "sha256-TsZ23yu5w0Dy/DBK6lmxcbchUl6EGghYlkfa6iHJOxg=",
         "owner": "tdortman",
         "repo": "spicetify-nix",
-        "rev": "a470be9a1671a7a90bbd4eb8ad7d6f9de3272b6a",
+        "rev": "a9e5ff728829eddef93d5af256103317793b84b9",
         "type": "github"
       },
       "original": {
