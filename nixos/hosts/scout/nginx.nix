@@ -52,22 +52,26 @@ in
         };
       in
       {
-        "couchdb.error.tuxcord.net" = {
+        "couchdb.error.tuxcord.net" = defaultOptions // {
           locations."/" = {
             proxyPass = "http://localhost:5984";
             extraConfig = ''
               proxy_pass_header Authorization;
             '';
           };
-        }
-        // defaultOptions;
+        };
 
         "freshrss.error.tuxcord.net" = defaultOptions;
 
-        "webdav.error.tuxcord.net" = {
-          locations."/" = {
-            root = "/srv/webdav";
+        "scout.error.tuxcord.net" = defaultOptions // {
+          root = "/var/www/scout";
+          locations."/".index = "index.html";
+        };
 
+        "webdav.error.tuxcord.net" = defaultOptions // {
+          root = "/srv/webdav";
+
+          locations."/" = {
             extraConfig = ''
               client_max_body_size 10G;
 
@@ -83,8 +87,7 @@ in
               auth_basic_user_file /etc/nginx/webdav.htpasswd;
             '';
           };
-        }
-        // defaultOptions;
+        };
       };
   };
 
