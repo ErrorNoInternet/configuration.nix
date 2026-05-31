@@ -41,18 +41,18 @@ in
           acmeRoot = null;
           forceSSL = true;
           useACMEHost = "errornointernet.tuxcord.net";
-        };
-      in
-      {
-        couchdb = {
+
           listen = [
             {
               addr = "0.0.0.0";
-              port = 6984;
+              port = 18080;
               ssl = true;
             }
           ];
-
+        };
+      in
+      {
+        "couchdb.error.tuxcord.net" = {
           locations."/" = {
             proxyPass = "http://localhost:5984";
             extraConfig = ''
@@ -62,28 +62,11 @@ in
         }
         // defaultOptions;
 
-        freshrss = {
-          listen = [
-            {
-              addr = "0.0.0.0";
-              port = 18080;
-              ssl = true;
-            }
-          ];
-        }
-        // defaultOptions;
+        "freshrss.error.tuxcord.net" = defaultOptions;
 
-        webdav = {
-          listen = [
-            {
-              addr = "0.0.0.0";
-              port = 18081;
-              ssl = true;
-            }
-          ];
-
-          locations."/webdav/" = {
-            root = "/srv";
+        "webdav.error.tuxcord.net" = {
+          locations."/" = {
+            root = "/srv/webdav";
 
             extraConfig = ''
               client_max_body_size 10G;

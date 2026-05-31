@@ -17,7 +17,8 @@
   services.freshrss = {
     enable = true;
     api.enable = true;
+    virtualHost = "freshrss.error.tuxcord.net";
     passwordFile = config.age.secrets.freshrss.path;
-    baseUrl = "https://scout.errornointernet.tuxcord.net:18080";
+    baseUrl = "https://freshrss.error.tuxcord.net:18080";
   };
 }
