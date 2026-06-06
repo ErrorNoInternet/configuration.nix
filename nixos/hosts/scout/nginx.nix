@@ -1,10 +1,6 @@
 { pkgs, ... }:
 let
-  usedTCPPorts = [
-    6984
-    18080
-    18081
-  ];
+  usedTCPPorts = [ 18080 ];
 in
 {
   environment.persistence."/persist".directories = [
