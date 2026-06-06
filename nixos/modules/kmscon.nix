@@ -1,7 +1,6 @@
 {
   config,
   lib,
-  pkgs,
   ...
 }:
 let
@@ -28,27 +27,15 @@ in
     services.kmscon = {
       enable = mkDefault true;
 
-      fonts = [
-        {
-          name = "Iosevka Nerd Font";
-          package = pkgs.nerd-fonts.iosevka;
-        }
-        {
-          name = "JetBrainsMonoNL Nerd Font";
-          package = pkgs.nerd-fonts.jetbrains-mono;
-        }
-      ];
-
-      hwRender = mkDefault true;
-      term = "xterm-256color";
-
-      extraConfig = ''
-        dpms-timeout = ${builtins.toString cfg.dpmsTimeout}
-        font-size = ${builtins.toString (config.fonts.preferredSize + 4)}
-
-        xkb-repeat-delay = ${builtins.toString config.graphical.repeatDelay}
-        xkb-repeat-rate = ${builtins.toString config.graphical.repeatRate}
-      '';
+      config = {
+        dpms-timeout = cfg.dpmsTimeout;
+        font-name = config.fonts.preferredName;
+        font-size = config.fonts.preferredSize + 4;
+        hwaccel = mkDefault true;
+        term = "xterm-256color";
+        xkb-repeat-delay = config.graphical.repeatDelay;
+        xkb-repeat-rate = config.graphical.repeatRate;
+      };
     };
   };
 }
