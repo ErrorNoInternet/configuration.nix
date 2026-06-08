@@ -108,6 +108,7 @@ in
       systemPackages = with pkgs; [
         bibata-cursors
         cava
+        exiftool
         ffmpeg-full
         galaxy-buds-client
         glib
