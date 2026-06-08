@@ -32,6 +32,7 @@ in
         font-name = config.fonts.preferredName;
         font-size = config.fonts.preferredSize + 4;
         hwaccel = mkDefault true;
+        libseat = false;
         term = "xterm-256color";
         xkb-repeat-delay = config.graphical.repeatDelay;
         xkb-repeat-rate = config.graphical.repeatRate;
