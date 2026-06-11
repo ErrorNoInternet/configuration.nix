@@ -377,11 +377,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1780199518,
-        "narHash": "sha256-NhtWx0youXYRvcqtL+sjdqoZinMcnjcwRsh6eBJUZLg=",
+        "lastModified": 1780971222,
+        "narHash": "sha256-q4+HMlbi80dbN4KfFxhO84MEBMQE0E87ShbNKXOKLao=",
         "owner": "feel-co",
         "repo": "hjem",
-        "rev": "ffa433dd86e761de45ef985d4293f31a4d2a775d",
+        "rev": "3aaf5f238fb3b2f9efdc926e6024730636f0de23",
         "type": "github"
       },
       "original": {
