@@ -5,7 +5,7 @@
   ...
 }:
 let
-  networkCount = 8;
+  networkCount = 9;
 
   cfg = config.wifi;
   inherit (lib)
