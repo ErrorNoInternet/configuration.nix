@@ -56,6 +56,7 @@
     codex
     distrobox
     duperemove
+    exfatprogs
     gimp3-with-plugins
     iamb
     imhex
