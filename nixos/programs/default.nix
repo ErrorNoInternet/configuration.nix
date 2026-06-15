@@ -145,6 +145,7 @@ in
     try
     tz
     unzip
+    usbutils
     vgrep
     vim
     whois
