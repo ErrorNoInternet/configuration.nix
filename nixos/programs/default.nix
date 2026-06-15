@@ -120,6 +120,7 @@ in
     perf
     pinentry-curses
     poop
+    powertop
     procs
     progress
     pstree
