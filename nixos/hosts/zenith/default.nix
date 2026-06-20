@@ -21,5 +21,5 @@
 
   libvirt.enable = true;
 
-  time.timeZone = "America/New_York";
+  time.timeZone = "Asia/Shanghai";
 }
