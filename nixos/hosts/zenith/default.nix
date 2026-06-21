@@ -21,5 +21,7 @@
 
   libvirt.enable = true;
 
+  services.resolved.settings.Resolve.DNSOverTLS = false;
+
   time.timeZone = "Asia/Shanghai";
 }
