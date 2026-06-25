@@ -21,7 +21,7 @@ jobs:
             log-lines = 500
 
       - name: Clone repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Check if properly formatted
         run: nix fmt -- --fail-on-change
