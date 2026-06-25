@@ -27,7 +27,7 @@ jobs:
             extra-platforms = aarch64-linux
 
       - name: Clone repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Check Nix flake outputs
         run: nix flake check --all-systems
