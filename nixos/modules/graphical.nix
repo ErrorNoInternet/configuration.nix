@@ -114,6 +114,7 @@ in
         glib
         gparted
         grim
+        intel-gpu-tools
         kdePackages.breeze
         kdePackages.breeze.qt5
         libva-utils
