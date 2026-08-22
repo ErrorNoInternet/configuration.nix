@@ -4,16 +4,11 @@
 
   boot.kernelParams = [
     "intel_iommu=on"
-    "nosgx"
   ];
 
   wifi.enable = true;
 
-  services = {
-    logind.settings.Login.HandleLidSwitch = "ignore";
-
-    upower.enable = true;
-  };
+  services.upower.enable = true;
 
   hjem.users.error = {
     rum.desktops.hyprland.settings.monitor = [

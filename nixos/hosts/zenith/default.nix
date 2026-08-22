@@ -1,8 +1,8 @@
 { ... }:
 {
   imports = [
+    ./graphics.nix
     ./hardware.nix
-    ./nvidia.nix
     ./programs.nix
     ./storage.nix
     ./usbguard.nix
