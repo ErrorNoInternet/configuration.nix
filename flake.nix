@@ -92,10 +92,7 @@
 
     nvf = {
       url = "github:NotAShelf/nvf";
-      inputs = {
-        flake-parts.follows = "flake-parts";
-        nixpkgs.follows = "nixpkgs";
-      };
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     sbox.url = "github:DavHau/sbox";
