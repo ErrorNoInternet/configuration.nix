@@ -70,6 +70,7 @@ in
     croc
     delta
     difftastic
+    dmidecode
     dnsutils
     doggo
     duf
