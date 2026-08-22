@@ -103,9 +103,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "4e2cac5124064a374e5a09edd287f05570e53d01",
-      "url": "https://github.com/irssi/scripts.irssi.org/archive/4e2cac5124064a374e5a09edd287f05570e53d01.tar.gz",
-      "hash": "sha256-bWCMMZRF+IcrCNnP5GdbTToYI2EpVqBkc/cY1rM4BbY="
+      "revision": "e844898ca7a43ac68eee9835cf4e8e89fe737d26",
+      "url": "https://github.com/irssi/scripts.irssi.org/archive/e844898ca7a43ac68eee9835cf4e8e89fe737d26.tar.gz",
+      "hash": "sha256-30aNByeT65jkiqsDU8hhH7l7ZNVCyj7k+k7Z44eJqTs="
     },
     "tide-item-jj": {
       "type": "Git",
@@ -116,9 +116,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "e1150b7332b85149b468cb10c2844f082f33975b",
-      "url": "https://github.com/lucasadelino/tide-item-jj/archive/e1150b7332b85149b468cb10c2844f082f33975b.tar.gz",
-      "hash": "sha256-vLSrHPoytZ/kXQh0Bp/4AWe8YLlyufRjepfXUAuWCB8="
+      "revision": "153be2b33a212ef633dcaf2f743308ea2e068309",
+      "url": "https://github.com/lucasadelino/tide-item-jj/archive/153be2b33a212ef633dcaf2f743308ea2e068309.tar.gz",
+      "hash": "sha256-pseflhnpPf1Rqx+CHetinfI3gCQHW/nISO+EHVXPmts="
     },
     "tmux-pane-focus": {
       "type": "Git",
@@ -129,9 +129,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "525ce8117220de82331a97fec87fa6b54bad81df",
-      "url": "https://github.com/graemedavidson/tmux-pane-focus/archive/525ce8117220de82331a97fec87fa6b54bad81df.tar.gz",
-      "hash": "sha256-dkXTWZcNfs1+BelKuRzN268jF1CwIIObz9VJDLwMHvE="
+      "revision": "437d30938b9b2893711953e8c56e50b42d9c3b4a",
+      "url": "https://github.com/graemedavidson/tmux-pane-focus/archive/437d30938b9b2893711953e8c56e50b42d9c3b4a.tar.gz",
+      "hash": "sha256-yrqiMec6j1C75cC3kdkUvRIh2OPg1mjgvq7tnC7Luwo="
     },
     "vimiv-qt": {
       "type": "Git",
@@ -142,9 +142,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "df86b111812b851b7748e8e21344fff2f122dd84",
-      "url": "https://github.com/ErrorNoInternet/vimiv-qt/archive/df86b111812b851b7748e8e21344fff2f122dd84.tar.gz",
-      "hash": "sha256-XRY/Er9nzWW6KVCIdEwtCl6C1is8RIy239qOMBEPLgc="
+      "revision": "271f095fd38bf509694dbab5ab28dab1480340f4",
+      "url": "https://github.com/ErrorNoInternet/vimiv-qt/archive/271f095fd38bf509694dbab5ab28dab1480340f4.tar.gz",
+      "hash": "sha256-5RDXPokKN2bLYWKRGAVlBltQE2wAfIiOPCyNLy1RW0w="
     },
     "wlr-clients": {
       "type": "Git",
@@ -160,5 +160,5 @@
       "hash": "sha256-uDXq9HHqvX5wPAz/4L2x5Zsm8d+B4d3SlCGKc4J6Rdc="
     }
   },
-  "version": 7
+  "version": 8
 }
