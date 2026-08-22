@@ -236,7 +236,7 @@
       };
       brightness = {
         backlightDeviceMappings = [ ];
-        brightnessStep = 5;
+        brightnessStep = 1;
         enableDdcSupport = true;
         enforceMinimum = false;
       };
