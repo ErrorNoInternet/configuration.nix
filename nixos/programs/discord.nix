@@ -23,6 +23,8 @@ in
       discord = {
         openASAR.enable = false;
         vencord.enable = false;
+
+        silenceNoModClientWarning = true;
       };
 
       equibop = {
@@ -47,11 +49,11 @@ in
           betterRoleContext.enable = true;
           betterSessions.enable = true;
           callTimer.enable = true;
-          ClearURLs.enable = true;
+          clearUrls.enable = true;
           copyFileContents.enable = true;
           copyProfileColors.enable = true;
           copyStickerLinks.enable = true;
-          CopyUserURLs.enable = true;
+          copyUserUrls.enable = true;
           crashHandler = {
             enable = true;
             attemptToNavigateToHome = true;
@@ -83,7 +85,7 @@ in
             enable = true;
             deleteStyle = "overlay";
           };
-          MutualGroupDMs.enable = true;
+          mutualGroupDms.enable = true;
           noDevtoolsWarning.enable = true;
           noF1.enable = true;
           noReplyMention = {
@@ -102,7 +104,7 @@ in
             notices = true;
           };
           revealAllSpoilers.enable = true;
-          ReviewDB = {
+          reviewDb = {
             enable = true;
             showWarning = false;
           };
