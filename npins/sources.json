@@ -1,5 +1,18 @@
 {
   "pins": {
+    "Kanagawa-GKT-Theme": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "Fausto-Korpsvart",
+        "repo": "Kanagawa-GKT-Theme"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "55ca4ba249eba21f861b9866b71ab41bb8930318",
+      "url": "https://github.com/Fausto-Korpsvart/Kanagawa-GKT-Theme/archive/55ca4ba249eba21f861b9866b71ab41bb8930318.tar.gz",
+      "hash": "sha256-UdMoMx2DoovcxSp/zBZ3PRv/Qpj+prd0uPm1gmdak2E="
+    },
     "Ori-fcitx5": {
       "type": "Git",
       "repository": {

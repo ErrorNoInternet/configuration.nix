@@ -2,6 +2,7 @@
   lib,
   osConfig,
   pkgs,
+  self',
   ...
 }:
 with pkgs;
@@ -13,7 +14,7 @@ let
       {
         packages = [
           colloid-icon-theme
-          kanagawa-gtk-theme
+          self'.packages.kanagawa-gtk-theme
         ];
         iconName = "Colloid-Dark";
         name = "Kanagawa-BL";
