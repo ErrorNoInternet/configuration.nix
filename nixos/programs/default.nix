@@ -117,6 +117,7 @@ in
     nvme-cli
     openssl
     parted
+    patchelf
     pciutils
     perf
     pinentry-curses
