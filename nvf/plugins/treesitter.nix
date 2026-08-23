@@ -21,7 +21,6 @@
       kotlin
       perl
       regex
-      tmux
       typescript
     ];
   };
