@@ -196,7 +196,7 @@ in
   nixpkgs.config.allowUnfree = true;
 
   system = {
-    configurationRevision = self.rev or self.dirtyRev;
+    configurationRevision = self.rev or self.dirtyRev or null;
     nssModules = mkForce [ ];
     stateVersion = "25.05";
   };
