@@ -4,7 +4,6 @@
     ./aesthetics.nix
     ./binds.nix
     ./colors.nix
-    ./graphics.nix
     ./input.nix
     ./rules.nix
   ];
