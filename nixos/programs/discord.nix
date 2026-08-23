@@ -59,12 +59,10 @@ in
           equibopStreamFixes.enable = true;
           experiments.enable = true;
           fakeNitro.enable = true;
-          favoriteGifSearch.enable = true;
           fixCodeblockGap.enable = true;
           fixSpotifyEmbeds.enable = true;
           fixYoutubeEmbeds.enable = true;
           forceOwnerCrown.enable = true;
-          friendsSince.enable = true;
           imageZoom = {
             enable = true;
             size = 250.0;
@@ -173,9 +171,9 @@ in
           showSongName.enable = true;
           timezones = {
             enable = true;
-            _24hTime = true;
-            showOwnTimezone = false;
             askedTimezone = true;
+            showOwnTimezone = false;
+            twentyFourHourFormat = true;
           };
           voiceRejoin.enable = true;
           whosWatching.enable = true;

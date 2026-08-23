@@ -66,7 +66,7 @@
     };
 
     nixcord = {
-      url = "github:FlameFlag/nixcord";
+      url = "github:4evy/nixcord";
       inputs = {
         flake-parts.follows = "flake-parts";
         nixpkgs.follows = "nixpkgs";

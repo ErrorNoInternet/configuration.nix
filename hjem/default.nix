@@ -61,7 +61,6 @@
       };
     };
 
-    linker = inputs'.hjem.packages.smfh;
     clobberByDefault = true;
     specialArgs = {
       inherit
