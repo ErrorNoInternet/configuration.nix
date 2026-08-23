@@ -63,8 +63,8 @@
     imhex
     inputs'.concord.packages.default
     inputs'.eilmeldung.packages.default
-    jetbrains.idea-oss
-    libreoffice-fresh
+    jetbrains.idea
+    libreoffice-stable
     lsfg-vk
     lsfg-vk-ui
     newsboat
