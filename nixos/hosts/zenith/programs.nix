@@ -33,6 +33,13 @@
   programs = {
     aerc.enable = true;
     btop.variant = "cuda";
+
+    clash-verge = {
+      enable = true;
+      serviceMode = true;
+      tunMode = true;
+    };
+
     irssi.enable = true;
 
     wireshark = {
