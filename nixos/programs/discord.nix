@@ -46,10 +46,12 @@ in
         plugins = {
           accountPanelServerProfile.enable = true;
           alwaysTrust.enable = true;
+          betterForwards.enable = true;
           betterRoleContext.enable = true;
           betterSessions.enable = true;
           callTimer.enable = true;
           clearUrls.enable = true;
+          copyEmojiMarkdown.enable = true;
           copyFileContents.enable = true;
           copyProfileColors.enable = true;
           copyStickerLinks.enable = true;
@@ -58,6 +60,7 @@ in
             enable = true;
             attemptToNavigateToHome = true;
           };
+          downloadAllAttachments.enable = true;
           equibopStreamFixes.enable = true;
           experiments.enable = true;
           fakeNitro.enable = true;
@@ -65,6 +68,7 @@ in
           fixSpotifyEmbeds.enable = true;
           fixYoutubeEmbeds.enable = true;
           forceOwnerCrown.enable = true;
+          gifMaker.enable = true;
           imageZoom = {
             enable = true;
             size = 250.0;
@@ -73,6 +77,8 @@ in
           jumpTo.enable = true;
           keepCurrentChannel.enable = true;
           lastActive.enable = true;
+          limitlessScreenshare.enable = true;
+          markdownTables.enable = true;
           memberCount.enable = true;
           mentionAvatars.enable = true;
           messageLatency = {
@@ -108,6 +114,7 @@ in
             enable = true;
             showWarning = false;
           };
+          sedEnhanced.enable = true;
           serverInfo.enable = true;
           showHiddenChannels.enable = true;
           showHiddenThings.enable = true;
@@ -149,6 +156,10 @@ in
             messageLimit = 100;
             cacheLimit = 250;
             saveImages = true;
+          };
+          messageTranslate = {
+            enable = true;
+            autoTranslate = false;
           };
           moyai = {
             enable = true;
