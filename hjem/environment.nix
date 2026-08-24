@@ -1,4 +1,4 @@
-{ osConfig, ... }:
+{ lib, osConfig, ... }:
 {
   environment.sessionVariables = {
     TERMINAL = "kitty";
@@ -9,5 +9,8 @@
     HWATCH = "--no-help-banner";
 
     NIXOS_OZONE_WL = 1;
+  }
+  // lib.optionalAttrs osConfig.hardware.nvidia.enabled {
+    GAMEMODERUNEXEC = "nvidia-offload";
   };
 }
