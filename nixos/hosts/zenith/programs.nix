@@ -71,6 +71,7 @@
     nheko
     nix-init
     obsidian
+    opencode
     oxipng
     qbittorrent
     qpwgraph
