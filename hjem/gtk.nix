@@ -17,7 +17,7 @@ let
           self'.packages.kanagawa-gtk-theme
         ];
         iconName = "Colloid-Dark";
-        name = "Kanagawa-BL";
+        name = "Kanagawa-Dark";
       }
     else if slug == "nord" then
       {
