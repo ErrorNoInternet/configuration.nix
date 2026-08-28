@@ -8,12 +8,19 @@
     "/var/lib/cups/printers.conf"
   ];
 
-  services.printing = {
-    enable = true;
-    drivers = with pkgs; [
-      brlaser
-      hplip
-    ];
+  services = {
+    printing = {
+      enable = true;
+      drivers = with pkgs; [
+        brlaser
+        hplip
+      ];
+    };
+
+    hardware.openrgb = {
+      enable = true;
+      package = pkgs.openrgb-with-all-plugins;
+    };
   };
 
   users.users.error.extraGroups = [
