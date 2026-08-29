@@ -9,7 +9,7 @@
     li = "ls -li";
     ll = "ls -l";
     lM = "ls -lM";
-    ls = "eza --icons";
+    ls = "eza --icons=auto";
     lss = "ls --sort=size";
     lst = "ls --sort=time";
     lT = "ls -lT";
