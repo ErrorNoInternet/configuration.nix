@@ -75,8 +75,7 @@ in
     doggo
     duf
     dust
-    # TODO: add back after https://github.com/NixOS/nixpkgs/pull/549694
-    # dwarfs
+    dwarfs
     e2fsprogs
     efibootmgr
     ethtool
