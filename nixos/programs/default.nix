@@ -43,6 +43,8 @@ in
 
     ssh.startAgent = true;
 
+    mosh.enable = true;
+
     nix-index-database.comma.enable = true;
 
     nix-index = {
