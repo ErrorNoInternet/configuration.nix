@@ -1,4 +1,4 @@
-{
+{ config, ... }: {
   environment.variables = {
     DO_NOT_TRACK = 1;
     EDITOR = "nvim";
@@ -17,7 +17,10 @@
   programs.dconf.profiles.user.databases = [
     {
       settings = {
-        "org/gnome/desktop/interface".color-scheme = "prefer-dark";
+        "org/gnome/desktop/interface" = {
+          color-scheme = "prefer-dark";
+          font-name = "${config.fonts.preferredName} ${builtins.toString config.fonts.preferredSize}";
+        };
         "org/gnome/desktop/wm/preferences".button-layout = ":";
       };
     }
