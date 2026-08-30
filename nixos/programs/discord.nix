@@ -141,6 +141,7 @@ in
           viewRaw.enable = true;
           voiceDownload.enable = true;
           voiceMessages.enable = true;
+          voiceMessageTranscriber.enable = true;
           voiceStats.enable = true;
           volumeBooster.enable = true;
           webKeybinds.enable = true;
