@@ -1,4 +1,4 @@
-{ inputs', pkgs, ... }:
+{ pkgs, ... }:
 {
   development.enable = true;
   display.enable = true;
@@ -8,8 +8,8 @@
   };
 
   environment.systemPackages = with pkgs; [
+    eilmeldung
     ffmpeg-full
-    inputs'.eilmeldung.packages.default
     radeontop
     yt-dlp
   ];

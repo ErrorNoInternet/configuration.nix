@@ -71,12 +71,12 @@
     codex
     distrobox
     duperemove
+    eilmeldung
     exfatprogs
     gimp3-with-plugins
     iamb
     imhex
     inputs'.concord.packages.default
-    inputs'.eilmeldung.packages.default
     jetbrains.idea
     libreoffice-stable
     lsfg-vk
