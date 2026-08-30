@@ -171,13 +171,6 @@ in
           questify = {
             enable = true;
             disableSponsoredBanner = true;
-            allowChangingDangerousSettings = true;
-            makeMobileVideoQuestsDesktopCompatible = true;
-            autoCompleteQuestTypes = {
-              WATCH_VIDEO = true;
-              WATCH_VIDEO_ON_MOBILE = true;
-              ACHIEVEMENT_IN_ACTIVITY = true;
-            };
             notifyOnNewQuests = false;
             questButtonDisplay = "never";
             questFetchInterval = 12 * 60 * 60;
