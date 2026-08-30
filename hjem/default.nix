@@ -48,6 +48,7 @@
       ./tz.nix
       ./vimiv.nix
       ./xdg.nix
+      ./xdph.nix
       ./zoxide.nix
       inputs.hjem-rum.hjemModules.default
     ];

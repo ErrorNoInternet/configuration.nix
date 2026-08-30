@@ -34,6 +34,7 @@ in
         src = self.pins.vimiv-qt;
       }))
 
+      hyprland-preview-share-picker
       hyprpicker
       inputs'.hyprwm-contrib.packages.grimblast
       inputs'.shadower.packages.shadower
