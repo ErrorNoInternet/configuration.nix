@@ -102,6 +102,7 @@ in
           };
           permissionsViewer.enable = true;
           petpet.enable = true;
+          pinIcon.enable = true;
           platformIndicators = {
             enable = true;
             messages = false;
