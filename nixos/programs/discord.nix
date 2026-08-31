@@ -67,6 +67,7 @@ in
           fixCodeblockGap.enable = true;
           fixSpotifyEmbeds.enable = true;
           fixYoutubeEmbeds.enable = true;
+          followVoiceUser.enable = true;
           forceOwnerCrown.enable = true;
           gifMaker.enable = true;
           imageZoom = {
