@@ -60,7 +60,6 @@ in
     _7zz
     atop
     atuin
-    bandwhich
     bat
     binsort
     btdu
@@ -110,6 +109,7 @@ in
     miniupnpc
     multipath-tools
     ncdu
+    netwatch
     nh
     nix-output-monitor
     nix-tree
