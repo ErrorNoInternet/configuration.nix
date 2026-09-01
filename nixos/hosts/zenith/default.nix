@@ -19,6 +19,8 @@
     qol.enable = true;
   };
 
+  boot.kernel.sysctl."vm.swappiness" = 60;
+
   libvirt.enable = true;
 
   services.resolved.settings.Resolve.DNSOverTLS = false;

@@ -6,6 +6,7 @@
 let
   cfg = config.sysctl;
   inherit (lib)
+    mkDefault
     mkEnableOption
     mkIf
     ;
@@ -22,8 +23,8 @@ in
       "net.core.default_qdisc" = "cake";
 
       "vm.page-cluster" = 0;
-      "vm.swappiness" = 100;
-      "vm.watermark_boost_factor" = 1;
+      "vm.swappiness" = mkDefault 100;
+      "vm.watermark_boost_factor" = 0;
 
       "net.ipv4.conf.all.accept_redirects" = 0;
       "net.ipv4.conf.all.secure_redirects" = 0;
