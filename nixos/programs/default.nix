@@ -74,6 +74,7 @@ in
     dmidecode
     dnsutils
     doggo
+    dua
     duf
     dust
     dwarfs
