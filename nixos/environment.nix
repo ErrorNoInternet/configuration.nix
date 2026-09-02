@@ -19,7 +19,7 @@
       settings = {
         "org/gnome/desktop/interface" = {
           color-scheme = "prefer-dark";
-          font-name = "${config.fonts.preferredName} ${builtins.toString config.fonts.preferredSize}";
+          font-name = "${config.fonts.preferredName} ${builtins.toString (config.fonts.preferredSize + 1)}";
         };
         "org/gnome/desktop/wm/preferences".button-layout = ":";
       };
