@@ -12,6 +12,11 @@
     inherit (osConfig.hyprland) enable;
 
     settings = {
+      render = {
+        direct_scanout = true;
+        new_render_scheduling = true;
+      };
+
       ecosystem = {
         no_update_news = true;
         no_donation_nag = true;
