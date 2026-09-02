@@ -85,6 +85,7 @@ in
     fastfetch
     fd
     file
+    fuse-archive
     gcal
     gcc
     gnumake
