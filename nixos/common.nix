@@ -25,7 +25,6 @@ in
     impermanence.nixosModules.default
     inputs.nixcord.nixosModules.nixcord
     nix-index-database.nixosModules.nix-index
-    noctalia-shell.nixosModules.default
     sbox.nixosModules.default
     spicetify-nix.nixosModules.default
 

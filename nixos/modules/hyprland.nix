@@ -44,7 +44,6 @@ in
       wl-clipboard
       wl-screenrec
 
-      inputs'.noctalia-shell.packages.default
       kdePackages.kimageformats
       qt5.qtgraphicaleffects
       qt5.qtimageformats

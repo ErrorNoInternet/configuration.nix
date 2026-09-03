@@ -26,8 +26,6 @@
         disable_xdg_env_checks = true;
         enable_anr_dialog = false;
       };
-
-      exec-once = [ "noctalia-shell" ];
     };
   };
 }

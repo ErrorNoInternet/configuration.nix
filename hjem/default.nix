@@ -38,7 +38,7 @@
       ./mangohud.nix
       ./mpv.nix
       ./newsboat.nix
-      ./noctalia
+      ./noctalia.nix
       ./nvtop.nix
       ./qalculate.nix
       ./qt.nix
@@ -50,6 +50,7 @@
       ./xdg.nix
       ./zoxide.nix
       inputs.hjem-rum.hjemModules.default
+      inputs.noctalia.hjemModules.default
     ];
 
     users.error = {

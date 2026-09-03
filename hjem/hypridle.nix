@@ -11,7 +11,7 @@
 
     settings = {
       general = {
-        lock_cmd = "noctalia-shell ipc call lockScreen lock";
+        lock_cmd = "noctalia msg session lock";
         before_sleep_cmd = "loginctl lock-session";
       };
 
@@ -23,13 +23,7 @@
 
         {
           timeout = 15 * 60;
-          on-timeout = "hyprctl dispatch dpms off";
-        }
-
-        {
-          timeout = 15 * 60;
-          on-timeout = "brightnessctl -d asus::kbd_backlight -s s 0%";
-          on-resume = "brightnessctl -d asus::kbd_backlight -r";
+          on-timeout = "noctalia msg dpms-off";
         }
       ];
     };
@@ -40,10 +34,8 @@
     partOf = [ "graphical-session.target" ];
     wantedBy = [ "graphical-session.target" ];
     path = with pkgs; [
-      brightnessctl
       hypridle
-      hyprland
-      inputs'.noctalia-shell.packages.default
+      inputs'.noctalia.packages.default
     ];
     script = "hypridle";
   };

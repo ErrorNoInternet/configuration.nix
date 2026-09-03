@@ -246,7 +246,28 @@
           matches = [
             {
               type = "namespace";
-              value = "noctalia-background-.*";
+              value = "noctalia-screenshot-region";
+            }
+          ];
+          rules = [ "animation fade" ];
+        }
+        {
+          matches = [
+            {
+              type = "namespace";
+              value = "noctalia-bar-default";
+            }
+          ];
+          rules = [
+            "blur on"
+            "ignore_alpha 0.7"
+          ];
+        }
+        {
+          matches = [
+            {
+              type = "namespace";
+              value = "noctalia-attached-panel";
             }
           ];
           rules = [

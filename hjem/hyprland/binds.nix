@@ -13,25 +13,25 @@
     };
 
     extraConfig = /* hyprlang */ ''
-      bind    = $mod           , code:60, exec, noctalia-shell ipc call launcher emoji
-      bind    = $mod           , comma  , exec, noctalia-shell ipc call settings toggle
-      bind    = $mod           , D      , exec, noctalia-shell ipc call launcher toggle
-      bind    = $mod           , escape , exec, noctalia-shell ipc call sessionMenu toggle
-      bind    = $mod           , G      , exec, noctalia-shell ipc call launcher clipboard
-      bind    = $mod           , O      , exec, noctalia-shell ipc call controlCenter toggle
-      bind    = $mod           , P      , exec, noctalia-shell ipc call notifications toggleHistory
-      bind    = $mod SHIFT     , code:60, exec, noctalia-shell ipc call plugin:unicode toggle
-      bind    = $mod SHIFT     , O      , exec, noctalia-shell ipc call calendar toggle
-      bind    = $mod SHIFT     , P      , exec, noctalia-shell ipc call notifications dismissAll
+      bind    = $mod           , code:60 , exec, noctalia msg panel-toggle launcher /emo
+      bind    = $mod           , comma   , exec, noctalia msg settings-toggle
+      bind    = $mod           , D       , exec, noctalia msg panel-toggle launcher
+      bind    = $mod           , escape  , exec, noctalia msg panel-toggle session
+      bind    = $mod           , G       , exec, noctalia msg panel-toggle clipboard
+      bind    = $mod           , O       , exec, noctalia msg panel-toggle control-center
+      bind    = $mod           , P       , exec, noctalia msg panel-toggle control-center notifications
+      bind    = $mod SHIFT     , O       , exec, noctalia msg panel-toggle control-center calendar
+      bind    = $mod SHIFT     , P       , exec, noctalia msg notification-clear-active
 
-      bind    =                , PRINT,   exec, grimblast --freeze save area - | wl-copy
-      bind    = CTRL           , PRINT,   exec, grimblast --freeze save area - | satty -f-
-      bind    = CTRL SHIFT     , PRINT,   exec, grimblast --freeze save area - | shadower -r18 | satty -f-
-      bind    = SHIFT          , PRINT,   exec, grimblast --freeze save area - | shadower -r18 | wl-copy
+      bind    =                , PRINT                   , exec, noctalia msg screenshot-region
+      bind    =                , XF86SelectiveScreenshot , exec, grimblast --freeze save area - | wl-copy
+      bind    = CTRL           , PRINT                   , exec, grimblast --freeze save area - | satty -f-
+      bind    = CTRL SHIFT     , PRINT                   , exec, grimblast --freeze save area - | shadower -r18 | satty -f-
+      bind    = SHIFT          , PRINT                   , exec, grimblast --freeze save area - | shadower -r18 | wl-copy
 
       bind    = $mod           , L                     , exec, loginctl lock-session
       bind    = $mod CTRL SHIFT, code:22               , exit
-      bind    = $mod SHIFT     , L                     , exec, (sleep 1 && hyprctl dispatch dpms off &) && loginctl lock-session
+      bind    = $mod SHIFT     , L                     , exec, (sleep 1 && noctalia msg dpms-off &) && loginctl lock-session
       bindl   =                , switch:off:Lid Switch , exec, loginctl lock-session
       bindl   =                , switch:on:Lid Switch  , exec, loginctl lock-session
 
@@ -124,31 +124,30 @@
       bind    = $mod SHIFT     , TAB                       , movetoworkspace   , previous
 
       bindl   =                , XF86TouchpadToggle    , exec, hyprtoggle TOUCHPAD_ENABLED
-      bindlr  =                , XF86DisplayOff        , exec, sleep 0.1 && hyprctl dispatch dpms
+      bindlr  =                , XF86DisplayOff        , exec, sleep 0.1 && noctalia msg dpms-on
 
       bindl   =                , XF86Calculator        , exec, qalculate-gtk
       bindl   =                , XF86Launch1           , exec, kitty btop
-      bindl   = $mod           , XF86Calculator        , exec, noctalia-shell ipc call launcher calculator
       bindl   = CTRL           , XF86Launch1           , exec, kitty nvtop
       bindl   = CTRL SHIFT     , XF86Launch1           , exec, [float; center] kitty nvtop
       bindl   = SHIFT          , XF86Launch1           , exec, [float; center] kitty btop
 
-      bindl   =                , XF86AudioLowerVolume   , exec, noctalia-shell ipc call volume decrease
-      bindl   =                , XF86AudioMicLowerVolume, exec, noctalia-shell ipc call volume decreaseInput
-      bindl   =                , XF86AudioMicMute       , exec, noctalia-shell ipc call volume muteInput
-      bindl   =                , XF86AudioMicRaiseVolume, exec, noctalia-shell ipc call volume increaseInput
-      bindl   =                , XF86AudioMute          , exec, noctalia-shell ipc call volume muteOutput
+      bindl   =                , XF86AudioLowerVolume   , exec, noctalia msg volume-down
+      bindl   =                , XF86AudioMicLowerVolume, exec, noctalia msg mic-volume-down
+      bindl   =                , XF86AudioMicMute       , exec, noctalia msg mic-mute
+      bindl   =                , XF86AudioMicRaiseVolume, exec, noctalia msg mic-volume-up
+      bindl   =                , XF86AudioMute          , exec, noctalia msg volume-mute
       bindl   =                , XF86AudioNext          , exec, playerctl next
       bindl   =                , XF86AudioPlay          , exec, playerctl play
       bindl   =                , XF86AudioPrev          , exec, playerctl previous
-      bindl   =                , XF86AudioRaiseVolume   , exec, noctalia-shell ipc call volume increase
+      bindl   =                , XF86AudioRaiseVolume   , exec, noctalia msg volume-up
       bindl   =                , XF86AudioStop          , exec, playerctl pause
-      bindl   = $mod SHIFT     , m                      , exec, noctalia-shell ipc call volume muteInput
+      bindl   = $mod SHIFT     , m                      , exec, noctalia msg mic-mute
 
-      bindle  =                , XF86KbdBrightnessDown , exec, brightnessctl -d asus::kbd_backlight s 1%-
-      bindle  =                , XF86KbdBrightnessUp   , exec, brightnessctl -d asus::kbd_backlight s 1%+
-      bindle  =                , XF86MonBrightnessDown , exec, noctalia-shell ipc call brightness decrease
-      bindle  =                , XF86MonBrightnessUp   , exec, noctalia-shell ipc call brightness increase
+      bindle  =                , XF86KbdBrightnessDown , exec, noctalia msg keyboard-backlight-down
+      bindle  =                , XF86KbdBrightnessUp   , exec, noctalia msg keyboard-backlight-up
+      bindle  =                , XF86MonBrightnessDown , exec, noctalia msg brightness-down 1
+      bindle  =                , XF86MonBrightnessUp   , exec, noctalia msg brightness-up 1
 
       bind    = $mod CTRL SHIFT, escape, submap, clean
       submap  = clean

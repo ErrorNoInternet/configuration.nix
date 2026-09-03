@@ -6,9 +6,7 @@
     settings = {
       main = {
         width = 64;
-        font = "${osConfig.fonts.preferredName}:size=${
-          builtins.toString (osConfig.fonts.preferredSize + 2)
-        }";
+        font = "${osConfig.fonts.preferredName}:size=${builtins.toString osConfig.fonts.preferredSize}";
       };
 
       colors = with osConfig.scheme; {
