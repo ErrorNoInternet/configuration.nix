@@ -2,6 +2,7 @@
 {
   config.vim = {
     extraPackages = with pkgs; [
+      graphviz
       python3Packages.pylatexenc
     ];
 
@@ -54,7 +55,11 @@
 
       rust = {
         enable = true;
-        extensions.crates-nvim.enable = true;
+        lsp.enable = false;
+        extensions = {
+          crates-nvim.enable = true;
+          rustaceanvim.enable = true;
+        };
       };
 
       tex.enable = true;
