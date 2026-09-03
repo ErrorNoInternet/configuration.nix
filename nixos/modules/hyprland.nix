@@ -41,8 +41,8 @@ in
       self'.packages.gamma-control
       self'.packages.hyprtoggle
       self'.packages.scratchpad
-      wf-recorder
       wl-clipboard
+      wl-screenrec
 
       inputs'.noctalia-shell.packages.default
       kdePackages.kimageformats

@@ -15,12 +15,7 @@
     };
 
     abbrs = {
-      wr = "wf-recorder -f recording_(date \"+%Y-%m-%d_%H:%M:%S\").mp4 -b 0 -c h264_nvenc -p b=8M";
-      wra = "wf-recorder -f recording_(date \"+%Y-%m-%d_%H:%M:%S\").mp4 -b 0 -c h264_nvenc -p b=8M -a=alsa_output.pci-0000_00_1b.0.analog-stereo.monitor";
-      wrs = "wf-recorder -f recording_(date \"+%Y-%m-%d_%H:%M:%S\").mp4 -b 0 -c h264_nvenc -p b=8M -g (slurp)";
-      wrsa = "wf-recorder -f recording_(date \"+%Y-%m-%d_%H:%M:%S\").mp4 -b 0 -c h264_nvenc -p b=8M -a=alsa_output.pci-0000_00_1b.0.analog-stereo.monitor -g (slurp)";
-
-      prun = "prime-run";
+      nvo = "nvidia-offload";
     };
   };
 }
