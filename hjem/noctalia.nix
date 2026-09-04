@@ -129,7 +129,7 @@ in
         ];
 
         grid = {
-          cell_size = 64;
+          cell_size = 24;
           major_interval = 4;
           visible = true;
         };
@@ -165,10 +165,10 @@ in
           };
 
           lockscreen-widget-0000000000000001 = {
-            box_height = 192.0;
-            box_width = 448.0;
+            box_height = 160.0;
+            box_width = 416.0;
             cx = 960.0;
-            cy = 348.0;
+            cy = 332.0;
             output = "eDP-1";
             placement_height = 1080.0;
             placement_width = 1920.0;
@@ -179,10 +179,10 @@ in
           };
 
           lockscreen-widget-0000000000000002 = {
-            box_height = 64.0;
-            box_width = 384.0;
+            box_height = 48.0;
+            box_width = 336.0;
             cx = 960.0;
-            cy = 444.0;
+            cy = 412.0;
             output = "eDP-1";
             placement_height = 1080.0;
             placement_width = 1920.0;
