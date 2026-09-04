@@ -207,6 +207,7 @@ in
 
         kinds = {
           dnd = false;
+          keyboard_layout = false;
           media = false;
           privacy = false;
         };
