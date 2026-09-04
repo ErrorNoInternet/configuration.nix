@@ -234,6 +234,8 @@ in
         font_family = osConfig.fonts.preferredName;
         polkit_agent = true;
 
+        animation.speed = 1.5;
+
         launcher = {
           auto_paste = "off";
           show_app_actions = true;
