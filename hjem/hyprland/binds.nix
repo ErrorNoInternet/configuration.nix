@@ -13,13 +13,14 @@
     };
 
     extraConfig = /* hyprlang */ ''
-      bind    = $mod           , code:60 , exec, noctalia msg panel-toggle launcher /emo
       bind    = $mod           , comma   , exec, noctalia msg settings-toggle
       bind    = $mod           , D       , exec, noctalia msg panel-toggle launcher
       bind    = $mod           , escape  , exec, noctalia msg panel-toggle session
       bind    = $mod           , G       , exec, noctalia msg panel-toggle clipboard
       bind    = $mod           , O       , exec, noctalia msg panel-toggle control-center
       bind    = $mod           , P       , exec, noctalia msg panel-toggle control-center notifications
+      bind    = $mod           , period  , exec, noctalia msg panel-toggle launcher /emo
+      bind    = $mod           , slash   , exec, noctalia msg panel-toggle launcher /
       bind    = $mod SHIFT     , O       , exec, noctalia msg panel-toggle control-center calendar
       bind    = $mod SHIFT     , P       , exec, noctalia msg notification-clear-active
 
