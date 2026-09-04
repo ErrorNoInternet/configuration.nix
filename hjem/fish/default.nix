@@ -16,8 +16,8 @@
 
     config = lib.mkAfter /* fish */ ''
       status is-interactive; and begin
-        if not set -q SETTINGS_CONFIGURED
-          set -U SETTINGS_CONFIGURED 1
+        if not set -q FISH_SETTINGS_CONFIGURED
+          set -U FISH_SETTINGS_CONFIGURED 1
         end
 
         if not set -q FISH_DISABLE_ATUIN
