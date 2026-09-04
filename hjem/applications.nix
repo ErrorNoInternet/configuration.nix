@@ -15,7 +15,7 @@ in
       Categories = "Development;Graphics;System;Utility";
       Type = "Application";
       Icon = "utilities-terminal";
-      Exec = "hyprpicker -a";
+      Exec = "sh -c 'sleep 0.5 && hyprpicker -a'";
     };
 
     "applications/lowfi.desktop".text = toDesktop {
