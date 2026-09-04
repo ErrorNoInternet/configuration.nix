@@ -79,6 +79,7 @@
     inputs'.concord.packages.default
     jetbrains.idea
     libreoffice-stable
+    localsend
     lsfg-vk
     lsfg-vk-ui
     newsboat
