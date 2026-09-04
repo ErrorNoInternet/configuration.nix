@@ -123,6 +123,7 @@ in
         osc
         pavucontrol
         playerctl
+        pulseaudio
         qalculate-gtk
         ripdrag
         satty
