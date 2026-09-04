@@ -61,13 +61,13 @@ in
               "cpu"
               "ram"
               "sysmon_swap"
+              "sysmon_disk"
               "network_rx"
               "network_tx"
-              "sysmon_disk"
             ];
             opacity = 1.0;
             padding = 10.0;
-            widget_spacing = 12;
+            widget_spacing = 10;
           }
           {
             accordion = false;
@@ -301,6 +301,16 @@ in
         network = {
           show_label = false;
           show_vpn_label = true;
+        };
+
+        network_rx = {
+          network_speed_compact = true;
+          visualization = "none";
+        };
+
+        network_tx = {
+          network_speed_compact = true;
+          visualization = "none";
         };
 
         privacy = {
