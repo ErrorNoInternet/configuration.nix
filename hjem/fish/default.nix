@@ -8,6 +8,7 @@
     ./plugins.nix
     ./programs
     ./theme.nix
+    ./tmout.nix
   ];
 
   rum.programs.fish = {
