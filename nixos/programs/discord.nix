@@ -143,6 +143,7 @@ in
           viewRaw.enable = true;
           voiceDownload.enable = true;
           voiceMessages.enable = true;
+          voiceMessagesInBackground.enable = true;
           voiceMessageTranscriber.enable = true;
           voiceStats.enable = true;
           volumeBooster.enable = true;
