@@ -127,9 +127,13 @@
       bindlr  =                , XF86DisplayOff        , exec, sleep 0.1 && noctalia msg dpms-on
 
       bindl   =                , XF86Calculator        , exec, qalculate-gtk
+      bindl   =                , XF86Favorites         , exec, kitty btop
       bindl   =                , XF86Launch1           , exec, kitty btop
+      bindl   = CTRL           , XF86Favorites         , exec, kitty nvtop
       bindl   = CTRL           , XF86Launch1           , exec, kitty nvtop
+      bindl   = CTRL SHIFT     , XF86Favorites         , exec, [float; center] kitty nvtop
       bindl   = CTRL SHIFT     , XF86Launch1           , exec, [float; center] kitty nvtop
+      bindl   = SHIFT          , XF86Favorites         , exec, [float; center] kitty btop
       bindl   = SHIFT          , XF86Launch1           , exec, [float; center] kitty btop
 
       bindl   =                , XF86AudioLowerVolume   , exec, noctalia msg volume-down
