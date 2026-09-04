@@ -129,9 +129,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "153be2b33a212ef633dcaf2f743308ea2e068309",
-      "url": "https://github.com/lucasadelino/tide-item-jj/archive/153be2b33a212ef633dcaf2f743308ea2e068309.tar.gz",
-      "hash": "sha256-pseflhnpPf1Rqx+CHetinfI3gCQHW/nISO+EHVXPmts="
+      "revision": "2eff634fc27d3591f6580d3a9d40055ad3852276",
+      "url": "https://github.com/lucasadelino/tide-item-jj/archive/2eff634fc27d3591f6580d3a9d40055ad3852276.tar.gz",
+      "hash": "sha256-E14NGa1NsRaHoL1s3sW7DSpVb0epCZd6zwiAhnXjZqg="
     },
     "tmux-pane-focus": {
       "type": "Git",
