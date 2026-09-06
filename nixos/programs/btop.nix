@@ -38,6 +38,13 @@ in
   };
 
   config = mkIf cfg.enable {
+    security.wrappers.btop = {
+      owner = "root";
+      group = "root";
+      source = "${cfg.package}/bin/btop";
+      capabilities = "cap_perfmon=+ep cap_dac_read_search=+ep";
+    };
+
     environment.systemPackages = [ cfg.package ];
   };
 }
