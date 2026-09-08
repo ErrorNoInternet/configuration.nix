@@ -25,5 +25,5 @@
 
   services.resolved.settings.Resolve.DNSOverTLS = false;
 
-  time.timeZone = "Asia/Shanghai";
+  time.timeZone = "America/New_York";
 }
