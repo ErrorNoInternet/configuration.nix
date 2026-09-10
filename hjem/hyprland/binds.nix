@@ -26,7 +26,8 @@
 
       bind    =                , PRINT                   , exec, noctalia msg screenshot-region
       bind    =                , XF86SelectiveScreenshot , exec, grimblast --freeze save area - | wl-copy
-      bind    = CTRL           , PRINT                   , exec, grimblast --freeze save area - | satty -f-
+      bind    = CTRL           , PRINT                   , exec, noctalia msg screenshot-annotate
+      bind    = CTRL           , XF86SelectiveScreenshot , exec, grimblast --freeze save area - | satty -f-
       bind    = CTRL SHIFT     , PRINT                   , exec, grimblast --freeze save area - | shadower -r18 | satty -f-
       bind    = SHIFT          , PRINT                   , exec, grimblast --freeze save area - | shadower -r18 | wl-copy
 
