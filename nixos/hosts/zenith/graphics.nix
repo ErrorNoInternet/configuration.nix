@@ -3,7 +3,10 @@
     graphics = {
       enable = true;
 
-      extraPackages = [ pkgs.intel-media-driver ];
+      extraPackages = with pkgs; [
+        intel-media-driver
+        ocl-icd
+      ];
     };
 
     nvidia = {
