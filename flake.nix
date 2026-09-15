@@ -92,8 +92,6 @@
 
     sbox.url = "github:DavHau/sbox";
 
-    shadower.url = "github:n3oney/shadower";
-
     spicetify-nix = {
       url = "github:tdortman/spicetify-nix/lucid-gitlab";
       inputs.nixpkgs.follows = "nixpkgs";

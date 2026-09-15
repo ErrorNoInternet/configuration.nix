@@ -36,7 +36,6 @@ in
 
       hyprpicker
       inputs'.hyprwm-contrib.packages.grimblast
-      inputs'.shadower.packages.shadower
       libnotify
       self'.packages.gamma-control
       self'.packages.hyprtoggle
