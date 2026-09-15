@@ -4,6 +4,10 @@
   ...
 }:
 {
+  imports = [
+    ./borgmatic.nix
+  ];
+
   environment.persistence."/persist".files = [
     "/var/lib/cups/printers.conf"
   ];
@@ -68,6 +72,7 @@
     android-file-transfer
     android-studio
     android-tools
+    borgbackup
     codex
     distrobox
     duperemove
