@@ -24,7 +24,7 @@
       exclude_from = [ config.age.secrets.borgExclude.path ];
       encryption_passcommand = "cat ${config.age.secrets.borgPassphrase.path}";
 
-      compression = "lz4";
+      compression = "zstd,9";
       exclude_caches = true;
       exclude_if_present = [ ".nobackup" ];
       one_file_system = true;
