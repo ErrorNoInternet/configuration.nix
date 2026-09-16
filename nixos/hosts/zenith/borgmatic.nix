@@ -44,6 +44,8 @@
         "/home/*/.rustup"
         "/home/*/code/android/.old"
         "/home/*/code/android/sdk"
+        "/home/error/.local/share/PrismLauncher/assets"
+        "/home/error/downloads/torrents"
         "/persist/mnt"
         "/persist/var/lib/systemd/coredump"
       ];
