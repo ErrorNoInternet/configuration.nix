@@ -11,6 +11,9 @@ let
 in
 {
   "aerc.age".publicKeys = [ zenith ];
+  "borg/zenith/exclude.age".publicKeys = [ zenith ];
+  "borg/zenith/passphrase.age".publicKeys = [ zenith ];
+  "borg/zenith/patterns.age".publicKeys = [ zenith ];
   "couchdb.age".publicKeys = [
     zenith
     scout

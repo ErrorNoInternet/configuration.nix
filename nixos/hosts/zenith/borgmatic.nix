@@ -1,62 +1,34 @@
-{
+{ config, self, ... }: {
+  age.secrets =
+    let
+      inherit (config.host) name;
+    in
+    {
+      borgExclude.file = "${self}/agenix/borg/${name}/exclude.age";
+      borgPassphrase.file = "${self}/agenix/borg/${name}/passphrase.age";
+      borgPatterns.file = "${self}/agenix/borg/${name}/patterns.age";
+    };
+
   services.borgmatic = {
     enable = true;
 
     configurations.bastion = {
-      ssh_command = "ssh -i /etc/ssh/ssh_host_ed25519_key";
-
       repositories = [
         {
-          path = "ssh://error@bastion.error.tuxcord.net//mnt/backups/borg/zenith";
           label = "bastion";
+          path = "ssh://error@bastion.error.tuxcord.net//mnt/backups/borg/zenith";
         }
       ];
 
-      source_directories = [
-        "/persist"
-      ];
-
-      patterns = [
-        "R /home"
-        "+ /home/error/code/git/ErrorNoInternet"
-        "- /home/error/code/git"
-      ];
-
-      exclude_patterns = [
-        "*.pyc"
-        "*/.snapshots"
-        "*/.Trash-*"
-        "*/.venv"
-        "*/.vim*.tmp"
-        "*/node_modules"
-        "*/rpmbuild"
-        "/home/*/.cache"
-        "/home/*/.codex"
-        "/home/*/.config/**/Cache"
-        "/home/*/.config/**/Code Cache"
-        "/home/*/.config/.android/avd"
-        "/home/*/.go"
-        "/home/*/.gradle"
-        "/home/*/.local/share/Trash"
-        "/home/*/.mypy_cache"
-        "/home/*/.npm"
-        "/home/*/.nv"
-        "/home/*/.rustup"
-        "/home/*/code/android/.old"
-        "/home/*/code/android/sdk"
-        "/home/error/.local/share/PrismLauncher/assets"
-        "/home/error/downloads/torrents"
-        "/persist/mnt"
-        "/persist/var/lib/systemd/coredump"
-      ];
-
-      exclude_if_present = [
-        ".nobackup"
-      ];
+      patterns_from = [ config.age.secrets.borgPatterns.path ];
+      exclude_from = [ config.age.secrets.borgExclude.path ];
+      encryption_passcommand = "cat ${config.age.secrets.borgPassphrase.path}";
 
       compression = "lz4";
       exclude_caches = true;
+      exclude_if_present = [ ".nobackup" ];
       one_file_system = true;
+      ssh_command = "ssh -i /etc/ssh/ssh_host_ed25519_key";
 
       keep_weekly = 4;
       keep_monthly = 6;
