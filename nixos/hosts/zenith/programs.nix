@@ -74,6 +74,7 @@
     android-tools
     borgbackup
     codex
+    concord-tui
     distrobox
     duperemove
     eilmeldung
@@ -81,7 +82,6 @@
     gimp3-with-plugins
     iamb
     imhex
-    inputs'.concord.packages.default
     jetbrains.idea
     libreoffice-stable
     localsend
