@@ -30,6 +30,7 @@
       one_file_system = true;
       ssh_command = "ssh -i /etc/ssh/ssh_host_ed25519_key";
 
+      keep_daily = 7;
       keep_weekly = 4;
       keep_monthly = 6;
       keep_3monthly = 12;
