@@ -1,5 +1,7 @@
 { config, ... }:
 {
+  borgmatic.enable = true;
+
   disko.devices.disk.main = {
     type = "disk";
     device = "/dev/disk/by-id/nvme-KINGSTON_SNV2S1000G_50026B7382E7E711";

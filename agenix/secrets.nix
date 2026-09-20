@@ -10,10 +10,9 @@ let
   ];
 in
 {
-  "aerc.age".publicKeys = [ zenith ];
-  "borg/zenith/exclude.age".publicKeys = [ zenith ];
-  "borg/zenith/passphrase.age".publicKeys = [ zenith ];
-  "borg/zenith/patterns.age".publicKeys = [ zenith ];
+  "aerc.age".publicKeys = [
+    zenith
+  ];
   "couchdb.age".publicKeys = [
     zenith
     scout
@@ -24,12 +23,36 @@ in
     scout
   ];
   "ntfy.age".publicKeys = systems;
-  "usbguard.age".publicKeys = [ zenith ];
+  "usbguard.age".publicKeys = [
+    zenith
+  ];
   "users/error.age".publicKeys = systems;
   "users/root.age".publicKeys = systems;
   "wifi.age".publicKeys = systems;
   "wireguard.age".publicKeys = [
     zenith
     scout
+  ];
+
+  "borg/scout/exclude.age".publicKeys = [
+    scout
+    zenith
+  ];
+  "borg/scout/passphrase.age".publicKeys = [
+    scout
+    zenith
+  ];
+  "borg/scout/patterns.age".publicKeys = [
+    scout
+    zenith
+  ];
+  "borg/zenith/exclude.age".publicKeys = [
+    zenith
+  ];
+  "borg/zenith/passphrase.age".publicKeys = [
+    zenith
+  ];
+  "borg/zenith/patterns.age".publicKeys = [
+    zenith
   ];
 }

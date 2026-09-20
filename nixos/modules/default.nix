@@ -1,5 +1,6 @@
 {
   imports = [
+    ./borgmatic.nix
     ./ddns.nix
     ./development.nix
     ./display.nix
