@@ -1,4 +1,8 @@
-{ lib, ... }: {
+{ lib, ... }:
+let
+  inherit (lib) mkDefault;
+in
+{
   networking.nameservers = [
     "9.9.9.9#dns.quad9.net"
     "149.112.112.112#dns.quad9.net"
@@ -16,7 +20,8 @@
         "2606:4700:4700::1111#cloudflare-dns.com"
         "2606:4700:4700::1001#cloudflare-dns.com"
       ];
-      DNSOverTLS = lib.mkDefault true;
+      DNSOverTLS = mkDefault true;
+      DNSSEC = mkDefault true;
     };
   };
 }
