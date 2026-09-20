@@ -30,13 +30,19 @@
       ];
 
       script = ''
-        mkdir /impermanence_tmp
+        mkdir -p /impermanence_tmp
         mount /dev/disk/by-label/${config.host.name} /impermanence_tmp || mount /dev/disk/by-label/NIXOS_SD /impermanence_tmp
 
-        timestamp=$(date --date="@$(stat -c %Y /impermanence_tmp/@)" "+%Y-%m-%d_%H:%M:%S")
         if [[ -e /impermanence_tmp/@ ]]; then
+            timestamp=$(date --date="@$(stat -c %Y /impermanence_tmp/@)" "+%Y-%m-%d_%H:%M:%S")
             mkdir -p /impermanence_tmp/roots
-            mv /impermanence_tmp/@ "/impermanence_tmp/roots/$timestamp"
+            target=/impermanence_tmp/roots/$timestamp
+            suffix=1
+            while [[ -e $target ]]; do
+                target=/impermanence_tmp/roots/$timestamp_$suffix
+                suffix=$((suffix + 1))
+            done
+            mv /impermanence_tmp/@ "$target"
         fi
 
         delete_subvolume_recursively() {

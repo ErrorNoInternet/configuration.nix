@@ -30,7 +30,7 @@ in
         "console=ttyS0,115200n8"
         "console=ttyAMA0,115200n8"
         "console=tty0"
-        "root=/dev/disk/by-label/NIXOS_SD"
+        "root=/dev/disk/by-label/scout"
         "rootfstype=btrfs"
         "rootflags=subvol=@"
         "rootwait"
@@ -45,7 +45,7 @@ in
     fileSystems =
       let
         defaultOptions = [ "compress=zstd" ];
-        device = "/dev/disk/by-label/NIXOS_SD";
+        device = "/dev/disk/by-label/scout";
         fsType = "btrfs";
       in
       {
