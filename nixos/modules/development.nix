@@ -23,6 +23,7 @@ in
 
     programs.java = {
       inherit (cfg.java) enable;
+      package = pkgs.jdk25;
       binfmt = true;
     };
 
