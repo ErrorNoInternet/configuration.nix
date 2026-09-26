@@ -21,10 +21,8 @@ in
       user = "error";
 
       discord = {
-        openASAR.enable = false;
         vencord.enable = false;
-
-        silenceNoModClientWarning = true;
+        equicord.enable = true;
       };
 
       equibop = {
