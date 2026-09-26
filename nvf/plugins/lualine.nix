@@ -19,12 +19,22 @@
         };
 
         sections = {
-          lualine_a = [ ''"mode"'' ];
-          lualine_b = [ ''"filetype", "filename"'' ];
-          lualine_c = [ ''"navic"'' ];
-          lualine_x = [ ''"diagnostics"'' ];
-          lualine_y = [ ''"searchcount", "branch"'' ];
-          lualine_z = [ ''"progress", "location", "fileformat"'' ];
+          lualine_a = [ { "@1" = "mode"; } ];
+          lualine_b = [
+            { "@1" = "filetype"; }
+            { "@1" = "filename"; }
+          ];
+          lualine_c = [ { "@1" = "navic"; } ];
+          lualine_x = [ { "@1" = "diagnostics"; } ];
+          lualine_y = [
+            { "@1" = "searchcount"; }
+            { "@1" = "branch"; }
+          ];
+          lualine_z = [
+            { "@1" = "progress"; }
+            { "@1" = "location"; }
+            { "@1" = "fileformat"; }
+          ];
         };
       };
     };
