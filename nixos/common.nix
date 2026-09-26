@@ -93,6 +93,8 @@ in
   };
 
   boot = {
+    kernelPackages = mkDefault pkgs.linuxPackages_latest;
+
     loader = {
       grub = {
         enable = mkDefault true;
@@ -105,7 +107,7 @@ in
       timeout = 1;
     };
 
-    kernelPackages = mkDefault pkgs.linuxPackages_latest;
+    initrd.systemd.emergencyAccess = true;
     kernelParams = [
       "boot.shell_on_fail"
       "zswap.enabled=0"
