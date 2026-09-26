@@ -79,7 +79,6 @@ in
           jumpTo.enable = true;
           keepCurrentChannel.enable = true;
           lastActive.enable = true;
-          limitlessScreenshare.enable = true;
           markdownTables.enable = true;
           memberCount.enable = true;
           mentionAvatars.enable = true;
