@@ -759,16 +759,15 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1783314748,
-        "narHash": "sha256-ixkubl8/hGYDg4WpID92VIDzIPLlBo9y8fgJN01B0+c=",
+        "lastModified": 1789950570,
+        "narHash": "sha256-5KK2oWLp5adkvduA98YVeos4n49b12rf8rwy17NP2wc=",
         "owner": "tdortman",
         "repo": "spicetify-nix",
-        "rev": "f25af4253cfe7bc0aaa9c3a56a51a33abb74cf0f",
+        "rev": "1f88155b9baeb678cc2f1aab947525b35f7c2ec2",
         "type": "github"
       },
       "original": {
         "owner": "tdortman",
-        "ref": "lucid-gitlab",
         "repo": "spicetify-nix",
         "type": "github"
       }

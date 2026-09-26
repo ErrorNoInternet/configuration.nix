@@ -85,7 +85,7 @@
     sbox.url = "github:DavHau/sbox";
 
     spicetify-nix = {
-      url = "github:tdortman/spicetify-nix/lucid-gitlab";
+      url = "github:tdortman/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
