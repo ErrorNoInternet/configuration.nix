@@ -9,18 +9,23 @@
     {
       enable = true;
 
-      componentSeparator = {
-        left = "|";
-        right = "|";
-      };
-      sectionSeparator = { inherit (separators) left right; };
-      activeSection = {
-        a = [ ''"mode"'' ];
-        b = [ ''"filetype", "filename"'' ];
-        c = [ ''"navic"'' ];
-        x = [ ''"diagnostics"'' ];
-        y = [ ''"searchcount", "branch"'' ];
-        z = [ ''"progress", "location", "fileformat"'' ];
+      setupOpts = {
+        options = {
+          component_separators = {
+            left = "|";
+            right = "|";
+          };
+          section_separators = { inherit (separators) left right; };
+        };
+
+        sections = {
+          lualine_a = [ ''"mode"'' ];
+          lualine_b = [ ''"filetype", "filename"'' ];
+          lualine_c = [ ''"navic"'' ];
+          lualine_x = [ ''"diagnostics"'' ];
+          lualine_y = [ ''"searchcount", "branch"'' ];
+          lualine_z = [ ''"progress", "location", "fileformat"'' ];
+        };
       };
     };
 }
