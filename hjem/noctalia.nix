@@ -199,7 +199,18 @@ in
 
       notification = {
         background_opacity = 0.75;
+        filter_order = [ "filter" ];
         layer = "overlay";
+
+        filter.filter = {
+          allow_permanent = true;
+          bypass_dnd = false;
+          enabled = true;
+          match = "discord";
+          play_sound = false;
+          save_history = true;
+          show_toast = true;
+        };
       };
 
       osd = {
