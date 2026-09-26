@@ -45,7 +45,24 @@ in
 
     users.users.error.extraGroups = [ "pipewire" ];
 
+    security.pam.services.ly.enableGnomeKeyring = true;
+
     services = {
+      displayManager.ly = {
+        enable = true;
+
+        settings = {
+          animation = "colormix";
+          brightness_down_cmd = "${pkgs.brightnessctl}/bin/brightnessctl -q -n -d intel_backlight s 5%-";
+          brightness_up_cmd = "${pkgs.brightnessctl}/bin/brightnessctl -q -n -d intel_backlight s +5%";
+          clock = "%c";
+          default_input = "password";
+          hide_key_hints = true;
+          hide_version_string = true;
+          sleep_cmd = "systemctl suspend";
+        };
+      };
+
       pipewire = {
         enable = true;
         pulse.enable = true;
