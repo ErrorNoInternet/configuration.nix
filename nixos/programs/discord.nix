@@ -45,6 +45,7 @@ in
 
         plugins = {
           accountPanelServerProfile.enable = true;
+          addAttachments.enable = true;
           alwaysTrust.enable = true;
           betterForwards.enable = true;
           betterRoleContext.enable = true;
@@ -107,6 +108,7 @@ in
             enable = true;
             messages = false;
           };
+          reactionTimestamps.enable = true;
           relationshipNotifier = {
             enable = true;
             notices = true;
