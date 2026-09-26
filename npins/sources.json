@@ -103,9 +103,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "1fb959a45b8c15cfdb4af5f4330a6d936dbc9c2f",
-      "url": "https://github.com/osandov/osandov-linux/archive/1fb959a45b8c15cfdb4af5f4330a6d936dbc9c2f.tar.gz",
-      "hash": "sha256-IZGMc9nOhoHfsHmVKfUQy3Kat4BZK4HV7G+gbG5UOmQ="
+      "revision": "a1afe7c9a100d85b9fd68c97fbe348cfa67e43eb",
+      "url": "https://github.com/osandov/osandov-linux/archive/a1afe7c9a100d85b9fd68c97fbe348cfa67e43eb.tar.gz",
+      "hash": "sha256-ipuHSSLstCqyrlKVGsSwqXQX9zp+H2+COUb0kHHNBb8="
     },
     "scripts.irssi.org": {
       "type": "Git",
@@ -116,9 +116,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "e844898ca7a43ac68eee9835cf4e8e89fe737d26",
-      "url": "https://github.com/irssi/scripts.irssi.org/archive/e844898ca7a43ac68eee9835cf4e8e89fe737d26.tar.gz",
-      "hash": "sha256-30aNByeT65jkiqsDU8hhH7l7ZNVCyj7k+k7Z44eJqTs="
+      "revision": "b150fff730af148f63c2abe27d4585048fe59a00",
+      "url": "https://github.com/irssi/scripts.irssi.org/archive/b150fff730af148f63c2abe27d4585048fe59a00.tar.gz",
+      "hash": "sha256-Nse8IfuPziyACGbGYvxBXnvcysc2GwrL4o3IIrJLNi4="
     },
     "tide-item-jj": {
       "type": "Git",
