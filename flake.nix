@@ -57,10 +57,7 @@
 
     nixcord = {
       url = "github:4evy/nixcord";
-      inputs = {
-        flake-parts.follows = "flake-parts";
-        nixpkgs.follows = "nixpkgs";
-      };
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     nix-index-database = {
