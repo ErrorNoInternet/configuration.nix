@@ -1,9 +1,13 @@
 {
   rum.desktops.hyprland.settings = {
     animations = {
-      bezier = "extremeEaseOut, 0, 1, 0, 1";
+      bezier = [
+        "extremeEaseOut , 0   , 1, 0   , 1"
+        "ease           , 0.32, 0, 0.15, 1"
+      ];
       animation = [
         "fade,             1, 3, default"
+        "fadeDpms,         1, 6, ease"
         "layers,           1, 3, extremeEaseOut, popin 50%"
         "layersOut,        1, 3, extremeEaseOut, popin 75%"
         "windows,          1, 3, extremeEaseOut, popin 50%"
