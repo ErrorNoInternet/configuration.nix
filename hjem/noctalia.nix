@@ -117,7 +117,11 @@ in
 
       location.auto_locate = true;
 
-      lockscreen.tint_intensity = 0.6;
+      lockscreen = {
+        tint_intensity = 0.6;
+        transition = [ "zoom" ];
+        transition_duration = 500;
+      };
 
       lockscreen_widgets = {
         enabled = true;
@@ -244,6 +248,7 @@ in
         clipboard_history_max_entries = 1000;
         font_family = osConfig.fonts.preferredName;
         polkit_agent = true;
+        settings_expand_all_groups = true;
 
         animation.speed = 1.5;
 
