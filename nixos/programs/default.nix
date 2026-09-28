@@ -156,6 +156,7 @@ in
     vgrep
     vim
     whois
+    wol
     xfsprogs
   ];
 }
