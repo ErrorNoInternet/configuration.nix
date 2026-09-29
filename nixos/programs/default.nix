@@ -97,6 +97,7 @@ in
     inputs'.disko.packages.default
     inputs'.nix-alien.packages.default
     inxi
+    iw
     jq
     jujutsu
     killall
