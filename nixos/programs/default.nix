@@ -148,6 +148,7 @@ in
     sysstat
     tcpdump
     tmux
+    traceroute
     translate-shell
     trickle
     try
