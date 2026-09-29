@@ -48,8 +48,10 @@
             [
               rust
 
+              clang
               gcc
               libclang
+              autoreconfHook
               llvmPackages.bintools
               pkg-config
 
@@ -75,7 +77,7 @@
           // lib.optionalAttrs static {
             CARGO_BUILD_TARGET = muslTarget;
             CARGO_TARGET_X86_64_UNKNOWN_LINUX_MUSL_LINKER = "${muslCC}/bin/${muslTarget}-cc";
-            CC_x86_64_unknown_linux_musl = "${muslCC}/bin/${muslTarget}-cc";
+            CC_x86_64_unknown_linux_musl = "${muslTarget}-cc";
             AR_x86_64_unknown_linux_musl = "${muslCC.bintools}/bin/${muslTarget}-ar";
             BINDGEN_EXTRA_CLANG_ARGS_x86_64_unknown_linux_musl = "--sysroot=${muslHeaders}";
           };
