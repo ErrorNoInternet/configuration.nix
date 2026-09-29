@@ -61,6 +61,9 @@ in
           hide_version_string = true;
           session_log = ".local/state/ly-session.log";
           sleep_cmd = "systemctl suspend";
+          colormix_col1 = "0x005277C3";
+          colormix_col2 = "0x007EBAE4";
+          colormix_col3 = "0x205277C3";
         };
       };
 
