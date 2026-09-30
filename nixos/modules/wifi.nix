@@ -21,7 +21,10 @@ let
       addr-gen-mode = "default";
       method = "auto";
     };
-    wifi.mode = "infrastructure";
+    wifi = {
+      mode = "infrastructure";
+      wake-on-wlan = "magic";
+    };
     wifi-security = {
       auth-alg = "open";
       key-mgmt = "wpa-psk";
