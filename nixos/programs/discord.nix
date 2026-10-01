@@ -64,6 +64,8 @@ in
           experiments.enable = true;
           fakeNitro.enable = true;
           fixCodeblockGap.enable = true;
+          fixFileExtensions.enable = true;
+          fixImagesQuality.enable = true;
           fixSpotifyEmbeds.enable = true;
           fixYoutubeEmbeds.enable = true;
           followVoiceUser.enable = true;
@@ -115,6 +117,7 @@ in
             enable = true;
             showWarning = false;
           };
+          searchFix.enable = true;
           sedEnhanced.enable = true;
           serverInfo.enable = true;
           showHiddenChannels.enable = true;
@@ -138,6 +141,8 @@ in
           typingTweaks.enable = true;
           unindent.enable = true;
           userVoiceShow.enable = true;
+          validReply.enable = true;
+          validUser.enable = true;
           viewIcons.enable = true;
           viewRaw.enable = true;
           voiceDownload.enable = true;
