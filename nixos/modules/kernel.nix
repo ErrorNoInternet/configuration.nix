@@ -31,7 +31,7 @@ in
 
   config = {
     nixpkgs.overlays = mkIf cfg.cachyos.enable [
-      inputs.nix-cachyos-kernel.overlays.default
+      inputs.nix-cachyos-kernel.overlays.pinned
     ];
 
     boot = {
