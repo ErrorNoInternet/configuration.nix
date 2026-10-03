@@ -14,6 +14,8 @@
     max-free = 20 * 1024 * 1024 * 1024;
   };
 
+  services.resolved.settings.Resolve.DNSSEC = false;
+
   ddns.enable = true;
   fail2ban.enable = true;
   networking.firewall.enable = true;
