@@ -15,7 +15,7 @@
 
   wifi.enable = true;
 
-  services.kmscon.hwRender = false;
+  services.kmscon.config.hwaccel = false;
 
   systemd.services.load-backlight = {
     description = "Load Backlight for radeon_bl0";
