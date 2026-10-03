@@ -23,7 +23,7 @@ let
     };
     wifi = {
       mode = "infrastructure";
-      wake-on-wlan = "magic";
+      wake-on-wlan = 8;
     };
     wifi-security = {
       auth-alg = "open";
