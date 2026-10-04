@@ -4,7 +4,7 @@
     aliases = {
       batp = "bat -pp";
       fd = "LS_COLORS=1 command fd";
-      gcal = "gcal -H '\e[34m:\e[0m:\e[32m:\e[0m'";
+      gcal = "gcal -H '\\x1b[34m:\\x1b[0m:\\x1b[32m:\\x1b[0m'";
       grep = "grep --color";
       ip = "ip --color";
       lowfi = "lowfi -w8";

@@ -67,11 +67,6 @@
 
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    nix-super = {
-      url = "github:privatevoid-net/nix-super";
-      inputs.flake-parts.follows = "flake-parts";
-    };
-
     noctalia = {
       url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs";

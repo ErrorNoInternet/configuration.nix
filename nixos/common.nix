@@ -1,6 +1,5 @@
 {
   config,
-  inputs',
   inputs,
   lib,
   pkgs,
@@ -53,19 +52,14 @@ in
   };
 
   nix = {
-    # TODO: remove when nix-super updates nixpkgs
-    package =
-      with inputs'.nix-super.packages;
-      default.override {
-        nix-cli = nix-cli.override {
-          inherit (pkgs) mimalloc;
-        };
-      };
+    package = pkgs.lixPackageSets.stable.lix;
 
     settings = {
       auto-optimise-store = true;
+      deprecated-features = [
+        "or-as-identifier"
+      ];
       experimental-features = [
-        "ca-derivations"
         "flakes"
         "nix-command"
       ];
