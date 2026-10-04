@@ -161,5 +161,11 @@ in
     nixpkgs.config.permittedInsecurePackages = [
       "olm-3.2.16"
     ];
+
+    environment.persistence."/persist" = {
+      files = [
+        "/etc/ly/save.txt"
+      ];
+    };
   };
 }
