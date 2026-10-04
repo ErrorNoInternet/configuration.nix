@@ -7,6 +7,9 @@
       j = "jj";
       ja = "jj abandon";
       jA = "jj arrange";
+      ja- = "jj abandon @-";
+      ja--I = "jj abandon @- --ignore-immutable";
+      ja-I = "jj abandon @- --ignore-immutable";
       jab = "jj absorb";
       jb = "jj bookmark";
       jbd = "jj bookmark delete";
