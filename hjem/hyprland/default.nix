@@ -13,7 +13,6 @@
 
     settings = {
       render = {
-        direct_scanout = true;
         new_render_scheduling = true;
       };
 
