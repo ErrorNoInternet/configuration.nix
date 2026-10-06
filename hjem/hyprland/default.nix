@@ -12,10 +12,6 @@
     inherit (osConfig.hyprland) enable;
 
     settings = {
-      render = {
-        new_render_scheduling = true;
-      };
-
       ecosystem = {
         no_update_news = true;
         no_donation_nag = true;
