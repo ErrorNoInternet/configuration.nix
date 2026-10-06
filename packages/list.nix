@@ -8,4 +8,5 @@
   ./savehw
   ./scratchpad
   ./tbw
+  ./tmux
 ]

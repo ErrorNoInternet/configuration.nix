@@ -140,6 +140,7 @@ in
     screen
     self'.packages.btrfs-map-physical
     self'.packages.neovim
+    self'.packages.tmux
     smartmontools
     smem
     socat
@@ -147,7 +148,6 @@ in
     sshfs
     sysstat
     tcpdump
-    tmux
     traceroute
     translate-shell
     trickle

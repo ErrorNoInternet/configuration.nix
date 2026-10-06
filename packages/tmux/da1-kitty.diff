@@ -1,0 +1,45 @@
+diff --git a/input.c b/input.c
+index d126da7..e572a30 100644
+--- a/input.c
++++ b/input.c
+@@ -1470,6 +1470,28 @@ input_esc_dispatch(struct input_ctx *ictx)
+ 	return (0);
+ }
+ 
++#ifdef ENABLE_IMAGES
++static int
++input_kitty_client(struct input_ctx *ictx)
++{
++	struct window	*w;
++	struct client	*c;
++
++	if (ictx->wp == NULL)
++		return (0);
++	w = ictx->wp->window;
++
++	TAILQ_FOREACH(c, &clients, entry) {
++		if (c->session == NULL || c->session->curw == NULL ||
++		    c->session->curw->window != w)
++			continue;
++		if (c->tty.term != NULL && c->tty.term->flags & TERM_KITTY)
++			return (1);
++	}
++	return (0);
++}
++#endif
++
+ /* Execute control sequence. */
+ static int
+ input_csi_dispatch(struct input_ctx *ictx)
+@@ -1595,7 +1617,10 @@ input_csi_dispatch(struct input_ctx *ictx)
+ 			break;
+ 		case 0:
+ #ifdef ENABLE_IMAGES
+-			input_reply(ictx, 1, "\033[?1;2;4c");
++			if (input_kitty_client(ictx))
++				input_reply(ictx, 1, "\033[?1;2c");
++			else
++				input_reply(ictx, 1, "\033[?1;2;4c");
+ #else
+ 			input_reply(ictx, 1, "\033[?1;2c");
+ #endif

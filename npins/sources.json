@@ -133,6 +133,19 @@
       "url": "https://github.com/lucasadelino/tide-item-jj/archive/2eff634fc27d3591f6580d3a9d40055ad3852276.tar.gz",
       "hash": "sha256-E14NGa1NsRaHoL1s3sW7DSpVb0epCZd6zwiAhnXjZqg="
     },
+    "tmux": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "tmux",
+        "repo": "tmux"
+      },
+      "branch": "4902-image-support",
+      "submodules": false,
+      "revision": "90ee6a89ccb080a52071c8660856572a770ab0d6",
+      "url": "https://github.com/tmux/tmux/archive/90ee6a89ccb080a52071c8660856572a770ab0d6.tar.gz",
+      "hash": "sha256-am3IdiyZOvrX5k6MFcrJUraOepttVHd7mXMKjprunmk="
+    },
     "tmux-pane-focus": {
       "type": "Git",
       "repository": {
