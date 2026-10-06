@@ -162,7 +162,7 @@ in
   users.users =
     let
       authorizedKeys = [
-        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDnfOU2aTBedjLgsyREoCK/7gUyq6VAXcBbZT/YAnddScNtmN2BVwFuMtVWG3hoDGFyNEvchZA7xng1nqwGArGg= paradigm"
+        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCylq5DiX8ZeAtoVDWU5fRC3QQccISS40NptVkh+VOPqvGPEUtYf5f/Rh2T6bQrDd5RbsaYepqbSROXsf9b/15s= paradigm"
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDzdpxex2GlFVf5G2qsh3Ixa/XCMjnbq4JSTmAev7WYJ error.nointernet@gmail.com"
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIZ/2CGqYAIrVV5LWNFbKMopeGAFr1wFlP6nwu+HEgdI moss"
       ];
