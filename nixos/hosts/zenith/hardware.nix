@@ -1,10 +1,6 @@
 { self', ... }:
 {
-  hardware = {
-    cpu.intel.updateMicrocode = true;
-
-    xpadneo.enable = true;
-  };
+  hardware.cpu.intel.updateMicrocode = true;
 
   boot.kernelParams = [
     "intel_iommu=on"

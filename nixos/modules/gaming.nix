@@ -19,6 +19,8 @@ in
   config = mkIf cfg.enable {
     boot.kernelModules = [ "ntsync" ];
 
+    hardware.xpadneo.enable = true;
+
     users.users.error.extraGroups = [
       "gamemode"
     ];
