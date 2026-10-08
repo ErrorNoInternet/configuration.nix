@@ -91,6 +91,7 @@
     sqlit-tui
     stress-ng
     wechat
+    wine
     wireguard-tools
     yt-dlp
   ];
