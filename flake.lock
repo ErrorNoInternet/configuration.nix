@@ -599,11 +599,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1790501864,
-        "narHash": "sha256-G38UG0Q5oqIFG2ly1Xx6e4mPsQVLjyVkgTXJNiUm/4g=",
+        "lastModified": 1791109065,
+        "narHash": "sha256-FjYkvXC+lysFVl0PR9Uf8sdn/O133SEmCIEtQUrz6kI=",
         "owner": "tdortman",
         "repo": "spicetify-nix",
-        "rev": "fcb7a9fe25d21ba874958ed327818eb860760c43",
+        "rev": "aec53f6659208b2b42be84757351690600f456d5",
         "type": "github"
       },
       "original": {
