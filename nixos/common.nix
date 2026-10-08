@@ -137,6 +137,7 @@ in
     };
 
     nscd.enable = false;
+    ntpd-rs.enable = true;
     openssh.enable = lib.mkDefault true;
     power-profiles-daemon.enable = true;
   };
