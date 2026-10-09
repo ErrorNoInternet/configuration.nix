@@ -1,10 +1,25 @@
-{ self', ... }:
+{
+  self',
+  pkgs,
+  lib,
+  ...
+}:
+let
+  dsdtOverride = toString (
+    pkgs.runCommand "dsdt-override.cpio" { } ''
+      mkdir -p kernel/firmware/acpi
+      cp ${./dsdt.aml} kernel/firmware/acpi/dsdt.aml
+      echo kernel/firmware/acpi/dsdt.aml | ${pkgs.cpio}/bin/cpio -o -H newc > $out
+    ''
+  );
+in
 {
   hardware.cpu.intel.updateMicrocode = true;
 
-  boot.kernelParams = [
-    "intel_iommu=on"
-  ];
+  boot = {
+    initrd.prepend = lib.mkAfter [ dsdtOverride ];
+    kernelParams = [ "intel_iommu=on" ];
+  };
 
   wifi.enable = true;
 
