@@ -28,8 +28,8 @@ in
           "recorder"
           "tray"
           "notifications"
-          "volume"
           "group:rf"
+          "volume"
           "battery"
           "clock"
         ];
