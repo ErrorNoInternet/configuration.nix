@@ -40,7 +40,14 @@ in
     };
 
     environment.systemPackages = with pkgs; [
-      heroic
+      (heroic.override {
+        extraPkgs =
+          pkgs': with pkgs'; [
+            gamemode
+            gamescope
+          ];
+      })
+
       mangohud
       osu-lazer-bin
       prismlauncher
