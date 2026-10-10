@@ -26,10 +26,7 @@ in
     ];
 
     programs = {
-      gamemode = {
-        enable = true;
-        settings.general.renice = 10;
-      };
+      gamemode.enable = true;
 
       gamescope.enable = true;
 
