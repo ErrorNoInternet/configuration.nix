@@ -12,10 +12,7 @@
     nvidia = {
       open = true;
 
-      powerManagement = {
-        enable = true;
-        finegrained = true;
-      };
+      powerManagement.enable = true;
 
       prime = {
         offload = {
