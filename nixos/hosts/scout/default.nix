@@ -14,7 +14,10 @@
     max-free = 20 * 1024 * 1024 * 1024;
   };
 
-  services.resolved.settings.Resolve.DNSSEC = false;
+  services.resolved.settings.Resolve = {
+    DNSOverTLS = false;
+    DNSSEC = false;
+  };
 
   ddns.enable = true;
   fail2ban.enable = true;
