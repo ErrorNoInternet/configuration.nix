@@ -52,13 +52,8 @@ in
   };
 
   nix = {
-    package = pkgs.lixPackageSets.stable.lix;
-
     settings = {
       auto-optimise-store = true;
-      deprecated-features = [
-        "or-as-identifier"
-      ];
       experimental-features = [
         "flakes"
         "nix-command"
