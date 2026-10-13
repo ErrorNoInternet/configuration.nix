@@ -76,6 +76,10 @@ in
         };
       };
 
+      udev.extraRules = ''
+        ACTION=="add", SUBSYSTEM=="sound", KERNEL=="controlC*", ATTRS{idVendor}=="001f", ATTRS{idProduct}=="0b21", RUN+="/bin/sh -c 'sleep 1; ${pkgs.alsa-utils}/bin/amixer -c %n -q cset numid=4 4096'"
+      '';
+
       xserver = {
         enable = true;
         excludePackages = [ pkgs.xterm ];
@@ -118,6 +122,23 @@ in
     };
 
     environment = {
+      etc."xdg/wireplumber/wireplumber.conf.d/99-ab13x-headset.conf".text = ''
+        monitor.alsa.rules = [
+          {
+            matches = [
+              { device.name = "alsa_card.usb-Generic_AB13X_USB_Audio_20210726905926-00" }
+            ]
+            actions = { update-props = { api.alsa.soft-mixer = true } }
+          }
+        ]
+      '';
+
+      persistence."/persist" = {
+        files = [
+          "/etc/ly/save.txt"
+        ];
+      };
+
       sessionVariables = {
         BROWSER = "firefox";
 
@@ -127,6 +148,7 @@ in
       };
 
       systemPackages = with pkgs; [
+        alsa-utils
         bibata-cursors
         cava
         exiftool
@@ -161,11 +183,5 @@ in
     nixpkgs.config.permittedInsecurePackages = [
       "olm-3.2.16"
     ];
-
-    environment.persistence."/persist" = {
-      files = [
-        "/etc/ly/save.txt"
-      ];
-    };
   };
 }
