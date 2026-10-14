@@ -36,17 +36,19 @@ in
   config = mkIf cfg.enable {
     fonts = {
       packages = with pkgs; [
-        cfg.preferredPackage
-
+        corefonts
         nerd-fonts.jetbrains-mono
         noto-fonts
         noto-fonts-cjk-sans
         noto-fonts-cjk-serif
         source-han-sans
         source-han-serif
+        vista-fonts
 
         noto-fonts-color-emoji
         twitter-color-emoji
+
+        cfg.preferredPackage
       ];
 
       fontconfig.defaultFonts = {
