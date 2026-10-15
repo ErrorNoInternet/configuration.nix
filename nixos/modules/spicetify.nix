@@ -2,6 +2,7 @@
   config,
   inputs',
   lib,
+  self,
   ...
 }:
 let
@@ -28,6 +29,7 @@ in
         enabledExtensions = with spicePkgs.extensions; [
           adblock
           beautifulLyrics
+          copyToClipboard
           fullAppDisplayMod
           keyboardShortcut
           songStats
@@ -38,6 +40,11 @@ in
           lyricsPlus
           marketplace
           ncsVisualizer
+
+          {
+            src = "${self.pins.spicetify-apps}/apps";
+            name = "data-porter";
+          }
         ];
       };
   };
