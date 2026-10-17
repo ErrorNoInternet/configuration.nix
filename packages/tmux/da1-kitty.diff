@@ -21,7 +21,7 @@ index d126da7..e572a30 100644
 +		if (c->session == NULL || c->session->curw == NULL ||
 +		    c->session->curw->window != w)
 +			continue;
-+		if (c->tty.term != NULL && c->tty.term->flags & TERM_KITTY)
++		if (c->tty.term != NULL && c->tty.term->flags & TERM_KITTYGRAPHICS)
 +			return (1);
 +	}
 +	return (0);

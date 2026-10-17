@@ -77,9 +77,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "b351cb58ee1254fff5b344e740bdee1adae358c7",
-      "url": "https://github.com/Spiegie/jj-conflict-highlight.nvim/archive/b351cb58ee1254fff5b344e740bdee1adae358c7.tar.gz",
-      "hash": "sha256-2fr6AFNILf84nhitk+05CiSDVTuwrp7j5GOKS4f08yk="
+      "revision": "94837dcf42f11dedaa528e3621ab3f8e38d9aefc",
+      "url": "https://github.com/Spiegie/jj-conflict-highlight.nvim/archive/94837dcf42f11dedaa528e3621ab3f8e38d9aefc.tar.gz",
+      "hash": "sha256-0GsMNzCvnVO5XM705T3jgGjv33M9AfZx4laG/M1xiwA="
     },
     "kanagawa.yazi": {
       "type": "Git",
@@ -155,9 +155,9 @@
       },
       "branch": "4902-image-support",
       "submodules": false,
-      "revision": "90ee6a89ccb080a52071c8660856572a770ab0d6",
-      "url": "https://github.com/tmux/tmux/archive/90ee6a89ccb080a52071c8660856572a770ab0d6.tar.gz",
-      "hash": "sha256-am3IdiyZOvrX5k6MFcrJUraOepttVHd7mXMKjprunmk="
+      "revision": "e5147c2bbcefe7886a204abb1223220fd9ace37b",
+      "url": "https://github.com/tmux/tmux/archive/e5147c2bbcefe7886a204abb1223220fd9ace37b.tar.gz",
+      "hash": "sha256-jOgahsPo6f4hC6bAyAPfH5PQt8TxpPFhR5g22Ld/UXc="
     },
     "tmux-pane-focus": {
       "type": "Git",
