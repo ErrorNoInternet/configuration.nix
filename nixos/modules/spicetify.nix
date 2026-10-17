@@ -42,7 +42,7 @@ in
           ncsVisualizer
 
           {
-            src = "${self.pins.spicetify-apps}/apps";
+            src = self.pins.spicetify-apps;
             name = "data-porter";
           }
         ];

@@ -121,17 +121,10 @@
       "hash": "sha256-Nse8IfuPziyACGbGYvxBXnvcysc2GwrL4o3IIrJLNi4="
     },
     "spicetify-apps": {
-      "type": "Git",
-      "repository": {
-        "type": "GitHub",
-        "owner": "Prog-Jacob",
-        "repo": "spicetify-apps"
-      },
-      "branch": "main",
-      "submodules": false,
-      "revision": "d2da4299d857ad899467b4ab2d5d60f64b56e009",
-      "url": "https://github.com/Prog-Jacob/spicetify-apps/archive/d2da4299d857ad899467b4ab2d5d60f64b56e009.tar.gz",
-      "hash": "sha256-5hEiRAcBNFvZEFaUcqCdcQLy+ZgBKuxJtBkbIfGDyEU="
+      "type": "Url",
+      "url": "https://github.com/Prog-Jacob/spicetify-apps/releases/download/data-porter-v3.3.0/spicetify-data-porter.release.zip",
+      "unpack": true,
+      "hash": "sha256-WT1JKu1d4F/YGA+oeaNljA92fAzpPupmiG85eDI8pS0="
     },
     "tide-item-jj": {
       "type": "Git",
