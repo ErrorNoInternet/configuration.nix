@@ -88,9 +88,9 @@ in
         };
       in
       [
-        (_: super: {
-          ubootRaspberryPi3_64bit = super.ubootRaspberryPi3_64bit.overrideAttrs ubootWithBtrfsAndZstd;
-          ubootRaspberryPi4_64bit = super.ubootRaspberryPi4_64bit.overrideAttrs ubootWithBtrfsAndZstd;
+        (_final: prev: {
+          ubootRaspberryPi3_64bit = prev.ubootRaspberryPi3_64bit.overrideAttrs ubootWithBtrfsAndZstd;
+          ubootRaspberryPi4_64bit = prev.ubootRaspberryPi4_64bit.overrideAttrs ubootWithBtrfsAndZstd;
         })
       ];
 

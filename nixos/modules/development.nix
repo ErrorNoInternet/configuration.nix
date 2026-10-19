@@ -21,6 +21,17 @@ in
   config = mkIf cfg.enable {
     documentation.dev.enable = true;
 
+    nixpkgs.overlays = [
+      (_final: prev: {
+        mold-unwrapped = prev.mold-unwrapped.overrideAttrs (old: {
+          postFixup = (old.postFixup or "") + ''
+            mkdir -p $out/lib/mold
+            [ -e $out/lib/mold/mold-wrapper.so ] || ln -s ../mold-wrapper.so $out/lib/mold/mold-wrapper.so
+          '';
+        });
+      })
+    ];
+
     programs.java = {
       inherit (cfg.java) enable;
       package = pkgs.jdk25;
