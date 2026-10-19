@@ -20,6 +20,7 @@
       misc = {
         disable_xdg_env_checks = true;
         enable_anr_dialog = false;
+        render_unfocused_fps = 60;
       };
     };
   };

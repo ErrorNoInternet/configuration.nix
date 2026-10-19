@@ -221,6 +221,16 @@
           ];
           rules = [ "float on" ];
         }
+
+        {
+          matches = [
+            {
+              type = "title";
+              value = "Steam Big Picture Mode";
+            }
+          ];
+          rules = [ "render_unfocused on" ];
+        }
       ];
 
       layerRuleSets = [
