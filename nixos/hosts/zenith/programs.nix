@@ -17,9 +17,16 @@
       enable = true;
       package = pkgs.openrgb-with-all-plugins;
     };
+
+    sunshine = {
+      enable = true;
+      capSysAdmin = true;
+      openFirewall = true;
+    };
   };
 
   users.users.error.extraGroups = [
+    "uinput"
     "wireshark"
   ];
 
