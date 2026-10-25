@@ -5,7 +5,7 @@ let
 in
 {
   programs.noctalia = {
-    enable = true;
+    inherit (osConfig.graphical) enable;
     systemd.enable = true;
 
     settings = {
