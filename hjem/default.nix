@@ -59,7 +59,7 @@
 
       files.".face".source = builtins.fetchurl {
         url = "https://avatars.githubusercontent.com/u/61157623";
-        sha256 = "0k90jpmp82f237b8cwpjdlybfc0gqm3f4l491zxii29ncln2dcb3";
+        sha256 = "12ksaj95f5lsca3hmbasd2caqfz7i6brqyjrrw3xnzjlrmwr8r6j";
       };
     };
 
