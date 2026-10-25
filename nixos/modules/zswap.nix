@@ -18,16 +18,5 @@ in
       "zswap.enabled=1"
       "zswap.max_pool_percent=25"
     ];
-
-    fileSystems."/persist/swap" = {
-      device = "/dev/mapper/luks_zenith";
-      fsType = "btrfs";
-      options = [
-        "subvol=@swap"
-        "noatime"
-      ];
-    };
-
-    swapDevices = [ { device = "/persist/swap/swapfile"; } ];
   };
 }
