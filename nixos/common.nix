@@ -11,6 +11,7 @@ let
     mkDefault
     mkForce
     mkIf
+    optionals
     ;
 
   sshPorts = config.services.openssh.ports;
@@ -99,8 +100,8 @@ in
     initrd.systemd.emergencyAccess = true;
     kernelParams = [
       "boot.shell_on_fail"
-      "zswap.enabled=0"
-    ];
+    ]
+    ++ optionals (!config.zswap.enable) [ "zswap.enabled=0" ];
 
     binfmt = {
       emulatedSystems = mkIf pkgs.stdenv.hostPlatform.isx86 [ "aarch64-linux" ];
@@ -149,7 +150,7 @@ in
   '';
 
   zramSwap = {
-    enable = true;
+    enable = mkDefault true;
 
     algorithm = mkDefault "lzo-rle";
     memoryPercent = 100;

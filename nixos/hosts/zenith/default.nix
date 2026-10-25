@@ -19,7 +19,7 @@
     qol.enable = true;
   };
 
-  boot.kernel.sysctl."vm.swappiness" = 60;
+  zswap.enable = true;
 
   libvirt.enable = true;
 

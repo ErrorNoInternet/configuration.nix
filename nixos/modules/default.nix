@@ -21,5 +21,6 @@
     ./upnp.nix
     ./wifi.nix
     ./wireguard.nix
+    ./zswap.nix
   ];
 }
