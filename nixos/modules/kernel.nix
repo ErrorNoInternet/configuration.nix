@@ -30,6 +30,8 @@ in
   };
 
   config = {
+    substituters.caches.nix-cachyos-kernel = { inherit (cfg.cachyos) enable; };
+
     nixpkgs.overlays = mkIf cfg.cachyos.enable [
       inputs.nix-cachyos-kernel.overlays.pinned
     ];

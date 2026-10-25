@@ -14,6 +14,10 @@ let
       url = "https://fenix.cachix.org";
       key = "fenix.cachix.org-1:ecJhr+RdYEdcVgUkjruiYhjbBloIEGov7bos90cZi0Q=";
     };
+    nix-cachyos-kernel = {
+      url = "https://cache.lantian.pub/lantian";
+      key = "lantian:WVGO7vsRMSEN+h7Lp7kv6SAmrkEXgUGbbXm7jMDjBuQ=";
+    };
     nix-community = {
       url = "https://nix-community.cachix.org";
       key = "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs=";
