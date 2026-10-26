@@ -550,7 +550,8 @@
         "noctalia": "noctalia",
         "nvf": "nvf",
         "sbox": "sbox",
-        "spicetify-nix": "spicetify-nix"
+        "spicetify-nix": "spicetify-nix",
+        "zmem": "zmem"
       }
     },
     "rust-analyzer-src": {
@@ -639,6 +640,26 @@
       "original": {
         "owner": "numtide",
         "repo": "treefmt-nix",
+        "type": "github"
+      }
+    },
+    "zmem": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1792902383,
+        "narHash": "sha256-dYAvl1cXe9FFtgR8a4goB7Z3ucYH46ZNppI1x1L8jhs=",
+        "owner": "xeome",
+        "repo": "Zmem",
+        "rev": "4708158dcd93217de31bbd93386db1c9345a26bb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "xeome",
+        "repo": "Zmem",
         "type": "github"
       }
     }

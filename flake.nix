@@ -83,6 +83,11 @@
       url = "github:tdortman/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    zmem = {
+      url = "github:xeome/Zmem";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

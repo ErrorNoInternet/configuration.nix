@@ -96,6 +96,7 @@ in
     inputs'.agenix.packages.default
     inputs'.disko.packages.default
     inputs'.nix-alien.packages.default
+    inputs'.zmem.packages.default
     inxi
     iw
     jq
