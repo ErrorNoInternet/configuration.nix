@@ -45,6 +45,9 @@
       ntfd = "notify-done";
       nw = "newsboat";
       objd = "objdump -d";
+      oc = "opencode";
+      ocs = "opencode -s";
+      ocsl = "opencode session list";
       oscc = "osc copy";
       oscp = "osc paste";
       p = "ping";
