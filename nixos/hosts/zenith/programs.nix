@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
-  environment.persistence."/persist".files = [
-    "/var/lib/cups/printers.conf"
+  environment.persistence."/persist".directories = [
+    "/var/lib/cups"
   ];
 
   services = {
