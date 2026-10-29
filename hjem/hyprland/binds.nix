@@ -16,7 +16,7 @@
       bind    = $mod           , comma   , exec, noctalia msg settings-toggle
       bind    = $mod           , D       , exec, noctalia msg panel-toggle launcher
       bind    = $mod           , escape  , exec, noctalia msg panel-toggle session
-      bind    = $mod           , G       , exec, noctalia msg panel-toggle clipboard
+      bind    = $mod           , V       , exec, noctalia msg panel-toggle clipboard
       bind    = $mod           , O       , exec, noctalia msg panel-toggle control-center
       bind    = $mod           , P       , exec, noctalia msg panel-toggle control-center notifications
       bind    = $mod           , period  , exec, noctalia msg panel-toggle launcher /emo
@@ -56,7 +56,7 @@
       bind    = $mod           , F    , fullscreen, 1
       bind    = $mod           , Q    , killactive
       bind    = $mod           , T    , togglegroup
-      bind    = $mod           , V    , togglefloating
+      bind    = $mod           , C    , togglefloating
       bind    = $mod           , Z    , layoutmsg, togglesplit
       bind    = $mod CTRL      , F    , fullscreenstate, 0 2
       bind    = $mod SHIFT     , F    , fullscreen
