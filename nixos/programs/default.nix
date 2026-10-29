@@ -120,6 +120,7 @@ in
     nmap
     npins
     nurl
+    nvd
     nvme-cli
     openssl
     parted
