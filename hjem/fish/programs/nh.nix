@@ -1,17 +1,17 @@
 {
   rum.programs.fish = {
     aliases = {
-      "B." = "nh os boot .";
-      "S." = "nh os switch .";
-      "T." = "nh os test .";
       B = "nh os boot";
       S = "nh os switch";
       T = "nh os test";
     };
 
     abbrs = {
+      "B." = "B .";
       "Ba." = "B -a .";
+      "S." = "S .";
       "Sa." = "S -a .";
+      "T." = "T .";
       "Ta." = "T -a .";
       Ba = "B -a";
       Bn = "B --no-nom";
