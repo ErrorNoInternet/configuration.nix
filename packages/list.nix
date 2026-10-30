@@ -1,7 +1,6 @@
 [
   ./btrfs-map-physical
   ./gamma-control
-  ./hyprtoggle
   ./kanagawa-gtk-theme
   ./kitty
   ./neovim

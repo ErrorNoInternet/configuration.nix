@@ -8,7 +8,6 @@ in
       let
         filetypes = {
           ".*/.irssi/config" = "conf";
-          ".*/hypr/.*.conf" = "hyprlang";
         };
       in
       ''

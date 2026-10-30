@@ -12,11 +12,18 @@ let
   inherit (lib)
     mkEnableOption
     mkIf
+    mkOption
+    types
     ;
 in
 {
   options.hyprland = {
     enable = mkEnableOption "";
+
+    monitors = mkOption {
+      default = [ ];
+      type = types.listOf types.str;
+    };
   };
 
   config = mkIf cfg.enable {
@@ -38,7 +45,6 @@ in
       inputs'.hyprwm-contrib.packages.grimblast
       libnotify
       self'.packages.gamma-control
-      self'.packages.hyprtoggle
       self'.packages.scratchpad
       wl-clipboard
       wl-screenrec
