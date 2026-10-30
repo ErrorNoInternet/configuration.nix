@@ -45,6 +45,7 @@ in
           accountPanelServerProfile.enable = true;
           addAttachments.enable = true;
           alwaysTrust.enable = true;
+          betterBackreading.enable = true;
           betterForwards.enable = true;
           betterRoleContext.enable = true;
           betterSessions.enable = true;
@@ -59,6 +60,7 @@ in
             enable = true;
             attemptToNavigateToHome = true;
           };
+          directFileDownload.enable = true;
           downloadAllAttachments.enable = true;
           equibopStreamFixes.enable = true;
           experiments.enable = true;
@@ -102,6 +104,7 @@ in
           };
           permissionsViewer.enable = true;
           petpet.enable = true;
+          pinDms.enable = true;
           pinIcon.enable = true;
           platformIndicators = {
             enable = true;
@@ -192,19 +195,6 @@ in
           voiceRejoin.enable = true;
           whosWatching.enable = true;
           webContextMenus.enable = true;
-          equicordHelper = {
-            enable = true;
-            noMirroredCamera = false;
-            removeActivitySection = false;
-            showYourOwnActivityButtons = false;
-            forceRoleIcon = false;
-            restoreFileDownloadButton = false;
-            noModalAnimation = false;
-            disableAdoptTagPrompt = false;
-            jsonGateway = false;
-            noBulletPoints = false;
-            accountStandingButton = false;
-          };
           disableDeepLinks.enable = true;
         };
       };
