@@ -57,7 +57,11 @@
 
     nixcord = {
       url = "github:4evy/nixcord";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs = {
+        nixpkgs-ci.follows = "nixpkgs";
+        nixpkgs-packages.follows = "nixpkgs";
+        nixpkgs.follows = "nixpkgs";
+      };
     };
 
     nix-index-database = {
