@@ -56,7 +56,7 @@
       bind    = $mod           , F    , fullscreen, 1
       bind    = $mod           , Q    , killactive
       bind    = $mod           , T    , togglegroup
-      bind    = $mod           , C    , togglefloating
+      bind    = $mod           , X    , togglefloating
       bind    = $mod           , Z    , layoutmsg, togglesplit
       bind    = $mod CTRL      , F    , fullscreenstate, 0 2
       bind    = $mod SHIFT     , F    , fullscreen
