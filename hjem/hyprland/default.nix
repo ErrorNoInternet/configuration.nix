@@ -66,10 +66,11 @@ let
     monitor:
     let
       field = map strings.trim (splitString "," monitor);
+      extra = if builtins.length field > 4 then ", ${elemAt field 4}" else "";
     in
     ''hl.monitor({ output = "${elemAt field 0}", mode = "${elemAt field 1}", position = "${elemAt field 2}", scale = ${
       if elemAt field 3 == "auto" then "\"auto\"" else elemAt field 3
-    } })''
+    }${extra} })''
   ) osConfig.hyprland.monitors;
 in
 {
