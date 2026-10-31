@@ -30,6 +30,7 @@
       ./gtk.nix
       ./hypridle.nix
       ./hyprland
+      ./hyprtoolkit.nix
       ./iamb.nix
       ./irssi
       ./jujutsu.nix
