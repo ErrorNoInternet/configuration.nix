@@ -1,14 +1,16 @@
-{ lib, pkgs, ... }:
+{ lib, ... }:
 let
-  inherit (lib.nvim.dag) entryBefore;
+  inherit (lib.nvim.dag) entryAfter;
 in
 {
   config.vim = {
-    startPlugins = [ pkgs.vimPlugins.kanagawa-nvim ];
+    theme = {
+      enable = true;
+      name = "kanagawa";
+      style = "wave";
+    };
 
-    luaConfigRC.theme = entryBefore [ "pluginConfigs" "lazyConfigs" ] /* lua */ ''
-      vim.cmd.colorscheme("kanagawa")
-
+    luaConfigRC.theme-overrides = entryAfter [ "theme" ] /* lua */ ''
       vim.api.nvim_set_hl(0, 'GitSignsAdd', { bg = 'NONE', update = true })
       vim.api.nvim_set_hl(0, 'GitSignsChange', { bg = 'NONE', update = true })
       vim.api.nvim_set_hl(0, 'GitSignsDelete', { bg = 'NONE', update = true })
