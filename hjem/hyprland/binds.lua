@@ -60,7 +60,7 @@ bind({ mod }, "Q", hl.dsp.window.close())
 bind({ mod }, "T", hl.dsp.group.toggle())
 bind({ mod }, "X", hl.dsp.window.float({ action = "toggle" }))
 bind({ mod }, "Z", hl.dsp.layout("togglesplit"))
-bind({ mod, "CTRL" }, "F", hl.dsp.window.fullscreen_state({ internal = 0, client = 2 }))
+bind({ mod, "CTRL" }, "F", hl.dsp.window.fullscreen_state({ internal = 0, client = 2, action = "toggle" }))
 bind({ mod, "SHIFT" }, "F", hl.dsp.window.fullscreen({ mode = "fullscreen" }))
 bind({ mod, "SHIFT" }, "T", hl.dsp.group.lock({ action = "toggle" }))
 
