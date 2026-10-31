@@ -101,9 +101,12 @@ bind({ mod, "SHIFT" }, "mouse_up", hl.dsp.window.move({ workspace = "e-1" }))
 bind({ mod }, "mouse:272", hl.dsp.window.drag(), { mouse = true })
 bind({ mod }, "mouse:273", hl.dsp.window.resize(), { mouse = true })
 
+local keypad_codes = { 87, 88, 89, 83, 84, 85, 79, 80, 81, 90 }
 for i = 1, 10 do
     local key = i % 10
+    bind({ mod }, "code:" .. keypad_codes[i], hl.dsp.focus({ workspace = i }))
     bind({ mod }, key, hl.dsp.focus({ workspace = i }))
+    bind({ mod, "SHIFT" }, "code:" .. keypad_codes[i], hl.dsp.window.move({ workspace = i }))
     bind({ mod, "SHIFT" }, key, hl.dsp.window.move({ workspace = i }))
 end
 bind({ mod }, "mouse:274", hl.dsp.focus({ workspace = "previous" }))
