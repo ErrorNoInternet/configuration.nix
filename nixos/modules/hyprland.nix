@@ -22,7 +22,29 @@ in
 
     monitors = mkOption {
       default = [ ];
-      type = types.listOf types.str;
+      type = types.listOf (
+        types.submodule {
+          options = {
+            output = mkOption { type = types.str; };
+            mode = mkOption {
+              type = types.str;
+              default = "preferred";
+            };
+            position = mkOption {
+              type = types.str;
+              default = "auto";
+            };
+            scale = mkOption {
+              type = types.raw;
+              default = 1;
+            };
+            extra = mkOption {
+              type = types.attrsOf types.raw;
+              default = { };
+            };
+          };
+        }
+      );
     };
   };
 

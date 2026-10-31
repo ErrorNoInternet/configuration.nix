@@ -7,11 +7,9 @@ let
   inherit (lib)
     concatMapStringsSep
     concatStringsSep
-    elemAt
+    isString
     mapAttrsToList
     mkIf
-    strings
-    splitString
     ;
 
   codes = [
@@ -62,15 +60,20 @@ let
     )
   );
 
+  luaValue = v: if isString v then ''"${v}"'' else toString v;
+
   monitors = concatMapStringsSep "\n" (
     monitor:
     let
-      field = map strings.trim (splitString "," monitor);
-      extra = if builtins.length field > 4 then ", ${elemAt field 4}" else "";
+      fields = [
+        "output = ${luaValue monitor.output}"
+        "mode = ${luaValue monitor.mode}"
+        "position = ${luaValue monitor.position}"
+        "scale = ${luaValue monitor.scale}"
+      ]
+      ++ mapAttrsToList (key: value: "${key} = ${luaValue value}") monitor.extra;
     in
-    ''hl.monitor({ output = "${elemAt field 0}", mode = "${elemAt field 1}", position = "${elemAt field 2}", scale = ${
-      if elemAt field 3 == "auto" then "\"auto\"" else elemAt field 3
-    }${extra} })''
+    "hl.monitor({ ${concatStringsSep ", " fields} })"
   ) osConfig.hyprland.monitors;
 in
 {

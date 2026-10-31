@@ -41,8 +41,17 @@ in
   };
 
   hyprland.monitors = [
-    "eDP-1    , 1920x1080@144 , 0x1080  , 1"
-    "HDMI-A-1 , 1920x1080@144 , 0x0     , 1"
-    "         , preferred     , auto    , 1"
+    {
+      output = "eDP-1";
+      mode = "1920x1080@144";
+      position = "0x1080";
+      extra.supports_hdr = -1;
+    }
+    {
+      output = "HDMI-A-1";
+      mode = "1920x1080@144";
+      position = "0x0";
+    }
+    { output = ""; }
   ];
 }
