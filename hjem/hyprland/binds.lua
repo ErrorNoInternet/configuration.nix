@@ -131,11 +131,12 @@ for _, b in ipairs(monitor_binds) do
     bind(b.mods or {}, b.key, hl.dsp.exec_cmd(b.cmd, b.rules), { locked = true })
 end
 
+bind({ "SHIFT" }, "XF86AudioLowerVolume", hl.dsp.exec_cmd("noctalia msg mic-volume-down"), { locked = true })
+bind({ "SHIFT" }, "XF86AudioMute", hl.dsp.exec_cmd("noctalia msg mic-mute"), { locked = true })
+bind({ "SHIFT" }, "XF86AudioRaiseVolume", hl.dsp.exec_cmd("noctalia msg mic-volume-up"), { locked = true })
 bind({}, "XF86AudioLowerVolume", hl.dsp.exec_cmd("noctalia msg volume-down"), { locked = true })
 bind({}, "XF86AudioMicMute", hl.dsp.exec_cmd("noctalia msg mic-mute"), { locked = true })
 bind({}, "XF86AudioMute", hl.dsp.exec_cmd("noctalia msg volume-mute"), { locked = true })
-bind({ "SHIFT" }, "XF86AudioLowerVolume", hl.dsp.exec_cmd("noctalia msg mic-volume-down"), { locked = true })
-bind({ "SHIFT" }, "XF86AudioRaiseVolume", hl.dsp.exec_cmd("noctalia msg mic-volume-up"), { locked = true })
 bind({}, "XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true })
 bind({}, "XF86AudioPlay", hl.dsp.exec_cmd("playerctl play"), { locked = true })
 bind({}, "XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
