@@ -56,14 +56,14 @@ in
           brightness_down_cmd = "${pkgs.brightnessctl}/bin/brightnessctl -q -n -d intel_backlight s 5%-";
           brightness_up_cmd = "${pkgs.brightnessctl}/bin/brightnessctl -q -n -d intel_backlight s +5%";
           clock = "%c";
-          default_input = "password";
-          hide_key_hints = true;
-          hide_version_string = true;
-          session_log = ".local/state/ly-session.log";
-          sleep_cmd = "systemctl suspend";
           colormix_col1 = "0x005277C3";
           colormix_col2 = "0x007EBAE4";
           colormix_col3 = "0x205277C3";
+          corner_bottom_left = "";
+          corner_top_left = "";
+          default_input = "password";
+          save_file_dir = "/var/lib/ly";
+          session_log = ".local/state/ly-session.log";
         };
       };
 
@@ -134,8 +134,8 @@ in
       '';
 
       persistence."/persist" = {
-        files = [
-          "/etc/ly/save.txt"
+        directories = [
+          "/var/lib/ly"
         ];
       };
 
