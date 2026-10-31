@@ -2,6 +2,7 @@
 {
   environment.persistence."/persist".directories = [
     "/var/lib/cups"
+    "/var/lib/OpenRGB"
   ];
 
   services = {
