@@ -231,8 +231,12 @@ in
 
       plugin_settings."noctalia/screen_recorder" = {
         copy_to_clipboard = true;
-        directory = home;
+        directory = "/home/error";
         hide_inactive = true;
+        replay_duration = 60;
+        replay_enabled = true;
+        video_bitrate_mode = "vbr";
+        video_quality = "high";
       };
 
       plugins.enabled = [
