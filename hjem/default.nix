@@ -40,7 +40,6 @@
       ./newsboat.nix
       ./noctalia.nix
       ./nvtop.nix
-      ./opencode.nix
       ./qalculate.nix
       ./qt.nix
       ./satty.nix
