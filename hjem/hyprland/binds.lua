@@ -106,11 +106,13 @@ for i = 1, 10 do
     bind({ mod }, key, hl.dsp.focus({ workspace = i }))
     bind({ mod, "SHIFT" }, key, hl.dsp.window.move({ workspace = i }))
 end
-bind({ mod }, "mouse:276", hl.dsp.window.move({ workspace = 9 }))
-bind({ mod }, "mouse:275", hl.dsp.window.move({ workspace = 10 }))
 bind({ mod }, "mouse:274", hl.dsp.focus({ workspace = "previous" }))
+bind({ mod }, "mouse:275", hl.dsp.focus({ workspace = 10 }))
+bind({ mod }, "mouse:276", hl.dsp.focus({ workspace = 9 }))
 bind({ mod }, "TAB", hl.dsp.focus({ workspace = "previous" }))
 bind({ mod, "SHIFT" }, "mouse:274", hl.dsp.window.move({ workspace = "previous" }))
+bind({ mod, "SHIFT" }, "mouse:275", hl.dsp.window.move({ workspace = 10 }))
+bind({ mod, "SHIFT" }, "mouse:276", hl.dsp.window.move({ workspace = 9 }))
 bind({ mod, "SHIFT" }, "TAB", hl.dsp.window.move({ workspace = "previous" }))
 
 bind({}, "XF86DisplayOff", hl.dsp.exec_cmd("sleep 0.1 && noctalia msg dpms-on"), { locked = true, release = true })
