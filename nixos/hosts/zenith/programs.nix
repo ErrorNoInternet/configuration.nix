@@ -71,6 +71,7 @@
     android-file-transfer
     android-studio
     android-tools
+    claude-code
     codex
     concord-tui
     distrobox
