@@ -1,12 +1,20 @@
 {
+  config,
   inputs',
+  inputs,
   lib,
   pkgs,
   self',
+  self,
   ...
 }:
 let
   inherit (lib) mkDefault mkForce;
+
+  neovim = pkgs.callPackage ../../packages/neovim {
+    inherit inputs self;
+    schemeSlug = config.scheme.slug;
+  };
 in
 {
   imports = [
@@ -113,6 +121,7 @@ in
     miniupnpc
     multipath-tools
     ncdu
+    neovim
     netwatch
     nh
     nix-output-monitor
@@ -141,7 +150,6 @@ in
     s-tui
     screen
     self'.packages.btrfs-map-physical
-    self'.packages.neovim
     self'.packages.tmux
     smartmontools
     smem
