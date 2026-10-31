@@ -64,6 +64,7 @@ in
           downloadAllAttachments.enable = true;
           equibopStreamFixes.enable = true;
           experiments.enable = true;
+          expressionManager.enable = true;
           fakeNitro.enable = true;
           fixCodeblockGap.enable = true;
           fixFileExtensions.enable = true;
