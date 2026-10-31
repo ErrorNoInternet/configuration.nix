@@ -18,7 +18,7 @@ local window_rule_sets = {
 
     { match = { class = "blueman-manager" }, rules = { animation = "slide", center = true, float = true, size = "monitor_w*0.6 monitor_h*0.65" } },
     { match = { class = "xdg-desktop-portal-gtk" }, rules = { animation = "slide", center = true, float = true, size = "monitor_w*0.6 monitor_h*0.65" } },
-    { match = { title = "Select what to share" }, rules = { animation = "slide", center = true, float = true, size = "monitor_w*0.3 monitor_h*0.3" } },
+    { match = { class = "hyprland-share-picker" }, rules = { animation = "slide", center = true, float = true, size = "monitor_w*0.3 monitor_h*0.65" } },
 
     { match = { class = "jetbrains-(.*)", title = "^win(.*)" }, rules = { no_initial_focus = true } },
     { match = { class = "branchdialog" }, rules = { float = true } },
