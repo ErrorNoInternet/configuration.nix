@@ -186,7 +186,6 @@ in
             questButtonDisplay = "never";
             questFetchInterval = 12 * 60 * 60;
           };
-          showSongName.enable = true;
           timezones = {
             enable = true;
             askedTimezone = true;
