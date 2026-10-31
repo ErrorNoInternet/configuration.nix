@@ -63,6 +63,7 @@ in
         src = self.pins.vimiv-qt;
       }))
 
+      gpu-screen-recorder-gtk
       hyprpicker
       inputs'.hyprwm-contrib.packages.grimblast
       libnotify
