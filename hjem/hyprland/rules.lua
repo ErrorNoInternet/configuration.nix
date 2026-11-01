@@ -30,6 +30,7 @@ local window_rule_sets = {
     { match = { class = "org.kde.kdeconnect.daemon" }, rules = { float = true } },
     { match = { class = "vimiv" }, rules = { float = true } },
 
+    { match = { class = "steam_app_(.*)" }, rules = { render_unfocused = true } },
     { match = { title = "Steam Big Picture Mode" }, rules = { render_unfocused = true } },
 }
 
