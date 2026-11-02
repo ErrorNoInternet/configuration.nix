@@ -54,7 +54,6 @@ in
           copyEmojiMarkdown.enable = true;
           copyFileContents.enable = true;
           copyProfileColors.enable = true;
-          copyStickerLinks.enable = true;
           copyUserUrls.enable = true;
           crashHandler = {
             enable = true;
