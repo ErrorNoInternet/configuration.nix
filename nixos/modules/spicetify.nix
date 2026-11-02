@@ -35,6 +35,11 @@ in
           songStats
           spicyLyrics
           volumePercentage
+
+          {
+            src = self.pins.spicetify-last-fm + "/dist";
+            name = "lastfm.js";
+          }
         ];
         enabledCustomApps = with spicePkgs.apps; [
           lyricsPlus
