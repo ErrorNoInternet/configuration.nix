@@ -20,6 +20,7 @@
     };
 
     config = {
+      keep-open = true;
       no-keepaspect-window = "";
 
       demuxer-max-back-bytes = "50MiB";
