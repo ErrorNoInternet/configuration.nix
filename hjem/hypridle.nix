@@ -25,6 +25,11 @@
           timeout = 15 * 60;
           on-timeout = "noctalia msg dpms-off";
         }
+
+        {
+          timeout = 30 * 60;
+          on-timeout = "openrgb -c 000000";
+        }
       ];
     };
   };
@@ -36,6 +41,7 @@
     path = with pkgs; [
       hypridle
       inputs'.noctalia.packages.default
+      osConfig.services.hardware.openrgb.package
     ];
     script = "hypridle";
   };
