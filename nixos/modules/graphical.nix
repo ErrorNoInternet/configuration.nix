@@ -112,6 +112,13 @@ in
       appimage = {
         enable = true;
         binfmt = true;
+
+        package = pkgs.appimage-run.override {
+          extraPkgs =
+            pkgs: with pkgs; [
+              pipewire
+            ];
+        };
       };
       dconf.enable = true;
       discord.enable = true;
