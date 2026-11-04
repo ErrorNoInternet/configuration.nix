@@ -58,6 +58,7 @@ in
       mold
       nixfmt
       nixfmt-tree
+      nodejs
       onefetch
       pandoc
       pkg-config
