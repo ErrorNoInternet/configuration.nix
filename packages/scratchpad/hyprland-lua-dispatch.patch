@@ -1,0 +1,34 @@
+diff --git a/scratchpad b/scratchpad
+index a5e435d..58f6b0c 100644
+--- a/scratchpad
++++ b/scratchpad
+@@ -90,7 +90,7 @@ EOF
+ }
+ 
+ takes() {
+-  hyprctl dispatch workspace "special:$default_scratchpad_name"
++  hyprctl dispatch "hl.dsp.focus({ workspace = \"special:$default_scratchpad_name\" })"
+   exit 0
+ }
+ 
+@@ -127,16 +127,16 @@ getBack() {
+   }
+   [ -z "$_selected_client" ] && _selected_client="$(echo "${_clients_on_spad[*]}" | eval "${_menu_cmd[*]}")"
+   _address="$(echo "$_selected_client" | awk '{print $NF}')"
+-  hyprctl dispatch movetoworkspace "$_current_workspace,address:$_address"
+-  hyprctl dispatch focuswindow "address:$_address"
++  hyprctl dispatch "hl.dsp.window.move({ workspace = \"$_current_workspace\", window = \"address:$_address\", follow = false })"
++  hyprctl dispatch "hl.dsp.focus({ window = \"address:$_address\" })"
+   [ "$(hyprctl activewindow -j | jq '.floating')" = true ] && {
+-    hyprctl dispatch bringactivetotop none
++    hyprctl dispatch 'hl.dsp.window.alter_zorder({ mode = "top" })'
+   }
+   IFS="$_ifs"
+ }
+ 
+ send() {
+-  hyprctl dispatch movetoworkspacesilent "special:$default_scratchpad_name"
++  hyprctl dispatch "hl.dsp.window.move({ workspace = \"special:$default_scratchpad_name\", follow = false })"
+ }
+ 
+ getArgs() {

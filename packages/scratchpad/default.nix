@@ -4,5 +4,6 @@ inputs'.hyprwm-contrib.packages.scratchpad.overrideAttrs (old: {
     ./better-notifications.patch
     ./fix-grammar.patch
     ./hide-rofi-icons.patch
+    ./hyprland-lua-dispatch.patch
   ];
 })
