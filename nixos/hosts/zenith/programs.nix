@@ -93,6 +93,7 @@
     obsidian
     opencode
     oxipng
+    pi-coding-agent
     qbittorrent
     qpwgraph
     scrcpy
