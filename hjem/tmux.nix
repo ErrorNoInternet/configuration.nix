@@ -5,6 +5,7 @@
       set  -g  allow-passthrough   on
       set  -g  base-index          1
       set  -g  default-terminal    "tmux-256color"
+      set  -g  extended-keys       on
       set  -g  focus-events        on
       set  -g  history-limit       500000
       set  -g  mode-keys           vi
