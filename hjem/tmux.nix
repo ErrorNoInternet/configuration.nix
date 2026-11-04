@@ -2,23 +2,24 @@
 {
   xdg.config.files = with pkgs; {
     "tmux/tmux.conf".text = /* tmux */ ''
-      set  -g  allow-passthrough   on
-      set  -g  base-index          1
-      set  -g  default-terminal    "tmux-256color"
-      set  -g  extended-keys       on
-      set  -g  focus-events        on
-      set  -g  history-limit       500000
-      set  -g  mode-keys           vi
-      set  -g  mouse               on
-      set  -g  repeat-time         0
-      set  -g  set-clipboard       on
-      set  -g  set-titles          on
-      set  -g  status-keys         vi
-      set  -ga terminal-overrides ",xterm*:RGB"
-      set  -s  escape-time         0
-      setw -g  aggressive-resize   off
-      setw -g  clock-mode-style    24
-      setw -g  pane-base-index     1
+      set  -g  allow-passthrough     on
+      set  -g  base-index            1
+      set  -g  default-terminal      "tmux-256color"
+      set  -g  extended-keys         on
+      set  -g  extended-keys-format  csi-u
+      set  -g  focus-events          on
+      set  -g  history-limit         500000
+      set  -g  mode-keys             vi
+      set  -g  mouse                 on
+      set  -g  repeat-time           0
+      set  -g  set-clipboard         on
+      set  -g  set-titles            on
+      set  -g  status-keys           vi
+      set  -ga terminal-overrides    ",xterm*:RGB"
+      set  -s  escape-time           0
+      setw -g  aggressive-resize     off
+      setw -g  clock-mode-style      24
+      setw -g  pane-base-index       1
 
       set  -g  @jump-bg-color '\e[0m\e[90m'
       set  -g  @jump-fg-color '\e[1m\e[33m'
