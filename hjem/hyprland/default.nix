@@ -1,6 +1,7 @@
 {
-  osConfig,
   lib,
+  osConfig,
+  self,
   ...
 }:
 let
@@ -80,6 +81,8 @@ in
   rum.desktops.hyprland.enable = osConfig.hyprland.enable;
 
   xdg.config.files = mkIf osConfig.hyprland.enable {
+    "hypr/plugins/split-monitor-workspaces".source = self.pins.split-monitor-workspaces;
+
     "hypr/hyprland.lua".source = ./hyprland.lua;
     "hypr/aesthetics.lua".source = ./aesthetics.lua;
     "hypr/binds.lua".source = ./binds.lua;

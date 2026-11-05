@@ -1,5 +1,7 @@
 local mod = "SUPER"
 
+local smw = require("plugins.split-monitor-workspaces")
+
 hl.config({
     binds = {
         allow_workspace_cycles = true,
@@ -90,8 +92,8 @@ for _, offset in ipairs(move_offsets) do
     bind({ mod, "ALT" }, offset.key, hl.dsp.window.move({ x = offset.x, y = offset.y, relative = true }), { repeating = true })
 end
 
-bind({ mod }, "mouse_down", hl.dsp.focus({ workspace = "e+1" }))
-bind({ mod }, "mouse_up", hl.dsp.focus({ workspace = "e-1" }))
+bind({ mod }, "mouse_down", smw.cycle_workspaces("next"))
+bind({ mod }, "mouse_up", smw.cycle_workspaces("prev"))
 bind({ mod, "CTRL" }, "mouse_down", hl.dsp.focus({ workspace = "r+1" }))
 bind({ mod, "CTRL" }, "mouse_up", hl.dsp.focus({ workspace = "r-1" }))
 bind({ mod, "CTRL", "SHIFT" }, "mouse_down", hl.dsp.window.move({ workspace = "r+1" }))
@@ -102,12 +104,12 @@ bind({ mod }, "mouse:272", hl.dsp.window.drag(), { mouse = true })
 bind({ mod }, "mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 local keypad_codes = { 87, 88, 89, 83, 84, 85, 79, 80, 81, 90 }
-for i = 1, 10 do
-    local key = i % 10
-    bind({ mod }, "code:" .. keypad_codes[i], hl.dsp.focus({ workspace = i }))
-    bind({ mod }, key, hl.dsp.focus({ workspace = i }))
-    bind({ mod, "SHIFT" }, "code:" .. keypad_codes[i], hl.dsp.window.move({ workspace = i }))
-    bind({ mod, "SHIFT" }, key, hl.dsp.window.move({ workspace = i }))
+for i = 1, smw.get_amount_of_workspaces() do
+    local n = tostring(i % 10)
+    bind({ mod }, "code:" .. keypad_codes[i], smw.workspace(n))
+    bind({ mod }, n, smw.workspace(n))
+    bind({ mod, "SHIFT" }, "code:" .. keypad_codes[i], smw.move_to_workspace_silent(n))
+    bind({ mod, "SHIFT" }, n, smw.move_to_workspace_silent(n))
 end
 bind({ mod }, "mouse:274", hl.dsp.focus({ workspace = "previous" }))
 bind({ mod }, "mouse:275", hl.dsp.focus({ workspace = 10 }))

@@ -139,6 +139,22 @@
       "url": "https://github.com/Taeko-ar/spicetify-last-fm/archive/2726552af6d617f8010306e352e1ad17ff3bfeea.tar.gz",
       "hash": "sha256-KguR4ZJ4hPQfyMuot9R2nwE2jVlosek8Y8eAouwjurk="
     },
+    "split-monitor-workspaces": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "zjeffer",
+        "repo": "split-monitor-workspaces"
+      },
+      "pre_releases": false,
+      "version_upper_bound": "0.58",
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v0.57.0",
+      "revision": "23f9b1125c0a8c17d473bd4e3dab128f9b9d90a4",
+      "url": "https://api.github.com/repos/zjeffer/split-monitor-workspaces/tarball/refs/tags/v0.57.0",
+      "hash": "sha256-lup85KjDGFXFbaUGaFp2JxhhMKr32iE/pXOqIkht6Cw="
+    },
     "tide-item-jj": {
       "type": "Git",
       "repository": {
