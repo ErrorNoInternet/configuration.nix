@@ -85,6 +85,7 @@
     };
 
     config = /* fish */ ''
+      abbr -a --set-cursor -- pp "pi -p '%'"
       abbr -a dotdot -r '^\.\.+$' -f multicd
     '';
   };
