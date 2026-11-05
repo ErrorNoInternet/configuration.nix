@@ -44,13 +44,13 @@ in
     {
       output = "eDP-1";
       mode = "1920x1080@144";
-      position = "0x1080";
+      position = "0x0";
       extra.supports_hdr = -1;
     }
     {
       output = "HDMI-A-1";
       mode = "1920x1080@144";
-      position = "0x0";
+      position = "0x-1080";
     }
     { output = ""; }
   ];
