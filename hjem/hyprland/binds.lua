@@ -39,7 +39,7 @@ bind({ mod, "SHIFT" }, "L", hl.dsp.exec_cmd("(sleep 1 && noctalia msg dpms-off &
 bind({}, "switch:off:Lid Switch", hl.dsp.exec_cmd("loginctl lock-session"), { locked = true })
 bind({}, "switch:on:Lid Switch", hl.dsp.exec_cmd("loginctl lock-session"), { locked = true })
 
-bind({ mod }, "A", hl.dsp.exec_cmd('scratchpad -g -l -m "fuzzel -d"'))
+bind({ mod }, "A", hl.dsp.exec_cmd('pkill -x fuzzel || scratchpad -g -l -m "fuzzel -d"'))
 bind({ mod }, "E", hl.dsp.workspace.toggle_special("inbox"))
 bind({ mod }, "S", hl.dsp.workspace.toggle_special("scratchpad"))
 bind({ mod }, "W", hl.dsp.workspace.toggle_special("communication"))
