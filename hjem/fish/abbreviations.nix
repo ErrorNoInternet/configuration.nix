@@ -67,8 +67,6 @@
       sl = "sleep";
       spds = "sudo pidstat --human -d 1";
       spds3 = "sudo pidstat --human -d 3";
-      sr = "songrec r -d \"Monitor of HUAWEI USB-C HEADSET Pro\"";
-      srl = "songrec l -d \"Monitor of HUAWEI USB-C HEADSET Pro\"";
       st = "strace";
       sv = "sudo -v";
       t = "tmux";
