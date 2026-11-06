@@ -34,13 +34,13 @@
             disown
             set -g __fish_tmout_pid $last_pid
         end
-        if test -p $__fish_tmout_fifo
+        if set -q __fish_tmout_fifo; and test -p $__fish_tmout_fifo
             echo prompt > $__fish_tmout_fifo
         end
     end
 
     function pause_logout_timer --on-event fish_preexec
-        if test -p $__fish_tmout_fifo
+        if set -q __fish_tmout_fifo; and test -p $__fish_tmout_fifo
             echo busy > $__fish_tmout_fifo
         end
     end
