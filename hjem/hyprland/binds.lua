@@ -145,6 +145,7 @@ bind({}, "XF86AudioLowerVolume", hl.dsp.exec_cmd("noctalia msg volume-down"), { 
 bind({}, "XF86AudioMicMute", hl.dsp.exec_cmd("noctalia msg mic-mute"), { locked = true })
 bind({}, "XF86AudioMute", hl.dsp.exec_cmd("noctalia msg volume-mute"), { locked = true })
 bind({}, "XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true })
+bind({}, "XF86AudioPause", hl.dsp.exec_cmd("playerctl pause"), { locked = true })
 bind({}, "XF86AudioPlay", hl.dsp.exec_cmd("playerctl play"), { locked = true })
 bind({}, "XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
 bind({}, "XF86AudioRaiseVolume", hl.dsp.exec_cmd("noctalia msg volume-up"), { locked = true })
