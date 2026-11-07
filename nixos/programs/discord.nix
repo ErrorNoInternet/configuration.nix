@@ -47,7 +47,9 @@ in
           alwaysTrust.enable = true;
           betterBackreading.enable = true;
           betterForwards.enable = true;
+          betterMutualServers.enable = true;
           betterRoleContext.enable = true;
+          betterSearch.enable = true;
           betterSessions.enable = true;
           callTimer.enable = true;
           clearUrls.enable = true;
