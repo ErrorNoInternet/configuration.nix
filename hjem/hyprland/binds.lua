@@ -108,8 +108,8 @@ for i = 1, smw.get_amount_of_workspaces() do
     local n = tostring(i % 10)
     bind({ mod }, "code:" .. keypad_codes[i], smw.workspace(n))
     bind({ mod }, n, smw.workspace(n))
-    bind({ mod, "SHIFT" }, "code:" .. keypad_codes[i], smw.move_to_workspace_silent(n))
-    bind({ mod, "SHIFT" }, n, smw.move_to_workspace_silent(n))
+    bind({ mod, "SHIFT" }, "code:" .. keypad_codes[i], smw.move_to_workspace(n))
+    bind({ mod, "SHIFT" }, n, smw.move_to_workspace(n))
 end
 bind({ mod }, "mouse:274", hl.dsp.focus({ workspace = "previous" }))
 bind({ mod }, "mouse:275", hl.dsp.focus({ workspace = 10 }))
