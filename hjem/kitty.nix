@@ -45,6 +45,7 @@
         shell_integration = "no-rc no-cursor";
 
         map = [
+          "ctrl+shift+p"
           "ctrl+shift+minus change_font_size all -0.5"
           "ctrl+shift+equal change_font_size all +0.5"
         ];
