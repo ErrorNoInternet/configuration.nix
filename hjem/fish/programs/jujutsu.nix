@@ -79,9 +79,9 @@
     };
 
     config = /* fish */ ''
-      abbr -a --set-cursor -- jc 'jj commit -m "%"'
-      abbr -a --set-cursor -- jd 'jj desc -m "%"'
-      abbr -a --set-cursor -- jd- 'jj desc -m "%" @-'
+      abbr -a --set-cursor -- jc "jj commit -m '%'"
+      abbr -a --set-cursor -- jd "jj desc -m '%'"
+      abbr -a --set-cursor -- jd- "jj desc -m '%'" @-
     '';
   };
 }

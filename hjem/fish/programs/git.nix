@@ -133,8 +133,8 @@
     };
 
     config = ''
-      abbr -a --set-cursor -- ga.c 'git add . && git commit -m "%"'
-      abbr -a --set-cursor -- gc 'git commit -m "%"'
+      abbr -a --set-cursor -- ga.c "git add . && git commit -m '%'"
+      abbr -a --set-cursor -- gc "git commit -m '%'"
     '';
   };
 }
