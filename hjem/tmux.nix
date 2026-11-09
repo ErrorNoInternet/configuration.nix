@@ -2,6 +2,7 @@
 {
   xdg.config.files = with pkgs; {
     "tmux/tmux.conf".text = /* tmux */ ''
+      set  -ga terminal-features     "xterm-kitty:progressbar"
       set  -g  allow-passthrough     on
       set  -g  base-index            1
       set  -g  default-terminal      "tmux-256color"
