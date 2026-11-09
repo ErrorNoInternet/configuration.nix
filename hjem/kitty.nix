@@ -46,6 +46,10 @@
 
         map = [
           "ctrl+shift+p"
+          "ctrl+shift+r"
+          "ctrl+shift+s"
+          "ctrl+shift+t"
+          "ctrl+shift+w"
           "ctrl+shift+minus change_font_size all -0.5"
           "ctrl+shift+equal change_font_size all +0.5"
         ];
