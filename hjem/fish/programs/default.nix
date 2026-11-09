@@ -11,6 +11,7 @@
     ./mullvad.nix
     ./nh.nix
     ./nix.nix
+    ./pi.nix
     ./podman.nix
     ./rpm.nix
     ./systemd.nix
