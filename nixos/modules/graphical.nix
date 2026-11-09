@@ -158,6 +158,7 @@ in
         alsa-utils
         bibata-cursors
         cava
+        easyeffects
         exiftool
         ffmpeg-full
         galaxy-buds-client
