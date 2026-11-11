@@ -74,6 +74,148 @@ in
           enable = true;
           support32Bit = true;
         };
+
+        extraConfig.pipewire."99-ab13x-eq" = {
+          "context.modules" = [
+            {
+              args = {
+                "audio.channels" = 2;
+                "audio.position" = [
+                  "FL"
+                  "FR"
+                ];
+                "capture.props" = {
+                  "filter.smart" = true;
+                  "filter.smart.name" = "ab13x_eq";
+                  "filter.smart.target" = {
+                    "node.name" = "alsa_output.usb-Generic_AB13X_USB_Audio_20210726905926-00.analog-stereo";
+                  };
+                  "media.class" = "Audio/Sink";
+                  "node.name" = "ab13x_eq";
+                };
+                "filter.graph" = {
+                  links = [
+                    {
+                      input = "sub:In";
+                      output = "preamp:Out";
+                    }
+                    {
+                      input = "bass:In";
+                      output = "sub:Out";
+                    }
+                    {
+                      input = "box:In";
+                      output = "bass:Out";
+                    }
+                    {
+                      input = "body:In";
+                      output = "box:Out";
+                    }
+                    {
+                      input = "presence:In";
+                      output = "body:Out";
+                    }
+                    {
+                      input = "sparkle:In";
+                      output = "presence:Out";
+                    }
+                    {
+                      input = "air:In";
+                      output = "sparkle:Out";
+                    }
+                  ];
+                  nodes = [
+                    {
+                      control = {
+                        "Mult" = 0.55;
+                      };
+                      label = "linear";
+                      name = "preamp";
+                      type = "builtin";
+                    }
+                    {
+                      control = {
+                        "Freq" = 40.0;
+                        "Gain" = 0.5;
+                        "Q" = 0.8;
+                      };
+                      label = "bq_peaking";
+                      name = "sub";
+                      type = "builtin";
+                    }
+                    {
+                      control = {
+                        "Freq" = 105.0;
+                        "Gain" = 5.5;
+                        "Q" = 0.7;
+                      };
+                      label = "bq_lowshelf";
+                      name = "bass";
+                      type = "builtin";
+                    }
+                    {
+                      control = {
+                        "Freq" = 400.0;
+                        "Gain" = -3.5;
+                        "Q" = 1.0;
+                      };
+                      label = "bq_peaking";
+                      name = "box";
+                      type = "builtin";
+                    }
+                    {
+                      control = {
+                        "Freq" = 1700.0;
+                        "Gain" = 3.0;
+                        "Q" = 1.2;
+                      };
+                      label = "bq_peaking";
+                      name = "body";
+                      type = "builtin";
+                    }
+                    {
+                      control = {
+                        "Freq" = 3200.0;
+                        "Gain" = 4.0;
+                        "Q" = 1.0;
+                      };
+                      label = "bq_peaking";
+                      name = "presence";
+                      type = "builtin";
+                    }
+                    {
+                      control = {
+                        "Freq" = 6500.0;
+                        "Gain" = 3.0;
+                        "Q" = 1.2;
+                      };
+                      label = "bq_peaking";
+                      name = "sparkle";
+                      type = "builtin";
+                    }
+                    {
+                      control = {
+                        "Freq" = 10000.0;
+                        "Gain" = 2.5;
+                        "Q" = 0.7;
+                      };
+                      label = "bq_highshelf";
+                      name = "air";
+                      type = "builtin";
+                    }
+                  ];
+                };
+                "media.name" = "AB13X Headset Equalizer";
+                "node.description" = "AB13X Headset Equalizer";
+                "playback.props" = {
+                  "node.name" = "ab13x_eq_output";
+                  "node.passive" = true;
+                };
+              };
+              name = "libpipewire-module-filter-chain";
+            }
+          ];
+        };
       };
 
       udev.extraRules = ''
