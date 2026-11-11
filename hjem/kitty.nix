@@ -45,6 +45,7 @@
         shell_integration = "no-rc no-cursor";
 
         map = [
+          "ctrl+shift+f"
           "ctrl+shift+p"
           "ctrl+shift+r"
           "ctrl+shift+s"
