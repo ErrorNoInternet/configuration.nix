@@ -13,6 +13,7 @@
     };
 
     grammars = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+      c_sharp
       cuda
       fish
       hyprlang
