@@ -92,8 +92,29 @@ for _, offset in ipairs(move_offsets) do
     bind({ mod, "ALT" }, offset.key, hl.dsp.window.move({ x = offset.x, y = offset.y, relative = true }), { repeating = true })
 end
 
-bind({ mod }, "mouse_down", smw.cycle_workspaces("next"))
-bind({ mod }, "mouse_up", smw.cycle_workspaces("prev"))
+local function cycle(dir)
+    local monitor, ids = hl.get_active_monitor(), {}
+    for _, ws in ipairs(hl.get_workspaces()) do
+        if ws.id and not ws.is_empty and ws.monitor == monitor then
+            ids[#ids + 1] = ws.id
+        end
+    end
+    if #ids == 0 then
+        return
+    end
+    table.sort(ids)
+    local cur = monitor.active_workspace.id
+    local i = 0
+    for _, id in ipairs(ids) do
+        if id < cur or (dir > 0 and id == cur) then
+            i = i + 1
+        end
+    end
+    hl.dispatch(hl.dsp.focus({ workspace = tostring(ids[(i + math.min(dir, 0)) % #ids + 1]) }))
+end
+
+bind({ mod }, "mouse_down", function() cycle(1) end)
+bind({ mod }, "mouse_up", function() cycle(-1) end)
 bind({ mod, "CTRL" }, "mouse_down", hl.dsp.focus({ workspace = "r+1" }))
 bind({ mod, "CTRL" }, "mouse_up", hl.dsp.focus({ workspace = "r-1" }))
 bind({ mod, "CTRL", "SHIFT" }, "mouse_down", hl.dsp.window.move({ workspace = "r+1" }))
