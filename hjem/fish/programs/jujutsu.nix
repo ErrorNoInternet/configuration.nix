@@ -11,6 +11,7 @@
       ja--I = "jj abandon @- --ignore-immutable";
       ja-I = "jj abandon @- --ignore-immutable";
       jab = "jj absorb";
+      jabi = "jj absorb -i";
       jb = "jj bookmark";
       jbd = "jj bookmark delete";
       jbm = "jj bookmark move";
