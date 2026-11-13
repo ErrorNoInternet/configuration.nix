@@ -13,6 +13,10 @@ pkgs.sunshine.overrideAttrs (old: {
     rev = self.pins.sunshine.revision;
   };
 
+  patches = (old.patches or [ ]) ++ [
+    ./map-absolute-input-compositor-desktop.patch
+  ];
+
   ui = old.ui.overrideAttrs (oldUi: {
     inherit version;
     src = self.pins.sunshine;

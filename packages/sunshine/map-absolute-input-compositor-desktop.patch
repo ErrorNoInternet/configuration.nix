@@ -1,0 +1,203 @@
+diff --git a/src/input.cpp b/src/input.cpp
+index a6afa54fa..eb4ce5dd7 100644
+--- a/src/input.cpp
++++ b/src/input.cpp
+@@ -2575,6 +2575,18 @@ namespace input {
+       ::input::passthrough(input, &packet);
+     }
+ 
++    void send_absolute_mouse_packet(std::shared_ptr<input_t> &input, std::int16_t x, std::int16_t y, std::int16_t width, std::int16_t height) {
++      NV_ABS_MOUSE_MOVE_PACKET packet {};
++      packet.header.size = util::endian::big<std::uint32_t>(sizeof(packet) - sizeof(packet.header.size));
++      packet.header.magic = util::endian::little<std::uint32_t>(MOUSE_MOVE_ABS_MAGIC);
++      packet.x = util::endian::big(x);
++      packet.y = util::endian::big(y);
++      packet.width = util::endian::big(width);
++      packet.height = util::endian::big(height);
++
++      ::input::passthrough(input, &packet);
++    }
++
+     void reset_keyboard_state() {
+       task_pool.cancel(key_press_repeat_id);
+       key_press_repeat_id = nullptr;
+diff --git a/src/input.h b/src/input.h
+index 41e0439aa..b2354a21b 100644
+--- a/src/input.h
++++ b/src/input.h
+@@ -181,6 +181,8 @@ namespace input {
+      */
+     void send_relative_mouse_packet(std::shared_ptr<input_t> &input, std::int16_t delta_x, std::int16_t delta_y);
+ 
++    void send_absolute_mouse_packet(std::shared_ptr<input_t> &input, std::int16_t x, std::int16_t y, std::int16_t width, std::int16_t height);
++
+     /**
+      * @brief Forget every key Sunshine tracks as pressed and cancel any pending key repeat.
+      */
+diff --git a/src/platform/linux/display_geometry.h b/src/platform/linux/display_geometry.h
+index ab38dae25..eee920442 100644
+--- a/src/platform/linux/display_geometry.h
++++ b/src/platform/linux/display_geometry.h
+@@ -76,4 +76,12 @@ namespace platf {
+     touch_port_t bounds_ {};  ///< Union of all valid monitor extents.
+     bool initialized_ = false;  ///< Whether a valid monitor has established the origin.
+   };
++
++  inline touch_port_t absolute_input_desktop(const touch_port_t &compositor_bounds, const touch_port_t &capture_bounds) {
++    if (compositor_bounds.width > 0 && compositor_bounds.height > 0) {
++      return compositor_bounds;
++    }
++
++    return capture_bounds;
++  }
+ }  // namespace platf
+diff --git a/src/platform/linux/kmsgrab.cpp b/src/platform/linux/kmsgrab.cpp
+index a2f6eb505..b1aa2250c 100644
+--- a/src/platform/linux/kmsgrab.cpp
++++ b/src/platform/linux/kmsgrab.cpp
+@@ -2237,12 +2237,10 @@ namespace platf {
+    * This is an ugly hack :(
+    * @param cds Capture display state used by the KMS backend.
+    */
+-  void correlate_to_wayland(std::vector<kms::card_descriptor_t> &cds) {
+-    auto monitors = wl::monitors();
+-
++  void correlate_to_wayland(std::vector<kms::card_descriptor_t> &cds, const std::vector<std::unique_ptr<wl::monitor_t>> &monitors) {
+     BOOST_LOG(info) << "-------- Start of KMS monitor list --------"sv;
+ 
+-    for (auto &monitor : monitors) {
++    for (const auto &monitor : monitors) {
+       std::string_view name = monitor->name;
+ 
+       // Try to convert names in the format:
+@@ -2409,17 +2407,23 @@ namespace platf {
+       });
+     }
+ 
++    platf::desktop_geometry_t compositor_desktop;
+     if (!wl::init()) {
+-      correlate_to_wayland(cds);
+-    }
+-
+-    platf::desktop_geometry_t desktop;
+-    for (const auto &card_descriptor : cds) {
+-      for (const auto &[_, monitor_descriptor] : card_descriptor.crtc_to_monitor) {
+-        desktop.add(monitor_descriptor.viewport);
++      auto monitors = wl::monitors();
++      correlate_to_wayland(cds, monitors);
++      for (const auto &monitor : monitors) {
++        compositor_desktop.add(monitor->viewport);
+       }
+     }
+-    kms::env_bounds = desktop.bounds();
++
++    platf::desktop_geometry_t capture_desktop;
++    for (const auto &card_descriptor : cds) {
++      for (const auto &[_, monitor_descriptor] : card_descriptor.crtc_to_monitor) {
++        capture_desktop.add(monitor_descriptor.viewport);
++      }
++    }
++
++    kms::env_bounds = platf::absolute_input_desktop(compositor_desktop.bounds(), capture_desktop.bounds());
+     BOOST_LOG(debug) << "Desktop resolution: "sv << kms::env_bounds.width << 'x' << kms::env_bounds.height;
+ 
+     kms::card_descriptors = std::move(cds);
+diff --git a/tests/unit/platform/linux/test_display_geometry.cpp b/tests/unit/platform/linux/test_display_geometry.cpp
+index 202f5d7a3..00b24a2c4 100644
+--- a/tests/unit/platform/linux/test_display_geometry.cpp
++++ b/tests/unit/platform/linux/test_display_geometry.cpp
+@@ -104,6 +104,37 @@ TEST(LinuxDisplayGeometryTest, UsesLogicalSizesForMixedScalingAndPreservesGaps)
+   EXPECT_EQ(desktop.bounds().logical_width, 4140);
+ }
+ 
++TEST(LinuxDisplayGeometryTest, PrefersTheCompositorDesktopOverCapturedOutputs) {
++  platf::desktop_geometry_t compositor_desktop;
++  compositor_desktop.add({.width = 1920, .height = 1080, .logical_width = 1920, .logical_height = 1080});
++  compositor_desktop.add({.offset_y = -1080, .width = 1920, .height = 1080, .logical_width = 1920, .logical_height = 1080});
++
++  platf::desktop_geometry_t capture_desktop;
++  capture_desktop.add({.width = 1920, .height = 1080, .logical_width = 1920, .logical_height = 1080});
++
++  const auto bounds = platf::absolute_input_desktop(compositor_desktop.bounds(), capture_desktop.bounds());
++  EXPECT_EQ(bounds.offset_x, 0);
++  EXPECT_EQ(bounds.offset_y, -1080);
++  EXPECT_EQ(bounds.width, 1920);
++  EXPECT_EQ(bounds.height, 2160);
++  EXPECT_EQ(bounds.logical_width, 1920);
++  EXPECT_EQ(bounds.logical_height, 2160);
++}
++
++TEST(LinuxDisplayGeometryTest, FallsBackToCapturedOutputsWithoutACompositorDesktop) {
++  platf::desktop_geometry_t capture_desktop;
++  capture_desktop.add({.offset_x = 1920, .width = 2560, .height = 1440, .logical_width = 1280, .logical_height = 720});
++
++  const platf::desktop_geometry_t empty_compositor_desktop;
++  const auto bounds = platf::absolute_input_desktop(empty_compositor_desktop.bounds(), capture_desktop.bounds());
++  EXPECT_EQ(bounds.offset_x, 1920);
++  EXPECT_EQ(bounds.offset_y, 0);
++  EXPECT_EQ(bounds.width, 2560);
++  EXPECT_EQ(bounds.height, 1440);
++  EXPECT_EQ(bounds.logical_width, 1280);
++  EXPECT_EQ(bounds.logical_height, 720);
++}
++
+ TEST(LinuxDisplayGeometryTest, PublishesDesktopOriginAndStreamedConnectorThroughTheTouchPort) {
+   geometry_display_t display;
+   display.width = 3840;
+diff --git a/tests/unit/test_input.cpp b/tests/unit/test_input.cpp
+index 0f322a48e..fd0b40ff8 100644
+--- a/tests/unit/test_input.cpp
++++ b/tests/unit/test_input.cpp
+@@ -712,6 +712,52 @@ TEST_F(InputGamepadSessionTest, TranslatesEditingKeysToCanonicalKeycodes) {
+   }
+ }
+ 
++TEST_F(InputGamepadSessionTest, TargetsAbsoluteMouseAtTheStreamedMonitorAboveAStackedDesktop) {
++  auto session_mail = std::make_shared<safe::mail_raw_t>();
++  auto stream_input = input::alloc(session_mail, "absolute-mouse-client");
++  ASSERT_NE(stream_input, nullptr);
++
++  const input::touch_port_t viewport {
++    {
++      .offset_x = 0,
++      .offset_y = 0,
++      .width = 1920,
++      .height = 1080,
++      .logical_width = 1920,
++      .logical_height = 1080,
++      .env_offset_x = 0,
++      .env_offset_y = -1080,
++    },
++    1920,
++    2160,
++    0.0F,
++    0.0F,
++    1.0F,
++    1.0F,
++    1920,
++    2160,
++  };
++
++  session_mail->event<input::touch_port_t>(mail::touch_port)->raise(viewport);
++
++  input::testing::send_absolute_mouse_packet(stream_input, 960, 0, 1920, 1080);
++  auto mouse_event = context().mouse->last_submitted_event();
++  EXPECT_EQ(mouse_event.kind, lvh::MouseEventKind::absolute_motion);
++  EXPECT_FLOAT_EQ(mouse_event.absolute_x, 960.0F);
++  EXPECT_FLOAT_EQ(mouse_event.absolute_y, 0.0F);
++  EXPECT_EQ(mouse_event.width, 1920);
++  EXPECT_EQ(mouse_event.height, 1080);
++  EXPECT_EQ(context().mouse_desktop.offset_y, -1080);
++  EXPECT_EQ(context().mouse_desktop.height, 2160);
++  EXPECT_EQ(context().mouse_viewport.offset_y, 0);
++  EXPECT_EQ(context().mouse_viewport.height, 1080);
++
++  input::testing::send_absolute_mouse_packet(stream_input, 960, 1079, 1920, 1080);
++  mouse_event = context().mouse->last_submitted_event();
++  EXPECT_FLOAT_EQ(mouse_event.absolute_y, 1079.0F);
++  EXPECT_EQ(mouse_event.height, 1080);
++}
++
+ TEST_F(InputGamepadSessionTest, RetargetsNativeTouchAndPenWithoutApplyingTheMonitorOffsetTwice) {
+   auto session_mail = std::make_shared<safe::mail_raw_t>();
+   auto stream_input = input::alloc(session_mail, "absolute-input-client");
