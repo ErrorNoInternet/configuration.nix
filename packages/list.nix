@@ -6,6 +6,7 @@
   ./neovim
   ./savehw
   ./scratchpad
+  ./sunshine
   ./tbw
   ./tmux
 ]

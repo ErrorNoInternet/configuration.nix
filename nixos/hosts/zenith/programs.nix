@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, self', ... }:
 {
   environment.persistence."/persist".directories = [
     "/var/lib/cups"
@@ -21,6 +21,8 @@
 
     sunshine = {
       enable = true;
+      package = self'.packages.sunshine;
+
       capSysAdmin = true;
       openFirewall = true;
     };

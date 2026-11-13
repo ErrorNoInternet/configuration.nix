@@ -155,6 +155,22 @@
       "url": "https://api.github.com/repos/zjeffer/split-monitor-workspaces/tarball/refs/tags/v0.57.0",
       "hash": "sha256-lup85KjDGFXFbaUGaFp2JxhhMKr32iE/pXOqIkht6Cw="
     },
+    "sunshine": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "LizardByte",
+        "repo": "Sunshine"
+      },
+      "pre_releases": true,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": true,
+      "version": "v2026.1112.40957",
+      "revision": "844af6927c276efb1fba670e1868483930684298",
+      "url": null,
+      "hash": "sha256-MvGmYvrd12BLVgqvxBruIROdUqPyD+eGLNJDXuiWRbI="
+    },
     "tide-item-jj": {
       "type": "Git",
       "repository": {
