@@ -191,11 +191,11 @@
         "owner": "tmux",
         "repo": "tmux"
       },
-      "branch": "4902-image-support",
+      "branch": "master",
       "submodules": false,
-      "revision": "e5147c2bbcefe7886a204abb1223220fd9ace37b",
-      "url": "https://github.com/tmux/tmux/archive/e5147c2bbcefe7886a204abb1223220fd9ace37b.tar.gz",
-      "hash": "sha256-jOgahsPo6f4hC6bAyAPfH5PQt8TxpPFhR5g22Ld/UXc="
+      "revision": "31c28422be0591189fb71670a78d283751294fcd",
+      "url": "https://github.com/tmux/tmux/archive/31c28422be0591189fb71670a78d283751294fcd.tar.gz",
+      "hash": "sha256-zFFZoDu3q3kPYXIh+ylOtXpyYj7BIHBwXfU/t/p/VK0="
     },
     "tmux-pane-focus": {
       "type": "Git",

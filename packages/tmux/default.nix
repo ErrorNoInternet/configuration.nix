@@ -13,8 +13,6 @@ pkgs.tmux.overrideAttrs (old: {
       'AC_INIT([tmux], next-3.9)' 'AC_INIT([tmux], 3.9)'
   '';
 
-  patches = (old.patches or [ ]) ++ [ ./da1-kitty.diff ];
-
   buildInputs = (old.buildInputs or [ ]) ++ [
     pkgs.libpng
     pkgs.zlib
