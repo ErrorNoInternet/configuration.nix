@@ -22,7 +22,7 @@ in
     boot.kernel.sysctl = {
       "net.core.default_qdisc" = "cake";
 
-      "vm.page-cluster" = 0;
+      "vm.page-cluster" = mkDefault 0;
       "vm.swappiness" = mkDefault 100;
       "vm.watermark_boost_factor" = 0;
 

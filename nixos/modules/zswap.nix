@@ -20,7 +20,10 @@ in
         "zswap.max_pool_percent=25"
       ];
 
-      kernel.sysctl."vm.swappiness" = 60;
+      kernel.sysctl = {
+        "vm.page-cluster" = 3;
+        "vm.swappiness" = 60;
+      };
     };
   };
 }
