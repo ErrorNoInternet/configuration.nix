@@ -46,6 +46,8 @@
       jo = "jj op";
       jol = "jj op log";
       jos = "jj op show";
+      josp = "jj op show --patch";
+      joss = "jj op show --stat";
       jp = "jj git push";
       jpb = "jj git push -b";
       jpg = "jj git push --remote gitea";
