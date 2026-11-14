@@ -43,6 +43,7 @@ in
         noto-fonts-cjk-serif
         source-han-sans
         source-han-serif
+        unifont
         vista-fonts
 
         noto-fonts-color-emoji

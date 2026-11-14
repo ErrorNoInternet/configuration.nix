@@ -14,19 +14,28 @@
     settings =
       with osConfig.scheme.withHashtag;
       let
-        symbolMap = [
-          "2211"
-          "23CE"
-          "23F1"
-          "23F8"
-          "25CB"
-        ];
+        symbolMap = font: chars: "${lib.concatStringsSep "," (map (char: "U+${char}") chars)} ${font}";
       in
       {
         box_drawing_scale = "0.001, 0.75, 1, 1.5";
         font_family = osConfig.fonts.preferredName;
         font_size = osConfig.fonts.preferredSize;
-        symbol_map = "${lib.concatStringsSep "," (map (char: "U+${char}") symbolMap)} Unifont";
+        symbol_map = [
+          (symbolMap "Unifont" [
+            "2211"
+            "23CE"
+            "23F1"
+            "23F8"
+            "25CB"
+          ])
+          (symbolMap osConfig.fonts.preferredName [
+            "25A0"
+            "25A6"
+            "25E7"
+            "26DD"
+            "26F6"
+          ])
+        ];
 
         background_opacity = 0.8;
         confirm_os_window_close = 0;
