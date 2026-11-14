@@ -25,6 +25,7 @@
       jde-- = "jj desc --editor @--";
       jde--I = "jj desc --editor @-- --ignore-immutable";
       jde-I = "jj desc --editor @- --ignore-immutable";
+      jDs = "jj diff | delta --side-by-side";
       je = "jj edit";
       jE = "jj evolog";
       je- = "jj edit @-";
