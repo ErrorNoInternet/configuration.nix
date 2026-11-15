@@ -72,6 +72,7 @@
 
   environment.systemPackages = with pkgs; [
     android-file-transfer
+    android-mic
     android-studio
     android-tools
     claude-code
