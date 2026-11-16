@@ -18,6 +18,7 @@ in
       kernelParams = [
         "zswap.enabled=1"
         "zswap.max_pool_percent=25"
+        "zswap.shrinker_enabled=0"
       ];
 
       kernel.sysctl = {
