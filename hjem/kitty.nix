@@ -27,6 +27,7 @@
             "23F1"
             "23F8"
             "25CB"
+            "2611"
           ])
           (symbolMap osConfig.fonts.preferredName [
             "25A0"
