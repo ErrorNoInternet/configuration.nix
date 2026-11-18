@@ -122,6 +122,9 @@
       gsmru = "git submodule update --recursive --remote";
       gsmu = "git submodule update";
       gss = "git show -m --stat";
+      gss- = "git show -m --stat HEAD^";
+      gss-- = "git show -m --stat HEAD^^";
+      gss--- = "git show -m --stat HEAD^^^";
       gst = "git status";
       gsw = "git switch";
       gsw- = "git switch";
