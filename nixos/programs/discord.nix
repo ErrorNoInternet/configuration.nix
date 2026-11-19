@@ -48,6 +48,7 @@ in
           betterBackreading.enable = true;
           betterForwards.enable = true;
           betterMutualServers.enable = true;
+          betterPollDetails.enable = true;
           betterRoleContext.enable = true;
           betterSearch.enable = true;
           betterSessions.enable = true;
