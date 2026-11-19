@@ -18,7 +18,7 @@ in
     enable = mkEnableOption "";
 
     repeatDelay = mkOption {
-      default = 150;
+      default = 200;
       type = types.int;
     };
 
