@@ -1,4 +1,9 @@
-{ pkgs, self', ... }:
+{
+  inputs',
+  pkgs,
+  self',
+  ...
+}:
 {
   environment.persistence."/persist".directories = [
     "/var/lib/cups"
@@ -85,6 +90,7 @@
     gimp3-with-plugins
     iamb
     imhex
+    inputs'.serein.packages.default
     jetbrains.idea
     libreoffice-stable
     localsend

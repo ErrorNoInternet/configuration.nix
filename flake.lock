@@ -542,6 +542,7 @@
         "noctalia": "noctalia",
         "nvf": "nvf",
         "sbox": "sbox",
+        "serein": "serein",
         "spicetify-nix": "spicetify-nix",
         "zmem": "zmem"
       }
@@ -575,6 +576,29 @@
       "original": {
         "owner": "DavHau",
         "repo": "sbox",
+        "type": "github"
+      }
+    },
+    "serein": {
+      "inputs": {
+        "flake-parts": [
+          "flake-parts"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1795010738,
+        "narHash": "sha256-sxIaixGlOwTqQCHzoJt/d7CCTCc0Z8/MZjebx29T3ws=",
+        "owner": "ViceVerse-cz",
+        "repo": "Serein",
+        "rev": "a89da93a8d77577f3b22249c7aebe0e13b5c9c09",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ViceVerse-cz",
+        "repo": "Serein",
         "type": "github"
       }
     },

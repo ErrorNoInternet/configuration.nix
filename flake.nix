@@ -83,6 +83,14 @@
 
     sbox.url = "github:DavHau/sbox";
 
+    serein = {
+      url = "github:ViceVerse-cz/Serein";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        flake-parts.follows = "flake-parts";
+      };
+    };
+
     spicetify-nix = {
       url = "github:tdortman/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
