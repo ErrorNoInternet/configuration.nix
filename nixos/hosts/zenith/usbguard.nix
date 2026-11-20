@@ -10,7 +10,7 @@
   environment.systemPackages = [ pkgs.usbguard-notifier ];
 
   services.usbguard = {
-    enable = true;
+    enable = false;
     IPCAllowedGroups = [ "wheel" ];
     ruleFile = config.age.secrets.usbguard.path;
   };
