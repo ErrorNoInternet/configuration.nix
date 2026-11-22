@@ -30,4 +30,6 @@
     "modesetting"
     "nvidia"
   ];
+
+  programs.atop.atopgpu.enable = true;
 }

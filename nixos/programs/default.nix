@@ -31,6 +31,11 @@ in
   };
 
   programs = {
+    atop = {
+      enable = true;
+      setuidWrapper.enable = true;
+    };
+
     fish = {
       enable = true;
 
@@ -66,7 +71,6 @@ in
 
   environment.systemPackages = with pkgs; [
     _7zz
-    atop
     atuin
     bat
     binsort
