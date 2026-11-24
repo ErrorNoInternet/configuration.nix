@@ -10,6 +10,7 @@ in
 
     settings = {
       audio = {
+        colorize_icons = true;
         enable_overdrive = true;
         enable_sounds = true;
       };
@@ -115,6 +116,8 @@ in
 
       desktop_widgets.enabled = false;
 
+      dock.colorize_icons = true;
+
       location.auto_locate = true;
 
       lockscreen = {
@@ -204,6 +207,7 @@ in
 
       notification = {
         background_opacity = 0.75;
+        colorize_icons = true;
         filter_order = [ "filter" ];
         layer = "overlay";
 
@@ -247,18 +251,20 @@ in
 
       shell = {
         app_icon_color = "on_surface";
-        app_icon_colorize = true;
         avatar_path = "${pictures}/profiles/ferris_bg.png";
         clipboard_auto_paste = "off";
         clipboard_history_max_entries = 1000;
         font_family = osConfig.fonts.preferredName;
         polkit_agent = true;
+        polkit_colorize_icons = true;
+        screen_time_colorize_icons = true;
         settings_expand_all_groups = true;
 
         animation.speed = 1.5;
 
         launcher = {
           auto_paste = "off";
+          colorize_icons = true;
           show_app_actions = true;
 
           providers.windows.global = false;
@@ -271,6 +277,8 @@ in
         };
 
         screenshot.save_to_file = false;
+
+        window_switcher.colorize_icons = true;
       };
 
       system.monitor = {
@@ -298,6 +306,8 @@ in
       };
 
       widget = {
+        active_window.colorize_icons = true;
+
         battery.actions.right = "power-cycle";
 
         clock = {
@@ -361,10 +371,15 @@ in
           type = "sysmon";
         };
 
+        taskbar.colorize_icons = true;
+
+        tray.colorize_icons = true;
+
         volume.actions.middle = "exec pavucontrol || pwvucontrol";
 
         workspaces = {
           active_pill_size = 2.0;
+          colorize_icons = true;
           font_scale = 1.2;
         };
       };
